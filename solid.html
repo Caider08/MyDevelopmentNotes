@@ -99,16 +99,21 @@
 
     <div class="collapse" id="collapse-btn-1">
       <div class="card">
-        <div class="card-body bg-secondary">
-          <ul class="list-group bg-secondary">
-            <a class="list-group-item" target="_blank"
+        <div class="card-body">
+          <ul class="list-group">
+            <a class="list-group-item list-group-item-dark" target="_blank"
               href="https://blog.bitsrc.io/solid-principles-every-developer-should-know-b3bfa96bb688">Solid Principles
               Every Developer Should know</a>
-              <a class="list-group-item" target="_blank" href="https://codeburst.io/software-architecture-the-difference-between-architecture-and-design-7936abdd5830">Difference Between Architecture and Design</a>
-              <a class="list-group-item" target="_blank" href="https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013">10 Common Softare Architecture Patterns</a>
-            <a class="list-group-item" target="_blank"
+            <a class="list-group-item list-group-item-dark" target="_blank"
+              href="https://codeburst.io/software-architecture-the-difference-between-architecture-and-design-7936abdd5830">Difference
+              Between Architecture and Design</a>
+            <a class="list-group-item list-group-item-dark" target="_blank"
+              href="https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013">10
+              Common Softare Architecture Patterns</a>
+            <a class="list-group-item list-group-item-dark" target="_blank"
               href="https://github.com/teambit/bit?source=post_page---------------------------">github</a>
-            <a target ="_blank" class="list-group-item" href="https://bit.dev/explore">bit dev</a>
+            <a target="_blank" class="list-group-item list-group-item-dark" href="https://bit.dev/explore">bit
+              dev</a>
           </ul>
         </div>
       </div>
@@ -129,7 +134,8 @@
       <ul class="list-group list-group-flush mb-5">
         <li class="list-group-item active">Software entities(Classes, modules, functions) should be open for extension,
           not modification.</li>
-          <li class="list-group-item list-group-item-dark">You should be able to add more functionality to the class but do not edit current functions in a way that breaks existing code that uses it.</li>
+        <li class="list-group-item list-group-item-dark">You should be able to add more functionality to the class but
+          do not edit current functions in a way that breaks existing code that uses it.</li>
         <li class="list-group-item list-group-item-dark">Animal now has a virtual method makeSound. We have each animal
           extend the Animal class and implement the virtual makeSound method.</li>
         <li class="list-group-item list-group-item-dark">Every animal adds its own implementation on how it makes a
@@ -148,8 +154,11 @@
       <h3>L: Liskov Substitution Principle</h3>
       <ul class="list-group list-group-flush mb-5">
         <li class="list-group-item active">A sub-class must be substitutable for its super-class</li>
-        <li class="list-group-item list-group-item-dark">Use inheritance in a way that will not break the application logic at any point</li>
-        <li class="list-group-item list-group-item-dark">ChildClass shall not replicate a functionality of ParentClass in a way that changes the behavior of the ParentClass...so you can easily use the object of ChildClass instead of the obect of ParentClass without breaking the application logic</li>
+        <li class="list-group-item list-group-item-dark">Use inheritance in a way that will not break the application
+          logic at any point</li>
+        <li class="list-group-item list-group-item-dark">ChildClass shall not replicate a functionality of ParentClass
+          in a way that changes the behavior of the ParentClass...so you can easily use the object of ChildClass instead
+          of the obect of ParentClass without breaking the application logic</li>
         <li class="list-group-item list-group-item-dark">The aim of this principle is to ascertain that a sub-class can
           assume the place of its super-class without errors. If the code finds itself checking the type of class then,
           it must have violated this principle.</li>
@@ -162,7 +171,8 @@
         <li class="list-group-item list-group-item-dark">Make fine grained interfaces that are client specific.
           Clients should not be forced to depend upon interfaces that they do not use.
         </li>
-        <li class="list-group-item active">Since a class can implement multiple interfaces, structure your code in a way that a class will never be forced to implement a function that is not important to its purpose.</li>
+        <li class="list-group-item active">Since a class can implement multiple interfaces, structure your code in a way
+          that a class will never be forced to implement a function that is not important to its purpose.</li>
         <li class="list-group-item list-group-item-dark">This interface draws squares, circles, rectangles. class
           Circle, Square or Rectangle implementing the IShape interface must define the methods drawCircle(),
           drawSquare(),drawRectangle().
@@ -182,7 +192,8 @@
           Both should depend upon abstractions.</li>
         <li class="list-group-item list-group-item-dark">B) Abstractions should not depend on details. Details should
           depend upon abstractions.</li>
-        <li class="list-group-item active">If a PurchaseClass depends on a UserClass...then the UserClass object instantiation should come from outside the PurchaseClass.</li>
+        <li class="list-group-item active">If a PurchaseClass depends on a UserClass...then the UserClass object
+          instantiation should come from outside the PurchaseClass.</li>
         <li class="list-group-item list-group-item-dark">(below violates)
           class XMLHttpService extends XMLHttpRequestService {}class Http {
           constructor(private xmlhttpService: XMLHttpService) { }
