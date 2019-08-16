@@ -8,13 +8,12 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
     integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <link type="text/css" rel="stylesheet" href="notes.css">
-  <title>Design Patterns</title>
-
+  <title>Software Design Patterns</title>
 </head>
 
 <body class="bg-dark text-light">
   <header>
-    <h1 class="display-4 text-center my-4">Design Patterns</h1>
+    <h1 class="display-4 text-center my-4">Software Design Patterns</h1>
     <div class="container">
       <div class="row">
         <div class="col-md-2">
@@ -70,44 +69,43 @@
   </header>
 
   <div class="container">
-    <button class="btn btn-primary d-block mb-4" data-toggle="collapse" style="margin-top: 25px"
-      data-target="#collapse-btn-1">SOLID</button>
+    <button class="btn btn-primary d-block mt-25" style="margin-top: 25px" data-toggle="collapse"
+      data-target="#collapse-btn-1">SA Pattern links</button>
 
-    <div class="collapse mb-5" id="collapse-btn-1">
+    <div class="collapse my-25" id="collapse-btn-1">
       <div class="card">
         <div class="card-body">
-          <ul class="list-group mb-5">
-            <a class="list-group-item list-group-item-dark" href="solid.html">S: Single Responsibility Principle</a>
-            <a class="list-group-item list-group-item-dark" href="solid.html">O: Open-Closed Principle</a>
-            <a class="list-group-item list-group-item-dark" href="solid.html">L: Liskov Substitution Principle</a>
-            <a class="list-group-item list-group-item-dark" href="solid.html">I: Interface Segregation Principle</a>
-            <a class="list-group-item list-group-item-dark" href="solid.html">D: Dependency Inversion Principle</a>
+          <ul class="list-group">
+            <a class="list-group-item list-group-item-dark" target="_blank"
+              href="https://codeburst.io/software-architecture-the-difference-between-architecture-and-design-7936abdd5830">Difference
+              Between Architecture and Design</a>
           </ul>
         </div>
       </div>
     </div>
 
-
-    <div id="accordion">
+    <div id="accordion" style="margin-top: 10px">
       <div class="card">
         <div class="card-header">
           <h5>
             <a href="#collapse1" data-parent="#accordion" data-toggle="collapse">
-              Software Architecture
+              Microservices
             </a>
           </h5>
         </div>
 
         <div id="collapse1" class="collapse">
           <div class="card-body bg-secondary">
-            <h4 class="car-title">Software Architecture</h4>
-            <p class="card-text">Software architecture is the process of converting software characteristics such as
-              flexibility, scalability, feasibility, reusability, and security into a structured solution that meets the
-              technical and the business expectations.</p>
-            <p class="card-text">Software should be "extendable, modular and maintainable". <strong>Performance</strong>
-              and <strong>low fault tolerance, scalability and reliability</strong> are your key characteristics</p>
-            <p class="card-text">Responsible for the skeleton and the high-level infrastructure of a software.</p>
-            <a href="SApatterns.html" class="btn btn-primary">Architecture Patterns</a>
+            <h4 class="car-title">Microservices</h4>
+            <p class="card-text">Has become most popular architecture</p>
+            <p class="card-text">It depends on developing small, independent modular services where each service solves
+              a specific problem or performs a unique task and these modules communicate with each other through
+              well-defined API to serve the business goal</p>
+            <p class="card-text">Received its reputation after being adopted by Amazon and Netflix and showing its great
+              impact</p>
+
+            <img class="card-img-bottom img-fluid" src="../MyDevelopmentNotes/img/microservices.png" alt="">
+
 
           </div>
         </div>
@@ -117,15 +115,17 @@
         <div class="card-header">
           <h5>
             <a href="#collapse2" data-parent="#accordion" data-toggle="collapse">
-              Software Design
+              Serverless
             </a>
           </h5>
         </div>
 
         <div id="collapse2" class="collapse">
           <div class="card-body bg-secondary">
-            <h4 class="car-title">Software Design</h4>
-            <a href="DesignPatterns.html" class="btn btn-primary">Design Patterns</a>
+            <h4 class="car-title">Serverless</h4>
+            <p class="card-text">Divided into two main categories: <strong>Backend as a service (BaaS)</strong> and
+              <strong>Functions as a Service (FaaS)</strong></p>
+            <p class="card-text">Most famous provider of serverless API is Amazon AWS "Lambda"</p>
           </div>
         </div>
       </div>
@@ -134,18 +134,18 @@
         <div class="card-header">
           <h5>
             <a href="#collapse3" data-parent="#accordion" data-toggle="collapse">
-              Collapse Three
+              Event-Driven Architecture
             </a>
           </h5>
         </div>
 
         <div id="collapse3" class="collapse">
-          <div class="card-body">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis ea iste a doloremque, cumque, debitis
-            eum vel ipsum architecto
-            aut, recusandae totam ullam aperiam. Nesciunt expedita officiis animi quam corporis optio inventore facilis
-            sint
-            et nulla in, repellat debitis dolor at nisi quo, unde temporibus. Quos nisi nostrum officia, illo.
+          <div class="card-body bg-secondary">
+            <h4 class="car-title">Event-Driven Architecture</h4>
+            <p class="card-text">Depends on <strong>Event Producers</strong> and <strong>Event Consumers</strong></p>
+            <p class="card-text">Main Idea is to decouple your system's parts and each part will be triggered when an
+              interesting event from another part has got triggered</p>
+
           </div>
         </div>
       </div>
