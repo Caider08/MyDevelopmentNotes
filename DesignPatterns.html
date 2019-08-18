@@ -13,16 +13,16 @@
 
 <body class="bg-dark text-light">
   <header>
-    <h1 class="display-4 text-center my-4">Software Design Patterns</h1>
+    <h1 class="display-2 text-center my-4">Design Patterns</h1>
     <div class="container">
       <div class="row">
         <div class="col-md-2">
           <div class="dropdown">
             <button class="btn btn-primary btn-block dropdown-toggle" type="button" data-toggle="dropdown">
-              C#
+              Computer Sci.
             </button>
             <div class="dropdown-menu">
-              <a href="mvc.html" class="dropdown-item">.Net MVC</a>
+
               <a class="dropdown-item" href="DotNetDesignPatterns.html" class="dropdown-item">Design
                 Patterns</a>
               <a href="index.html" class="dropdown-item">Notes Home</a>
@@ -32,8 +32,12 @@
         <div class="col-md-2">
           <div class="dropdown">
             <button class="btn btn-success btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
-              SQL
+              C#
             </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="mvc.html" class="dropdown-item">.Net MVC</a>
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
           </div>
         </div>
         <div class="col-md-2">
@@ -41,20 +45,9 @@
             <button class="btn btn-danger btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
               JS
             </button>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="dropdown">
-            <button class="btn btn-warning btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
-              Front-End
-            </button>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="dropdown">
-            <button class="btn btn-primary btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
-              Data-Strucutres
-            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
           </div>
         </div>
         <div class="col-md-2">
@@ -62,15 +55,39 @@
             <button class="btn btn-success btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
               Salesforce
             </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
           </div>
         </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-warning btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              WebDevelopment
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-primary btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              Interview Prep
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </header>
 
   <div class="container">
     <button class="btn btn-primary d-block mt-25" style="margin-top: 25px" data-toggle="collapse"
-      data-target="#collapse-btn-1">SA Pattern links</button>
+      data-target="#collapse-btn-1">Design Pattern links</button>
 
     <div class="collapse my-25" id="collapse-btn-1">
       <div class="card">
@@ -84,28 +101,55 @@
       </div>
     </div>
 
-    <div id="accordion" style="margin-top: 10px">
+    <button class="btn btn-primary d-block mb-4" data-toggle="collapse" style="margin-top: 25px"
+      data-target="#collapse-btn-2">Creational Patterns</button>
+
+    <div class="collapse mb-5" id="collapse-btn-2">
+      <div class="card">
+        <div class="card-body">
+          <ul class="list-group mb-5">
+            <a class="list-group-item list-group-item-dark" href="creational.html">Builders (piecewise construction of
+              objects while making the target object's constructors inaccessible).</a>
+            <a class="list-group-item list-group-item-dark" href="creational.html">Factories (class member that acts as
+              a way of creating object in one go (typically replaces a constructor))</a>
+            <a class="list-group-item list-group-item-dark" href="creational.html">Prototypes (building from an already
+              existing object)</a>
+            <a class="list-group-item list-group-item-dark" href="creational.html">Singleton (idea of only one instance
+              of a particular component in your application)</a>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id="accordion" style="margin-top: 25px">
       <div class="card">
         <div class="card-header">
           <h5>
             <a href="#collapse1" data-parent="#accordion" data-toggle="collapse">
-              Microservices
+              Creational Patterns
             </a>
           </h5>
         </div>
 
         <div id="collapse1" class="collapse">
           <div class="card-body bg-secondary">
-            <h4 class="car-title">Microservices</h4>
-            <p class="card-text">Has become most popular architecture</p>
-            <p class="card-text">It depends on developing small, independent modular services where each service solves
-              a specific problem or performs a unique task and these modules communicate with each other through
-              well-defined API to serve the business goal</p>
-            <p class="card-text">Received its reputation after being adopted by Amazon and Netflix and showing its great
-              impact</p>
-
-            <img class="card-img-bottom img-fluid" src="../MyDevelopmentNotes/img/microservices.png" alt="">
-
+            <h4 class="car-title">Software Architecture</h4>
+            <p class="card-text">Software architecture is the process of converting software characteristics such as
+              flexibility, scalability, feasibility, reusability, and security into a structured solution that meets the
+              technical and the business expectations.</p>
+            <p class="card-text">Software should be "extendable, modular and maintainable". <strong>Performance</strong>
+              and <strong>low fault tolerance, scalability and reliability</strong> are your key characteristics</p>
+            <p class="card-text">Responsible for the skeleton and the high-level infrastructure of a software.</p>
+            <a href="SApatterns.html" class="btn btn-primary">Architecture Patterns</a>
 
           </div>
         </div>
@@ -115,17 +159,17 @@
         <div class="card-header">
           <h5>
             <a href="#collapse2" data-parent="#accordion" data-toggle="collapse">
-              Serverless
+              Software Design
             </a>
           </h5>
         </div>
 
         <div id="collapse2" class="collapse">
           <div class="card-body bg-secondary">
-            <h4 class="car-title">Serverless</h4>
-            <p class="card-text">Divided into two main categories: <strong>Backend as a service (BaaS)</strong> and
-              <strong>Functions as a Service (FaaS)</strong></p>
-            <p class="card-text">Most famous provider of serverless API is Amazon AWS "Lambda"</p>
+            <h4 class="car-title">Software Design</h4>
+            <p class="card-text">Responsible for the code-level design such as, what each module is doing, the classes
+              scope, and the functions, purposes etc..</p>
+            <a href="DesignPatterns.html" class="btn btn-primary">Design Patterns</a>
           </div>
         </div>
       </div>
@@ -134,34 +178,36 @@
         <div class="card-header">
           <h5>
             <a href="#collapse3" data-parent="#accordion" data-toggle="collapse">
-              Event-Driven Architecture
+              Collapse Three
             </a>
           </h5>
         </div>
 
         <div id="collapse3" class="collapse">
-          <div class="card-body bg-secondary">
-            <h4 class="car-title">Event-Driven Architecture</h4>
-            <p class="card-text">Depends on <strong>Event Producers</strong> and <strong>Event Consumers</strong></p>
-            <p class="card-text">Main Idea is to decouple your system's parts and each part will be triggered when an
-              interesting event from another part has got triggered</p>
-
+          <div class="card-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis ea iste a doloremque, cumque, debitis
+            eum vel ipsum architecto
+            aut, recusandae totam ullam aperiam. Nesciunt expedita officiis animi quam corporis optio inventore facilis
+            sint
+            et nulla in, repellat debitis dolor at nisi quo, unde temporibus. Quos nisi nostrum officia, illo.
           </div>
         </div>
       </div>
     </div>
 
+  </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-      integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
-    </script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+  </script>
 
 </body>
 
