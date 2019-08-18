@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="notes.css">
+  <title>Structural Design Patterns</title>
+</head>
+
+<body class="bg-dark text-light">
+  <header>
+    <h1 class="display-2 text-center my-4">Structural Design Patterns</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-primary btn-block dropdown-toggle" type="button" data-toggle="dropdown">
+              Computer Sci.
+            </button>
+            <div class="dropdown-menu">
+
+              <a class="dropdown-item" href="DotNetDesignPatterns.html" class="dropdown-item">Design
+                Patterns</a>
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-success btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              C#
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="mvc.html" class="dropdown-item">.Net MVC</a>
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-danger btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              JS
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-success btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              Salesforce
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-warning btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              WebDevelopment
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-primary btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              Interview Prep
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <button class="btn btn-primary d-block mt-25" style="margin-top: 25px" data-toggle="collapse"
+      data-target="#collapse-btn-1">Structural links</button>
+
+    <div class="collapse my-25" id="collapse-btn-1">
+      <div class="card">
+        <div class="card-body">
+          <ul class="list-group">
+            <a class="list-group-item list-group-item-dark" target="_blank"
+              href="https://codeburst.io/software-architecture-the-difference-between-architecture-and-design-7936abdd5830">Difference
+              Between Architecture and Design</a>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="accordion" style="margin-top: 10px">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse1" data-parent="#accordion" data-toggle="collapse">
+              Adapters
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse1" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Adapters</h4>
+            <p class="card-text">we have an interface, but we want a different one, and building an adapter over the
+              interface is what gets us to where we want to be.</p>
+            <h5>Examples:</h5>
+            <p class="card-text"> We have an interface that DrawsPoint();
+              We need to build adapter that can take VectorObjects to collection of lines to collection of points so
+              that we can draw them using DrawsPoint()</p>
+            <p class="card-text">Imagine that your application deals with Youtube API and in order to get access token,
+              you have to call a function called getYoutubeToken(); So, you called this function in 20 different places
+              in your application (which is a problem if Google releases a new version of YouTube API (possibly changing
+              methodNames))...</p>
+            <p class="card-text">so build a YouTubeAdapter class</p>
+            <img class="card-img img-fluid mb-5" src="../MyDevelopmentNotes/img/youTubeAdapter.png"
+              alt="YouTube Adapter Pattern example">
+
+            <img class="card-img img-fluid mb-5" src="../MyDevelopmentNotes/img/adapterNotes.png"
+              alt="Adapter Pattern 1">
+
+            <img class="card-img img-fluid mb-5" src="../MyDevelopmentNotes/img/adapterNotes2.png"
+              alt="Adapter Pattern 2">
+
+
+            <img class="card-img img-fluid" src="../MyDevelopmentNotes/img/adapterNotes3.png" alt="Adapter Pattern 3">
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse2" data-parent="#accordion" data-toggle="collapse">
+              Bridges
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse2" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Bridges</h4>
+            <p class="card-text">Problem is having like having RedCircle, BlueCircle, GreenCircle, etc...</p>
+            <p class="card-text">Principal goal of the Bridge design pattern is to avoid excessive proliferation of data
+              types where there are two or more dimensions, or aspects of a system that can potentially multiply in
+              number.
+            </p>
+            <p class="card-text">Best approach is <strong>ACTIVE AVOIDANCE</strong> (replace classes with enums, if
+              possible)...</p>
+
+            <p class="card-text">...simply abstract away both hierarchies if not possible and find way of connecting
+              them</p>
+
+            <img class="card-img img-fluid mb-5" src="../MyDevelopmentNotes/img/bridge.png" alt="Factory example">
+
+
+            <p class="card-text">Bridge is NOTHING MORE than the application of the dependency inversion principle,
+              where you connect two distint hierarchies together through a common parameter.</p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse3" data-parent="#accordion" data-toggle="collapse">
+              Composites
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse3" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Composite Pattern</h4>
+            <p class="card-text">Composite design pattern allows us to provide identical interfaces for individual
+              objects and collections of objects</p>
+            <ul class="list-group">
+              <p class="list-group-header">Ways for an object to advertise that it is composed of something</p>
+              <li class="list-group-item list-group-item-success">1) object to either implement IEnumerable<T> (T is
+                  whatever you're prepared to expose) OR expose public members that themselves implement IEnumerable<T>
+                  </T>
+                  (performs a deep copy)</li>
+              <li class="list-group-item list-group-item-success">2) inherit from a known collection class such as
+                Collection<T>, List<T> or something similar</li>
+            </ul>
+
+            <img class="card-img img-fluid" src="../MyDevelopmentNotes/img/compositeNotes.png" alt="Composite Example1">
+            <h5></h5>
+            <img class="card-img img-fluid" src="../MyDevelopmentNotes/img/compositeNotes2.png"
+              alt="Composite Example2">
+            <img class="card-img-bottom img-fluid" src="../MyDevelopmentNotes/img/compositeNotes3.png"
+              alt="Composite Example2">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse4" data-parent="#accordion" data-toggle="collapse">
+              Decorators
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse4" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Decorator Pattern</h4>
+            <p class="card-text">Decorator allows us to enhance existing types without either modifying the original
+              types (open-closed Principle) or causing an explosion of the number of derived types...</p>
+            <p class="card-text">...inheritance sometimes fails because base class is 'sealed' or you need to inherit
+              something else</p>
+            <p class="card-text">A Decorator gives a class additional functionality while adhering to the OCP and
+              mitigating issues related to sealed classes and multiple inheritance.</p>
+
+            <img class="card-img img-fluid mb-5" src="../MyDevelopmentNotes/img/decorator.png" alt="Decorator Example">
+
+            <p class="card-text"><strong>Multiple Inheritance</strong>
+              in addition to extending SEALED classes, Decorator also shows up when you want to have multiple base
+              classes, which cannot do because c# does not support multiple inheritance.</p>
+
+            <img class="card-img img-fluid mb-5" src="../MyDevelopmentNotes/img/decoratorMultipleInheritance.png"
+              alt="Decorator Multiple Inheritance">
+
+            <p class="card-text"><strong>Dynamic Decorators</strong> which can store references to the decorated objects
+              and provide
+              dynamic (runtime) composability</p>
+
+            <img class="card-img img-fluid mb-5" src="../MyDevelopmentNotes/img/dynamicDecorator.png"
+              alt="Dynamic Decorator Example">
+
+            <p class="card-text"><strong>Static Decorators </strong>
+              preserve the information about the type of the objects involved in the decoration</p>
+
+            <img class="card-img img-fluid" src="../MyDevelopmentNotes/img/staticDecorator.png"
+              alt="Static Decorator Example">
+
+            <img class="card-img img-fluid" src="../MyDevelopmentNotes/img/staticDecorator2.png"
+              alt="Static Decorator Example2">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse5" data-parent="#accordion" data-toggle="collapse">
+              Facades
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse5" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Facade Pattern</h4>
+            <p class="card-text">complex interaction of different parts is required for something to get done we might
+              want to put it behind a much simpler interface (facade)</p>
+
+            <p class="card-text">Facade is a way of putting a simple interface in front of one or more complicated
+              subsystems.</p>
+
+            <p class="card-text"><strong>Trading Terminals</strong> first part of a terminal window is the buffer.
+              (rendered characters are stored)
+              Rectangular area of memory, typically a ID2 or 2D char or wchar_t array
+              A buffer can be much larger than the visible area of the terminal window, so it can store some historical
+              output to which you can scroll back.
+              viewport(rectangular area of buffer)
+              console (terminal window itself)
+
+              can Create a faster terminal scren using something like OpenGL API</p>
+
+
+            <img class="card-img img-fluid" src="../MyDevelopmentNotes/img/facade.png" alt="Facade Example">
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse6" data-parent="#accordion" data-toggle="collapse">
+              Flyweights
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse6" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Flyweight Pattern</h4>
+            <p class="card-text">Temporary component that acts as a smart reference to something (sometimes called token
+              or cookie)</p>
+
+            <p class="card-text">fundamentally a space-saving technique
+            </p>
+            <p class="card-text">DotNet example is Span<T></T>
+            </p>
+            <h5>Usernames Example:</h5>
+            <p class="card-text">
+              store a name once and then references to it...
+              separate First and Last Name and store in an indexed store and then simply store the index value instead
+              of actual string</p>
+
+            <img class="card-img-bottom img-fluid" src="../MyDevelopmentNotes/img/flyweight.png"
+              alt="Flyweight Example">
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse7" data-parent="#accordion" data-toggle="collapse">
+              Proxies
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse7" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Proxy Pattern</h4>
+            <p class="card-text">Similar to Decorator Pattern but tries to preserve exactly (or as closely as possible)
+              the API that is being used while offering internal enhancements</p>
+
+            <h5>Protection Proxy</h5>
+
+            <p class="card-text">Have a Car class AND want to check drivers age before allowing to use the Drive method
+            </p>
+            <p class="card-text">expose ICar interface AGAIN in a CarProxy class
+              CarProxy takes a Driver in the constructor (Driver contains the age)
+              private Car car = new Car(); INSIDE of the CarProxy class
+            </p>
+            <h5 style="margin-bottom: 10px">Property Proxy</h5>
+
+            <h5>Virtual Proxy</h5>
+            <img class="card-img img-fluid mb-5" src="../MyDevelopmentNotes/img/VirtualProxy.png"
+              alt="Virtual Proxy Example">
+            <h5>Communication Proxy</h5>
+            <p class="card-text">
+              just moving something that's running on the same server / system to somewhere remote like a web API and
+              pinging it etc...
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+      integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
