@@ -2,18 +2,18 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-  <link type="text/css" rel="stylesheet" href="notes.css">
-  <title>Software Design Patterns</title>
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous" />
+  <link type="text/css" rel="stylesheet" href="notes.css" />
+  <title>Study Design Patterns</title>
 </head>
 
 <body class="bg-dark text-light">
   <header>
-    <h1 class="display-2 text-center my-4">Design Patterns</h1>
+    <h1 class="display-2 text-center my-4">Study Design Patterns</h1>
     <div class="container">
       <div class="row">
         <div class="col-md-2">
@@ -22,9 +22,7 @@
               Computer Sci.
             </button>
             <div class="dropdown-menu">
-
-              <a class="dropdown-item" href="DotNetDesignPatterns.html" class="dropdown-item">Design
-                Patterns</a>
+              <a class="dropdown-item" href="DotNetDesignPatterns.html" class="dropdown-item">Design Patterns</a>
               <a class="dropdown-item" href="studyDesignPatterns.html" class="dropdown-item">Quick Study
               </a>
               <a href="index.html" class="dropdown-item">Notes Home</a>
@@ -82,19 +80,27 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </header>
 
   <div class="container">
     <button class="btn btn-primary d-block mt-25" style="margin-top: 25px" data-toggle="collapse"
-      data-target="#collapse-btn-1">Design Pattern links</button>
+      data-target="#collapse-btn-1">
+      Design Pattern links
+    </button>
 
     <div class="collapse my-25" id="collapse-btn-1">
       <div class="card">
         <div class="card-body">
           <ul class="list-group">
+            <a class="list-group-item list-group-item-dark" target="_blank"
+              href="https://blog.bitsrc.io/solid-principles-every-developer-should-know-b3bfa96bb688">Solid Principles
+              Every Developer Should know</a>
+
+            <a class="list-group-item list-group-item-dark" target="_blank"
+              href="https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013">10
+              Common Softare Architecture Patterns</a>
             <a class="list-group-item list-group-item-dark" target="_blank"
               href="https://codeburst.io/software-architecture-the-difference-between-architecture-and-design-7936abdd5830">Difference
               Between Architecture and Design</a>
@@ -103,53 +109,111 @@
       </div>
     </div>
 
+    <h2 style="margin-top: 10px" class="display-3">SOLID</h2>
+
+    <button style="margin-top: 5px" class="btn btn-success" data-toggle="popover" data-placement="right"
+      data-content="Single Responsibility Principle:  A Class should have only one job">
+      S:</button><br />
+
+    <button style="margin-top: 5px" class="btn btn-success" data-toggle="popover" data-placement="right" data-content="Open Closed Principle:  Software entities should be open for extension,
+    not modification.">
+      O:
+    </button>
+
+    <button style="margin-top: 5px" class="btn btn-success" data-toggle="popover" data-placement="right" data-content="Liskov Substitution Principle:  Sub-class can
+    assume the place of its super-class without errors.">
+      L: 
+    </button>
+
+    <button style="margin-top: 5px" class="btn btn-success" data-toggle="popover" data-placement="right" data-content="Interface Segregation Principle:  Clients should not be forced to depend upon interfaces that they do not use.">
+      I: 
+    </button>
+
+    <button style="margin-top: 5px" class="btn btn-success" data-toggle="popover" data-placement="right" data-content="Dependency Inversion Principle:  Dependency should be on abstractions not concretions">
+      D: 
+    </button>
+
+    <h2 style="margin-top: 10px" class="display-3">Design Patterns</h2>
+
+    <h3 style="margin-top: 10px">Creational:</h3>
+
+    <button style="margin-top: 5px" class="btn btn-danger" data-toggle="popover" data-placement="right"
+      data-content="Piecewise construction of
+    objects while making the target object's constructors inaccessible.  Can force users to use the builder by specifying it as part of a parameter function.">
+      Builder</button><br />
+
+    <button style="margin-top: 5px" class="btn btn-danger" data-toggle="popover" data-placement="right" data-content="Class member that acts as a way of creating objects in ONE GO instead of piecewise construction (typically
+    replaces the constructor) ">
+      Factory
+    </button>
+
+    <button style="margin-top: 5px" class="btn btn-danger" data-toggle="popover" data-placement="right" data-content="Class member that acts as a way of creating objects in ONE GO instead of piecewise construction (typically
+    replaces the constructor) ">
+      Factory
+    </button>
+
+    <h2 class="display-3" style="margin-top: 10px">
+      Software Architecture Patterns
+    </h2>
+
     <button class="btn btn-success d-block mb-4" data-toggle="collapse" style="margin-top: 25px"
-      data-target="#collapse-btn-2">Creational Patterns</button>
+      data-target="#collapse-btn-2">
+      Creational Patterns
+    </button>
 
     <div class="collapse mb-5" id="collapse-btn-2">
       <div class="card">
         <div class="card-body">
           <ul class="list-group mb-5">
             <a class="list-group-item list-group-item-dark" href="creational.html">Builders (piecewise construction of
-              objects while making the target object's constructors inaccessible).</a>
+              objects while making the
+              target object's constructors inaccessible).</a>
             <a class="list-group-item list-group-item-dark" href="creational.html">Factories (class member that acts as
-              a way of creating object in one go (typically replaces a constructor))</a>
+              a way of creating object
+              in one go (typically replaces a constructor))</a>
             <a class="list-group-item list-group-item-dark" href="creational.html">Prototypes (building from an already
               existing object)</a>
             <a class="list-group-item list-group-item-dark" href="creational.html">Singleton (idea of only one instance
-              of a particular component in your application)</a>
+              of a particular component
+              in your application)</a>
           </ul>
         </div>
       </div>
     </div>
 
     <button class="btn btn-info d-block mb-4" data-toggle="collapse" style="margin-top: 25px"
-      data-target="#collapse-btn-3">Structural Patterns</button>
+      data-target="#collapse-btn-3">
+      Structural Patterns
+    </button>
 
     <div class="collapse mb-5" id="collapse-btn-3">
       <div class="card">
         <div class="card-body">
           <ul class="list-group mb-5">
             <a class="list-group-item list-group-item-dark" href="structural.html">
-              <strong>Adapter</strong> (converts the unexpected usage of a class to an expected one) </a>
+              <strong>Adapter</strong> (converts the unexpected usage of a
+              class to an expected one)
+            </a>
             <a class="list-group-item list-group-item-dark" href="structural.html"><strong>Bridge</strong> (connect two
-              distinct
-              hierarchies together through a common parameter)</a>
+              distinct hierarchies
+              together through a common parameter)</a>
             <a class="list-group-item list-group-item-dark" href="structural.html"><strong>Composite</strong> (allows us
-              to provide
-              identical interfaces for individual objects and collections of objects)</a>
+              to provide identical
+              interfaces for individual objects and collections of objects)</a>
             <a class="list-group-item list-group-item-dark" href="structural.html"><strong>Decorator </strong>(given a
-              class and you want
-              to extend that class's functionality)
+              class and you want to
+              extend that class's functionality)
             </a>
             <a class="list-group-item list-group-item-dark" href="structural.html"><strong>Facade</strong> (put complex
-              interaction behind a much simpler interface (facade))
+              interaction behind a much
+              simpler interface (facade))
             </a>
             <a class="list-group-item list-group-item-dark" href="structural.html"><strong>Flyweight </strong>(sometimes
               called token or cookie)
             </a>
             <a class="list-group-item list-group-item-dark" href="structural.html"><strong>Proxy</strong> Similar to
-              Decorator Pattern but tries to preserve exactly the API
+              Decorator Pattern but tries
+              to preserve exactly the API
             </a>
           </ul>
         </div>
@@ -157,37 +221,47 @@
     </div>
 
     <button class="btn btn-warning d-block mb-4" data-toggle="collapse" style="margin-top: 25px"
-      data-target="#collapse-btn-4">Behavioral Patterns</button>
+      data-target="#collapse-btn-4">
+      Behavioral Patterns
+    </button>
 
     <div class="collapse mb-5" id="collapse-btn-4">
       <div class="card">
         <div class="card-body">
           <ul class="list-group mb-5">
             <a class="list-group-item list-group-item-dark" href="behavioral.html">
-              <strong>Chain of Responsibility</strong> (simple design pattern that lets components process a command (or
-              a query) in turn)</a>
+              <strong>Chain of Responsibility</strong> (simple design pattern
+              that lets components process a command (or a query) in turn)</a>
             <a class="list-group-item list-group-item-dark" href="behavioral.html"><strong>Command</strong> (send
-              objects commands or instructions on how to do something.
-              )</a>
+              objects commands or instructions
+              on how to do something. )</a>
             <a class="list-group-item list-group-item-dark" href="structural.html"><strong>Interpreter</strong>
-              (Uncommon Design Pattern (Lexing / Parsing))</a>
+              (Uncommon Design Pattern (Lexing /
+              Parsing))</a>
             <a class="list-group-item list-group-item-dark" href="behavioral.html"><strong>Iterator </strong>(An object
-              that is used to traverse some structure or other.)
+              that is used to traverse
+              some structure or other.)
             </a>
             <a class="list-group-item list-group-item-dark" href="behavioral.html"><strong>Mediator</strong> (situations
-              when you don't necessarily want objects to be aware of each other's presence.)
+              when you don't
+              necessarily want objects to be aware of each other's presence.)
             </a>
             <a class="list-group-item list-group-item-dark" href="behavioral.html"><strong>Memento </strong>(when you
-              care about being able to roll back the system to a particular state)
+              care about being able to
+              roll back the system to a particular state)
             </a>
             <a class="list-group-item list-group-item-dark" href="behavioral.html"><strong>Null Object</strong> (you
-              don't want a piece of functionality but it's built into the interface....you make a NULL object)
+              don't want a piece of
+              functionality but it's built into the interface....you make a
+              NULL object)
             </a>
             <a class="list-group-item list-group-item-dark" href="behavioral.html"><strong>Observer</strong> (let's one
-              component notify other components that something has happened)
+              component notify other
+              components that something has happened)
             </a>
             <a class="list-group-item list-group-item-dark" href="behavioral.html"><strong>State</strong> (state
-              controls behavior and state can be changed.)
+              controls behavior and state can
+              be changed.)
             </a>
             <a class="list-group-item list-group-item-dark" href="behavioral.html"><strong>Strategy</strong>
             </a>
@@ -199,9 +273,6 @@
         </div>
       </div>
     </div>
-
-
-
 
     <div id="accordion" style="margin-top: 25px">
       <div class="card">
@@ -216,14 +287,23 @@
         <div id="collapse1" class="collapse">
           <div class="card-body bg-secondary">
             <h4 class="car-title">Software Architecture</h4>
-            <p class="card-text">Software architecture is the process of converting software characteristics such as
-              flexibility, scalability, feasibility, reusability, and security into a structured solution that meets the
-              technical and the business expectations.</p>
-            <p class="card-text">Software should be "extendable, modular and maintainable". <strong>Performance</strong>
-              and <strong>low fault tolerance, scalability and reliability</strong> are your key characteristics</p>
-            <p class="card-text">Responsible for the skeleton and the high-level infrastructure of a software.</p>
+            <p class="card-text">
+              Software architecture is the process of converting software
+              characteristics such as flexibility, scalability, feasibility,
+              reusability, and security into a structured solution that meets
+              the technical and the business expectations.
+            </p>
+            <p class="card-text">
+              Software should be "extendable, modular and maintainable".
+              <strong>Performance</strong> and
+              <strong>low fault tolerance, scalability and reliability</strong>
+              are your key characteristics
+            </p>
+            <p class="card-text">
+              Responsible for the skeleton and the high-level infrastructure
+              of a software.
+            </p>
             <a href="SApatterns.html" class="btn btn-primary">Architecture Patterns</a>
-
           </div>
         </div>
       </div>
@@ -240,8 +320,10 @@
         <div id="collapse2" class="collapse">
           <div class="card-body bg-secondary">
             <h4 class="car-title">Software Design</h4>
-            <p class="card-text">Responsible for the code-level design such as, what each module is doing, the classes
-              scope, and the functions, purposes etc..</p>
+            <p class="card-text">
+              Responsible for the code-level design such as, what each module
+              is doing, the classes scope, and the functions, purposes etc..
+            </p>
             <a href="DesignPatterns.html" class="btn btn-primary">Design Patterns</a>
           </div>
         </div>
@@ -258,19 +340,17 @@
 
         <div id="collapse3" class="collapse">
           <div class="card-body">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis ea iste a doloremque, cumque, debitis
-            eum vel ipsum architecto
-            aut, recusandae totam ullam aperiam. Nesciunt expedita officiis animi quam corporis optio inventore facilis
-            sint
-            et nulla in, repellat debitis dolor at nisi quo, unde temporibus. Quos nisi nostrum officia, illo.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Veritatis ea iste a doloremque, cumque, debitis eum vel ipsum
+            architecto aut, recusandae totam ullam aperiam. Nesciunt expedita
+            officiis animi quam corporis optio inventore facilis sint et nulla
+            in, repellat debitis dolor at nisi quo, unde temporibus. Quos nisi
+            nostrum officia, illo.
           </div>
         </div>
       </div>
     </div>
-
   </div>
-
-
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
@@ -282,6 +362,10 @@
     integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
   </script>
 
+  <script>
+    // Init Popover
+    $('[data-toggle="popover"]').popover();
+  </script>
 </body>
 
 </html>
