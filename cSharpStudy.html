@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous" />
+  <link type="text/css" rel="stylesheet" href="notes.css" />
+  <title>C# Quick Study</title>
+</head>
+
+<body class="bg-dark text-light">
+  <header>
+    <h1 class="display-2 text-center my-4">c# Quick Study</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-primary btn-block dropdown-toggle" type="button" data-toggle="dropdown">
+              Computer Sci.
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="DotNetDesignPatterns.html" class="dropdown-item">Design Patterns</a>
+              <a class="dropdown-item" href="studyDesignPatterns.html" class="dropdown-item">Quick Study
+              </a>
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-success btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              C#
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="mvc.html" class="dropdown-item">.Net MVC</a>
+              <a class="dropdown-item" href="cSharpStudy.html" class="dropdown-item">C# Quick Study</a>
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-danger btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              JS
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-success btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              Salesforce
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-warning btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              WebDevelopment
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-primary btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              Interview Prep
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <button class="btn btn-primary d-block mt-25" style="margin-top: 25px" data-toggle="collapse"
+      data-target="#collapse-btn-1">
+      Design Pattern links
+    </button>
+
+    <div class="collapse my-25" id="collapse-btn-1">
+      <div class="card">
+        <div class="card-body">
+          <ul class="list-group">
+            <a class="list-group-item list-group-item-dark" target="_blank"
+              href="https://blog.bitsrc.io/solid-principles-every-developer-should-know-b3bfa96bb688">Solid Principles
+              Every Developer Should know</a>
+
+            <a class="list-group-item list-group-item-dark" target="_blank"
+              href="https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013">10
+              Common Softare Architecture Patterns</a>
+            <a class="list-group-item list-group-item-dark" target="_blank"
+              href="https://codeburst.io/software-architecture-the-difference-between-architecture-and-design-7936abdd5830">Difference
+              Between Architecture and Design</a>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h2 style="margin-top: 10px" class="display-3">Class Construction</h2>
+
+    <div class="btn-group-vertical">
+      <div class="btn-group">
+        <button style="margin-top: 5px" class="btn btn-success" data-toggle="popover" data-placement="right"
+          data-content="abstract means you cannot instantiate it">
+          abstract</button>
+      </div>
+
+      <div class="btn-group">
+
+        <button style="margin-top: 5px" class="btn btn-success" data-toggle="popover" data-placement="right"
+          data-content="static classes cannot implement interfaces">
+          static
+        </button>
+      </div>
+
+      <div class="btn-group">
+
+        <button style="margin-top: 5px" class="btn btn-success" data-toggle="popover" data-placement="right"
+          data-content="Liskov Substitution Principle:  Sub-class can
+     assume the place of its super-class without errors.">
+          L:
+        </button>
+      </div>
+
+      <div class="btn-group">
+        <button style="margin-top: 5px" class="btn btn-success" data-toggle="popover" data-placement="right"
+          data-content="Interface Segregation Principle:  Clients should not be forced to depend upon interfaces that they do not use.">
+          I:
+        </button>
+      </div>
+
+      <button style="margin-top: 5px" class="btn btn-success" data-toggle="popover" data-placement="right"
+        data-content="Dependency Inversion Principle:  Dependency should be on abstractions not concretions">
+        D:
+      </button>
+
+    </div>
+
+
+    <div id="accordion" style="margin-top: 10px">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse1" data-parent="#accordion" data-toggle="collapse">
+              3 Fundamental ways in which data structures can be defined in c#
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse1" class="collapse">
+          <div class="card-body bg-secondary">
+            <ol class="list-group">
+
+              <li class="list-group-item list-group-item-success">1) Statically. Write the classes and they get compiled
+              </li>
+              <li class="list-group-item list-group-item-success">2) Code generation. T4 templates or databases (code
+                gets generated when you change UI behind the scenes like with WinForms or WPF)</li>
+              <li class="list-group-item list-group-item-success">3) Dynamically ie @ RunTime</li>
+            </ol>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse2" data-parent="#accordion" data-toggle="collapse">
+              Factories
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse2" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Factories</h4>
+            <p class="card-text">it is the most used design pattern in the OOP world because it saves a lot of time in
+              the future when you have to modify one of the classes you used</p>
+            <p class="card-text">Factory Method is a class member that acts as a way of creating objects (typically
+              replaces the constructor)</p>
+            <p class="card-text">typically a separate class that knows how to construct objects</p>
+            <p class="card-text">can implement caching and other storage optimizations; it is natural choice for
+              approaches such as pooling or the Singleton pattern</p>
+            <p class="card-text">Differs from the <strong>Builder</strong> in that with Factory you create the object in
+              one go whereas with Builder it's piecewise construction</p>
+
+            <img class="card-img img-fluid mb-5" src="../MyDevelopmentNotes/img/factory.png" alt="Factory example">
+            <img class="card-img-bottom img-fluid" src="../MyDevelopmentNotes/img/innerFactory.png" alt="Inner Factory">
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse3" data-parent="#accordion" data-toggle="collapse">
+              Prototypes
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse3" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Prototype Pattern</h4>
+            <p class="card-text">Building from an already existing object</p>
+            <ul class="list-group">
+              <p class="list-group-header">Really only 2 ways to implement the Prototype Pattern</p>
+              <li class="list-group-item list-group-item-success">1) writing code that correctly duplicates your object
+                (performs a deep copy)</li>
+              <li class="list-group-item list-group-item-success">2) writing code for support of serialization and
+                deserialization (computational penalty)</li>
+            </ul>
+            <p class="card-text mt-5"><strong>Deep</strong> vs <strong>Shallow</strong> copying</p>
+            <p class="card-text">assigning jane = john doesn't work because any changes to jane object will affect John
+              as well</p>
+            <p class="card-text">with value types, the cloning problem does not really exist (cloning a struct just
+              assign to new variable)</p>
+            <p class="card-text">strings are immutable, so you can use the assignment operator = on them without
+              worrying that subsequent modifications will affect more objects than it should</p>
+            <h5>Deep Copy</h5>
+            <img class="card-img img-fluid mb-5" src="../MyDevelopmentNotes/img/deepCopy.png" alt="Deep-Copy Prototype">
+            <h5>Prototype Factory</h5>
+            <img class="card-img img-fluid" src="../MyDevelopmentNotes/img/prototypeFactory.png"
+              alt="Prototype Factory">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse4" data-parent="#accordion" data-toggle="collapse">
+              Singletons
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse4" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Singleton Pattern</h4>
+            <p class="card-text">One instance of a component in your application(ex. a component that loads a database
+              into memory adn offers a read-only interface)</p>
+            <img class="card-img img-fluid mb-5" src="../MyDevelopmentNotes/img/databaseSingleton.png"
+              alt="Database Singleton">
+            <h5>LazyLoading Singleton</h5>
+            <img class="card-img img-fluid mb-5" src="../MyDevelopmentNotes/img/lazyLoading.png"
+              alt="LazyLoading singleton">
+
+            <ul class="list-group">
+              <p class="list-group-header">Singleton Issues:</p>
+              <li class="list-group-item list-group-item-warning">use in other components it becomes Fimrly Dependent
+                upon our SingletonInstance...</li>
+              <li class="list-group-item list-group-item-warning">...which presents issues with Unit Testing (having to
+                read a live database is frowned upon in Unit Testing)</li>
+              <li class="list-group-item list-group-item-success">SOLUTION = create something seperate that implements
+                the database interface so we can specify where the data is coming from and NOT DEPEND upon that
+                singleton</li>
+
+            </ul>
+
+            <ul class="list-group my-5">
+              <p class="list-group-header">Singletons and Inversion of Control</p>
+              <li class="list-group-item list-group-item-success">Instead of directly enforcing the lifetime of a class,
+                this funciton is outsourced to an Inversion of Control (IoC) container</li>
+              <li class="list-group-item list-group-item-success">many people believe that using a Singleton in a DI
+                container is the only socially acceptable use of a Singleton...</li>
+              <li class="list-group-item list-group-item-success">...with this approach if you need to replace a
+                Singleton object with something else, you can do it in one central place: the Container Configuration
+                code</li>
+
+            </ul>
+
+            <h5>Monostate</h5>
+            <img class="card-img img-fluid" src="../MyDevelopmentNotes/img/MonostateSingleton.png"
+              alt="Monostate singleton">
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <h2 class="display-3" style="margin-top: 10px">
+      Software Architecture Patterns
+    </h2>
+
+    <div class="btn-group-vertical">
+      <button style="margin-top: 5px" class="btn btn-info btn-lg" data-toggle="popover" data-placement="right"
+        data-content="It depends on developing small, independent modular services where each service solves
+        a specific problem...">
+        Microservices
+      </button> <br />
+
+
+      <button style="margin-top: 5px" class="btn btn-info btn-lg" data-toggle="popover" data-placement="right"
+        data-content="Divided into two main categories: Backend as a service (BaaS) and
+        Functions as a Service (FaaS)">
+        Serverless
+      </button> <br />
+
+      <button style="margin-top: 5px" class="btn btn-info btn-lg" data-toggle="popover" data-placement="right"
+        data-content="Main Idea is to decouple your system's parts and each part will be triggered when an
+        interesting event from another part has got triggered">
+        Event-Driven Architecture
+      </button> <br />
+    </div>
+
+  </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+  </script>
+
+  <script>
+    // Init Popover
+    $('[data-toggle="popover"]').popover();
+  </script>
+</body>
+
+</html>

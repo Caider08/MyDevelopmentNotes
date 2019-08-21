@@ -111,245 +111,206 @@
 
     <h2 style="margin-top: 10px" class="display-3">SOLID</h2>
 
-    <button style="margin-top: 5px" class="btn btn-success" data-toggle="popover" data-placement="right"
-      data-content="Single Responsibility Principle:  A Class should have only one job">
-      S:</button><br />
+    <div class="btn-group-vertical">
+      <div class="btn-group">
+        <button style="margin-top: 5px" class="btn btn-success" data-toggle="popover" data-placement="right"
+          data-content="Single Responsibility Principle:  A Class should have only one job">
+          S:</button>
+      </div>
 
-    <button style="margin-top: 5px" class="btn btn-success" data-toggle="popover" data-placement="right" data-content="Open Closed Principle:  Software entities should be open for extension,
-    not modification.">
-      O:
-    </button>
+      <div class="btn-group">
 
-    <button style="margin-top: 5px" class="btn btn-success" data-toggle="popover" data-placement="right" data-content="Liskov Substitution Principle:  Sub-class can
-    assume the place of its super-class without errors.">
-      L: 
-    </button>
+        <button style="margin-top: 5px" class="btn btn-success" data-toggle="popover" data-placement="right"
+          data-content="Open Closed Principle:  Software entities should be open for extension,
+     not modification.">
+          O:
+        </button>
+      </div>
 
-    <button style="margin-top: 5px" class="btn btn-success" data-toggle="popover" data-placement="right" data-content="Interface Segregation Principle:  Clients should not be forced to depend upon interfaces that they do not use.">
-      I: 
-    </button>
+      <div class="btn-group">
 
-    <button style="margin-top: 5px" class="btn btn-success" data-toggle="popover" data-placement="right" data-content="Dependency Inversion Principle:  Dependency should be on abstractions not concretions">
-      D: 
-    </button>
+        <button style="margin-top: 5px" class="btn btn-success" data-toggle="popover" data-placement="right"
+          data-content="Liskov Substitution Principle:  Sub-class can
+     assume the place of its super-class without errors.">
+          L:
+        </button>
+      </div>
+
+      <div class="btn-group">
+        <button style="margin-top: 5px" class="btn btn-success" data-toggle="popover" data-placement="right"
+          data-content="Interface Segregation Principle:  Clients should not be forced to depend upon interfaces that they do not use.">
+          I:
+        </button>
+      </div>
+
+      <button style="margin-top: 5px" class="btn btn-success" data-toggle="popover" data-placement="right"
+        data-content="Dependency Inversion Principle:  Dependency should be on abstractions not concretions">
+        D:
+      </button>
+
+    </div>
+
 
     <h2 style="margin-top: 10px" class="display-3">Design Patterns</h2>
 
     <h3 style="margin-top: 10px">Creational:</h3>
 
-    <button style="margin-top: 5px" class="btn btn-danger" data-toggle="popover" data-placement="right"
-      data-content="Piecewise construction of
+    <div class="btn-group-vertical">
+
+      <button style="margin-top: 5px" class="btn btn-danger" data-toggle="popover" data-placement="right"
+        data-content="Piecewise construction of
     objects while making the target object's constructors inaccessible.  Can force users to use the builder by specifying it as part of a parameter function.">
-      Builder</button><br />
+        Builder</button><br />
 
-    <button style="margin-top: 5px" class="btn btn-danger" data-toggle="popover" data-placement="right" data-content="Class member that acts as a way of creating objects in ONE GO instead of piecewise construction (typically
+      <button style="margin-top: 5px" class="btn btn-danger" data-toggle="popover" data-placement="right" data-content="Class member that acts as a way of creating objects in ONE GO instead of piecewise construction (typically
     replaces the constructor) ">
-      Factory
-    </button>
+        Factory
+      </button><br />
 
-    <button style="margin-top: 5px" class="btn btn-danger" data-toggle="popover" data-placement="right" data-content="Class member that acts as a way of creating objects in ONE GO instead of piecewise construction (typically
-    replaces the constructor) ">
-      Factory
-    </button>
+      <button style="margin-top: 5px" class="btn btn-danger" data-toggle="popover" data-placement="right"
+        data-content="Building from an already existing object">
+        Prototype
+      </button> <br />
+
+      <button style="margin-top: 5px" class="btn btn-danger" data-toggle="popover" data-placement="right"
+        data-content="One instance of a component in your application">
+        Singleton
+      </button> <br />
+    </div>
+
+    <h3 style="margin-top: 10px">Structural:</h3>
+
+    <div class="btn-group-vertical">
+
+      <button style="margin-top: 5px" class="btn btn-warning" data-toggle="popover" data-placement="right"
+        data-content="We have an interface, but we want a different one...">
+        Adapter</button><br />
+
+      <button style="margin-top: 5px" class="btn btn-warning" data-toggle="popover" data-placement="right" data-content="Application of the dependency inversion principle,
+    where you connect two distint hierarchies together through a common parameter.">
+        Bridge
+      </button><br />
+
+      <button style="margin-top: 5px" class="btn btn-warning" data-toggle="popover" data-placement="right" data-content="Allows us to provide identical interfaces for individual
+      objects and collections of objects.">
+        Composite
+      </button> <br />
+
+
+      <button style="margin-top: 5px" class="btn btn-warning" data-toggle="popover" data-placement="right" data-content="Decorator allows us to enhance existing types without either modifying the original
+      types (open-closed Principle) or causing an explosion of the number of derived types.">
+        Decorator
+      </button> <br />
+
+      <button style="margin-top: 5px" class="btn btn-warning" data-toggle="popover" data-placement="right"
+        data-content="Put something complex behind a much simpler interface.">
+        Facade
+      </button> <br />
+
+      <button style="margin-top: 5px" class="btn btn-warning" data-toggle="popover" data-placement="right"
+        data-content="Temporary component that acts as a smart reference to something (cookie or token)">
+        Flyweight
+      </button> <br />
+
+      <button style="margin-top: 5px" class="btn btn-warning" data-toggle="popover" data-placement="right"
+        data-content="Similar to Decorator Pattern but tries to preserve exactly (or as closely as possible) the API that is being used while offering internal enhancements">
+        Proxy
+      </button> <br />
+
+    </div>
+
+    <h3 style="margin-top: 10px">Behavioral:</h3>
+
+    <div class="btn-group-vertical">
+
+      <button style="margin-top: 5px" class="btn btn-primary" data-toggle="popover" data-placement="right"
+        data-content="Very simple design pattern that lets components process a command or query in turn">
+        Chain of Responsibility
+      </button> <br />
+
+      <button style="margin-top: 5px" class="btn btn-primary" data-toggle="popover" data-placement="right" data-content="Instead of working with objects directly by manipulating them through their
+    APIs, we send them commands or instructions on how to do something">
+        Command
+      </button> <br />
+
+      <button style="margin-top: 5px" class="btn btn-primary" data-toggle="popover" data-placement="right"
+        data-content="Uncommon pattern and removed from many universities">
+        Interpreter
+      </button> <br />
+
+      <button style="margin-top: 5px" class="btn btn-primary" data-toggle="popover" data-placement="right" data-content="Has been deliberately hidden in C# in favor of the simple IEnumerator/IEnumerable
+  dupoply">
+        Iterator
+      </button> <br />
+
+      <button style="margin-top: 5px" class="btn btn-primary" data-toggle="popover" data-placement="right" data-content="Situations when you don't necessarily want objects to be aware of each other's
+presence. (or maybe do but DON't want them to communicate through references...)">
+        Mediator
+      </button> <br />
+
+      <button style="margin-top: 5px" class="btn btn-primary" data-toggle="popover" data-placement="right"
+        data-content="all about handing out tokens that can be used to restore the system to a prior state.">
+        Memento
+      </button> <br />
+
+      <button style="margin-top: 5px" class="btn btn-primary" data-toggle="popover" data-placement="right" data-content="You don't want a piece of functionality but it's built into the interface....you make a
+NULL object">
+        Null Objects
+      </button> <br />
+
+      <button style="margin-top: 5px" class="btn btn-primary" data-toggle="popover" data-placement="right"
+        data-content="Let's one component notify other components that something has happened">
+        Observer
+      </button> <br />
+
+      <button style="margin-top: 5px" class="btn btn-primary" data-toggle="popover" data-placement="right" data-content="States model the
+possible states of the system and triggers transition us from one state to another.">
+        State
+      </button> <br />
+
+      <button style="margin-top: 5px" class="btn btn-primary" data-toggle="popover" data-placement="right" data-content="Allows you to define a skeleton of an algorithm and then use composition to supply
+the missing implementation details related to a particular strategy.">
+        Strategy
+      </button> <br />
+
+      <button style="margin-top: 5px" class="btn btn-primary" data-toggle="popover" data-placement="right" data-content="Strategy uses composition (whether dynamic or static) while Template uses
+inheritance">
+        Template
+      </button> <br />
+
+      <button style="margin-top: 5px" class="btn btn-primary" data-toggle="popover" data-placement="right"
+        data-content="Allows us to add some distinct behavior to every element in a heiarchy of objects">
+        Vistor
+      </button> <br />
+
+    </div>
 
     <h2 class="display-3" style="margin-top: 10px">
       Software Architecture Patterns
     </h2>
 
-    <button class="btn btn-success d-block mb-4" data-toggle="collapse" style="margin-top: 25px"
-      data-target="#collapse-btn-2">
-      Creational Patterns
-    </button>
+    <div class="btn-group-vertical">
+      <button style="margin-top: 5px" class="btn btn-info btn-lg" data-toggle="popover" data-placement="right"
+        data-content="It depends on developing small, independent modular services where each service solves
+        a specific problem...">
+        Microservices
+      </button> <br />
 
-    <div class="collapse mb-5" id="collapse-btn-2">
-      <div class="card">
-        <div class="card-body">
-          <ul class="list-group mb-5">
-            <a class="list-group-item list-group-item-dark" href="creational.html">Builders (piecewise construction of
-              objects while making the
-              target object's constructors inaccessible).</a>
-            <a class="list-group-item list-group-item-dark" href="creational.html">Factories (class member that acts as
-              a way of creating object
-              in one go (typically replaces a constructor))</a>
-            <a class="list-group-item list-group-item-dark" href="creational.html">Prototypes (building from an already
-              existing object)</a>
-            <a class="list-group-item list-group-item-dark" href="creational.html">Singleton (idea of only one instance
-              of a particular component
-              in your application)</a>
-          </ul>
-        </div>
-      </div>
+
+      <button style="margin-top: 5px" class="btn btn-info btn-lg" data-toggle="popover" data-placement="right"
+        data-content="Divided into two main categories: Backend as a service (BaaS) and
+        Functions as a Service (FaaS)">
+        Serverless
+      </button> <br />
+
+      <button style="margin-top: 5px" class="btn btn-info btn-lg" data-toggle="popover" data-placement="right"
+        data-content="Main Idea is to decouple your system's parts and each part will be triggered when an
+        interesting event from another part has got triggered">
+        Event-Driven Architecture
+      </button> <br />
     </div>
 
-    <button class="btn btn-info d-block mb-4" data-toggle="collapse" style="margin-top: 25px"
-      data-target="#collapse-btn-3">
-      Structural Patterns
-    </button>
-
-    <div class="collapse mb-5" id="collapse-btn-3">
-      <div class="card">
-        <div class="card-body">
-          <ul class="list-group mb-5">
-            <a class="list-group-item list-group-item-dark" href="structural.html">
-              <strong>Adapter</strong> (converts the unexpected usage of a
-              class to an expected one)
-            </a>
-            <a class="list-group-item list-group-item-dark" href="structural.html"><strong>Bridge</strong> (connect two
-              distinct hierarchies
-              together through a common parameter)</a>
-            <a class="list-group-item list-group-item-dark" href="structural.html"><strong>Composite</strong> (allows us
-              to provide identical
-              interfaces for individual objects and collections of objects)</a>
-            <a class="list-group-item list-group-item-dark" href="structural.html"><strong>Decorator </strong>(given a
-              class and you want to
-              extend that class's functionality)
-            </a>
-            <a class="list-group-item list-group-item-dark" href="structural.html"><strong>Facade</strong> (put complex
-              interaction behind a much
-              simpler interface (facade))
-            </a>
-            <a class="list-group-item list-group-item-dark" href="structural.html"><strong>Flyweight </strong>(sometimes
-              called token or cookie)
-            </a>
-            <a class="list-group-item list-group-item-dark" href="structural.html"><strong>Proxy</strong> Similar to
-              Decorator Pattern but tries
-              to preserve exactly the API
-            </a>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <button class="btn btn-warning d-block mb-4" data-toggle="collapse" style="margin-top: 25px"
-      data-target="#collapse-btn-4">
-      Behavioral Patterns
-    </button>
-
-    <div class="collapse mb-5" id="collapse-btn-4">
-      <div class="card">
-        <div class="card-body">
-          <ul class="list-group mb-5">
-            <a class="list-group-item list-group-item-dark" href="behavioral.html">
-              <strong>Chain of Responsibility</strong> (simple design pattern
-              that lets components process a command (or a query) in turn)</a>
-            <a class="list-group-item list-group-item-dark" href="behavioral.html"><strong>Command</strong> (send
-              objects commands or instructions
-              on how to do something. )</a>
-            <a class="list-group-item list-group-item-dark" href="structural.html"><strong>Interpreter</strong>
-              (Uncommon Design Pattern (Lexing /
-              Parsing))</a>
-            <a class="list-group-item list-group-item-dark" href="behavioral.html"><strong>Iterator </strong>(An object
-              that is used to traverse
-              some structure or other.)
-            </a>
-            <a class="list-group-item list-group-item-dark" href="behavioral.html"><strong>Mediator</strong> (situations
-              when you don't
-              necessarily want objects to be aware of each other's presence.)
-            </a>
-            <a class="list-group-item list-group-item-dark" href="behavioral.html"><strong>Memento </strong>(when you
-              care about being able to
-              roll back the system to a particular state)
-            </a>
-            <a class="list-group-item list-group-item-dark" href="behavioral.html"><strong>Null Object</strong> (you
-              don't want a piece of
-              functionality but it's built into the interface....you make a
-              NULL object)
-            </a>
-            <a class="list-group-item list-group-item-dark" href="behavioral.html"><strong>Observer</strong> (let's one
-              component notify other
-              components that something has happened)
-            </a>
-            <a class="list-group-item list-group-item-dark" href="behavioral.html"><strong>State</strong> (state
-              controls behavior and state can
-              be changed.)
-            </a>
-            <a class="list-group-item list-group-item-dark" href="behavioral.html"><strong>Strategy</strong>
-            </a>
-            <a class="list-group-item list-group-item-dark" href="behavioral.html"><strong>Template Method</strong>
-            </a>
-            <a class="list-group-item list-group-item-dark" href="behavioral.html"><strong>Visitor</strong>
-            </a>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div id="accordion" style="margin-top: 25px">
-      <div class="card">
-        <div class="card-header">
-          <h5>
-            <a href="#collapse1" data-parent="#accordion" data-toggle="collapse">
-              Creational Patterns
-            </a>
-          </h5>
-        </div>
-
-        <div id="collapse1" class="collapse">
-          <div class="card-body bg-secondary">
-            <h4 class="car-title">Software Architecture</h4>
-            <p class="card-text">
-              Software architecture is the process of converting software
-              characteristics such as flexibility, scalability, feasibility,
-              reusability, and security into a structured solution that meets
-              the technical and the business expectations.
-            </p>
-            <p class="card-text">
-              Software should be "extendable, modular and maintainable".
-              <strong>Performance</strong> and
-              <strong>low fault tolerance, scalability and reliability</strong>
-              are your key characteristics
-            </p>
-            <p class="card-text">
-              Responsible for the skeleton and the high-level infrastructure
-              of a software.
-            </p>
-            <a href="SApatterns.html" class="btn btn-primary">Architecture Patterns</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <h5>
-            <a href="#collapse2" data-parent="#accordion" data-toggle="collapse">
-              Software Design
-            </a>
-          </h5>
-        </div>
-
-        <div id="collapse2" class="collapse">
-          <div class="card-body bg-secondary">
-            <h4 class="car-title">Software Design</h4>
-            <p class="card-text">
-              Responsible for the code-level design such as, what each module
-              is doing, the classes scope, and the functions, purposes etc..
-            </p>
-            <a href="DesignPatterns.html" class="btn btn-primary">Design Patterns</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <h5>
-            <a href="#collapse3" data-parent="#accordion" data-toggle="collapse">
-              Collapse Three
-            </a>
-          </h5>
-        </div>
-
-        <div id="collapse3" class="collapse">
-          <div class="card-body">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Veritatis ea iste a doloremque, cumque, debitis eum vel ipsum
-            architecto aut, recusandae totam ullam aperiam. Nesciunt expedita
-            officiis animi quam corporis optio inventore facilis sint et nulla
-            in, repellat debitis dolor at nisi quo, unde temporibus. Quos nisi
-            nostrum officia, illo.
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
