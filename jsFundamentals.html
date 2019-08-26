@@ -215,7 +215,6 @@
             <p class="card-text">1 === true = false (no type coercion)</p>
             <p class="card-text">"2" + 3 returns "23" (because 3 is coerced to "3" and the strings are added</p>
 
-
             <ul class="list-group">
               <p class="list-group-header">Let</p>
               <li class="list-group-item list-group-item-success">Can be mutated(same thing as var)</li>
@@ -252,6 +251,8 @@
                 defining</li>
 
             </ul>
+
+            <img class="card-img img-fluid" src="img/TheVariableObject.PNG" alt="Variable Object">
 
             <p class="card-text mt-5">Variables associated with objects DON'T contain the objects, they contain a
               reference (pointer)</p>
@@ -290,6 +291,7 @@
               methods from the prototype</p>
             <p class="card-text"></p>
             <h5>Execution object</h5>
+            <img class="card-img img-fluid" src="img/TheVariableObject.PNG" alt="Variable Object">
             <ul class="list-group">
 
               <li class="list-group-item list-group-item-info">stores variables</li>
@@ -315,55 +317,248 @@
         <div class="card-header">
           <h5>
             <a href="#collapse5" data-parent="#accordion" data-toggle="collapse">
-              Singletons
+              Execution Context
             </a>
           </h5>
         </div>
 
         <div id="collapse5" class="collapse">
           <div class="card-body bg-secondary">
-            <h4 class="card-title">Singleton Pattern</h4>
-            <p class="card-text">One instance of a component in your application(ex. a component that loads a database
-              into memory adn offers a read-only interface)</p>
-            <p class="card-text">Angular’s services are a prime example of the singleton pattern being used in a big
-              popular framework. </p>
-            <img class="card-img img-fluid mb-5" src="img/databaseSingleton.png" alt="Database Singleton">
-            <h5>LazyLoading Singleton</h5>
-            <img class="card-img img-fluid mb-5" src="img/lazyLoading.png" alt="LazyLoading singleton">
+            <h4 class="card-title">Execution Context</h4>
+            
+            <p class="card-text">Stores Variables</p>
+            <img class="card-img img-fluid mb-5" src="img/TheVariableObject.PNG" alt="Variable Object Context">      
+            <p class="card-text"><strong>Global Execution Object:</strong>  Code that isn't in any function.  Window object in Browser</p>
+            <p class="card-text">Any function call is a new execution context</p>
+
+            <img class="card-img img-fluid mb-5" src="img/ExecutionContexts.PNG" alt="Execution Context basic">
 
             <ul class="list-group">
-              <p class="list-group-header">Singleton Issues:</p>
-              <li class="list-group-item list-group-item-warning">use in other components it becomes Fimrly Dependent
-                upon our SingletonInstance...</li>
-              <li class="list-group-item list-group-item-warning">...which presents issues with Unit Testing (having to
-                read a live database is frowned upon in Unit Testing)</li>
-              <li class="list-group-item list-group-item-success">SOLUTION = create something seperate that implements
-                the database interface so we can specify where the data is coming from and NOT DEPEND upon that
-                singleton</li>
+              <p class="list-group-header"><strong>Hoisting</strong></p>
+              <li class="list-group-item list-group-item-info">variables in JS are available BEFORE the execution actually starts.</li>
+              <li class="list-group-item list-group-item-info">don't have to declare functions() before calling them</li>
+              <li class="list-group-item list-group-item-info">Variables are set to undefined in the creation phase</li>
 
             </ul>
 
-            <ul class="list-group my-5">
-              <p class="list-group-header">Singletons and Inversion of Control</p>
-              <li class="list-group-item list-group-item-success">Instead of directly enforcing the lifetime of a class,
-                this funciton is outsourced to an Inversion of Control (IoC) container</li>
-              <li class="list-group-item list-group-item-success">many people believe that using a Singleton in a DI
-                container is the only socially acceptable use of a Singleton...</li>
-              <li class="list-group-item list-group-item-success">...with this approach if you need to replace a
-                Singleton object with something else, you can do it in one central place: the Container Configuration
-                code</li>
+            <p class="card-text">ONLY way to create a new scope in JS is to create new functions...</p>
+            <p class="card-text"><strong>lexical scoping</strong> - a function() inside another function gets access to the scope of the outer functions().</p>
+            <p class="card-text"><strong>'this'</strong> inside a function POINTS TO THE GLOBAL Object (even inner functions)</p>
 
+            <ul class="list-group">
+              <p class="list-group-header"><strong>CLOSURES</strong></p>
+              <li class="list-group-item list-group-item-warning">don't have to manually create them</li>
+              <li class="list-group-item list-group-item-warning">Inner-function has access to the variables and parameters of its outer-function, even after outer function has returned (think backpack)</li>
+              <img class="card-img img-fluid mb-5" src="img/closuresAnalogy.png" alt="Closures Backpack Analogy">
+              <li class="list-group-item list-group-item-warning">Function A() declares variable X and returns function B().  Function B() CAN access variable X because of <strong>closures</strong></li>
+              <li class="list-group-item list-group-item-warning">In module pattern, public methods can access private functions and variables because a CLOSURE was created</li>
             </ul>
 
-            <h5>Monostate</h5>
-            <img class="card-img img-fluid" src="img/MonostateSingleton.png" alt="Monostate singleton">
+            
+
+            <ul class="list-group">
+              <p class="list-group-header">WHEN program calls a function:</p>
+              <li class="list-group-item list-group-item-success">JS creates a new execution context (local)...</li>       
+              <li class="list-group-item list-group-item-success">...That local context will have its own set of variables...</li>
+              <li class="list-group-item list-group-success">...New Execution Context thrown onto the execution-stack.</li>
+            </ul>
+
+
+            <img class="card-img-bottom img-fluid" src="img/ExecutionContextINdetail.PNG" alt="Execution Context Detailed">
 
           </div>
         </div>
       </div>
 
-    </div>
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse6" data-parent="#accordion" data-toggle="collapse">
+              Event Loop JS
+            </a>
+          </h5>
+        </div>
 
+        <div id="collapse6" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Event Loop JS</h4>
+
+            <ol class="list-group">
+              <p class="list-group-header">Event Loop simplied:</p>
+              <li class="list-group-item list-group-item-success">3 Parts: Execution Stack, WEB APIs, Message Que</li>
+              <li class="list-group-item list-group-item-success">As functions() called they go onto the <strong>Execution Stack</strong>...As they return they Pop() off the stack</li>
+              <li class="list-group-item list-group-item-success">Asyncs (timeOuts() etc...), DOM Events (event listeners etc...) go with their Timers to the <strong>Web API</strong> and get knocked off <strong>Execution Stack</strong> so that other functions can execute </li>
+              <li class="list-group-item list-group-item-success">Once time finishes on the Asyncs...their callbackFunction() get sent to <strong>MessageQue</strong></li>
+              <li class="list-group-item list-group-item-success">CallBackFunctions() sit in <strong>MessageQue</strong> until <strong>ExeuctionStack()</strong> is empty (then Event Loop pushes it onto the stack)</li>
+            </ol>
+        
+            
+            <img class="card-img img-fluid mb-5" src="img/ExecutionSTACK.PNG" alt="Execution Stack basic">
+
+            <img class="card-img img-fluid" src="img/EventLoopJS.PNG" alt="Event Loop in JS example">
+            <img class="card-img img-fluid" src="img/EventLoopExample1.PNG" alt="Event Loop in JS example">
+            <img class="card-img img-fluid" src="img/EventLoop2.PNG" alt="Event Loop in JS example">
+            <img class="card-img img-fluid" src="img/EventLoop3.PNG" alt="Event Loop in JS example">
+            <img class="card-img img-fluid mb-5" src="img/EventLoop4.PNG" alt="Event Loop in JS example">
+
+            <p class="card-text">The main JS runtime is single-threaded...so two functions can't run at the same time.</p>
+            <p class="card-text">The runtime contains an <strong>Event Queue</strong> which stores a list of messages to be processed.</p>
+            <p class="card-text">There are no race conditions, no deadlocks.  However, the code in the Event Queue needs to run fast...otherwise the Browser will become unresponsive and will ask to kill the task.</p>
+            <h5>Event Loop Steps:</h5>
+            <p class="card-text">As functions() called they go onto the <strong>Execution Stack</strong>...As they return they Pop() off the stack (think STACK data structure).</p>
+            
+            <ul class="list-group">
+              <p class="list-group-header">Async(such as setTimeout())</p>
+              <li class="list-group-item list-group-item-info">Go with their Timers to the <strong>Web Api</strong> section...That call gets knocked off the stack(<strong>execution stack</strong>)</li>
+              <li class="list-group-item list-group-item-info">Rest of <strong>Execution Stack()</strong> can now execute</li>
+              <li class="list-group-item list-group-item-info">Once time finishes...callbackFunction() gets sent to the <strong>Message Que:</strong></li>
+              <li class="list-group-item list-group-item-info"><strong>Message Que</strong> calls that function ONCE all other functions() are off the <strong>Execution Stack()</strong></li>
+  
+            </ul>
+
+            <ul class="list-group">
+              <p class="list-group-header">Web API</p>
+              <li class="list-group-item list-group-item-info">setTimeout() - sits in there until Time Ends...then callBack funcion() moved to the <strong>MessageQue</strong></li>
+              <li class="list-group-item list-group-item-info"><strong>DOM events</strong> - such as EventListener() sits in here</li>
+              <li class="list-group-item list-group-item-info">XMLHttpRequest()</li>
+             
+            </ul>
+
+            <p class="card-text"><strong>EVENT loop</strong> - monitors the <strong>Execution-stack</strong> so that once it's empty it can push the next <strong>Message Que</strong> function() onto it</p>
+            <p class="card-text"><strong>DOM Evetns</strong> processed when the <strong>Execution Stack</strong> is empty</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse7" data-parent="#accordion" data-toggle="collapse">
+              DOM
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse7" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Document Object Model</h4>
+            <img class="card-img-top img-fluid" src="img/DOMbasic.PNG" alt="Event Loop in JS example">
+            <p class="card-text">'this' inside a function() points to the Global object (the DOM usually)</p>
+            <p class="card-text"><strong>EVENT Bubbling:</strong> Events bubble up inside the DOM-tree</p>
+
+            <img src="img/eventBubbling.PNG" alt="Event Bubbling JS" class="card-img img-fluid">
+            <img class="card-img img-fluid" src="img/EventLoopExample1.PNG" alt="Event Loop in JS example">
+          
+            <h5>Event Delegation</h5>
+            <p class="card-text">Attach it to the parent element and wait for it (catch it)</p>
+            <p class="card-text">Use cases:</p>
+            <p class="card-text">...Have an element w/ lots of child elements we're interested in</p>
+            <p class="card-text">...When we want an Event handler attached to an element that is not yet in the DOM when our page is loaded</p>
+            <img class="card-img img-fluid" src="img/EventDelegation.PNG" alt="Event Loop in JS example">
+            <ul class="list-group">
+              <p class="list-group-header">document methods:</p>
+              <li class="list-group-item list-group-item-info">document.querySelector('id').textContent = variable</li>
+              <li class="list-group-item list-group-item-info">document.querySelector('.id').style.display = "none"  (set the image or text to blank)</li>
+              <li class="list-group-item list-group-item-info">document.querySelector('.className').value  (grab user input)</li>
+            </ul>
+
+
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse8" data-parent="#accordion" data-toggle="collapse">
+              Functions
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse8" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Functions</h4>
+
+            <p class="card-text">Functions are objects, can be assigned to variables, stored in objects or arrays, passed as an argument to other functions, and returned from functions.</p>
+            <p class="card-text">A JS function is an object becaues its prototype is an object, and so it inherits methods from the protype</p>
+            <p class="card-text">main JS runtime is single-threaded....so two functions can't run at same time.</p>
+            <p class="card-text">Functions (except for arrow functions) have two pseudo-parameters: <strong>this</strong> and <strong>arguments</strong></p>
+            <ul class="list-group">
+              <p class="list-group-header">3 ways to define a function:</p>
+              <li class="list-group-item list-group-item-success">1) Function Declaration (aka Function Statement)</li>
+              <li class="list-group-item list-group-item-success">2) Function Expression (aka Function Literal)</li>
+              <li class="list-group-item list-group-item-success">3) Arrow Function</li>
+            </ul>
+            
+            <p class="card-text">Functions can be used before declaration since function declarations are moved, or "hoisted", to the top of their scope.  (variables set to undefined in creation phase)</p>
+            <p class="card-text"><strong>Closures</strong> are not formed with anonymous functions</p>
+            <p class="card-text">Function A() declares variable X and returns Function B()....Function B() CAN access variable X because of <strong>closures</strong></p>
+            <p class="card-text">in module pattern, public methods can access private functions and variables because a <strong>CLOSURE</strong> was created.</p>
+            <ul class="list-group">
+              <p class="list-group-header">WHEN program calls a function...</p>
+              <li class="list-group-item list-group-item-success">JS creates a new execution context (local)</li>
+              <li class="list-group-item list-group-item-success">That local context will have its own set of variables</li>
+              <li class="list-group-item list-group-item-success">New Execution Context thrown onto the execution-stack</li>
+            </ul>
+
+            <ul class="list-group">
+              <p class="list-group-header">WHEN function ends...</p>
+              <li class="list-group-item list-group-item-warning">Local execution context pops off the stack</li>
+              <li class="list-group-item list-group-item-warning">Return value sent back to the calling context.  Global or if no return statement..."undefined" returned</li>
+              <li class="list-group-item list-group-item-warning">Local context destroyed</li>
+            </ul>
+            
+
+            <p class="card-text"></p>
+
+
+            <h5>Callback Functions</h5>
+
+            <p class="card-text">function to be executed AFTER another has finished</p>
+            <p class="card-text">Why need CallBack Functions?...</p>
+            <p class="card-text">...JS is Event - Driven language (will keep executing while listening for other events)...</p>
+            <p class="card-text">...Callbacks are a way to make certain code doesn't execute until other code has already finished execution.</p>
+            <p class="card-text">Can use callBack functions() to defer activities into future to make our CODE NonBlocking.</p>
+            <img class="card-img img-fluid mb-5" src="img/CallBackFunction.png" alt="Callback Function basic">
+            <img class="card-img img-fluid mb-5" src="img/moreCallbackFunction.png" alt="More Callback Function basic">
+
+            <img class="card-img img-fluid mb-5" src="img/MoreComplexCallBackExample.PNG" alt="Complex CallBack Function example">
+            <p class="card-text">first Class Functions = passing functions as parameters to other functions</p>
+            <p class="card-text">'this' inside a function() points to the Global object (the DOM usually)</p>
+            <p class="card-text">Methods are functions that are stored in objects.  Functions are independent.  In order for a function to know on which object to work on <strong>this</strong> is used.  <strong>this</strong> represents the function's context</p>
+            <p class="card-text">The value of <strong>this</strong> depends on how the function was invoked, not where the function was defined.</p>
+            <p class="card-text">There is no point to use <strong>this</strong> when a function is invoked with the function form: doSomething().  In this case <strong>this</strong> is undefined or is the window object, depending if the strict mode of JS is enabled or not.</p>
+            <p class="card-text">When a function is invoked with the method form: theObject.doSomething(), <strong>this</strong> represents the object.</p>
+            <p class="card-text">When a function is used as a constructor: new Constructor(), <strong>this</strong> represents the newly created object.</p>
+            <p class="card-text">The value of <strong>this</strong> can be set with apply() or call(): doSomething.apply(theObject).  In this case <strong>this</strong> is the object sent as the first parameter to the method.</p>
+            
+            <h5>Arrow Function</h5>
+            <p class="card-text">sugar syntax for creating an anonymous function expression.</p>
+            <p class="card-text">let doSomething = () => {};</p>
+
+            <p class="card-text">Arrow Functions don't have their own <strong>this</strong> and <strong>arguments</strong></p>
+            <p class="card-text">Share the surrounding <strong>this</strong> keyword...</p>
+            <p class="card-text">...<strong>lexical</strong> this variable (use arrow functions to preserve value of this)</p>
+            <p class="card-text">Every async function() always returns a Promise</p>
+        
+              <p class="card-text"><strong>Destructuring</strong> = returning multiple values from a function()</p>
+            <p class="card-text">Immediately Invoked Function Expression is only called ONCE (IIFE)</p>
+
+            <ul class="list-group">
+              <p class="list-group-header">Private Functions</p>
+              <li class="list-group-item list-group-item-info">Exposed functions can be accessed from the outer scope</li>
+              <li class="list-group-item list-group-item-info">Other code cannot overwrite private functions and variables</li>
+              <li class="list-group-item list-group-item-info">An exposed public interface is sometimes called an API</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
