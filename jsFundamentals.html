@@ -51,6 +51,7 @@
               <a href="JSfundamentals.html" class="dropdown-item">JS Fundamentals</a>
               <a href="objectOrientedJS.html" class="dropdown-item">Object Oriented in JS</a>
               <a href="interviewJS.html" class="dropdown-item">Interview JS</a>
+              <a href="advancedJStopics.html" class="dropdown-item">Advanced JS Topics</a>
               <a href="JSframeworks.html" class="dropdown-item">JS Frameworks</a>
               <a href="index.html" class="dropdown-item">Notes Home</a>
             </div>
@@ -112,11 +113,12 @@
               href="https://medium.com/free-code-camp/heres-how-you-can-make-better-use-of-javascript-arrays-3efd6395af3c"
               class="list-group-item list-group-item-dark">Better use of JS arrays</a>
 
-              <a target="_blank"
-              href="https://codeburst.io/javascript-essentials-arrays-2d275b9598c5"
+            <a target="_blank" href="https://codeburst.io/javascript-essentials-arrays-2d275b9598c5"
               class="list-group-item list-group-item-dark">JS essential Arrays</a>
-              
 
+            <a target="_blank"
+              href="https://medium.com/free-code-camp/a-brief-review-of-scoping-and-hoisting-in-javascript-e74c38283b65"
+              class="list-group-item list-group-item-dark">Scoping and Hoisting</a>
 
           </ul>
         </div>
@@ -202,14 +204,18 @@
             <img class="card-img img-fluid mb-5" src="img/fillArray.png" alt="Array fill some JS basics9">
             <img class="card-img img-fluid mb-5" src="img/arraySort.png" alt="Array sort some JS basics10">
             <img class="card-img img-fluid mb-5" src="img/reverseString.png" alt="Reverse a string JS basics11">
-            
+
             <img class="card-img img-fluid mb-5" src="img/flattenArray.png" alt="Flatten an Array JS basics12">
-            <img class="card-img img-fluid mb-5" src="img/ArrayToObject.png" alt="convert an Array to an object JS basics 13">
-            <img class="card-img img-fluid mb-5" src="img/loopingArrays.png" alt="Looping an Array to an object JS basics 14">
-            <img class="card-img img-fluid mb-5" src="img/multiDimensionalArrays.png" alt="MultiDimensional Arrays JS basics 15">
-            <img class="card-img img-fluid mb-5" src="img/getDiagonalMultiDimensionalArrays.png" alt="MultiDimensional Arrays JS basics 16">
-          
-          
+            <img class="card-img img-fluid mb-5" src="img/ArrayToObject.png"
+              alt="convert an Array to an object JS basics 13">
+            <img class="card-img img-fluid mb-5" src="img/loopingArrays.png"
+              alt="Looping an Array to an object JS basics 14">
+            <img class="card-img img-fluid mb-5" src="img/multiDimensionalArrays.png"
+              alt="MultiDimensional Arrays JS basics 15">
+            <img class="card-img img-fluid mb-5" src="img/getDiagonalMultiDimensionalArrays.png"
+              alt="MultiDimensional Arrays JS basics 16">
+
+
             <p class="card-text"></p>
             <p class="card-text"></p>
 
@@ -529,12 +535,99 @@
         <div class="card-header">
           <h5>
             <a href="#collapse8" data-parent="#accordion" data-toggle="collapse">
-              Functions
+              Hoisting and Scoping
             </a>
           </h5>
         </div>
 
         <div id="collapse8" class="collapse">
+
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Hoisting and Scoping</h4>
+            <p class="card-text">In a nutshell, scoping and hoisting effect how the code we write will deal with our
+              declarations (such as var, let, const and function).</p>
+
+
+            <ul class="list-group">
+              <p class="list-group-header">var</p>
+              <li class="list-group-item list-group-item active">When using var to declare your variables, the parent
+                function where you declare your vars inside is your only de facto scope delimiter. This way, the parent
+                function creates and holds the scope for all the local variables declared within itself. This is
+                <strong>Local Scope...</strong></li>
+              <li class="list-group-item list-group-item-info">...As opposed to <strong>Global Scope,</strong> when the
+                variables are declared outside your function. They are accessible by everyone and everywhere. They are
+                omnipresent like the air we breathe, or like the window object in the browser.</li>
+
+              <li class="list-group-item list-group-item-info">Hence, other code blocks as conditionals and loops (such
+                as if, for, while, switch and try) do not delimit scope, unlike most other languages.
+                Then, any var inside these blocks will be scoped within their parent function which contains that
+                block...
+              </li>
+
+              <li class="list-group-item list-group-item-info">...Not only that, but during runtime, every var
+                declaration that is found inside such code blocks gets moved to the beginning of its parent function
+                (its scope). This is the definition of <strong>Hoisting.</strong></li>
+            </ul>
+
+            <img src="img/varScoping.png" alt="var and its scoping" class="card-img img-fluid mb-5">
+
+
+            <ul class="list-group">
+              <p class="list-group-header">let and const</p>
+              <li class="list-group-item list-group-item-info">ES2015 introduced let and const which are variables that
+                do respect the block scope. This means they are safe to be declared within a block and won’t leak
+                outside, as the following example:</li>
+              <li class="list-group-item list-group-item-info"></li>
+
+            </ul>
+
+            <img src="img/letAndConst.png" alt="let and const scoping" class="card-img img-fluid">
+
+
+            <p class="card-text">Keep in mind that we have created one pair of i and parameter variables for each
+              iteration of the for loop. Compare this to before when we just had one single i and parameter being
+              rewritten each time. This matters a little bit for memory consumption.
+            </p>
+            <p class="card-text mb-5">Finally, since we also created the setTimeout callback function within the same
+              scope, they will co-live with the protected values of i and parameter. Block scope will remain preserved
+              even after stepSum finished executing</p>
+
+
+            <ul class="list-group">
+              <p class="list-group-header">functions</p>
+              <li class="list-group-item list-group-item-info">declaring a function is different than declaring a var
+                and assigning a function to it...</li>
+              <li class="list-group-item list-group-item-info">function name() will get hoisted to top of scope</li>
+              <li class="list-group-item list-group-item-info">IF use var nameFunction = function() and call it before
+                you declared...will get an error</li>
+
+              <li class="list-group-item list-group-item-info">The difference here is that when a function is hoisted,
+                its body is also hoisted. Compared to when a var is hoisted, only its declaration gets hoisted but not
+                its assignment.</li>
+            </ul>
+
+            <img src="img/moreLetandCostscoping.png" alt=" more let and const scoping" class="card-img img-fluid">
+
+            <p class="card-text-success">Inside the forEach block, the function total is hoisted, so when the `total +=
+              parameter;` line runs, it uses the function total, not the total variable defined outside of the forEach
+              block. This means the let total varaible is unaffected by the forach block, so when the total is returned,
+              it’s value is still 0, the same as it was at creation.</p>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse9" data-parent="#accordion" data-toggle="collapse">
+              Functions
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse9" class="collapse">
           <div class="card-body bg-secondary">
             <h4 class="card-title">Functions</h4>
 
