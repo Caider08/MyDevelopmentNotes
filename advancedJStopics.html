@@ -185,6 +185,9 @@
                 href="https://medium.com/better-programming/js-reliable-fdea261012ee"
                 >Better Programming JS</a
               >
+
+              <a href="https://medium.com/@kristyburge/why-this-is-so-powerful-in-javascript-34116f1ca5f2" class="list-group-item list-group-item-dark">'this' is so powerful</a>
+            
             </ul>
           </div>
         </div>
@@ -553,7 +556,8 @@
                 data-parent="#accordion"
                 data-toggle="collapse"
               >
-                var, let, and const
+               this  
+
               </a>
             </h5>
           </div>
@@ -561,46 +565,53 @@
           <div id="collapse5" class="collapse">
             <div class="card-body bg-secondary">
               <h4 class="card-title">
-                What are the differences between var, let and const?
+                Why 'this' is so powerful
               </h4>
 
-              <p class="card-text-info">
-                <strong>Assignment: </strong>The most basic difference is that
-                let and var can be re-assigned while const cannot. This makes
-                const the best choice for variables that don’t need to change,
-                and it will prevent mistakes such as accidental re-assignment.
-                Note that const does allow for variable mutation, which means
-                that if it represents an array or an object, these can change.
-                You just can’t re-assign the variable itself. Both let and var
-                can be re-assigned, but — as the following points should make
-                clear — let has significant advantages over var , making it a
-                better choice in most, if not all circumstances where a variable
-                needs to change.
+              <p class="card-text bg-primary">
+                “this” is a keyword used in JavaScript that has a special meaning depending on the context it’s being used
               </p>
 
-              <p class="card-text-info">
-                <strong>Hoisting: </strong>Similar to the difference between
-                function declarations and expressions (discussed above),
-                variables declared using var are always hoised to the top of
-                their respective scope, while variables declared using const and
-                let are hoisted, but if you try to access them before they’re
-                declared, you will get a ‘temporal dead zone’ error. This is
-                useful behaviour, since var can be more prone to errors, such as
-                accidental re-assignment. Take the following example:
+              <p class="card-text">
+                Context is always the value of the this keyword which is a reference to the object that “owns” the currently executing code.
               </p>
+
+              <p class="card-text bg-primary">Functions that sit in the global context (not as a method on an object) will point the ‘this’ keyword back to the Window object.</p>
+
+              <p class="card-text bg-primary">When “this” is inside an object, it refers to the object itself (returns the object itself)
+               </p>
+
+               <p class="card-text bg-primary">Anytime you have an object nested inside another object, and then ‘this’ points to the object on which the method is defined.</p>
+
+               <p class="card-text bg-primary">this on Arrow functions returns window object(or global context).  An arrow function expression has a shorter syntax than a function expression and does not have its own this, arguments, super, or new.target. These function expressions are best suited for non-method functions, and they cannot be used as constructors</p>
 
               <img
                 class="card-img img-fluid mb-5"
-                src="img/varLetConst.png"
-                alt="Var, let, const examples"
+                src="img/arrowFunctionThis.png"
+                alt="this with Arrow functions"
               />
 
+               <p class="card-text bg-primary">However, if a function is executed in strict mode, ‘this’ will return undefined because strict mode does not allow default binding.</p>
+
+              <img src="img/strictModeThis.png" alt="this with strict-mode">
+
               <p class="card-text-info">
-                <strong>Scope</strong> While var is function-scoped, let and
-                const are block-scoped: in general, a block is any code within
-                curly braces {} , including functions, conditional statements,
-                and loops.
+                if you want to use ‘this’ in strict mode, ‘this’ must be defined by the execution context because ‘this’ is not automatically attached to any object (not even the Window object).
               </p>
+
+              <p class="card-text bg-primary">When ‘this’ is called from a function declared outside of an object</p>
+
+              <img src="img/thisFunctionAssignment.png" alt="function assignment with this" class="card-img img-fluid">
+
+              <p class="card-text">In this context, the function chase() returns undefined because when run in the global context, ‘this’ points to the window object by default and does not have the properties (‘breed’ or ‘lovesToChase’) defined on that object.</p>
+              
+              <p class="card-text">A constructor function allows us to define an object (like Number or String, except it has its own special properties and methods).</p>
+
+              <p class="card-text bg-primary">It’s important to note that ‘this’ does not have a value while in the constructor function.</p>
+
+              <img src="img/thisDog.png" alt="more this functions" class="card-img img-fluid">
+
+              <img src="img/thisFunctions.png" alt="more detailed this in Functions" class="card-img-bottom img-fluid">
             </div>
           </div>
         </div>

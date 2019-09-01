@@ -126,6 +126,9 @@
             <a href="https://medium.com/free-code-camp/dom-manipulation-in-vanilla-js-2036a568dcd9"
               class="list-group-item list-group-item-dark">DOM Manipulation in vanilla JS</a>
 
+              <a href="https://medium.com/@kristyburge/why-this-is-so-powerful-in-javascript-34116f1ca5f2" class="list-group-item list-group-item-dark">Why 'this' is so powerful</a>
+     
+
 
           </ul>
         </div>
@@ -162,6 +165,8 @@
               <li class="list-group-item list-group-item-info">strings, like all primitives, are immutable. concat()
                 doesn't modify the existing string but <strong>creates</strong> a new one.</li>
             </ul>
+
+            <img src="img/stringThis.png" alt="string this" class="card-img img-fluid my-5">
 
             <ul class="list-group">
               <p class="list-group-header">Boolean (true and false)</p>
@@ -369,6 +374,8 @@
             <p class="card-text"><strong>Global Execution Object:</strong> Code that isn't in any function. Window
               object in Browser</p>
             <p class="card-text">Any function call is a new execution context</p>
+            <p class="card-text bg-primary">Context is always the value of the <strong>this</strong> keyword which is a reference to the object that “owns” the currently executing code.</p>
+            <p class="card-text"><strong>“this”</strong> is a keyword used in JavaScript that has a special meaning depending on the context it’s being used</p>
             <p class="card-text">Function-stack (call stack) follows a LIFO(Last in First Out) order.</p>
             <p class="card-text">Stacking will not happen no matter how many function calls are made in the same Lexical
               Environment and scope. They all just push and pop within the same environment.</p>
@@ -714,6 +721,8 @@
 
             <p class="card-text"></p>
 
+            <img src="img/thisFunctions.png" alt="functions this" class="card-img img-fluid mb-5">
+
 
             <h5>Callback Functions</h5>
 
@@ -744,6 +753,8 @@
               <strong>this</strong> represents the object.</p>
             <p class="card-text">When a function is used as a constructor: new Constructor(), <strong>this</strong>
               represents the newly created object.</p>
+              <p class="card-text">When a function sits in the global scope, then the value of ‘this’ is the Window object. Think of it as the test function being a method on the context in which it sits (the window object).</p>
+              <p class="card-text bg-warning">However, if a function is executed in strict mode, ‘this’ will return undefined because strict mode does not allow default binding.</p>
             <p class="card-text">The value of <strong>this</strong> can be set with apply() or call():
               doSomething.apply(theObject). In this case <strong>this</strong> is the object sent as the first parameter
               to the method.</p>
@@ -755,6 +766,7 @@
             <p class="card-text">Arrow Functions don't have their own <strong>this</strong> and
               <strong>arguments</strong></p>
             <p class="card-text">Share the surrounding <strong>this</strong> keyword...</p>
+            <p class="card-text bg-primary">An arrow function expression has a shorter syntax than a function expression and does not have its own this, arguments, super, or new.target. These function expressions are best suited for non-method functions, and they cannot be used as constructors</p>
             <p class="card-text">...<strong>lexical</strong> this variable (use arrow functions to preserve value of
               this)</p>
             <p class="card-text">Every async function() always returns a Promise</p>
