@@ -120,10 +120,12 @@
               href="https://medium.com/free-code-camp/a-brief-review-of-scoping-and-hoisting-in-javascript-e74c38283b65"
               class="list-group-item list-group-item-dark">Scoping and Hoisting</a>
 
-              <a href="https://medium.com/free-code-camp/execution-context-and-the-call-stack-visually-illustrated-by-a-slice-of-tasty-cake-14f9a64dc460" class="list-group-item list-group-item-dark">Execution Context and the call stack visually illustrated</a>
-              
-              <a href="https://medium.com/free-code-camp/dom-manipulation-in-vanilla-js-2036a568dcd9" class="list-group-item list-group-item-dark">DOM Manipulation in vanilla JS</a>
-              
+            <a href="https://medium.com/free-code-camp/execution-context-and-the-call-stack-visually-illustrated-by-a-slice-of-tasty-cake-14f9a64dc460"
+              class="list-group-item list-group-item-dark">Execution Context and the call stack visually illustrated</a>
+
+            <a href="https://medium.com/free-code-camp/dom-manipulation-in-vanilla-js-2036a568dcd9"
+              class="list-group-item list-group-item-dark">DOM Manipulation in vanilla JS</a>
+
 
           </ul>
         </div>
@@ -368,20 +370,28 @@
               object in Browser</p>
             <p class="card-text">Any function call is a new execution context</p>
             <p class="card-text">Function-stack (call stack) follows a LIFO(Last in First Out) order.</p>
-            <p class="card-text">Stacking will not happen no matter how many function calls are made in the same Lexical Environment and scope. They all just push and pop within the same environment.</p>
+            <p class="card-text">Stacking will not happen no matter how many function calls are made in the same Lexical
+              Environment and scope. They all just push and pop within the same environment.</p>
 
             <img class="card-img img-fluid mb-5" src="img/ExecutionContexts.PNG" alt="Execution Context basic">
 
-            <p class="card-text-primary"><strong>Global Scope</strong> is created internally by JavaScript as var window = Window() (rough equivalent) behind the veil.</p>
-              <p class="card-text"><strong>Global Scope</strong> acts as the first automatically created Execution Context roughly at the time when the browser opens a URL</p>
+            <p class="card-text bg-primary"><strong>Global Scope</strong> is created internally by JavaScript as var
+              window
+              = Window() (rough equivalent) behind the veil.</p>
+            <p class="card-text"><strong>Global Scope</strong> acts as the first automatically created Execution Context
+              roughly at the time when the browser opens a URL</p>
 
-              <p class="card-text">Variables defined with var, let, or const are created within <strong>Variable Environment.</strong> This is why they are not automatically tied to the <strong>window</strong> object nor bound to <strong>this</strong> object</p>
-              <img src="img/GlobalScopePieChart.png" alt="Scoping Pie Chart" class="card-img img-fluid">
-              <img src="img/GlobalScopePieChart2.png" alt="Scoping Pie Chart 2" class="card-img img-fluid">
-              <img src="img/GlobalScopePieChart3.png" alt="Scoping Pie Chart 3" class="card-img img-fluid mb-5">
+            <p class="card-text">Variables defined with var, let, or const are created within <strong>Variable
+                Environment.</strong> This is why they are not automatically tied to the <strong>window</strong> object
+              nor bound to <strong>this</strong> object</p>
+            <img src="img/GlobalScopePieChart.png" alt="Scoping Pie Chart" class="card-img img-fluid">
+            <img src="img/GlobalScopePieChart2.png" alt="Scoping Pie Chart 2" class="card-img img-fluid">
+            <img src="img/GlobalScopePieChart3.png" alt="Scoping Pie Chart 3" class="card-img img-fluid mb-5">
 
-              <p class="card-text">A new Execution Context is caused by a function call. This new Execution Context is then placed on top of Execution Stack (or The Call Stack).</p>
-              <p class="card-text">A new Execution Context can also be created when an object is instantiated — but its only because object instantiation is a constructor function call.</p>
+            <p class="card-text">A new Execution Context is caused by a function call. This new Execution Context is
+              then placed on top of Execution Stack (or The Call Stack).</p>
+            <p class="card-text">A new Execution Context can also be created when an object is instantiated — but its
+              only because object instantiation is a constructor function call.</p>
 
             <ul class="list-group">
               <p class="list-group-header"><strong>Hoisting</strong></p>
@@ -562,17 +572,22 @@
 
           <div class="card-body bg-secondary">
             <h4 class="card-title">Hoisting and Scoping</h4>
-            
+
             <p class="card-text">In a nutshell, scoping and hoisting effect how the code we write will deal with our
               declarations (such as var, let, const and function).</p>
 
-              <p class="card-text-primary"><strong>Global Scope</strong> is created internally by JavaScript as var window = Window() (rough equivalent) behind the veil.</p>
-              <p class="card-text"><strong>Global Scope</strong> acts as the first automatically created Execution Context roughly at the time when the browser opens a URL</p>
+            <p class="card-text bg-primary"><strong>Global Scope</strong> is created internally by JavaScript as var
+              window
+              = Window() (rough equivalent) behind the veil.</p>
+            <p class="card-text"><strong>Global Scope</strong> acts as the first automatically created Execution Context
+              roughly at the time when the browser opens a URL</p>
 
-              <p class="card-text">Variables defined with var, let, or const are created within <strong>Variable Environment.</strong> This is why they are not automatically tied to the <strong>window</strong> object nor bound to <strong>this</strong> object</p>
-              <img src="img/GlobalScopePieChart.png" alt="Scoping Pie Chart" class="card-img img-fluid">
-              <img src="img/GlobalScopePieChart2.png" alt="Scoping Pie Chart 2" class="card-img img-fluid">
-              <img src="img/GlobalScopePieChart3.png" alt="Scoping Pie Chart 3" class="card-img img-fluid mb-5">
+            <p class="card-text">Variables defined with var, let, or const are created within <strong>Variable
+                Environment.</strong> This is why they are not automatically tied to the <strong>window</strong> object
+              nor bound to <strong>this</strong> object</p>
+            <img src="img/GlobalScopePieChart.png" alt="Scoping Pie Chart" class="card-img img-fluid">
+            <img src="img/GlobalScopePieChart2.png" alt="Scoping Pie Chart 2" class="card-img img-fluid">
+            <img src="img/GlobalScopePieChart3.png" alt="Scoping Pie Chart 3" class="card-img img-fluid mb-5">
 
             <ul class="list-group">
               <p class="list-group-header">var</p>
@@ -634,7 +649,8 @@
 
             <img src="img/moreLetandCostscoping.png" alt=" more let and const scoping" class="card-img img-fluid">
 
-            <p class="card-text-success">Inside the forEach block, the function total is hoisted, so when the `total +=
+            <p class="card-text bg-success">Inside the forEach block, the function total is hoisted, so when the `total
+              +=
               parameter;` line runs, it uses the function total, not the total variable defined outside of the forEach
               block. This means the let total varaible is unaffected by the forach block, so when the total is returned,
               it’s value is still 0, the same as it was at creation.</p>
