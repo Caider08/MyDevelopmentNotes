@@ -1,864 +1,759 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-      crossorigin="anonymous"
-    />
-    <link type="text/css" rel="stylesheet" href="notes.css" />
-    <title>JS Interview Related</title>
-  </head>
 
-  <body class="bg-dark text-light">
-    <header>
-      <h1 class="display-2 text-center my-4">Advanced JS Topics</h1>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-2">
-            <div class="dropdown">
-              <button
-                class="btn btn-primary btn-block dropdown-toggle"
-                type="button"
-                data-toggle="dropdown"
-              >
-                Computer Sci.
-              </button>
-              <div class="dropdown-menu">
-                <a
-                  class="dropdown-item"
-                  href="DotNetDesignPatterns.html"
-                  class="dropdown-item"
-                  >Design Patterns</a
-                >
-                <a
-                  class="dropdown-item"
-                  href="studyDesignPatterns.html"
-                  class="dropdown-item"
-                  >Quick Study
-                </a>
-                <a href="index.html" class="dropdown-item">Notes Home</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="dropdown">
-              <button
-                class="btn btn-success btn-block dropdown-toggle"
-                type="buton"
-                data-toggle="dropdown"
-              >
-                C#
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="mvc.html" class="dropdown-item"
-                  >.Net MVC</a
-                >
-                <a href="index.html" class="dropdown-item">Notes Home</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="dropdown">
-              <button
-                class="btn btn-danger btn-block dropdown-toggle"
-                type="buton"
-                data-toggle="dropdown"
-              >
-                JS
-              </button>
-              <div class="dropdown-menu">
-                <a href="JSfundamentals.html" class="dropdown-item"
-                  >JS Fundamentals</a
-                >
-                <a href="objectOrientedJS.html" class="dropdown-item"
-                  >Object Oriented in JS</a
-                >
-                <a href="advancedJStopics.html" class="dropdown-item"
-                  >Advanced JS Topics</a
-                >
-                <a href="JSframeworks.html" class="dropdown-item"
-                  >JS Interview Related</a
-                >
-                <a href="JSframeworks.html" class="dropdown-item"
-                  >JS Frameworks</a
-                >
-                <a href="index.html" class="dropdown-item">Notes Home</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="dropdown">
-              <button
-                class="btn btn-success btn-block dropdown-toggle"
-                type="buton"
-                data-toggle="dropdown"
-              >
-                Salesforce
-              </button>
-              <div class="dropdown-menu">
-                <a href="index.html" class="dropdown-item">Notes Home</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="dropdown">
-              <button
-                class="btn btn-warning btn-block dropdown-toggle"
-                type="buton"
-                data-toggle="dropdown"
-              >
-                WebDevelopment
-              </button>
-              <div class="dropdown-menu">
-                <a href="index.html" class="dropdown-item">Notes Home</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="dropdown">
-              <button
-                class="btn btn-primary btn-block dropdown-toggle"
-                type="buton"
-                data-toggle="dropdown"
-              >
-                Interview Prep
-              </button>
-              <div class="dropdown-menu">
-                <a href="index.html" class="dropdown-item">Notes Home</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous" />
+  <link type="text/css" rel="stylesheet" href="notes.css" />
+  <title>Advanced JS Topics</title>
+</head>
 
+<body class="bg-dark text-light">
+  <header>
+    <h1 class="display-2 text-center my-4">Advanced JS Topics</h1>
     <div class="container">
-      <button
-        class="btn btn-primary d-block mt-25"
-        style="margin-top: 25px"
-        data-toggle="collapse"
-        data-target="#collapse-btn-1"
-      >
-        JS links
-      </button>
-
-      <div class="collapse my-25" id="collapse-btn-1">
-        <div class="card">
-          <div class="card-body">
-            <ul class="list-group">
-              <a
-                class="list-group-item list-group-item-dark"
-                target="_blank"
-                href="https://medium.com/dailyjs/i-never-understood-javascript-closures-9663703368e8"
-                >JS Closures</a
-              >
-
-              <a
-                class="list-group-item list-group-item-dark"
-                target="_blank"
-                href="https://medium.com/dailyjs/some-examples-to-help-understand-javascripts-closure-372e42fff94d"
-                >Making sense of JS Closures</a
-              >
-
-              <a
-                class="list-group-item list-group-item-dark"
-                target="_blank"
-                href="http://davidshariff.com/blog/what-is-the-execution-context-in-javascript/"
-                >Execution Context in JS</a
-              >
-
-              <a
-                class="list-group-item list-group-item-dark"
-                target="_blank"
-                href="https://medium.com/poka-techblog/destructuring-in-javascript-f4f56d5cbd80"
-                >Destructuring in JS</a
-              >
-
-              <a
-                class="list-group-item list-group-item-dark"
-                target="_blank"
-                href="https://medium.com/better-programming/js-reliable-fdea261012ee"
-                >Better Programming JS</a
-              >
-
-              <a href="https://medium.com/@kristyburge/why-this-is-so-powerful-in-javascript-34116f1ca5f2" class="list-group-item list-group-item-dark">'this' is so powerful</a>
-            
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div id="accordion" style="margin-top: 10px">
-        <div class="card">
-          <div class="card-header">
-            <h5>
-              <a
-                href="#collapse1"
-                data-parent="#accordion"
-                data-toggle="collapse"
-              >
-                JS Closures
+      <div class="row">
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-primary btn-block dropdown-toggle" type="button" data-toggle="dropdown">
+              Computer Sci.
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="DotNetDesignPatterns.html" class="dropdown-item">Design Patterns</a>
+              <a class="dropdown-item" href="studyDesignPatterns.html" class="dropdown-item">Quick Study
               </a>
-            </h5>
-          </div>
-
-          <div id="collapse1" class="collapse">
-            <div class="card-body bg-secondary">
-              <h4 class="card-text-header">Closures</h4>
-
-              <p class="card-text bg-info">
-                When code is run in JavaScript, the environment in which it is
-                executed is very important, and is evaluated as 1 of the
-                following:
-              </p>
-
-              <p class="card-text bg-info">
-                <strong>Global code - </strong> The default environment where
-                your code is executed for the first time.
-              </p>
-
-              <p class="card-text bg-info">
-                <strong>Function code</strong> Whenever the flow of execution
-                enters a function body.
-              </p>
-
-              <p class="card-text bg-primary">
-                think of the term <strong>execution context</strong> as the
-                environment / scope the current code is being evaluated in.
-              </p>
-
-              <ul class="list-group">
-                <p class="list-group-header">
-                  When the program calls a function, what happens?
-                </p>
-                <li class="list-group-item list-group-item-success">
-                  JavaScript creates a new execution context, a local execution
-                  context
-                </li>
-                <li class="list-group-item list-group-item-success">
-                  That local execution context will have its own set of
-                  variables, these variables will be local to that execution
-                  context.
-                </li>
-
-                <li class="list-group-item list-group-item-success">
-                  The new execution context is thrown onto the execution stack.
-                  Think of the execution stack as a mechanism to keep track of
-                  where the program is in its execution
-                </li>
-              </ul>
-
-              <ul class="list-group">
-                <p class="list-group-header">
-                  When a function ends, the following happens:
-                </p>
-
-                <li class="list-group-item list-group-item-warning">
-                  The local execution contexts pops off the execution stack
-                </li>
-                <li class="list-group-item list-group-item-warning">
-                  The functions sends the return value back to the calling
-                  context. The calling context is the execution context that
-                  called this function, it could be the global execution context
-                  or another local execution context. It is up to the calling
-                  execution context to deal with the return value at that point.
-                  The returned value could be an object, an array, a function, a
-                  boolean, anything really. If the function has no return
-                  statement, undefined is returned.
-                </li>
-
-                <li class="list-group-item list-group-item-warning mb-3">
-                  The local execution context is destroyed. This is important.
-                  Destroyed. All the variables that were declared within the
-                  local execution context are erased. They are no longer
-                  available. That’s why they’re called local variables.
-                </li>
-              </ul>
-
-              <p class="card-text bg-info">
-                One intricacy of JavaScript is how it looks for variables. If it
-                can’t find a variable in its local execution context, it will
-                look for it in its calling context. And if not found there in
-                its calling context. Repeatedly, until it is looking in the
-                global execution context. (And if it does not find it there,
-                it’s undefined)
-              </p>
-
-              <p class="card-text bg-info">
-                a function has access to variables that are defined in its
-                calling context. The formal name of this phenomenon is the
-                <strong>lexical scope.</strong>
-              </p>
-
-              <p class="card-text bg-primary">
-                Here is how it works. Whenever you declare a new function and
-                assign it to a variable, you store the function definition, as
-                well as a closure. The closure contains all the variables that
-                are in scope at the time of creation of the function. It is
-                analogous to a backpack. A function definition comes with a
-                little backpack. And in its pack it stores all the variables
-                that were in scope at the time that the function definition was
-                created.
-              </p>
-
-              <img
-                src="img/closuresSimpleExample.png"
-                alt="Simple Closure Example"
-                class="card-img img-fluid"
-              />
-
-              <p class="card-text bg-sucess">
-                Whenever you declare a new function and assign it to a variable,
-                you store the function definition, as well as a closure. The
-                closure contains all the variables that are in scope at the time
-                of creation of the function. It is analogous to a backpack. A
-                function definition comes with a little backpack. And in its
-                pack it stores all the variables that were in scope at the time
-                that the function definition was created.
-              </p>
-
-              <p class="card-text bg-primary">
-                Every function has a closure...event functions created in the
-                Global Scope. When a function returns a function, that is when
-                the concept of closures becomes more relevant.
-              </p>
-
-              <img
-                src="img/closuresMoreComplicated.png"
-                alt="More complicated closures example"
-                class="card-img img-fluid mb-5"
-              />
-
-              <img
-                src="img/OOPandRecursionClosure.png"
-                alt="More Closures Example"
-                class="card-img img-fluid mb-5"
-              />
-
-              <img
-                src="img/moreComplicatedClosures.png"
-                alt="More complicated closures example"
-                class="card-img img-fluid"
-              />
-
-              <p class="card-text bg-info">
-                <strong>Partial Application</strong> is basically a design
-                pattern where your function returns another function that takes
-                an argument. For example, you can call your function like this:
-                myFun(arg1)(arg2), which is equivalent to:
-              </p>
-
-              <img
-                src="img/partialApplicationClosure.png"
-                alt="Partial Application design pattern"
-                class="card-img img-fluid"
-              />
-
-              <p class="card-text bg-info">
-                <strong>Partial application</strong> is a powerful design
-                pattern because you can continuing chaining things like
-                myFun(arg1)(arg2)(arg3)… What’s happening here is akin to an
-                assembly line in a factory: One argument at a time is applied to
-                myFun to evaluate a better and better partial solution until all
-                the arguments are applied to provide a complete solution.
-              </p>
+              <a href="index.html" class="dropdown-item">Notes Home</a>
             </div>
           </div>
         </div>
-
-        <div class="card">
-          <div class="card-header">
-            <h5>
-              <a
-                href="#collapse2"
-                data-parent="#accordion"
-                data-toggle="collapse"
-              >
-                Destructuring
-              </a>
-            </h5>
-          </div>
-
-          <div id="collapse2" class="collapse">
-            <div class="card-body bg-secondary">
-              <p class="card-text-primary">
-                Destructuring is a powerful way to create variables from values
-                in arrays and objects...can make your code simpler.
-              </p>
-
-              <p class="card-text">Array destructuring</p>
-
-              <img
-                class="card-img img-fluid mb-5"
-                src="img/ArrayDestructuring.png"
-                alt="Destrucuring Arrays"
-              />
-
-              <ul class="list-group">
-                <p class="list-group-header">Array destructuring use cases:</p>
-                <li class="list-group-item list-group-item-success">
-                  Blog Posts. Ex... you want first post formatted differently
-                  than all the other posts.
-                </li>
-                <li class="list-group-item list-group-item-info">
-                  const [starPost, ...otherPosts] = blogPosts;
-                </li>
-                <li class="list-group-item list-group-item-success">
-                  Blog Posts. Ex... you just need the first three posts of the
-                  array, you can just declare three variables and the rest will
-                  be ignored.
-                </li>
-                <li class="list-group-item list-group-item-info">
-                  const [post1, post2, post3] = blogPosts;
-                </li>
-              </ul>
-
-              <p class="card-text">Object Destructuring</p>
-
-              <img
-                src="img/objectDestructuring.png"
-                alt="Object Destructuring"
-                class="card-img img-fluid mb-5"
-              />
-
-              <p class="card-text bg-primary">
-                best use of object destructuring is the handling of options
-              </p>
-
-              <img
-                src="img/handlingOptions.png"
-                alt="Handling options via Destructuring on Objects"
-                class="card-img img-fluid"
-              />
-
-              <p class="card-text">
-                by writing options = {} as the argument, we specify that if
-                nothing is passed, by default we will use an empty object as the
-                passed options.
-              </p>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-success btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              C#
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="mvc.html" class="dropdown-item">.Net MVC</a>
+              <a href="index.html" class="dropdown-item">Notes Home</a>
             </div>
           </div>
         </div>
-
-        <div class="card">
-          <div class="card-header">
-            <h5>
-              <a
-                href="#collapse3"
-                data-parent="#accordion"
-                data-toggle="collapse"
-              >
-                Write Better JS
-              </a>
-            </h5>
-          </div>
-
-          <div id="collapse3" class="collapse">
-            <div class="card-body bg-secondary">
-              <h4 class="card-title">Better Programming in JS</h4>
-
-              <img
-                class="card-img img-fluid"
-                src="img/betterProgrammingexamplesJS.png"
-                alt="Write Better JS example 1"
-              />
-
-              <p class="card-text-success">
-                <strong>ESLint</strong> is a tool for static code analysis. It
-                is the most important tool that allows us to find potential
-                issues within the codebase and ensure high quality of the
-                codebase. The best part is that linting is a fully automated
-                process and can be used to prevent the low-quality code from
-                making its way into the codebase.
-              </p>
-
-              <a href="https://eslint.org/">ES-Lint</a>
-
-              <p class="card-text-info">
-                <strong>ES-Lint</strong> Configuration
-              </p>
-              <p class="card-text-info">
-                ESLint rules into your project one-by-one as well. Configure
-                them initially as warn, and once you’re comfortable, you can
-                convert some of the rules into error.
-              </p>
-              <p class="card-text-info">
-                In the root directory of your project run:
-              </p>
-              <p class="card-text bg-primary">
-                npm i -D eslint npm i -D eslint-plugin-fp
-              </p>
-
-              <p class="card-text">
-                Then create a .eslintrc.yml file within the root directory of
-                your project:
-              </p>
-              <p class="card-text bg-info">
-                env: es6: true plugins: fp rules: # rules will go in here
-              </p>
-
-              <p class="card-text">
-                You can also run ESLint manually from the command line: npx
-                eslint .
-              </p>
-
-              <p class="card-text bg-warning">
-                rules: max-lines: - warn - 200 (sets the max lines to 200 for
-                files)
-              </p>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-danger btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              JS
+            </button>
+            <div class="dropdown-menu">
+              <a href="JSfundamentals.html" class="dropdown-item">JS Fundamentals</a>
+              <a href="objectOrientedJS.html" class="dropdown-item">Object Oriented in JS</a>
+              <a href="advancedJStopics.html" class="dropdown-item">Advanced JS Topics</a>
+              <a href="JSframeworks.html" class="dropdown-item">JS Interview Related</a>
+              <a href="JSframeworks.html" class="dropdown-item">JS Frameworks</a>
+              <a href="index.html" class="dropdown-item">Notes Home</a>
             </div>
           </div>
         </div>
-
-        <div class="card">
-          <div class="card-header">
-            <h5>
-              <a
-                href="#collapse4"
-                data-parent="#accordion"
-                data-toggle="collapse"
-              >
-                advanced console commands
-              </a>
-            </h5>
-          </div>
-
-          <div id="collapse4" class="collapse">
-            <div class="card-body bg-secondary">
-              <h4 class="card-title">advanced console commands</h4>
-
-              <p class="card-text bg-info">console.log({ foo, bar });</p>
-              <p class="card-text>(to console.log() multiple objects for testing/debugging) </p>
-              <p class="card-text bg-info">console.warn() & console.error()</p>
-
-              <p class="card-text bg-info">console.group()  can be used when grouping or nesting together relevant details to enable you to read the logs easily</p>
-
-              <img
-                class="card-img img-fluid"
-                src="img/consoleLog.png"
-                alt="Advanced console log commands"
-              />
-          
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-success btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              Salesforce
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Notes Home</a>
             </div>
           </div>
         </div>
-
-        <div class="card">
-          <div class="card-header">
-            <h5>
-              <a
-                href="#collapse5"
-                data-parent="#accordion"
-                data-toggle="collapse"
-              >
-               this  
-
-              </a>
-            </h5>
-          </div>
-
-          <div id="collapse5" class="collapse">
-            <div class="card-body bg-secondary">
-              <h4 class="card-title">
-                Why 'this' is so powerful
-              </h4>
-
-              <p class="card-text bg-primary">
-                “this” is a keyword used in JavaScript that has a special meaning depending on the context it’s being used
-              </p>
-
-              <p class="card-text">
-                Context is always the value of the this keyword which is a reference to the object that “owns” the currently executing code.
-              </p>
-
-              <p class="card-text bg-primary">Functions that sit in the global context (not as a method on an object) will point the ‘this’ keyword back to the Window object.</p>
-
-              <p class="card-text bg-primary">When “this” is inside an object, it refers to the object itself (returns the object itself)
-               </p>
-
-               <p class="card-text bg-primary">Anytime you have an object nested inside another object, and then ‘this’ points to the object on which the method is defined.</p>
-
-               <p class="card-text bg-primary">this on Arrow functions returns window object(or global context).  An arrow function expression has a shorter syntax than a function expression and does not have its own this, arguments, super, or new.target. These function expressions are best suited for non-method functions, and they cannot be used as constructors</p>
-
-              <img
-                class="card-img img-fluid mb-5"
-                src="img/arrowFunctionThis.png"
-                alt="this with Arrow functions"
-              />
-
-               <p class="card-text bg-primary">However, if a function is executed in strict mode, ‘this’ will return undefined because strict mode does not allow default binding.</p>
-
-              <img src="img/strictModeThis.png" alt="this with strict-mode">
-
-              <p class="card-text-info">
-                if you want to use ‘this’ in strict mode, ‘this’ must be defined by the execution context because ‘this’ is not automatically attached to any object (not even the Window object).
-              </p>
-
-              <p class="card-text bg-primary">When ‘this’ is called from a function declared outside of an object</p>
-
-              <img src="img/thisFunctionAssignment.png" alt="function assignment with this" class="card-img img-fluid">
-
-              <p class="card-text">In this context, the function chase() returns undefined because when run in the global context, ‘this’ points to the window object by default and does not have the properties (‘breed’ or ‘lovesToChase’) defined on that object.</p>
-              
-              <p class="card-text">A constructor function allows us to define an object (like Number or String, except it has its own special properties and methods).</p>
-
-              <p class="card-text bg-primary">It’s important to note that ‘this’ does not have a value while in the constructor function.</p>
-
-              <img src="img/thisDog.png" alt="more this functions" class="card-img img-fluid">
-
-              <img src="img/thisFunctions.png" alt="more detailed this in Functions" class="card-img-bottom img-fluid">
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-warning btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              WebDevelopment
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Notes Home</a>
             </div>
           </div>
         </div>
-
-        <div class="card">
-          <div class="card-header">
-            <h5>
-              <a
-                href="#collapse6"
-                data-parent="#accordion"
-                data-toggle="collapse"
-              >
-                Assign a variable without a keyword?
-              </a>
-            </h5>
-          </div>
-
-          <div id="collapse6" class="collapse">
-            <div class="card-body bg-secondary">
-              <h4 class="card-title">
-                What happens if you assign a variable without a keyword?
-              </h4>
-
-              <p class="card-text-primary">
-                What if you define a variable without using a keyword at all?
-                Technically, if xhasn’t already been defined, then x = 1 is
-                shorthand for window.x = 1 .
-              </p>
-              <p class="card-text-success">
-                as it’s a common cause of memory leaks. To prevent this
-                shorthand altogether, you can use strict mode — introduced in
-                ES5 — by writing use strict at the top of your document or a
-                particular function. Then, when you try to declare a variable
-                without a keyword, you’ll get an error: Uncaught SyntaxError:
-                Unexpected indentifier .
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header">
-            <h5>
-              <a
-                href="#collapse7"
-                data-parent="#accordion"
-                data-toggle="collapse"
-              >
-                O.O.P. vs functional programming
-              </a>
-            </h5>
-          </div>
-
-          <div id="collapse7" class="collapse">
-            <div class="card-body bg-secondary">
-              <h4 class="card-title">
-                What’s the difference between Object Oriented Programming (OOP)
-                and Functional Programming (FP)?
-              </h4>
-
-              <p class="card-text-primary">
-                JavaScript is a multi-paradigm language, meaning that it
-                supports multiple different programming styles, including
-                event-driven, functional and object-oriented.
-              </p>
-
-              <p class="card-text-info">
-                OOP is based around the concept of “objects”. These are data
-                structures that contain data fields — known in JavaScript as
-                “properties” — and procedures — known as “methods”. Some of
-                JavaScript’s in-built objects include Math (used for methods
-                such as random , max and sin ), JSON (used for parsing JSON
-                data), and primitive data types like String , Array , Number and
-                Boolean .
-              </p>
-
-              <p class="card-text-success">
-                Whenever you rely on in-built methods, prototypes or classes,
-                you are essentially using Object-Oriented Programming.
-              </p>
-
-              <p class="card-text-info">
-                FP is based around the concept of “pure functions”, which avoid
-                shared state, mutable data and side-effects. This might seem
-                like a lot of jargon, but chances are you’ve created written
-                many pure functions in your code.
-              </p>
-
-              <p class="card-text-info">
-                Given the same inputs, a pure function always returns the same
-                output. It does not have side effects: these are anything, such
-                as logging to the console or modifying an external variable,
-                beyond returning the result.
-              </p>
-
-              <p class="card-text"></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header">
-            <h5>
-              <a
-                href="#collapse8"
-                data-parent="#accordion"
-                data-toggle="collapse"
-              >
-                Imperative vs. declarative programming
-              </a>
-            </h5>
-          </div>
-
-          <div id="collapse8" class="collapse">
-            <div class="card-body bg-secondary">
-              <h4 class="card-title">
-                What’s the difference between imperative and declarative
-                programming?
-              </h4>
-
-              <p class="card-text-info">
-                We can also think about the difference between OOP and FP in
-                terms of the difference between “imperative” and “declarative”
-                programming.
-              </p>
-              <p class="card-text-primary">
-                FP is an example of declarative programming, while OOP is an
-                example of imperative programming.
-              </p>
-              <p class="card-text-info">
-                In a basic sense, imperative programming is concerned with how
-                you do something. It spells out the steps in the most essential
-                way, and is characterised by for and while loops, if and switch
-                statements, and so on.
-              </p>
-
-              <p class="card-text-info">
-                By contrast, declarative programming is concerned with what to
-                do, and it abstracts away the how by relying on expressions.
-                This often results in more concise code, but at scale, it can
-                become more difficult to debug because it’s that much less
-                transparent. Here’s a declarative approach to our sumArray()
-                function, above.
-              </p>
-
-              <img
-                class="card-img img-fluid mb-5"
-                src="img/imperativeDeclarative.png"
-                alt="Imperative and Declarative programming JS"
-              />
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header">
-            <h5>
-              <a
-                href="#collapse9"
-                data-parent="#accordion"
-                data-toggle="collapse"
-              >
-                Prototype-Based Inheritance
-              </a>
-            </h5>
-          </div>
-
-          <div id="collapse9" class="collapse">
-            <div class="card-body bg-secondary">
-              <h4 class="card-title">What is Prototype-Based Inheritance?</h4>
-
-              <p class="card-text-primary">
-                There are several different styles of Object-Oriented
-                Programming, and the one JavaScript uses is Prototype-Based
-                Inheritance. The system allows for repeated behaviour via the
-                use of existing objects that serve as “prototypes”.
-              </p>
-
-              <p class="card-text-info">
-                Even if the idea of prototypes is new to you, you will have
-                encountered the prototype system by using in-built methods. For
-                example, functions used to manipulate arrays such as map ,
-                reduce , splice and so on are all methods of the Array.prototype
-                object. In fact, every instance of an array (defined using
-                square brackets [], or — more unusually — using new Array())
-                inherits from Array.prototype , which is why methods like map ,
-                reduce and spliceare available by default.
-              </p>
-
-              <p class="card-text-info">
-                The same is true of virtually every other built-in object, such
-                as strings and booleans: only a few, such as Infinity , NaN ,
-                null and undefined have no properties or methods. At the end of
-                the prototype chain we find Object.prototype , and almost every
-                object in JavaScript is an instance of Object.prototype :
-                Array.prototype and String.prototype , for example, both inherit
-                properties and methods from Object.prototype . To add properties
-                and methods to an object using prototype syntax, you can simply
-                initiate the object as a function, and use the prototype keyword
-                to add properties and methods:
-              </p>
-
-              <img
-                class="card-img img-fluid mb-5"
-                src="img/prototypes.png"
-                alt="Prototypes in JS"
-              />
-
-              <h5>Should I Override or Extend the Behaviour of Prototypes?</h5>
-
-              <p class="card-text-info">
-                It’s possible to change the behaviour of built-in prototypes in
-                exactly the same way that we can create and extend our own
-                prototypes, but most developers (and most companies) would
-                advise against this. If you want several objects to share the
-                same behaviour, you can always create a custom object (or define
-                your own ‘class’ or ‘subclass’) that inherits from a built-in
-                prototype without making any changes to the prototype itself. If
-                you’re going to be working with other developers, they’ll have
-                certain expectations about JavaScript’s default behaviour, and
-                editing this default behaviour can easily lead to errors. It’s
-                worth noting, however, that not everyone shares this strong
-                opposition to extending built-in prototypes. See, for example,
-                this article from Brendan Eich, the creator of JavaScript. In
-                this article (from 2005), Eich suggested that the prototype
-                system in fact was built — in part — to make extensions
-                possible!
-              </p>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-primary btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              Interview Prep
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Notes Home</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-      integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  </header>
+
+  <div class="container">
+    <button class="btn btn-primary d-block mt-25" style="margin-top: 25px" data-toggle="collapse"
+      data-target="#collapse-btn-1">
+      JS links
+    </button>
+
+    <div class="collapse my-25" id="collapse-btn-1">
+      <div class="card">
+        <div class="card-body">
+          <ul class="list-group">
+            <a class="list-group-item list-group-item-dark" target="_blank"
+              href="https://medium.com/dailyjs/i-never-understood-javascript-closures-9663703368e8">JS Closures</a>
+
+            <a class="list-group-item list-group-item-dark" target="_blank"
+              href="https://medium.com/dailyjs/some-examples-to-help-understand-javascripts-closure-372e42fff94d">Making
+              sense of JS Closures</a>
+
+            <a class="list-group-item list-group-item-dark" target="_blank"
+              href="http://davidshariff.com/blog/what-is-the-execution-context-in-javascript/">Execution Context in
+              JS</a>
+
+            <a class="list-group-item list-group-item-dark" target="_blank"
+              href="https://medium.com/poka-techblog/destructuring-in-javascript-f4f56d5cbd80">Destructuring in JS</a>
+
+            <a class="list-group-item list-group-item-dark" target="_blank"
+              href="https://medium.com/better-programming/js-reliable-fdea261012ee">Better Programming JS</a>
+
+            <a href="https://medium.com/@kristyburge/why-this-is-so-powerful-in-javascript-34116f1ca5f2"
+              class="list-group-item list-group-item-dark">'this' is so powerful</a>
+
+            <a href="https://codeburst.io/js-by-example-8-distinct-uses-of-javascript-array-slice-4e4e95a470e4"
+              class="list-group-item list-group-item-dark">Uses of array.slice()</a>
+
+            <a href=" https://medium.com/free-code-camp/the-evolution-of-async-javascript-from-callbacks-to-promises-to-async-await-e73b047f2f40"
+              class="list-group-item list-group-item-dark">History of Async in Javascript</a>
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="accordion" style="margin-top: 10px">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse1" data-parent="#accordion" data-toggle="collapse">
+              JS Closures
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse1" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-text-header">Closures</h4>
+
+            <p class="card-text bg-info">
+              When code is run in JavaScript, the environment in which it is
+              executed is very important, and is evaluated as 1 of the
+              following:
+            </p>
+
+            <p class="card-text bg-info">
+              <strong>Global code - </strong> The default environment where
+              your code is executed for the first time.
+            </p>
+
+            <p class="card-text bg-info">
+              <strong>Function code</strong> Whenever the flow of execution
+              enters a function body.
+            </p>
+
+            <p class="card-text bg-primary">
+              think of the term <strong>execution context</strong> as the
+              environment / scope the current code is being evaluated in.
+            </p>
+
+            <ul class="list-group">
+              <p class="list-group-header">
+                When the program calls a function, what happens?
+              </p>
+              <li class="list-group-item list-group-item-success">
+                JavaScript creates a new execution context, a local execution
+                context
+              </li>
+              <li class="list-group-item list-group-item-success">
+                That local execution context will have its own set of
+                variables, these variables will be local to that execution
+                context.
+              </li>
+
+              <li class="list-group-item list-group-item-success">
+                The new execution context is thrown onto the execution stack.
+                Think of the execution stack as a mechanism to keep track of
+                where the program is in its execution
+              </li>
+            </ul>
+
+            <ul class="list-group">
+              <p class="list-group-header">
+                When a function ends, the following happens:
+              </p>
+
+              <li class="list-group-item list-group-item-warning">
+                The local execution contexts pops off the execution stack
+              </li>
+              <li class="list-group-item list-group-item-warning">
+                The functions sends the return value back to the calling
+                context. The calling context is the execution context that
+                called this function, it could be the global execution context
+                or another local execution context. It is up to the calling
+                execution context to deal with the return value at that point.
+                The returned value could be an object, an array, a function, a
+                boolean, anything really. If the function has no return
+                statement, undefined is returned.
+              </li>
+
+              <li class="list-group-item list-group-item-warning mb-3">
+                The local execution context is destroyed. This is important.
+                Destroyed. All the variables that were declared within the
+                local execution context are erased. They are no longer
+                available. That’s why they’re called local variables.
+              </li>
+            </ul>
+
+            <p class="card-text bg-info">
+              One intricacy of JavaScript is how it looks for variables. If it
+              can’t find a variable in its local execution context, it will
+              look for it in its calling context. And if not found there in
+              its calling context. Repeatedly, until it is looking in the
+              global execution context. (And if it does not find it there,
+              it’s undefined)
+            </p>
+
+            <p class="card-text bg-info">
+              a function has access to variables that are defined in its
+              calling context. The formal name of this phenomenon is the
+              <strong>lexical scope.</strong>
+            </p>
+
+            <p class="card-text bg-primary">
+              Here is how it works. Whenever you declare a new function and
+              assign it to a variable, you store the function definition, as
+              well as a closure. The closure contains all the variables that
+              are in scope at the time of creation of the function. It is
+              analogous to a backpack. A function definition comes with a
+              little backpack. And in its pack it stores all the variables
+              that were in scope at the time that the function definition was
+              created.
+            </p>
+
+            <img src="img/closuresSimpleExample.png" alt="Simple Closure Example" class="card-img img-fluid" />
+
+            <p class="card-text bg-sucess">
+              Whenever you declare a new function and assign it to a variable,
+              you store the function definition, as well as a closure. The
+              closure contains all the variables that are in scope at the time
+              of creation of the function. It is analogous to a backpack. A
+              function definition comes with a little backpack. And in its
+              pack it stores all the variables that were in scope at the time
+              that the function definition was created.
+            </p>
+
+            <p class="card-text bg-primary">
+              Every function has a closure...event functions created in the
+              Global Scope. When a function returns a function, that is when
+              the concept of closures becomes more relevant.
+            </p>
+
+            <img src="img/closuresMoreComplicated.png" alt="More complicated closures example"
+              class="card-img img-fluid mb-5" />
+
+            <img src="img/OOPandRecursionClosure.png" alt="More Closures Example" class="card-img img-fluid mb-5" />
+
+            <img src="img/moreComplicatedClosures.png" alt="More complicated closures example"
+              class="card-img img-fluid" />
+
+            <p class="card-text bg-info">
+              <strong>Partial Application</strong> is basically a design
+              pattern where your function returns another function that takes
+              an argument. For example, you can call your function like this:
+              myFun(arg1)(arg2), which is equivalent to:
+            </p>
+
+            <img src="img/partialApplicationClosure.png" alt="Partial Application design pattern"
+              class="card-img img-fluid" />
+
+            <p class="card-text bg-info">
+              <strong>Partial application</strong> is a powerful design
+              pattern because you can continuing chaining things like
+              myFun(arg1)(arg2)(arg3)… What’s happening here is akin to an
+              assembly line in a factory: One argument at a time is applied to
+              myFun to evaluate a better and better partial solution until all
+              the arguments are applied to provide a complete solution.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse2" data-parent="#accordion" data-toggle="collapse">
+              Destructuring
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse2" class="collapse">
+          <div class="card-body bg-secondary">
+            <p class="card-text-primary">
+              Destructuring is a powerful way to create variables from values
+              in arrays and objects...can make your code simpler.
+            </p>
+
+            <p class="card-text">Array destructuring</p>
+
+            <img class="card-img img-fluid mb-5" src="img/ArrayDestructuring.png" alt="Destrucuring Arrays" />
+
+            <ul class="list-group">
+              <p class="list-group-header">Array destructuring use cases:</p>
+              <li class="list-group-item list-group-item-success">
+                Blog Posts. Ex... you want first post formatted differently
+                than all the other posts.
+              </li>
+              <li class="list-group-item list-group-item-info">
+                const [starPost, ...otherPosts] = blogPosts;
+              </li>
+              <li class="list-group-item list-group-item-success">
+                Blog Posts. Ex... you just need the first three posts of the
+                array, you can just declare three variables and the rest will
+                be ignored.
+              </li>
+              <li class="list-group-item list-group-item-info">
+                const [post1, post2, post3] = blogPosts;
+              </li>
+            </ul>
+
+            <p class="card-text">Object Destructuring</p>
+
+            <img src="img/objectDestructuring.png" alt="Object Destructuring" class="card-img img-fluid mb-5" />
+
+            <p class="card-text bg-primary">
+              best use of object destructuring is the handling of options
+            </p>
+
+            <img src="img/handlingOptions.png" alt="Handling options via Destructuring on Objects"
+              class="card-img img-fluid" />
+
+            <p class="card-text">
+              by writing options = {} as the argument, we specify that if
+              nothing is passed, by default we will use an empty object as the
+              passed options.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse3" data-parent="#accordion" data-toggle="collapse">
+              Write Better JS
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse3" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Better Programming in JS</h4>
+
+            <img class="card-img img-fluid" src="img/betterProgrammingexamplesJS.png" alt="Write Better JS example 1" />
+
+            <p class="card-text-success">
+              <strong>ESLint</strong> is a tool for static code analysis. It
+              is the most important tool that allows us to find potential
+              issues within the codebase and ensure high quality of the
+              codebase. The best part is that linting is a fully automated
+              process and can be used to prevent the low-quality code from
+              making its way into the codebase.
+            </p>
+
+            <a href="https://eslint.org/">ES-Lint</a>
+
+            <p class="card-text-info">
+              <strong>ES-Lint</strong> Configuration
+            </p>
+            <p class="card-text-info">
+              ESLint rules into your project one-by-one as well. Configure
+              them initially as warn, and once you’re comfortable, you can
+              convert some of the rules into error.
+            </p>
+            <p class="card-text-info">
+              In the root directory of your project run:
+            </p>
+            <p class="card-text bg-primary">
+              npm i -D eslint npm i -D eslint-plugin-fp
+            </p>
+
+            <p class="card-text">
+              Then create a .eslintrc.yml file within the root directory of
+              your project:
+            </p>
+            <p class="card-text bg-info">
+              env: es6: true plugins: fp rules: # rules will go in here
+            </p>
+
+            <p class="card-text">
+              You can also run ESLint manually from the command line: npx
+              eslint .
+            </p>
+
+            <p class="card-text bg-warning">
+              rules: max-lines: - warn - 200 (sets the max lines to 200 for
+              files)
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse4" data-parent="#accordion" data-toggle="collapse">
+              advanced console commands
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse4" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">advanced console commands</h4>
+
+            <p class="card-text bg-info">console.log({ foo, bar });</p>
+            <p class="card-text>(to console.log() multiple objects for testing/debugging) </p>
+              <p class=" card-text bg-info">console.warn() & console.error()</p>
+
+            <p class="card-text bg-info">console.group() can be used when grouping or nesting together relevant details
+              to enable you to read the logs easily</p>
+
+            <img class="card-img img-fluid" src="img/consoleLog.png" alt="Advanced console log commands" />
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse5" data-parent="#accordion" data-toggle="collapse">
+              this
+
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse5" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">
+              Why 'this' is so powerful
+            </h4>
+
+            <p class="card-text bg-primary">
+              “this” is a keyword used in JavaScript that has a special meaning depending on the context it’s being used
+            </p>
+
+            <p class="card-text">
+              Context is always the value of the this keyword which is a reference to the object that “owns” the
+              currently executing code.
+            </p>
+
+            <p class="card-text bg-primary">Functions that sit in the global context (not as a method on an object) will
+              point the ‘this’ keyword back to the Window object.</p>
+
+            <p class="card-text bg-primary">When “this” is inside an object, it refers to the object itself (returns the
+              object itself)
+            </p>
+
+            <p class="card-text bg-primary">Anytime you have an object nested inside another object, and then ‘this’
+              points to the object on which the method is defined.</p>
+
+            <p class="card-text bg-primary">this on Arrow functions returns window object(or global context). An arrow
+              function expression has a shorter syntax than a function expression and does not have its own this,
+              arguments, super, or new.target. These function expressions are best suited for non-method functions, and
+              they cannot be used as constructors</p>
+
+            <img class="card-img img-fluid mb-5" src="img/arrowFunctionThis.png" alt="this with Arrow functions" />
+
+            <p class="card-text bg-primary">However, if a function is executed in strict mode, ‘this’ will return
+              undefined because strict mode does not allow default binding.</p>
+
+            <img src="img/strictModeThis.png" alt="this with strict-mode">
+
+            <p class="card-text-info">
+              if you want to use ‘this’ in strict mode, ‘this’ must be defined by the execution context because ‘this’
+              is not automatically attached to any object (not even the Window object).
+            </p>
+
+            <p class="card-text bg-primary">When ‘this’ is called from a function declared outside of an object</p>
+
+            <img src="img/thisFunctionAssignment.png" alt="function assignment with this" class="card-img img-fluid">
+
+            <p class="card-text">In this context, the function chase() returns undefined because when run in the global
+              context, ‘this’ points to the window object by default and does not have the properties (‘breed’ or
+              ‘lovesToChase’) defined on that object.</p>
+
+            <p class="card-text">A constructor function allows us to define an object (like Number or String, except it
+              has its own special properties and methods).</p>
+
+            <p class="card-text bg-primary">It’s important to note that ‘this’ does not have a value while in the
+              constructor function.</p>
+
+            <img src="img/thisDog.png" alt="more this functions" class="card-img img-fluid">
+
+            <img src="img/thisFunctions.png" alt="more detailed this in Functions" class="card-img-bottom img-fluid">
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse6" data-parent="#accordion" data-toggle="collapse">
+              array.slice()
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse6" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">
+            </h4>
+
+            <p class="card-text bg-primary">
+              The slice method provides a mechanism for creating a shallow copy of a subset of a list, without modifying
+              the original list. Thus it provides a key building block for writing functional JavaScript.
+            </p>
+
+            <p class="card-text bg-warning">The slice method is not to be confused with the splice method, which
+              modifies an array in place</p>
+
+            <ul class="list-group">
+              <p class="list-group-header">And with the rise of React and other functionally oriented JavaScript
+                practices, it is becoming even more important, for 2 key reasons:</p>
+              <li class="list-group-item list-group-item-success">
+                Functional programming, particularly higher level functions, works heavily with lists of data.
+              </li>
+              <li class="list-group-item list-group-item-success">
+                Functional programming requires pure functions, functions that do not cause side effects or modify their
+                input data.
+              </li>
+
+            </ul>
+
+            <p class="card-text bg-primary mt-3">
+              arr.slice([begin[, end]]);
+
+            </p>
+
+            <p class="card-text bg-info"> The slice method creates a copy of the array starting at begin up to but not
+              including end.</p>
+
+            <p class="card-text bg-info">It also accepts negative indices, which indicate counts back from the end of
+              the array.</p>
+
+            <img src="img/arraySlice.png" alt="array slice example 1" class="card-img img-fluid">
+
+            <p class="card-text bg-primary mt-3">Another huge area of use for slice is to manipulate arrays in a
+              functional/pure way, without modifying the original array.</p>
+
+            <p class="card-text">A powerful and common use of slice in a functional context is to replace the value of a
+              particular item in an array.
+              Imperatively this is simple, you just assign the new value, but in a functional world you can’t modify the
+              original array.</p>
+
+            <img src="img/arraySlice2.png" alt="Array slice example 2" class="car-img-bottom img-fluid">
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse7" data-parent="#accordion" data-toggle="collapse">
+              Async JS
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse7" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">
+              Async JS
+            </h4>
+
+            <img src="img/jQueryAsync.png" alt="JQuery Async example" class="car-img img-fluid">
+
+            <p class="card-text-primary">
+              If giving the restaurant your number is like giving them a <strong>callback function,</strong> receiving
+              the little buzzy thing is like receiving what’s called a <srong>“Promise”</srong>
+            </p>
+
+            <p class="card-text">
+              <strong>Promise</strong> can be in one of three states, pending, fulfilled or rejected... they represent the status of an asynchronous request.
+            </p>
+
+            <p class="card-text">
+              When you create a new Promise, you’re really just creating a plain old JavaScript object. This object can invoke two methods, then, and catch. Here’s the key. When the status of the promise changes to fulfilled, the function that was passed to .then will get invoked. When the status of a promise changes to rejected, the function that was passed to .catch will be invoked. What this means is that once you create a promise, you’ll pass the function you want to run if the async request is successful to .then. You’ll pass the function you want to run if the async request fails to .catch.
+            </p>
+
+            <img src="img/multiplePromise.png" alt="Promises Example" class="card-img img-fluid">
+
+            <p class="card-text"><strong>Chaining</strong>  Both .then and .catch will return a new promise. That seems like a small detail but it’s important because it means that promises can be chained.</p>
+
+            <img src="img/promiseChaining.png" alt="Example of Promise Chaining" class="card-img img-fluid">
+
+            <p class="card-text">thread the data (users) from the first async request all the way through to the last .then.</p>
+
+            <img src="img/callbackVSpromise.png" alt="callbacks vs. promises" class="card-img img-fluid mb-3">
+
+            <p class="card-text bg-primary">
+              <strong>Async / Await</strong>  anytime you add async to a function, that function is going to implicitly return a promise.
+            </p>
+
+            <p class="card-text bg-primary">
+              When you add async to a function it does two things. It makes it so the function itself returns (or wraps what gets returned in) a promise and makes it so you can use await inside of it.
+            </p>
+
+            <p class="card-text bg-warning">With Async/Await... catch errors by wrapping in try / catch blocks generally.</p>
+
+            <img src="img/asyncAwait.png" alt="Async and Await modern JS example" class="card-img img-fluid">
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse8" data-parent="#accordion" data-toggle="collapse">
+              Imperative vs. declarative programming
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse8" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">
+              What’s the difference between imperative and declarative
+              programming?
+            </h4>
+
+            <p class="card-text-info">
+              We can also think about the difference between OOP and FP in
+              terms of the difference between “imperative” and “declarative”
+              programming.
+            </p>
+            <p class="card-text-primary">
+              FP is an example of declarative programming, while OOP is an
+              example of imperative programming.
+            </p>
+            <p class="card-text-info">
+              In a basic sense, imperative programming is concerned with how
+              you do something. It spells out the steps in the most essential
+              way, and is characterised by for and while loops, if and switch
+              statements, and so on.
+            </p>
+
+            <p class="card-text-info">
+              By contrast, declarative programming is concerned with what to
+              do, and it abstracts away the how by relying on expressions.
+              This often results in more concise code, but at scale, it can
+              become more difficult to debug because it’s that much less
+              transparent. Here’s a declarative approach to our sumArray()
+              function, above.
+            </p>
+
+            <img class="card-img img-fluid mb-5" src="img/imperativeDeclarative.png"
+              alt="Imperative and Declarative programming JS" />
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse9" data-parent="#accordion" data-toggle="collapse">
+              Prototype-Based Inheritance
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse9" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">What is Prototype-Based Inheritance?</h4>
+
+            <p class="card-text-primary">
+              There are several different styles of Object-Oriented
+              Programming, and the one JavaScript uses is Prototype-Based
+              Inheritance. The system allows for repeated behaviour via the
+              use of existing objects that serve as “prototypes”.
+            </p>
+
+            <p class="card-text-info">
+              Even if the idea of prototypes is new to you, you will have
+              encountered the prototype system by using in-built methods. For
+              example, functions used to manipulate arrays such as map ,
+              reduce , splice and so on are all methods of the Array.prototype
+              object. In fact, every instance of an array (defined using
+              square brackets [], or — more unusually — using new Array())
+              inherits from Array.prototype , which is why methods like map ,
+              reduce and spliceare available by default.
+            </p>
+
+            <p class="card-text-info">
+              The same is true of virtually every other built-in object, such
+              as strings and booleans: only a few, such as Infinity , NaN ,
+              null and undefined have no properties or methods. At the end of
+              the prototype chain we find Object.prototype , and almost every
+              object in JavaScript is an instance of Object.prototype :
+              Array.prototype and String.prototype , for example, both inherit
+              properties and methods from Object.prototype . To add properties
+              and methods to an object using prototype syntax, you can simply
+              initiate the object as a function, and use the prototype keyword
+              to add properties and methods:
+            </p>
+
+            <img class="card-img img-fluid mb-5" src="img/prototypes.png" alt="Prototypes in JS" />
+
+            <h5>Should I Override or Extend the Behaviour of Prototypes?</h5>
+
+            <p class="card-text-info">
+              It’s possible to change the behaviour of built-in prototypes in
+              exactly the same way that we can create and extend our own
+              prototypes, but most developers (and most companies) would
+              advise against this. If you want several objects to share the
+              same behaviour, you can always create a custom object (or define
+              your own ‘class’ or ‘subclass’) that inherits from a built-in
+              prototype without making any changes to the prototype itself. If
+              you’re going to be working with other developers, they’ll have
+              certain expectations about JavaScript’s default behaviour, and
+              editing this default behaviour can easily lead to errors. It’s
+              worth noting, however, that not everyone shares this strong
+              opposition to extending built-in prototypes. See, for example,
+              this article from Brendan Eich, the creator of JavaScript. In
+              this article (from 2005), Eich suggested that the prototype
+              system in fact was built — in part — to make extensions
+              possible!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+  </script>
+</body>
+
 </html>

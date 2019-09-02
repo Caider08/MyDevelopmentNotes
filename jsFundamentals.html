@@ -117,6 +117,11 @@
               class="list-group-item list-group-item-dark">JS essential Arrays</a>
 
             <a target="_blank"
+              href="https://codeburst.io/js-by-example-8-distinct-uses-of-javascript-array-slice-4e4e95a470e4"
+              class="list-group-item list-group-item-dark">JS array slice method</a>
+
+
+            <a target="_blank"
               href="https://medium.com/free-code-camp/a-brief-review-of-scoping-and-hoisting-in-javascript-e74c38283b65"
               class="list-group-item list-group-item-dark">Scoping and Hoisting</a>
 
@@ -126,8 +131,9 @@
             <a href="https://medium.com/free-code-camp/dom-manipulation-in-vanilla-js-2036a568dcd9"
               class="list-group-item list-group-item-dark">DOM Manipulation in vanilla JS</a>
 
-              <a href="https://medium.com/@kristyburge/why-this-is-so-powerful-in-javascript-34116f1ca5f2" class="list-group-item list-group-item-dark">Why 'this' is so powerful</a>
-     
+            <a href="https://medium.com/@kristyburge/why-this-is-so-powerful-in-javascript-34116f1ca5f2"
+              class="list-group-item list-group-item-dark">Why 'this' is so powerful</a>
+
 
 
           </ul>
@@ -374,8 +380,10 @@
             <p class="card-text"><strong>Global Execution Object:</strong> Code that isn't in any function. Window
               object in Browser</p>
             <p class="card-text">Any function call is a new execution context</p>
-            <p class="card-text bg-primary">Context is always the value of the <strong>this</strong> keyword which is a reference to the object that “owns” the currently executing code.</p>
-            <p class="card-text"><strong>“this”</strong> is a keyword used in JavaScript that has a special meaning depending on the context it’s being used</p>
+            <p class="card-text bg-primary">Context is always the value of the <strong>this</strong> keyword which is a
+              reference to the object that “owns” the currently executing code.</p>
+            <p class="card-text"><strong>“this”</strong> is a keyword used in JavaScript that has a special meaning
+              depending on the context it’s being used</p>
             <p class="card-text">Function-stack (call stack) follows a LIFO(Last in First Out) order.</p>
             <p class="card-text">Stacking will not happen no matter how many function calls are made in the same Lexical
               Environment and scope. They all just push and pop within the same environment.</p>
@@ -560,8 +568,6 @@
             </ul>
 
 
-
-
           </div>
         </div>
       </div>
@@ -734,6 +740,10 @@
               already finished execution.</p>
             <p class="card-text">Can use callBack functions() to defer activities into future to make our CODE
               NonBlocking.</p>
+
+            <p class="card-text bg-info">Pass a reference to a function as an argument... you do this the function
+              you’re passing as an argument is called a callback function and the function you’re passing the callback
+              function to is called a higher order function.</p>
             <img class="card-img img-fluid mb-5" src="img/CallBackFunction.png" alt="Callback Function basic">
             <img class="card-img img-fluid mb-5" src="img/moreCallbackFunction.png" alt="More Callback Function basic">
 
@@ -753,8 +763,11 @@
               <strong>this</strong> represents the object.</p>
             <p class="card-text">When a function is used as a constructor: new Constructor(), <strong>this</strong>
               represents the newly created object.</p>
-              <p class="card-text">When a function sits in the global scope, then the value of ‘this’ is the Window object. Think of it as the test function being a method on the context in which it sits (the window object).</p>
-              <p class="card-text bg-warning">However, if a function is executed in strict mode, ‘this’ will return undefined because strict mode does not allow default binding.</p>
+            <p class="card-text">When a function sits in the global scope, then the value of ‘this’ is the Window
+              object. Think of it as the test function being a method on the context in which it sits (the window
+              object).</p>
+            <p class="card-text bg-warning">However, if a function is executed in strict mode, ‘this’ will return
+              undefined because strict mode does not allow default binding.</p>
             <p class="card-text">The value of <strong>this</strong> can be set with apply() or call():
               doSomething.apply(theObject). In this case <strong>this</strong> is the object sent as the first parameter
               to the method.</p>
@@ -766,7 +779,9 @@
             <p class="card-text">Arrow Functions don't have their own <strong>this</strong> and
               <strong>arguments</strong></p>
             <p class="card-text">Share the surrounding <strong>this</strong> keyword...</p>
-            <p class="card-text bg-primary">An arrow function expression has a shorter syntax than a function expression and does not have its own this, arguments, super, or new.target. These function expressions are best suited for non-method functions, and they cannot be used as constructors</p>
+            <p class="card-text bg-primary">An arrow function expression has a shorter syntax than a function expression
+              and does not have its own this, arguments, super, or new.target. These function expressions are best
+              suited for non-method functions, and they cannot be used as constructors</p>
             <p class="card-text">...<strong>lexical</strong> this variable (use arrow functions to preserve value of
               this)</p>
             <p class="card-text">Every async function() always returns a Promise</p>
