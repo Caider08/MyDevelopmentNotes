@@ -134,6 +134,8 @@
             <a href="https://medium.com/@kristyburge/why-this-is-so-powerful-in-javascript-34116f1ca5f2"
               class="list-group-item list-group-item-dark">Why 'this' is so powerful</a>
 
+            <a href="https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff"
+              class="list-group-item list-group-item-dark">Understanding Async JS</a>
 
 
           </ul>
@@ -468,6 +470,9 @@
           <div class="card-body bg-secondary">
             <h4 class="card-title">Event Loop JS</h4>
 
+            <p class="card-text bg-primary">The job of the Event loop is to look into the call stack and determine if
+              the call stack is empty or not. If the call stack is empty, it looks into the message queue to see if
+              there’s any pending callback waiting to be executed.</p>
             <ol class="list-group">
               <p class="list-group-header">Event Loop simplied:</p>
               <li class="list-group-item list-group-item-success">3 Parts: Execution Stack, WEB APIs, Message Que</li>
@@ -528,6 +533,16 @@
               once it's empty it can push the next <strong>Message Que</strong> function() onto it</p>
             <p class="card-text"><strong>DOM Evetns</strong> processed when the <strong>Execution Stack</strong> is
               empty</p>
+
+            <p class="card-text bg-primary">ES6 introduced the concept of job queue/micro-task queue which is used by
+              Promises in JavaScript. The difference between the message queue and the job queue is that the job queue
+              has a higher priority than the message queue, which means that promise jobs inside the job queue/
+              micro-task queue will be executed before the callbacks inside the message queue.</p>
+
+            <p class="card-text">While the event loop is executing the tasks in the micro-task queue and in that time if
+              another promise is resolved, it will be added to the end of the same micro-task queue, and it will be
+              executed before the callbacks inside the message queue no matter for how much time the callback is waiting
+              to be executed.</p>
           </div>
         </div>
       </div>

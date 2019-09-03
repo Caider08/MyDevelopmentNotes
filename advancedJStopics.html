@@ -125,7 +125,12 @@
             <a href=" https://medium.com/free-code-camp/the-evolution-of-async-javascript-from-callbacks-to-promises-to-async-await-e73b047f2f40"
               class="list-group-item list-group-item-dark">History of Async in Javascript</a>
 
-                <a href="https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff" class="list-group-item list-group-item-dark">async JS and Event Loop</a>
+
+            <a href="https://medium.com/free-code-camp/how-to-master-async-await-with-this-real-world-example-19107e7558ad"
+              class="list-group-item list-group-item-dark"></a>
+
+            <a href="https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff"
+              class="list-group-item list-group-item-dark">async JS and Event Loop</a>
 
           </ul>
         </div>
@@ -588,46 +593,67 @@
             </h4>
 
             <img src="img/jQueryAsync.png" alt="JQuery Async example" class="car-img img-fluid">
-            
-            <p class="card-text">JavaScript is a single-threaded programming language which means only one thing can happen at a time. That is, the JavaScript engine can only process one statement at a time in a single thread.</p>
-            <p class="card-text bg-warning">While the single-threaded languages simplify writing code because you don’t have to worry about the concurrency issues, this also means you can’t perform long operations such as network access without blocking the main thread.</p>
 
-            <p class="card-text bg-primary">Using asynchronous JavaScript (such as callbacks, promises, and async/await), you can perform long network requests without blocking the main thread.</p>
-            
+            <p class="card-text">JavaScript is a single-threaded programming language which means only one thing can
+              happen at a time. That is, the JavaScript engine can only process one statement at a time in a single
+              thread.</p>
+            <p class="card-text bg-warning">While the single-threaded languages simplify writing code because you don’t
+              have to worry about the concurrency issues, this also means you can’t perform long operations such as
+              network access without blocking the main thread.</p>
+
+            <p class="card-text bg-primary">Using asynchronous JavaScript (such as callbacks, promises, and
+              async/await), you can perform long network requests without blocking the main thread.</p>
+
             <p class="card-text-primary">
               If giving the restaurant your number is like giving them a <strong>callback function,</strong> receiving
               the little buzzy thing is like receiving what’s called a <srong>“Promise”</srong>
             </p>
 
             <p class="card-text">
-              <strong>Promise</strong> can be in one of three states, pending, fulfilled or rejected... they represent the status of an asynchronous request.
+              <strong>Promise</strong> can be in one of three states, pending, fulfilled or rejected... they represent
+              the status of an asynchronous request.
             </p>
 
             <p class="card-text">
-              When you create a new Promise, you’re really just creating a plain old JavaScript object. This object can invoke two methods, then, and catch. Here’s the key. When the status of the promise changes to fulfilled, the function that was passed to .then will get invoked. When the status of a promise changes to rejected, the function that was passed to .catch will be invoked. What this means is that once you create a promise, you’ll pass the function you want to run if the async request is successful to .then. You’ll pass the function you want to run if the async request fails to .catch.
+              When you create a new Promise, you’re really just creating a plain old JavaScript object. This object can
+              invoke two methods, then, and catch. Here’s the key. When the status of the promise changes to fulfilled,
+              the function that was passed to .then will get invoked. When the status of a promise changes to rejected,
+              the function that was passed to .catch will be invoked. What this means is that once you create a promise,
+              you’ll pass the function you want to run if the async request is successful to .then. You’ll pass the
+              function you want to run if the async request fails to .catch.
             </p>
 
             <img src="img/multiplePromise.png" alt="Promises Example" class="card-img img-fluid">
 
-            <p class="card-text"><strong>Chaining</strong>  Both .then and .catch will return a new promise. That seems like a small detail but it’s important because it means that promises can be chained.</p>
+            <p class="card-text"><strong>Chaining</strong> Both .then and .catch will return a new promise. That seems
+              like a small detail but it’s important because it means that promises can be chained.</p>
 
             <img src="img/promiseChaining.png" alt="Example of Promise Chaining" class="card-img img-fluid">
 
-            <p class="card-text">thread the data (users) from the first async request all the way through to the last .then.</p>
+            <p class="card-text">thread the data (users) from the first async request all the way through to the last
+              .then.</p>
 
             <img src="img/callbackVSpromise.png" alt="callbacks vs. promises" class="card-img img-fluid mb-3">
 
             <p class="card-text bg-primary">
-              <strong>Async / Await</strong>  anytime you add async to a function, that function is going to implicitly return a promise.
+              <strong>Async / Await</strong> anytime you add async to a function, that function is going to implicitly
+              return a promise.
             </p>
+
+            <p class="card-text bg-primary">Async is nothing more than syntactic sugar for promises</p>
 
             <p class="card-text bg-primary">
-              When you add async to a function it does two things. It makes it so the function itself returns (or wraps what gets returned in) a promise and makes it so you can use await inside of it.
+              When you add async to a function it does two things. It makes it so the function itself returns (or wraps
+              what gets returned in) a promise and makes it so you can use await inside of it.
             </p>
 
-            <p class="card-text bg-warning">With Async/Await... catch errors by wrapping in try / catch blocks generally.</p>
+            <p class="card-text bg-warning">With Async/Await... catch errors by wrapping in try / catch blocks
+              generally.</p>
 
-            <img src="img/asyncAwait.png" alt="Async and Await modern JS example" class="card-img img-fluid">
+            <img src="img/asyncAwait.png" alt="Async and Await modern JS example" class="card-img img-fluid mb-5">
+
+            <img src="img/asyncAxios.png" alt="Async and Await with Axios" class="card-img img-fluid">
+
           </div>
         </div>
       </div>
