@@ -129,6 +129,17 @@
               <a href="https://medium.com/wtl-studio/10-things-you-will-eventually-learn-about-javascript-projects-efd7646b958a"
               class="list-group-item list-group-item-dark">Ten things about JS</a>
 
+              <a href="https://medium.com/better-programming/web-components-api-in-a-nutshell-c409127d563a"
+              class="list-group-item list-group-item-dark">Web Components API in a Nutshell</a>
+
+              
+              <a href="https://developers.google.com/web/fundamentals/web-components/customelements"
+              class="list-group-item list-group-item-dark">Web Components Google Fundamentals</a>
+
+      
+
+              <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components" class="list-group-item list-group-item-dark">Mozilla Web Components</a>
+              
 
           </ul>
         </div>
@@ -387,8 +398,6 @@
             </ul>
 
 
-
-
           </div>
         </div>
       </div>
@@ -467,6 +476,58 @@
           </div>
         </div>
       </div>
+
+      
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse10" data-parent="#accordion" data-toggle="collapse">
+              Web Components 
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse10" class="collapse">
+          <div class="card-body bg-secondary">
+
+            <h4 class="card-title">Web Components</h4>
+
+            <ul class="list-group">
+                <p class="list-group-header">Web Component Links</p>
+                <li class="list-group-item list-group-item-light"><a href="https://www.webcomponents.org/">Web componentsORG</a></li>
+                <li class="list-group-item list-group-item-light"><a href="https://www.amazon.com/Web-Component-Essentials-introduction-Components-ebook/dp/B07JNRC8Y8/ref=as_li_ss_tl?keywords=web+components&qid=1564573511&s=books&sr=1-1&linkCode=sl1&tag=thegeniusde07-20&linkId=f88083b5dfb4a787fcfd40af783a39e6&language=en_US">Web Components Essentials book</a></li>
+                <li class="list-group-item list-group-item-light"> <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components">Mozilla Web Components</a></li>
+                <li class="list-group-item list-group-item-light"><a href="https://www.webcomponents.org/">Web componentsORG</a></li>
+              </ul>
+      
+            
+            <p class="card-text bg-info mt-5">Each JS framework has its own API for reusable components. A react-video-player won’t work in Ember, and a ember-preload won’t work in Vue. For example, Matrix.org’s JavaScript SDK is tied to React. Other JS SDK’s use an iframe (Facebook Like Button and other ad-tech SDK’s usually go this route) or abstain from providing any UI functionality at all (like WebTorrent).</p>
+
+            <p class="card-text bg-primary">Web Components, since they act exactly like built-in HTML elements, should work within any framework. If your framework can render arbitrary HTML elements, then it can render a custom HTML element. If you’re just building an app, it doesn’t matter; just render the HTML that you want in your template language.</p>
+
+            <p class="card-text bg-info">the browser global window object has a property called customElements — we call the define method on the property to create our custom HTML element. It takes three arguments, the last one is optional.</p>
+
+            <p class="card-text bg-info">WebComponentButton class has lifecycles out of the box. If you come from the React, Vue, Angular, etc., this might be familiar to you already. Lifecycle methods let us control what happens when certain actions happen. For example, when the browser renders the button, we want to attach styles to it.</p>
+            <p class="card-text bg-primary">customElements.define(name, constructor, options);</p>
+
+            <img src="img/webcomponentsORG.png" alt="Overview of Web ComponentsORG" class="card-img img-fluid">
+
+            <img src="img/blazorOverview2.png" alt="Overview of Web ComponentsORG 2" class="card-img img-fluid">
+
+            <img src="img/webcomponentsORG3.png" alt="Overview of Web ComponentsORG 3" class="card-img img-fluid">
+
+            <img src="img/WebComponentCode.png" alt="Web Component Code" class="card-img img-fluid mt-3">
+
+            <img src="img/webComponentCode2.png" alt="Web Component Code" class="card-img img-fluid mt-3">
+              
+
+            <p class="card-text"></p>
+
+          </div>
+        </div>
+      </div>
+
+
 
 
     </div>
