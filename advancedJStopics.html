@@ -51,6 +51,7 @@
               <a href="advancedJStopics.html" class="dropdown-item">Advanced JS Topics</a>
               <a href="JSframeworks.html" class="dropdown-item">JS Interview Related</a>
               <a href="jsDatastructures.html" class="dropdown-item">JS Data Structures</a>
+              <a href="strangeJS.html" class="dropdown-item">strange JS</a>
               <a href="JSframeworks.html" class="dropdown-item">JS Frameworks</a>
               <a href="index.html" class="dropdown-item">Notes Home</a>
             </div>
@@ -132,6 +133,9 @@
 
             <a href="https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff"
               class="list-group-item list-group-item-dark">async JS and Event Loop</a>
+
+              <a href="https://medium.com/datadriveninvestor/event-loop-in-javascript-b7ff47202716" class="list-group-item list-group-item-dark">Event Loop JS</a>
+              
 
           </ul>
         </div>
@@ -653,7 +657,16 @@
 
             <img src="img/asyncAwait.png" alt="Async and Await modern JS example" class="card-img img-fluid mb-5">
 
-            <img src="img/asyncAxios.png" alt="Async and Await with Axios" class="card-img img-fluid">
+            <img src="img/asyncAxios.png" alt="Async and Await with Axios" class="card-img img-fluid mb-5">
+
+            <p class="card-text">a data structure which maps an event to a particular method. This data structure is the <strong>Event Table.</strong> But this event table only maps the method to an event and does not invoke the method itself. The event table instead sends the method to the <strong>Event Queue</strong>, and as the name suggests, it is a queue of methods to be executed in the correct order/sequence.</p>
+            <p class="card-text">The event loop is basically an endless loop, which keeps on checking whether there is something to be executed in the call stack. If the call stack is empty it checks the <strong>Event Queue,</strong> whether there is something to move to the call stack. If there is a method present, it moves it to the call stack and the method gets executed.</p>
+            
+            <img src="img/asyncEventQue2.png" alt="Async Event-Que" class="card-img img-fluid">
+
+            <img src="img/asyncEventQue.png" alt="Async Event-Que 2" class="card-img img-fluid mb-5">
+
+            <p class="card-text bg-primary"><strong>the event loop</strong> is a process that runs endlessly and whose only job is to monitor and transfer methods to the call stack from the event queue.</p>
 
           </div>
         </div>

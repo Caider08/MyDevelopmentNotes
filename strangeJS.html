@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="notes.css">
+  <title>strange JS</title>
+</head>
+
+<body class="bg-dark text-light">
+  <header>
+    <h1 class="display-2 text-center my-4">strange JS</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-primary btn-block dropdown-toggle" type="button" data-toggle="dropdown">
+              Computer Sci.
+            </button>
+            <div class="dropdown-menu">
+
+              <a class="dropdown-item" href="DotNetDesignPatterns.html" class="dropdown-item">Design
+                Patterns</a>
+              <a class="dropdown-item" href="studyDesignPatterns.html" class="dropdown-item">Quick Study
+              </a>
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-success btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              C#
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="mvc.html" class="dropdown-item">.Net MVC</a>
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-danger btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              JS
+            </button>
+            <div class="dropdown-menu">
+              <a href="JSfundamentals.html" class="dropdown-item">JS Fundamentals</a>
+              <a href="objectOrientedJS.html" class="dropdown-item">Object Oriented in JS</a>
+              <a href="interviewJS.html" class="dropdown-item">JS Interview Related</a>
+              <a href="advancedJStopics.html" class="dropdown-item">Advanced JS Topics</a>
+              <a href="strangeJS.html" class="dropdown-item">strange JS</a>
+              <a href="JSframeworks.html" class="dropdown-item">JS Frameworks</a>
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-success btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              Salesforce
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-warning btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              WebDevelopment
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-primary btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              Interview Prep
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <button class="btn btn-primary d-block mt-25" style="margin-top: 25px" data-toggle="collapse"
+      data-target="#collapse-btn-1">JS links</button>
+
+    <div class="collapse my-25" id="collapse-btn-1">
+      <div class="card">
+        <div class="card-body">
+          <ul class="list-group">
+
+            <a class="list-group-item list-group-item-dark" target="_blank"
+              href="">
+
+              </a>
+
+              <a class="list-group-item list-group-item-dark" target="_blank"
+              href="https://codeburst.io/does-js-really-do-that-43f17bc01e9b">does JS really do that?</a>
+       
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="accordion" style="margin-top: 10px">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse1" data-parent="#accordion" data-toggle="collapse">
+              [] + {} vs. {} + []
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse1" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">[] + {} //"[object Object]"
+                                {} + [] // 0
+            </h4>
+
+            <ul class="list-group">
+            
+                <li class="list-group-item list-group-item-primary">When an operand of the + operation is an object, the object is coerced into a primitive value. To achieve this coercion, first the valueOf() operation is invoked on the object. If it fails to produce a simple primitive, it falls back on the result of the toString() representation for the same.</li>
+                <li class="list-group-item list-group-item-primary">If any operand of a + operation is a string, the resulting expression is also a string.</li>
+            </ul>
+
+            <p class="card-text">For [] + {}, the valueOf() operation on [] doesn’t produce a simple primitive and so the toString() method is invoked which results in [] being coerced into "". Since one operand of this + operation is a string, the other operand, {} is also coerced to a string, producing "[object Object]".</p>
+
+            <p class="card-text">For {} + [] , however, {} is interpreted as a stand-alone empty block (semicolons aren’t needed to terminate them) and + [] as an expression which results in the explicit coercion of [] to a number value, 0. It might as well be represented as : {}; +[] .</p>
+          
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse2" data-parent="#accordion" data-toggle="collapse">
+              Booleans compared to others
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse2" class="collapse">
+          <div class="card-body bg-secondary">
+            <p class="card-text bg-primary">
+                    Booleans don’t play nice when compared with other primitives; they give unexpected results
+            </p>
+
+            <img class="card-img img-fluid mb-5" src="img/booleanComparison.png" alt="boolean JS comparison">
+       
+
+            <ul class="list-group">
+              <p class="list-group-header">Solutions:</p>
+              <li class="list-group-item list-group-item-info">For the first example, the type of x is indeed Boolean, so it performs ToNumber(x), which coerces true to 1. Now, 1 == “42” is evaluated. The types are still different, so (essentially recursively) we re-consult the algorithm, which just as above will coerce “42” to 42, and 1 == 42 is clearly false.</li>
+              <li class="list-group-item list-group-item-info">Similarly, in the second example, x is coerced to 1 while y is passed to the ToNumber() algorithm where ‘true’ is coerced to NaN and since 1 == NaN, also, is quite clearly false, we get the aforementioned result.</li>
+            </ul>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse3" data-parent="#accordion" data-toggle="collapse">
+              object comparison
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse3" class="collapse">
+          <div class="card-body bg-secondary">
+
+            <h4 class="card-title">object comparison</h4>
+
+            <p class="card-text bg-primary">We often need to check if two object references point to the same object and employ the == operator to achieve that effect</p>
+
+            <img class="card-img img-fluid" src="img/objectComparison.png" alt="object comparison js">
+
+            <img class="card-img img-fluid" src="img/objectComparison2.png" alt="object comparison js 2">
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse4" data-parent="#accordion" data-toggle="collapse">
+            Pre-increment with post-increment
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse4" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">pre-increment with post-increment</h4>
+
+            
+
+            <img class="card-img img-fluid" src="img/incrementJSthing.png"
+              alt="Pre-increment with post-increment">
+
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse5" data-parent="#accordion" data-toggle="collapse">
+            'name' must be named with caution
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse5" class="collapse">
+          <div class="card-body bg-secondary">
+
+            <h4 class="card-title">'name' must be named with caution</h4>
+
+            <img class="card-img img-fluid mb-5" src="img/name.png" alt="'name' must be named with caution">
+
+
+            <p class="card-text bg-info">
+             <strong>name</strong> or <strong>window.name</strong> is a reserved keyword. When name is set to any value, it is automatically stringified, i.e, the toString() method is called on it .
+             window.name gets/sets the name of the window. This only happens for var declarations and not for let declarations since let variables do not attach themselves to the window object.
+            </p>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse6" data-parent="#accordion" data-toggle="collapse">
+              undefined and null, same but different
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse6" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">undefined and null, same but different</h4>
+
+            <p class="card-text bg-primary">undefined and null coerce to each other when compared with <strong>==</strong>
+            </p>
+
+            <img class="card-img img-fluid mb-5" src="img/undefinedAndNull.png" alt="undefined and NaN">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse7" data-parent="#accordion" data-toggle="collapse">
+             caveat to destructuring
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse7" class="collapse">
+          <div class="card-body bg-secondary">
+
+            <h4 class="card-title">caveat to destructuring</h4>
+
+            <img class="card-img img-fluid mb-5" src="img/caveatDestructuring.png" alt="caveat for destructuring">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse8" data-parent="#accordion" data-toggle="collapse">
+              Avoid for-loops
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse8" class="collapse">
+          <div class="card-body bg-secondary">
+
+                <img class="card-img img-fluid" src="img/avoidForloops.png" alt="avoidForLoops 1">
+
+                <img class="card-img img-fluid" src="img/avoidForloops2.png" alt="avoidForLoops 2">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse9" data-parent="#accordion" data-toggle="collapse">
+            
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse9" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title"></h4>
+
+
+            <p class="card-text bg-primary"></p>
+
+            <p class="card-text bg-info"></p>
+
+            <p class="card-text bg-info">
+
+            </p>
+
+            <img class="card-img img-fluid mb-5" src="img/prototypes.png" alt="Prototypes in JS">
+
+            <h5></h5>
+
+            <p class="card-text bg-info"> 
+            </p>
+
+            <p class="card-text bg-warning"></p>
+            <p class="card-text bg-success"></p>
+
+            <p class="card-text bg-success"></p>
+
+              <ul class="list-group">
+                <p class="list-group-item-header"></p>
+                <li class="list-group-item list-group-item-info"></li>
+                <li class="list-group-item list-group-item-info"></li>
+                <li class="list-group-item list-group-item-info"></li> 
+                <li class="list-group-item"></li>
+              </ul>   
+
+          </div>
+        </div>
+      </div>
+
+      
+      
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse11" data-parent="#accordion" data-toggle="collapse">
+              What are the pros and cons of monolithic vs microservice architectures?
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse11" class="collapse">
+          <div class="card-body bg-secondary">
+            
+            <p class="card-text bg-info">A <strong>monolithic architecture</strong> means that your app is written as one cohesive unit of code whose components are designed to work together, sharing the same memory space and resources.</p>
+            <p class="card-text bg-info">A <strong>microservice architecture</strong> means that your app is made up of lots of smaller, independent applications capable of running in their own memory space and scaling independently from each other across potentially many separate machines.</p>
+
+            <ul class="list-group">
+              <p class="list-group-item-header">Monolithic Pros:</p>
+              <li class="list-group-item list-group-item-success">The major advantage of the monolithic architecture is that most apps typically have a large number of cross-cutting concerns, such as logging, rate limiting, and security features such audit trails and DOS protection.
+                When everything is running through the same app, it’s easy to hook up components to those cross-cutting concerns.</li>
+              <li class="list-group-item list-group-item-success">There can also be performance advantages, since shared-memory access is faster than inter-process communication (IPC).</li>
+              <li class="list-group-item list-group-item-success"></li> 
+            </ul>
+
+            <ul class="list-group">
+              <p class="list-group-item-header">Monolithic Cons:</p>
+              <li class="list-group-item list-group-item-warning">Monolithic app services tend to get tightly coupled and entangled as the application evolves, making it difficult to isolate services for purposes such as independent scaling or code maintainability.</li>
+              <li class="list-group-item list-group-item-warning">Monolithic architectures are also much harder to understand, because there may be dependencies, side-effects, and magic which are not obvious when you’re looking at a particular service or controller.</li>
+              <li class="list-group-item list-group-item-warning"></li> 
+            </ul>
+
+            <ul class="list-group">
+              <p class="list-group-item-header">Microservice Pros:</p>
+              <li class="list-group-item list-group-item-success">Microservice architectures are typically better organized, since each microservice has a very specific job, and is not concerned with the jobs of other components.</li>
+              <li class="list-group-item list-group-item-success">Decoupled services are also easier to recompose and reconfigure to serve the purposes of different apps (for example, serving both the web clients and public API).</li>
+              <li class="list-group-item list-group-item-success">They can also have performance advantages depending on how they’re organized because it’s possible to isolate hot services and scale them independent of the rest of the app.</li> 
+            </ul>
+
+            <ul class="list-group">
+              <p class="list-group-item-header">Microservice Cons:</p>
+              <li class="list-group-item list-group-item-warning">As you’re building a new microservice architecture, you’re likely to discover lots of cross-cutting concerns that you did not anticipate at design time. A monolithic app could establish shared magic helpers or middleware to handle such cross-cutting concerns without much effort.</li>
+              <li class="list-group-item list-group-item-warning">In a microservice architecture, you’ll either need to incur the overhead of separate modules for each cross-cutting concern, or encapsulate cross-cutting concerns in another service layer that all traffic gets routed through.</li>
+             
+              <li class="list-group-item list-group-item-warning">Eventually, even monolthic architectures tend to route traffic through an outer service layer for cross-cutting concerns, but with a monolithic architecture, it’s possible to delay the cost of that work until the project is much more mature.</li>
+              <li class="list-group-item list-group-item-warning">Microservices are frequently deployed on their own virtual machines or containers, causing a proliferation of VM wrangling work. These tasks are frequently automated with container fleet management tools.</li>
+            </ul>
+
+            <p class="text-card bg-primary mt-3">Positive attitudes toward microservices, despite the higher initial cost vs monolthic apps. Aware that microservices tend to perform and scale better in the long run.</p>
+            <p class="text-card bg-primary">Structure the app so that services are independent from each other at the code level, but easy to bundle together as a monolithic app in the beginning. Microservice overhead costs can be delayed until it becomes more practical to pay the price.</p>
+
+
+
+            <p class="card-text bg-info">
+              
+            </p>
+     
+            <p class="card-text bg-success"></p>
+
+          
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+  </script>
+
+</body>
+
+</html>
