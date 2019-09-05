@@ -51,6 +51,7 @@
               <a href="JSfundamentals.html" class="dropdown-item">JS Fundamentals</a>
               <a href="JSframeworks.html" class="dropdown-item">JS Frameworks</a>
               <a href="advancedJStopics.html" class="dropdown-item">Advanced JS Topics</a>
+              <a href="strangeJS.html" class="dropdown-item">strange examples in JS</a>
               <a href="index.html" class="dropdown-item">Notes Home</a>
             </div>
           </div>
@@ -136,10 +137,9 @@
               <a href="https://developers.google.com/web/fundamentals/web-components/customelements"
               class="list-group-item list-group-item-dark">Web Components Google Fundamentals</a>
 
-      
-
               <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components" class="list-group-item list-group-item-dark">Mozilla Web Components</a>
               
+              <a href="https://medium.com/free-code-camp/a-beginners-introduction-to-webpack-2620415e46b3" class="list-group-item list-group-item-dark">Introduction to Webpack</a>
 
           </ul>
         </div>
@@ -512,7 +512,7 @@
 
             <img src="img/webcomponentsORG.png" alt="Overview of Web ComponentsORG" class="card-img img-fluid">
 
-            <img src="img/blazorOverview2.png" alt="Overview of Web ComponentsORG 2" class="card-img img-fluid">
+            <img src="img/webcomponentsORG2.png" alt="Overview of Web ComponentsORG 2" class="card-img img-fluid">
 
             <img src="img/webcomponentsORG3.png" alt="Overview of Web ComponentsORG 3" class="card-img img-fluid">
 
@@ -527,7 +527,91 @@
         </div>
       </div>
 
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse11" data-parent="#accordion" data-toggle="collapse">
+               Webpack
+            </a>
+          </h5>
+        </div>
 
+        <div id="collapse11" class="collapse">
+          <div class="card-body bg-secondary">
+
+            <h4 class="card-title">Webpack</h4>
+
+            <ul class="list-group">
+                <p class="list-group-header">Webpack Links</p>
+                <li class="list-group-item list-group-item-light"><a href="https://www.webcomponents.org/">Web componentsORG</a></li>
+                <li class="list-group-item list-group-item-light"><a href="https://www.amazon.com/Web-Component-Essentials-introduction-Components-ebook/dp/B07JNRC8Y8/ref=as_li_ss_tl?keywords=web+components&qid=1564573511&s=books&sr=1-1&linkCode=sl1&tag=thegeniusde07-20&linkId=f88083b5dfb4a787fcfd40af783a39e6&language=en_US">Web Components Essentials book</a></li>
+                <li class="list-group-item list-group-item-light"> <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components">Mozilla Web Components</a></li>
+                <li class="list-group-item list-group-item-light"><a href="https://www.webcomponents.org/">Web componentsORG</a></li>
+              </ul>
+      
+            
+            <p class="card-text bg-primary">Webpack is a tool that lets you compile JavaScript modules. It’s also known as a <strong>module bundler.</strong>
+              Given a large number of files, it generates a single file (or a few files) that run your app.</p>
+
+            <p class="card-text bg-primary">Webpack is not limited to being used on the front-end, but is useful in backend Node.js development as well.</p>
+
+            <p class="card-text">There are many predecessors of Webpack and lots of similarities in what those tools and Webpack do. The main difference is that those tools are known as <strong>task runners,</strong> while Webpack was born as a module bundler.</p>
+
+            <p class="card-text bg-primary">Webpack is a more focused tool. You just need to specify an entry point to your app (it could even be an HTML file with script tags) and webpack analyzes the files and bundles them in a single JavaScript output file that includes everything you need to run the app.</p>
+
+            <ul class="list-group">
+              <p class="list-group-header">Webpack possible operations:</p>
+              <li class="list-group-item list-group-item-info">helps you bundle your resources.</li>
+              <li class="list-group-item list-group-item-info">watches for changes and re-runs the tasks.</li>
+              <li class="list-group-item list-group-item-info">can run Babel transpilation to ES5, allowing you to use the latest JavaScript features without worrying about browser support.</li>
+              <li class="list-group-item list-group-item-info">can transpile CoffeeScript to JavaScript</li>
+              <li class="list-group-item list-group-item-info">can convert inline images to data URIs.</li>
+              <li class="list-group-item list-group-item-info">allows you to use require() for CSS files.</li>
+              <li class="list-group-item list-group-item-info">can run a development webserver.</li>
+              <li class="list-group-item list-group-item-info">can handle hot module replacement.</li>
+              <li class="list-group-item list-group-item-info">can split the output files into multiple files to avoid having a huge JS file to load in the first page hit.</li> 
+              <li class="list-group-item list-group-item-info">can perform tree shaking.</li>
+            </ul>
+
+            
+
+            <img src="img/globalWebPackinstall.png" alt="Install Webpack globally" class="card-img img-fluid mb-5">
+
+            <img src="img/localWebpackinstall.png" alt="Install Webpack locally" class="card-img img-fluid">
+
+            <img src="img/localWebpackinstall2.png" alt="Install Webpack locally 2" class="card-img img-fluid mb-5">
+
+            <img src="img/webpackconfig.png" alt="Webpack Configuration" class="card-img img-fluid mb-5">
+
+            <img src="img/webpackOutput.png" alt="Webpack Output" class="card-img img-fluid mb-5">
+
+            <img src="img/orderMatters.png" alt="Webpack order matters" class="card-img img-fluid mb-5">
+
+            <img src="img/webpackplugins1.png" alt="webpack plugins 1" class="card-img img-fluid">
+
+            <img src="img/webpackplugins2.png" alt="webpack plugins 2" class="card-img img-fluid mb-5">
+
+            <img src="img/webpackMode.png" alt="The Webpack mode" class="card-img img-fluid mb-5">
+
+            <img src="img/runningWebpack.png" alt="running Webpack" class="card-img img-fluid mb-5">
+            
+            <img src="img/whatchingWebpackchanges.png" alt="whatching Webpack" class="card-img img-fluid mb-2">
+
+            <p class="card-text">One nice feature of the watch mode is that the bundle is only changed if the build has no errors. If there are errors, watch will keep listening for changes, and try to rebuild the bundle, but the current, working bundle is not affected by those problematic builds.</p>
+
+
+            <img src="img/handingImageswebpack.png" alt="Handling images with webpack" class="card-img img-fluid mt-2">
+
+            <img src="img/handingImageswebpack2.png" alt="Handling images with webpack 2" class="card-img img-fluid">
+
+            <img src="img/generateSourceMaps.png" alt="Generating source maps with webpack" class="card-img img-fluid">
+              
+
+            <p class="card-text"></p>
+
+          </div>
+        </div>
+      </div>
 
 
     </div>
