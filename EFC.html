@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="notes.css">
+  <title>Entity Framework Core</title>
+</head>
+
+<body class="bg-dark text-light">
+  <header>
+    <h1 class="display-2 text-center my-4">Entity Framework Core</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-primary btn-block dropdown-toggle" type="button" data-toggle="dropdown">
+              Computer Sci.
+            </button>
+            <div class="dropdown-menu">
+
+              <a class="dropdown-item" href="DotNetDesignPatterns.html" class="dropdown-item">Design
+                Patterns</a>
+              <a class="dropdown-item" href="studyDesignPatterns.html" class="dropdown-item">Quick Study
+              </a>
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-success btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              C#
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="mvc.html" class="dropdown-item">.Net MVC</a>
+              <a href="EFC.html" class="dropdown-item">Entity Framework Core</a>
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-danger btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              JS
+            </button>
+            <div class="dropdown-menu">
+              <a href="JSfundamentals.html" class="dropdown-item">JS Fundamentals</a>
+              <a href="objectOrientedJS.html" class="dropdown-item">Object Oriented in JS</a>
+              <a href="interviewJS.html" class="dropdown-item">JS Interview Related</a>
+              <a href="advancedJStopics.html" class="dropdown-item">Advanced JS Topics</a>
+              <a href="JSframeworks.html" class="dropdown-item">JS Frameworks</a>
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-success btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              Salesforce
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-warning btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              WebDevelopment
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-primary btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              Interview Prep
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <button class="btn btn-primary d-block mt-25" style="margin-top: 25px" data-toggle="collapse"
+      data-target="#collapse-btn-1">JS links</button>
+
+    <div class="collapse my-25" id="collapse-btn-1">
+      <div class="card">
+        <div class="card-body">
+          <ul class="list-group">
+
+            <a class="list-group-item list-group-item-dark" target="_blank"
+              href="https://medium.com/@bretcameron/what-javascript-developers-can-learn-from-c-3cdb93ab8658">What JS
+              developers can learn from C++</a>
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="accordion" style="margin-top: 10px">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse1" data-parent="#accordion" data-toggle="collapse">
+              General EFC commands
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse1" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">General Entity FrameWorkCore</h4>
+
+            <p class="card-text bg-primary">dotnet ef migrations add 'MigrationName'</p>
+            <p class="card-text">adds a new migration</p>
+            <p class="card-text-bg-success mb-5">if do this with blank one it creates a blank migration (good for seeding)</p>
+
+            <p class="card-text bg-primary">dotnet ef database update</p>
+            <p class="card-text mb-5">after a succesful migration add it applies changes to database</p>
+
+            <p class="card-text bg-primary">dotnet ef database update MigrationName</p>
+            <p class="card-text">to downgrade database</p>
+            <p class="card-text mb-5">use 0 for the name if no prior migrations</p>
+           
+          
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse2" data-parent="#accordion" data-toggle="collapse">
+              Adding More seeds to an Already Seeded Database
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse2" class="collapse">
+          <div class="card-body bg-secondary">
+
+            <p class="card-text bg-primary mb-5">1) Make changes to your Model (add a class)
+            </p>
+
+            <p class="card-text bg-primary">Adjust DbSet under Data or Persistence</p>
+            <p class="card-text mb-5">Public DbSetclass TableName {get; set;}</p>
+
+            <p class="card-text bg-primary mb-5">dotnet ef migrations add MigrationName (code has to compile successfully)</p>
+
+            <p class="card-text bg-primary mb-5">dotnet ef database update</p>
+
+            <p class="card-text bg-primary">if the above worked...</p>
+            <p class="card-text">dotnet ef migrations add MigrationName (with no changes to model)</p>
+            <p class="card-text">...creates blank migration</p>
+            <p class="card-text">make changes to the "protected override void Up()</p>
+            <p class="card-text">...can just copy prior one...change for new table/s and comment out prior what you added in</p>
+            <p class="card-text">...be sure to change protected override Down()</p>
+            <p class="card-text">......actually didn't delete any of the pre-existing data?</p>
+            <p class="card-text mb-5">dotnet ef database udpate</p>
+
+            <p class="card-text bg-primary">Deleting from an already seeded data...</p>
+            <p class="card-text">Execute teh SQL commands in protected override Up()</p>
+            <p class="card-text">...Don't put anything in proected override Down</p>
+            <p class="card-text">......migrationBuilder.Sql("DELETE FROM tableName");</p>
+          
+
+            <p class="card-text bg-primary">This is unlikely to cause problems if you’re performing simple equations
+              without the need for a high degree of accuracy. But it can cause headaches even in simple applications if
+              you need to test for equality.</p>
+
+            <ul class="list-group">
+              <p class="list-group-header">Solutions:</p>
+              <li class="list-group-item list-group-item-success"><strong>Fixed Point.</strong> For example, if you know
+                the maximum
+                precision you’ll need (for example, if you’re dealing with currencies), you can integer type to store
+                the value. So instead of $4.99 , you could store 499 and perform any equations on that. You could then
+                display the result to the end-user using an expression like result = (value / 100).toFixed(2) , which
+                returns a string.</li>
+              <li class="list-group-item list-group-item-success"><strong>Binary Coded Decimals</strong>If precision is
+                really important, another option is to use the Binary Coded Decimals (BCD) format, which you can access
+                in JavaScript using this BCD library. Every decimal value is stored separately in a single byte (8
+                bits). This is inefficient, as a byte can store 16 separate values and this system only uses values 0–9.
+                However, if precision is important for your application, it may be worth the trade-off.</li>
+            </ul>
+
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse3" data-parent="#accordion" data-toggle="collapse">
+              018 Minus 017 equals 3
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse3" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Why does 018 Minus 017 = 3?</h4>
+            <p class="card-text bg-primary">The fact that 018 — 017 returns 3 is a result of <strong>silent type
+                conversion.</strong> In this case, we’re talking about <strong>octal numbers.</strong></p>
+            <p class="card-text bg-info">You’re likely aware of the use of binary (base-2) and hexadecimal (base-16) number
+              systems in computing, but octal (base-8 ) also has a prominent place in the history of computers: in the
+              late 1950s and 1960s, it was used to abbreviate binary, cutting material costs in what were highly
+              expensive systems to manufacture!</p>
+            <p class="card-text bg-info">But what’s octal useful for in modern programming languages? Octal has an
+              advantage over hexadecimal for some use cases because it doesn’t require any non-numerical digits (using
+              0–7 rather than 0–F).
+              One common use is in file permissions for Unix systems, where there are exactly eight permission
+              variations
+            </p>
+            <p class="card-text bg-success">In JavaScript, the prefix 0 will convert any number to octal. However, 8 is not
+              used in octal, and any number containing an 8 will be silently converted to a regular decimal number.
+              Therefore, 018 — 017 is in fact equivalent to the decimal expression 18 — 15 , because 017 is octal but
+              018 is decimal.
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse4" data-parent="#accordion" data-toggle="collapse">
+              Function Expresion Differ from Function Declaration?
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse4" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">How Does a Function Expression Differ from a Function Declaration?</h4>
+
+            <p class="card-text bg-primary">A function declaration uses the keyword function , followed by the name of the
+              function. By contrast, a function expression begins with var , let or const , followed by the name of the
+              function and the assignment operator = . Here are some examples</p>
+
+            <img class="card-img img-fluid" src="img/functionExpressionVsDeclaration.png"
+              alt="Function Declarations and Function Expressions">
+
+
+
+            <p class="card-text bg-info">In usage, the key difference is that function declarations are hoisted, while
+              function expressions are not. That means function declarations are moved to the top of their scope by the
+              JavaScript interpreter, and so you can define a function declaration and call it anywhere in your code. By
+              contrast, you can only call a function expression in linear sequence: you have to define it before you
+              call it.</p>
+
+            <ul class="list-group">
+
+              <li class="list-group-item list-group-item-info"><strong>Many developers prefer function
+                  expressions:</strong></li>
+              <li class="list-group-item list-group-item-info">• First and foremost, function expressions enforce a more
+                predictable, structured codebase. Of course, a structured codebase is also possible with declarations;
+                it’s just that declarations allow you to get away with messy code more easily.</li>
+              <li class="list-group-item list-group-item-info">• Second, we can use ES6 syntax for function expressions:
+                this is generally more concise, and let and const provide more control over whether a variable can be
+                re-assigned or not.</li>
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse5" data-parent="#accordion" data-toggle="collapse">
+              var, let, and const
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse5" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">What are the differences between var, let and const?</h4>
+
+            <p class="card-text bg-info"><strong>Assignment: </strong>The most basic difference is that let and var can be
+              re-assigned while const cannot. This makes const the best choice for variables that don’t need to change,
+              and it will prevent mistakes such as accidental re-assignment. Note that const does allow for variable
+              mutation, which means that if it represents an array or an object, these can change. You just can’t
+              re-assign the variable itself.
+              Both let and var can be re-assigned, but — as the following points should make clear — let has significant
+              advantages over var , making it a better choice in most, if not all circumstances where a variable needs
+              to change.
+            </p>
+
+            <p class="card-text bg-info"><strong>Hoisting: </strong>Similar to the difference between function declarations
+              and expressions (discussed above), variables declared using var are always hoised to the top of their
+              respective scope, while variables declared using const and let are hoisted, but if you try to access them
+              before they’re declared, you will get a ‘temporal dead zone’ error. This is useful behaviour, since var
+              can be more prone to errors, such as accidental re-assignment. Take the following example:</p>
+
+
+            <img class="card-img img-fluid mb-5" src="img/varLetConst.png" alt="Var, let, const examples">
+
+            <p class="card-text bg-info"><strong>Scope</strong> While var is function-scoped, let and const are
+              block-scoped: in general, a block is any code within curly braces {} , including functions, conditional
+              statements, and loops.</p>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse6" data-parent="#accordion" data-toggle="collapse">
+              Assign a variable without a keyword?
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse6" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">What happens if you assign a variable without a keyword?</h4>
+
+
+
+
+
+            <p class="card-text bg-primary">What if you define a variable without using a keyword at all? Technically, if
+              xhasn’t already been defined, then x = 1 is shorthand for window.x = 1 .
+            </p>
+            <p class="card-text bg-success">as it’s a common cause of memory leaks.
+              To prevent this shorthand altogether, you can use strict mode — introduced in ES5 — by writing use strict
+              at the top of your document or a particular function. Then, when you try to declare a variable without a
+              keyword, you’ll get an error: Uncaught SyntaxError: Unexpected indentifier .
+            </p>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse7" data-parent="#accordion" data-toggle="collapse">
+              O.O.P. vs functional programming
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse7" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">What’s the difference between Object Oriented Programming (OOP) and Functional
+              Programming (FP)?</h4>
+
+
+            <p class="card-text bg-primary">JavaScript is a multi-paradigm language, meaning that it supports multiple
+              different programming styles, including event-driven, functional and object-oriented.</p>
+
+            <p class="card-text bg-info">OOP is based around the concept of “objects”. These are data structures that
+              contain data fields — known in JavaScript as “properties” — and procedures — known as “methods”.
+              Some of JavaScript’s in-built objects include Math (used for methods such as random , max and sin ), JSON
+              (used for parsing JSON data), and primitive data types like String , Array , Number and Boolean .
+            </p>
+
+            <p class="card-text bg-success">Whenever you rely on in-built methods, prototypes or classes, you are
+              essentially using Object-Oriented Programming.</p>
+
+
+            <p class="card-text bg-info">FP is based around the concept of “pure functions”, which avoid shared state,
+              mutable data and side-effects. This might seem like a lot of jargon, but chances are you’ve created
+              written many pure functions in your code.</p>
+
+            <p class="card-text bg-info">Given the same inputs, a pure function always returns the same output. It does not
+              have side effects: these are anything, such as logging to the console or modifying an external variable,
+              beyond returning the result.</p>
+
+              <p class="card-text bg-success">favor object composition over class inheritance (<strong>can-do, has-a, </strong> relationships instead of <strong>is-a</strong> relationships.</p>
+
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse8" data-parent="#accordion" data-toggle="collapse">
+              Imperative vs. declarative programming
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse8" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">What’s the difference between imperative and declarative programming?</h4>
+
+            <p class="card-text bg-info">We can also think about the difference between OOP and FP in terms of the
+              difference between “imperative” and “declarative” programming.</p>
+            <p class="card-text bg-primary">FP is an example of declarative programming, while OOP is an example of
+              imperative programming.</p>
+            <p class="card-text bg-info">In a basic sense, imperative programming is concerned with how you do something.
+              It spells out the steps in the most essential way, and is characterised by for and while loops, if and
+              switch statements, and so on.</p>
+
+
+            <p class="card-text bg-info">By contrast, declarative programming is concerned with what to do, and it
+              abstracts away the how by relying on expressions. This often results in more concise code, but at scale,
+              it can become more difficult to debug because it’s that much less transparent.
+              Here’s a declarative approach to our sumArray() function, above.
+            </p>
+
+            <img class="card-img img-fluid mb-5" src="img/imperativeDeclarative.png"
+              alt="Imperative and Declarative programming JS">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse9" data-parent="#accordion" data-toggle="collapse">
+              Prototype-Based Inheritance
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse9" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">What is Prototype-Based Inheritance?</h4>
+
+
+            <p class="card-text bg-primary">There are several different styles of Object-Oriented Programming, and the one
+              JavaScript uses is Prototype-Based Inheritance. The system allows for repeated behaviour via the use of
+              existing objects that serve as “prototypes”.</p>
+
+            <p class="card-text bg-info">Even if the idea of prototypes is new to you, you will have encountered the
+              prototype system by using in-built methods. For example, functions used to manipulate arrays such as map ,
+              reduce , splice and so on are all methods of the Array.prototype object. In fact, every instance of an
+              array (defined using square brackets [], or — more unusually — using new Array()) inherits from
+              Array.prototype , which is why methods like map , reduce and spliceare available by default.</p>
+
+            <p class="card-text bg-info">The same is true of virtually every other built-in object, such as strings and
+              booleans: only a few, such as Infinity , NaN , null and undefined have no properties or methods.
+              At the end of the prototype chain we find Object.prototype , and almost every object in JavaScript is an
+              instance of Object.prototype : Array.prototype and String.prototype , for example, both inherit properties
+              and methods from Object.prototype .
+              To add properties and methods to an object using prototype syntax, you can simply initiate the object as a
+              function, and use the prototype keyword to add properties and methods:
+
+            </p>
+
+            <img class="card-img img-fluid mb-5" src="img/prototypes.png" alt="Prototypes in JS">
+
+            <h5>Should I Override or Extend the Behaviour of Prototypes?</h5>
+
+            <p class="card-text bg-info">It’s possible to change the behaviour of built-in prototypes in exactly the same
+              way that we can create and extend our own prototypes, but most developers (and most companies) would
+              advise against this.
+              If you want several objects to share the same behaviour, you can always create a custom object (or define
+              your own ‘class’ or ‘subclass’) that inherits from a built-in prototype without making any changes to the
+              prototype itself. If you’re going to be working with other developers, they’ll have certain expectations
+              about JavaScript’s default behaviour, and editing this default behaviour can easily lead to errors.
+              It’s worth noting, however, that not everyone shares this strong opposition to extending built-in
+              prototypes. See, for example, this article from Brendan Eich, the creator of JavaScript. In this article
+              (from 2005), Eich suggested that the prototype system in fact was built — in part — to make extensions
+              possible!
+            </p>
+
+            <p class="card-text bg-warning"><strong>Classes: </strong> create tight coupling or hierarchies/taxonomies</p>
+            <p class="card-text bg-success"><strong>Prototypes: </strong> instances inherit directly from other objects. Instances are typically instantiated via factory functions or `Object.create()`. Instances may be composed from many different objects, allowing for easy selective inheritance.</p>
+
+            <p class="card-text bg-success">In JavaScript, prototypal inheritance is simpler &
+              more flexible than class inheritance.</p>
+
+              <ul class="list-group">
+                <p class="list-group-item-header">When is prototypal inheritance an appropriate choice?</p>
+                <li class="list-group-item list-group-item-info"><strong>Delegation</strong> (i.e. the prototype chain)</li>
+                <li class="list-group-item list-group-item-info"><strong>Concatenative</strong> (i.e. mixins, 'Object.assign()'</li>
+                <li class="list-group-item list-group-item-info"><strong>Functional</strong> (not to be confused with functional programming.  A function used to create a closure for private state/encapsulation).</li> 
+                <li class="list-group-item">all of them useful in their ability to enable <strong>composition</strong>, which creates <strong>has-a</strong> or <strong>uses-a</strong> or <strong>can-do</strong> relationships as opposed to the <strong>is-a</strong> relationship created with class inheritance.</li>
+              </ul>
+
+            
+
+          </div>
+        </div>
+      </div>
+
+      
+      
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse11" data-parent="#accordion" data-toggle="collapse">
+              What are the pros and cons of monolithic vs microservice architectures?
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse11" class="collapse">
+          <div class="card-body bg-secondary">
+            
+            <p class="card-text bg-info">A <strong>monolithic architecture</strong> means that your app is written as one cohesive unit of code whose components are designed to work together, sharing the same memory space and resources.</p>
+            <p class="card-text bg-info">A <strong>microservice architecture</strong> means that your app is made up of lots of smaller, independent applications capable of running in their own memory space and scaling independently from each other across potentially many separate machines.</p>
+
+            <ul class="list-group">
+              <p class="list-group-item-header">Monolithic Pros:</p>
+              <li class="list-group-item list-group-item-success">The major advantage of the monolithic architecture is that most apps typically have a large number of cross-cutting concerns, such as logging, rate limiting, and security features such audit trails and DOS protection.
+                When everything is running through the same app, it’s easy to hook up components to those cross-cutting concerns.</li>
+              <li class="list-group-item list-group-item-success">There can also be performance advantages, since shared-memory access is faster than inter-process communication (IPC).</li>
+              <li class="list-group-item list-group-item-success"></li> 
+            </ul>
+
+            <ul class="list-group">
+              <p class="list-group-item-header">Monolithic Cons:</p>
+              <li class="list-group-item list-group-item-warning">Monolithic app services tend to get tightly coupled and entangled as the application evolves, making it difficult to isolate services for purposes such as independent scaling or code maintainability.</li>
+              <li class="list-group-item list-group-item-warning">Monolithic architectures are also much harder to understand, because there may be dependencies, side-effects, and magic which are not obvious when you’re looking at a particular service or controller.</li>
+              <li class="list-group-item list-group-item-warning"></li> 
+            </ul>
+
+            <ul class="list-group">
+              <p class="list-group-item-header">Microservice Pros:</p>
+              <li class="list-group-item list-group-item-success">Microservice architectures are typically better organized, since each microservice has a very specific job, and is not concerned with the jobs of other components.</li>
+              <li class="list-group-item list-group-item-success">Decoupled services are also easier to recompose and reconfigure to serve the purposes of different apps (for example, serving both the web clients and public API).</li>
+              <li class="list-group-item list-group-item-success">They can also have performance advantages depending on how they’re organized because it’s possible to isolate hot services and scale them independent of the rest of the app.</li> 
+            </ul>
+
+            <ul class="list-group">
+              <p class="list-group-item-header">Microservice Cons:</p>
+              <li class="list-group-item list-group-item-warning">As you’re building a new microservice architecture, you’re likely to discover lots of cross-cutting concerns that you did not anticipate at design time. A monolithic app could establish shared magic helpers or middleware to handle such cross-cutting concerns without much effort.</li>
+              <li class="list-group-item list-group-item-warning">In a microservice architecture, you’ll either need to incur the overhead of separate modules for each cross-cutting concern, or encapsulate cross-cutting concerns in another service layer that all traffic gets routed through.</li>
+             
+              <li class="list-group-item list-group-item-warning">Eventually, even monolthic architectures tend to route traffic through an outer service layer for cross-cutting concerns, but with a monolithic architecture, it’s possible to delay the cost of that work until the project is much more mature.</li>
+              <li class="list-group-item list-group-item-warning">Microservices are frequently deployed on their own virtual machines or containers, causing a proliferation of VM wrangling work. These tasks are frequently automated with container fleet management tools.</li>
+            </ul>
+
+            <p class="text-card bg-primary mt-3">Positive attitudes toward microservices, despite the higher initial cost vs monolthic apps. Aware that microservices tend to perform and scale better in the long run.</p>
+            <p class="text-card bg-primary">Structure the app so that services are independent from each other at the code level, but easy to bundle together as a monolithic app in the beginning. Microservice overhead costs can be delayed until it becomes more practical to pay the price.</p>
+
+
+
+            <p class="card-text bg-info">
+              
+            </p>
+     
+            <p class="card-text bg-success"></p>
+
+          
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+  </script>
+
+</body>
+
+</html>
