@@ -8,13 +8,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
         integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="notes.css">
-    <title>.Net MVC Notes</title>
-
+    <title>ASP.net</title>
 </head>
 
-<body>
+<body class="bg-dark text-light">
     <header>
-        <h1 class="display-2 text-center my-4">.Net MVC</h1>
+        <h1 class="display-2 text-center my-4">ASP.net</h1>
         <div class="container">
             <div class="row">
                 <div class="col-md-2">
@@ -26,6 +25,8 @@
 
                             <a class="dropdown-item" href="DotNetDesignPatterns.html" class="dropdown-item">Design
                                 Patterns</a>
+                            <a class="dropdown-item" href="studyDesignPatterns.html" class="dropdown-item">Quick Study
+                            </a>
                             <a href="index.html" class="dropdown-item">Notes Home</a>
                         </div>
                     </div>
@@ -36,7 +37,8 @@
                             C#
                         </button>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="mvc.html" class="dropdown-item">.Net MVC</a>
+                            <a class="dropdown-item" href="mvc.html" class="dropdown-item">ASP.net</a>
+                            <a href="interviewcSharp.html" class="dropdown-item">interview-related CSharp</a>
                             <a href="index.html" class="dropdown-item">Notes Home</a>
                         </div>
                     </div>
@@ -47,6 +49,10 @@
                             JS
                         </button>
                         <div class="dropdown-menu">
+                            <a href="JSfundamentals.html" class="dropdown-item">JS Fundamentals</a>
+                            <a href="objectOrientedJS.html" class="dropdown-item">Object Oriented in JS</a>
+                            <a href="interviewJS.html" class="dropdown-item">JS Interview Related</a>
+                            <a href="advancedJStopics.html" class="dropdown-item">Advanced JS Topics</a>
                             <a href="JSframeworks.html" class="dropdown-item">JS Frameworks</a>
                             <a href="index.html" class="dropdown-item">Notes Home</a>
                         </div>
@@ -87,7 +93,533 @@
         </div>
     </header>
 
+    <div class="container">
+        <button class="btn btn-primary d-block mt-25" style="margin-top: 25px" data-toggle="collapse"
+            data-target="#collapse-btn-1">JS links</button>
 
+        <div class="collapse my-25" id="collapse-btn-1">
+            <div class="card">
+                <div class="card-body">
+                    <ul class="list-group">
+
+                        <a class="list-group-item list-group-item-dark" target="_blank"
+                            href="https://medium.com/@bretcameron/what-javascript-developers-can-learn-from-c-3cdb93ab8658">What
+                            JS
+                            developers can learn from C++</a>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="accordion" style="margin-top: 10px">
+            <div class="card">
+                <div class="card-header">
+                    <h5>
+                        <a href="#collapse1" data-parent="#accordion" data-toggle="collapse">
+                            View-Model, View-Bag, View-Data
+                        </a>
+                    </h5>
+                </div>
+
+                <div id="collapse1" class="collapse">
+                    <div class="card-body bg-secondary">
+                        <h4 class="card-title">View Model, View Bag, View Data</h4>
+
+                        <p class="card-text bg-primary">model-binding (all stored as name-value pairs)</p>
+
+                        <p class="card-text bg-success">Form Values</p>
+
+                        <p class="card-text bg-success">Route Values</p>
+
+                        <p class="card-text bg-success">Query Strings</p>
+
+                        <p class="card-text bg-success">if model-binding fails, MVC doesn't throw an error
+                            (ModelState.IsInvalid)</p>
+
+                        <p class="card-text bg-primary">ViewData</p>
+
+                        <p class="card-text">Un-typed Key-Value Dictionary</p>
+
+                        <p class="card-text">ViewData["cheese"] = CheeseData.GetAll()</p>
+
+                        <p class="card-text bg-info">ViewData["cheeses"] = cheeses (sets Data in ViewData on controller)
+                        </p>
+                        <p class="card-text bg-info">@ViewData["cheeses"] = to retrieve in View</p>
+
+                        <p class="card-text bg-primary">These 2 are equivalent:</p>
+
+                        <p class="card-text bg-info">@model ListCheeseMVC.Models.Cheese....then use "Model" throughout
+                            cshtml</p>
+
+                        <p class="card-text bg-primary">ViewBag</p>
+
+                        <p class="card-text">Dynamic-Object which is wrapper around the ViewData</p>
+
+                        <p class="card-text">ViewBag.CheeseData.GetALl()</p>
+
+                        <p class="card-text bg-primary">ViewModel</p>
+
+                        <p class="card-text">Model class to be used in view</p>
+
+                        <p class="card-text bg-success">Allow our views to-be "strongly-typed". Good for Form-Validation
+                        </p>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h5>
+                        <a href="#collapse2" data-parent="#accordion" data-toggle="collapse">
+                            razor views
+                        </a>
+                    </h5>
+                </div>
+
+                <div id="collapse2" class="collapse">
+                    <div class="card-body bg-secondary">
+
+                        <p class="card-text bg-primary">@* *@ are razor view comments</p>
+
+
+                        <p class="card-text bg-primary">Tag Helper
+                        </p>
+
+                        <p class="card-text">label asp-for="Name" /label... generates a label for Name property of
+                            "ViewModel"</p>
+
+                        <p class="card-text bg-primary">Error Messages in View</p>
+
+                        <p class="card-text">div asp-validation-summary = "All"</p>
+                        <p class="card-text">in ViewModel: [Required(ErrorMessage="")]</p>
+
+                        <p class="card-text bg-primary">override page styles</p>
+
+                        <p class="card-text">@RenderSection("overrideStyles", false)</p>
+
+                        <p class="card-text mb-5">then in view... @Section overrideStyles {put style tags in here}</p>
+
+                        <p class="card-text bg-primary">handling hidden inputs</p>
+
+                        <p class="card-text">input class="form-control" asp-for="classProperty" type="hidden"</p>
+
+                        <p class="card-text">good for preserving properties on an object back and forth through view</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h5>
+                        <a href="#collapse3" data-parent="#accordion" data-toggle="collapse">
+                            Interfaces
+                        </a>
+                    </h5>
+                </div>
+
+                <div id="collapse3" class="collapse">
+                    <div class="card-body bg-secondary">
+                        <h4 class="card-title">Interfaces</h4>
+
+                        <p class="card-text bg-primary">are used to specify methods and properties that a derived class
+                            will have access to.</p>
+
+                        <p class="card-text">Like a contract...if a class implements an interface...then the interface
+                            guarantees the class has access to that method.</p>
+
+                        <p class="card-text">Doesn't contain Code or Data
+                        </p>
+
+                        <p class="card-text">Big role in Abstraction and Styles
+                        </p>
+
+                        <p class="card-text bg-primary">Used to specify related behaviors that may be common across
+                            unrelated classes</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h5>
+                        <a href="#collapse4" data-parent="#accordion" data-toggle="collapse">
+                            abstract classes
+                        </a>
+                    </h5>
+                </div>
+
+                <div id="collapse4" class="collapse">
+                    <div class="card-body bg-secondary">
+
+                        <h4 class="card-title">abstract classes</h4>
+
+                        <p class="card-text bg-primary">similar to interfaces BUT can't be instantiated. Frequently
+                            partially or never implemented</p>
+
+                        <p class="card-text bg-primary">abstract classes cannot be instantiated</p>
+
+                        <p class="card-text">Can contain code or data</p>
+
+                        <p class="card-text">A class can inherit from only one <strong>abstract</strong> class (but can
+                            implement multiple interfaces)</p>
+
+                        <p class="card-text">Can specify methods as <strong>virtual</strong> to force a derived class to
+                            implement their own definition.</p>
+
+                        <p class="card-text">If you have classes that will have a lot of the same code/methods...go with
+                            <strong>abtract</strong> class instead of interfaces</p>
+
+
+                        <p class="card-text bg-primary">Containing Class doesn't hold implementation (derived classes do
+                            that)</p>
+
+                        <p class="card-text">Derived classes must implement all derived methods.</p>
+                        <p class="card-text bg-info">Example: A Person abstract class that has a PrintName() method in
+                            addition to some data such as default value for an age.</p>
+
+                        <p class="card text">should-be used to collect and specify behavior by related classes.</p>
+
+                        <p class="card-text bg-primary">you IMPLEMENT an <strong>interface</strong> while you EXTEND an
+                            <strong>abstract class</strong></p>
+
+
+                        <p class="card-text bg-warning"><strong>Sealed Modifier</strong> prevents it from derived or
+                            overriding of methods</p>
+
+                        <p class="card-text bg-warning">Sealed can only be applied to methods that are overriding
+                            "virtual" methods of the base class.</p>
+
+                        <p class="card-text">slightly faster because of run-time optimizations</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h5>
+                        <a href="#collapse5" data-parent="#accordion" data-toggle="collapse">
+                            static class
+                        </a>
+                    </h5>
+                </div>
+
+                <div id="collapse5" class="collapse">
+                    <div class="card-body bg-secondary">
+                        <h4 class="card-title">static class</h4>
+
+                        <p class="card-text bg-primary">Used to create data or functions that don't need to be
+                            instantiated
+                        </p>
+
+                        <p class="card-text">only contain static members</p>
+
+                        <p class="card-text">inherently sealed</p>
+
+                        <p class="card-text">Can't be instantiated</p>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h5>
+                        <a href="#collapse6" data-parent="#accordion" data-toggle="collapse">
+                            Generics
+                        </a>
+                    </h5>
+                </div>
+
+                <div id="collapse6" class="collapse">
+                    <div class="card-body bg-secondary">
+
+                        <h4 class="card-title">Generics</h4>
+
+
+                        <p class="card-text bg-primary">
+                            allow you to enforce Type Safety by letting you tailor a method or class to a precise
+                            data-type
+                        </p>
+
+
+                        <p class="card-text"> example: Array Class to store list of users or products and then when you
+                            use them you can use them as Users or Products (don't have to do any unboxing)
+                        </p>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h5>
+                        <a href="#collapse7" data-parent="#accordion" data-toggle="collapse">
+                            Four Pillars of OOP
+                        </a>
+                    </h5>
+                </div>
+
+                <div id="collapse7" class="collapse">
+                    <div class="card-body bg-secondary">
+                        <h4 class="card-title">4 Pillars of O.O.P.</h4>
+
+                        <ul class="list-group">
+
+                            <li class="list-group-item list-group-item-primary">Abstraction</li>
+                            <li class="list-group-item list-group-item-primary">Polymorphism</li>
+                            <li class="list-group-item list-group-item-primary">Inheritance</li>
+                            <li class="list-group-item list-group-item-primary">Encapsulation</li>
+                        </ul>
+
+                        <h4 class="card-title">Abstraction</h4>
+                        <p class="card-text bg-primary">abstraction allows making relevant information visible</p>
+                        <p class="card-text">are usually implemented as Abstract classes or Interfaces</p>
+
+
+                        <h4 class="card-title">Polymorphism</h4>
+
+                        <p class="card-text bg-primary"></p>
+
+                        <p class="card-text">...when classes have different functionality while sharing the same
+                            interface</p>
+
+                        <p class="card-text">Blue Ray Disc player(is the interface) able to play DVD(object) or
+                            CD(object)</p>
+
+                        <p class="card-text">Employee class...another class inherits from it(contractor)..then a
+                            permanent Employee class...SO they have different CalculateSalary classes (polymorphic)</p>
+
+                        <p class="card-text">Overloading with your methods is also a form of
+                            <strong>polymorphism</strong></p>
+
+                        <p class="card-text bg-info">creating multiple methods in a class with same name but different
+                            parameters and types is called <strong>method overloading</strong>...is an example of
+                            compile time polymorhpism which is done at compile time.</p>
+
+                        <p class="card-text bg-info"><strong>Run Time polymorphism</strong> would be Method overriding
+                        </p>
+
+                        <h4 class="card-title">Encapsulation</h4>
+
+                        <p class="card-text bg-primary">Related features</p>
+
+                        <p class="card-text"><strong>Encapsulation</strong> prevents access to implementation details.
+                        </p>
+
+                        <p class="card-text bg-info">encapsulation ex: setting stuff as private inside classes</p>
+
+                        <h4 class="card-title">Inheritance</h4>
+
+                        <p class="card-text bg-primary">when an object or class is based on a parent class (taking on
+                            its characteristics)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h5>
+                        <a href="#collapse8" data-parent="#accordion" data-toggle="collapse">
+                            .Net
+                        </a>
+                    </h5>
+                </div>
+
+                <div id="collapse8" class="collapse">
+                    <div class="card-body bg-secondary">
+
+                        <h4 class="card-title">What is .NET?</h4>
+
+                        <ul class="list-group">
+
+                            <li class="list-group-item list-group-item-primary">managed execution environment to manage
+                                and build applications</li>
+                            <li class="list-group-item list-group-item-primary">CLR + FCL (common language run time +
+                                framework class library)</li>
+
+                        </ul>
+
+
+                        <p class="card-text bg-primary"><strong>CLR</strong> Common Language Run-Time...offers security,
+                            memory management, exception handling</p>
+
+                        <p class="card-text bg-primary mb-5"><strong>FCL</strong> (framework class library) sits on top
+                            of the <strong>CLR</strong></p>
+
+                        <p class="card-text bg-primary">C# compilers create <strong>Managed</strong> code - garbage
+                            collecting, references etc...</p>
+
+                        <p class="card-text bg-primary"><strong>Unmanaged code</strong> compiles straight to machine
+                            code...</p>
+
+                        <p class="card-text">...Not portable</p>
+
+                        <p class="card-text">...Not managed by the CLR</p>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h5>
+                        <a href="#collapse9" data-parent="#accordion" data-toggle="collapse">
+                            Boxing vs. Unboxing
+                        </a>
+                    </h5>
+                </div>
+
+                <div id="collapse9" class="collapse">
+                    <div class="card-body bg-secondary">
+                        <h4 class="card-title">Boxing vs. Unboxing</h4>
+
+
+                        <p class="card-text bg-primary"><strong>Boxing</strong> is the process of converting a value
+                            type to the type object (integer into an object)</p>
+
+                        <p class="card-text mb-5"><strong>Boxed values</strong> use more memory and require memory
+                            lookups to access.</p>
+
+                        <p class="card-text bg-primary"><strong>Unboxing</strong> extracts the value from the object</p>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="card">
+                <div class="card-header">
+                    <h5>
+                        <a href="#collapse11" data-parent="#accordion" data-toggle="collapse">
+                            .Net Design Patterns
+                        </a>
+                    </h5>
+                </div>
+
+                <div id="collapse11" class="collapse">
+                    <div class="card-body bg-secondary">
+
+                        <h4 class="card-title">Dependency Injection</h4>
+
+                        <p class="card-text bg-primary">allows your class to no longer be responsible for instantiating
+                            its own dependencies</p>
+
+                        <p class="card-text">helps to develop loosely coupled code</p>
+                        <p class="card-text bg-info">3 ways - <strong>method, constructor, </strong></p>
+                        <p class="card-text">Derives from the concept of <strong>Inversion of Control</strong></p>
+
+
+                        <h4 class="card-title">Gang of Four</h4>
+                        <p class="card-text bg-primary">Authors of "Elements of Reusable Object-Oriented Software"</p>
+
+                        <h4 class="card-title">Repository Pattern</h4>
+                        <p class="card-text bg-primary">Allows applications to perform with CRUD type operations</p>
+                        <p class="card-text">Provides an obstraction of data so that</p>
+
+                        <h4 class="card-title">Unit of Work</h4>
+                        <p class="card-text bg-primary">Maintains in-memory updates</p>
+                        <p class="card-text">sends in-memory updates as one transaction to the database</p>
+                        <p class="card-text">often used with <strong>Repository Pattern</strong>...similar to how
+                            transactions in database are done which can be rolled back.</p>
+
+                        <ul class="list-group">
+                            <p class="list-group-item-header">Monolithic Pros:</p>
+                            <li class="list-group-item list-group-item-success">The major advantage of the monolithic
+                                architecture is that most apps typically have a large number of cross-cutting concerns,
+                                such as logging, rate limiting, and security features such audit trails and DOS
+                                protection.
+                                When everything is running through the same app, it’s easy to hook up components to
+                                those cross-cutting concerns.</li>
+                            <li class="list-group-item list-group-item-success">There can also be performance
+                                advantages, since shared-memory access is faster than inter-process communication (IPC).
+                            </li>
+                            <li class="list-group-item list-group-item-success"></li>
+                        </ul>
+
+                        <ul class="list-group">
+                            <p class="list-group-item-header">Monolithic Cons:</p>
+                            <li class="list-group-item list-group-item-warning">Monolithic app services tend to get
+                                tightly coupled and entangled as the application evolves, making it difficult to isolate
+                                services for purposes such as independent scaling or code maintainability.</li>
+                            <li class="list-group-item list-group-item-warning">Monolithic architectures are also much
+                                harder to understand, because there may be dependencies, side-effects, and magic which
+                                are not obvious when you’re looking at a particular service or controller.</li>
+                            <li class="list-group-item list-group-item-warning"></li>
+                        </ul>
+
+                        <ul class="list-group">
+                            <p class="list-group-item-header">Microservice Pros:</p>
+                            <li class="list-group-item list-group-item-success">Microservice architectures are typically
+                                better organized, since each microservice has a very specific job, and is not concerned
+                                with the jobs of other components.</li>
+                            <li class="list-group-item list-group-item-success">Decoupled services are also easier to
+                                recompose and reconfigure to serve the purposes of different apps (for example, serving
+                                both the web clients and public API).</li>
+                            <li class="list-group-item list-group-item-success">They can also have performance
+                                advantages depending on how they’re organized because it’s possible to isolate hot
+                                services and scale them independent of the rest of the app.</li>
+                        </ul>
+
+                        <ul class="list-group">
+                            <p class="list-group-item-header">Microservice Cons:</p>
+                            <li class="list-group-item list-group-item-warning">As you’re building a new microservice
+                                architecture, you’re likely to discover lots of cross-cutting concerns that you did not
+                                anticipate at design time. A monolithic app could establish shared magic helpers or
+                                middleware to handle such cross-cutting concerns without much effort.</li>
+                            <li class="list-group-item list-group-item-warning">In a microservice architecture, you’ll
+                                either need to incur the overhead of separate modules for each cross-cutting concern, or
+                                encapsulate cross-cutting concerns in another service layer that all traffic gets routed
+                                through.</li>
+
+                            <li class="list-group-item list-group-item-warning">Eventually, even monolthic architectures
+                                tend to route traffic through an outer service layer for cross-cutting concerns, but
+                                with a monolithic architecture, it’s possible to delay the cost of that work until the
+                                project is much more mature.</li>
+                            <li class="list-group-item list-group-item-warning">Microservices are frequently deployed on
+                                their own virtual machines or containers, causing a proliferation of VM wrangling work.
+                                These tasks are frequently automated with container fleet management tools.</li>
+                        </ul>
+
+                        <p class="text-card bg-primary mt-3">Positive attitudes toward microservices, despite the higher
+                            initial cost vs monolthic apps. Aware that microservices tend to perform and scale better in
+                            the long run.</p>
+                        <p class="text-card bg-primary">Structure the app so that services are independent from each
+                            other at the code level, but easy to bundle together as a monolithic app in the beginning.
+                            Microservice overhead costs can be delayed until it becomes more practical to pay the price.
+                        </p>
+
+
+
+                        <p class="card-text bg-info">
+
+                        </p>
+
+                        <p class="card-text bg-success"></p>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>

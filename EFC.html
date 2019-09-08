@@ -39,6 +39,7 @@
             <div class="dropdown-menu">
               <a class="dropdown-item" href="mvc.html" class="dropdown-item">.Net MVC</a>
               <a href="EFC.html" class="dropdown-item">Entity Framework Core</a>
+              <a href="dotNetFundamentals.html" class="dropdown-item">.Net fundamentals</a>
               <a href="index.html" class="dropdown-item">Notes Home</a>
             </div>
           </div>
@@ -128,7 +129,8 @@
 
             <p class="card-text bg-primary">dotnet ef migrations add 'MigrationName'</p>
             <p class="card-text">adds a new migration</p>
-            <p class="card-text-bg-success mb-5">if do this with blank one it creates a blank migration (good for seeding)</p>
+            <p class="card-text-bg-success mb-5">if do this with blank one it creates a blank migration (good for
+              seeding)</p>
 
             <p class="card-text bg-primary">dotnet ef database update</p>
             <p class="card-text mb-5">after a succesful migration add it applies changes to database</p>
@@ -136,8 +138,22 @@
             <p class="card-text bg-primary">dotnet ef database update MigrationName</p>
             <p class="card-text">to downgrade database</p>
             <p class="card-text mb-5">use 0 for the name if no prior migrations</p>
-           
-          
+
+            <p class="card-text bg-primary">Many-To-Many</p>
+            <p class="card-text">Needs a "join-table"</p>
+            <p class="card-text mb-5">each column is a foreign key into its respective table</p>
+
+            <p class="card-text bg-primary">Start with a fresh database</p>
+
+            <p class="card-text">Change database name in connection string in <strong>appsettings.json</strong></p>
+            <p class="card-text">dotnet ef update database</p>
+            <p class="card-text">dotnet ef database drop</p>
+
+            <p class="card-text bg-primary">instances of class to be stored as database table...</p>
+
+            <p class="card-text">public DbSetclass TableName {get; set;}</p>
+
+
           </div>
         </div>
       </div>
@@ -160,7 +176,8 @@
             <p class="card-text bg-primary">Adjust DbSet under Data or Persistence</p>
             <p class="card-text mb-5">Public DbSetclass TableName {get; set;}</p>
 
-            <p class="card-text bg-primary mb-5">dotnet ef migrations add MigrationName (code has to compile successfully)</p>
+            <p class="card-text bg-primary mb-5">dotnet ef migrations add MigrationName (code has to compile
+              successfully)</p>
 
             <p class="card-text bg-primary mb-5">dotnet ef database update</p>
 
@@ -168,7 +185,8 @@
             <p class="card-text">dotnet ef migrations add MigrationName (with no changes to model)</p>
             <p class="card-text">...creates blank migration</p>
             <p class="card-text">make changes to the "protected override void Up()</p>
-            <p class="card-text">...can just copy prior one...change for new table/s and comment out prior what you added in</p>
+            <p class="card-text">...can just copy prior one...change for new table/s and comment out prior what you
+              added in</p>
             <p class="card-text">...be sure to change protected override Down()</p>
             <p class="card-text">......actually didn't delete any of the pre-existing data?</p>
             <p class="card-text mb-5">dotnet ef database udpate</p>
@@ -177,27 +195,6 @@
             <p class="card-text">Execute teh SQL commands in protected override Up()</p>
             <p class="card-text">...Don't put anything in proected override Down</p>
             <p class="card-text">......migrationBuilder.Sql("DELETE FROM tableName");</p>
-          
-
-            <p class="card-text bg-primary">This is unlikely to cause problems if you’re performing simple equations
-              without the need for a high degree of accuracy. But it can cause headaches even in simple applications if
-              you need to test for equality.</p>
-
-            <ul class="list-group">
-              <p class="list-group-header">Solutions:</p>
-              <li class="list-group-item list-group-item-success"><strong>Fixed Point.</strong> For example, if you know
-                the maximum
-                precision you’ll need (for example, if you’re dealing with currencies), you can integer type to store
-                the value. So instead of $4.99 , you could store 499 and perform any equations on that. You could then
-                display the result to the end-user using an expression like result = (value / 100).toFixed(2) , which
-                returns a string.</li>
-              <li class="list-group-item list-group-item-success"><strong>Binary Coded Decimals</strong>If precision is
-                really important, another option is to use the Binary Coded Decimals (BCD) format, which you can access
-                in JavaScript using this BCD library. Every decimal value is stored separately in a single byte (8
-                bits). This is inefficient, as a byte can store 16 separate values and this system only uses values 0–9.
-                However, if precision is important for your application, it may be worth the trade-off.</li>
-            </ul>
-
 
 
           </div>
@@ -208,31 +205,17 @@
         <div class="card-header">
           <h5>
             <a href="#collapse3" data-parent="#accordion" data-toggle="collapse">
-              018 Minus 017 equals 3
+              appsettings.json
             </a>
           </h5>
         </div>
 
         <div id="collapse3" class="collapse">
           <div class="card-body bg-secondary">
-            <h4 class="card-title">Why does 018 Minus 017 = 3?</h4>
-            <p class="card-text bg-primary">The fact that 018 — 017 returns 3 is a result of <strong>silent type
-                conversion.</strong> In this case, we’re talking about <strong>octal numbers.</strong></p>
-            <p class="card-text bg-info">You’re likely aware of the use of binary (base-2) and hexadecimal (base-16) number
-              systems in computing, but octal (base-8 ) also has a prominent place in the history of computers: in the
-              late 1950s and 1960s, it was used to abbreviate binary, cutting material costs in what were highly
-              expensive systems to manufacture!</p>
-            <p class="card-text bg-info">But what’s octal useful for in modern programming languages? Octal has an
-              advantage over hexadecimal for some use cases because it doesn’t require any non-numerical digits (using
-              0–7 rather than 0–F).
-              One common use is in file permissions for Unix systems, where there are exactly eight permission
-              variations
-            </p>
-            <p class="card-text bg-success">In JavaScript, the prefix 0 will convert any number to octal. However, 8 is not
-              used in octal, and any number containing an 8 will be silently converted to a regular decimal number.
-              Therefore, 018 — 017 is in fact equivalent to the decimal expression 18 — 15 , because 017 is octal but
-              018 is decimal.
-            </p>
+            <h4 class="card-title">what's needed in appsettings.json</h4>
+            <p class="card-text bg-primary">Microsoft.EntityFrameworkCore.SqlServer</p>
+            <p class="card-text bg-primary">Microsoft.EntityFrameworkCore.Tools</p>
+
 
           </div>
         </div>
@@ -251,7 +234,8 @@
           <div class="card-body bg-secondary">
             <h4 class="card-title">How Does a Function Expression Differ from a Function Declaration?</h4>
 
-            <p class="card-text bg-primary">A function declaration uses the keyword function , followed by the name of the
+            <p class="card-text bg-primary">A function declaration uses the keyword function , followed by the name of
+              the
               function. By contrast, a function expression begins with var , let or const , followed by the name of the
               function and the assignment operator = . Here are some examples</p>
 
@@ -296,7 +280,8 @@
           <div class="card-body bg-secondary">
             <h4 class="card-title">What are the differences between var, let and const?</h4>
 
-            <p class="card-text bg-info"><strong>Assignment: </strong>The most basic difference is that let and var can be
+            <p class="card-text bg-info"><strong>Assignment: </strong>The most basic difference is that let and var can
+              be
               re-assigned while const cannot. This makes const the best choice for variables that don’t need to change,
               and it will prevent mistakes such as accidental re-assignment. Note that const does allow for variable
               mutation, which means that if it represents an array or an object, these can change. You just can’t
@@ -306,7 +291,8 @@
               to change.
             </p>
 
-            <p class="card-text bg-info"><strong>Hoisting: </strong>Similar to the difference between function declarations
+            <p class="card-text bg-info"><strong>Hoisting: </strong>Similar to the difference between function
+              declarations
               and expressions (discussed above), variables declared using var are always hoised to the top of their
               respective scope, while variables declared using const and let are hoisted, but if you try to access them
               before they’re declared, you will get a ‘temporal dead zone’ error. This is useful behaviour, since var
@@ -341,7 +327,8 @@
 
 
 
-            <p class="card-text bg-primary">What if you define a variable without using a keyword at all? Technically, if
+            <p class="card-text bg-primary">What if you define a variable without using a keyword at all? Technically,
+              if
               xhasn’t already been defined, then x = 1 is shorthand for window.x = 1 .
             </p>
             <p class="card-text bg-success">as it’s a common cause of memory leaks.
@@ -387,11 +374,13 @@
               mutable data and side-effects. This might seem like a lot of jargon, but chances are you’ve created
               written many pure functions in your code.</p>
 
-            <p class="card-text bg-info">Given the same inputs, a pure function always returns the same output. It does not
+            <p class="card-text bg-info">Given the same inputs, a pure function always returns the same output. It does
+              not
               have side effects: these are anything, such as logging to the console or modifying an external variable,
               beyond returning the result.</p>
 
-              <p class="card-text bg-success">favor object composition over class inheritance (<strong>can-do, has-a, </strong> relationships instead of <strong>is-a</strong> relationships.</p>
+            <p class="card-text bg-success">favor object composition over class inheritance (<strong>can-do, has-a,
+              </strong> relationships instead of <strong>is-a</strong> relationships.</p>
 
 
 
@@ -416,7 +405,8 @@
               difference between “imperative” and “declarative” programming.</p>
             <p class="card-text bg-primary">FP is an example of declarative programming, while OOP is an example of
               imperative programming.</p>
-            <p class="card-text bg-info">In a basic sense, imperative programming is concerned with how you do something.
+            <p class="card-text bg-info">In a basic sense, imperative programming is concerned with how you do
+              something.
               It spells out the steps in the most essential way, and is characterised by for and while loops, if and
               switch statements, and so on.</p>
 
@@ -448,7 +438,8 @@
             <h4 class="card-title">What is Prototype-Based Inheritance?</h4>
 
 
-            <p class="card-text bg-primary">There are several different styles of Object-Oriented Programming, and the one
+            <p class="card-text bg-primary">There are several different styles of Object-Oriented Programming, and the
+              one
               JavaScript uses is Prototype-Based Inheritance. The system allows for repeated behaviour via the use of
               existing objects that serve as “prototypes”.</p>
 
@@ -472,7 +463,8 @@
 
             <h5>Should I Override or Extend the Behaviour of Prototypes?</h5>
 
-            <p class="card-text bg-info">It’s possible to change the behaviour of built-in prototypes in exactly the same
+            <p class="card-text bg-info">It’s possible to change the behaviour of built-in prototypes in exactly the
+              same
               way that we can create and extend our own prototypes, but most developers (and most companies) would
               advise against this.
               If you want several objects to share the same behaviour, you can always create a custom object (or define
@@ -485,28 +477,36 @@
               possible!
             </p>
 
-            <p class="card-text bg-warning"><strong>Classes: </strong> create tight coupling or hierarchies/taxonomies</p>
-            <p class="card-text bg-success"><strong>Prototypes: </strong> instances inherit directly from other objects. Instances are typically instantiated via factory functions or `Object.create()`. Instances may be composed from many different objects, allowing for easy selective inheritance.</p>
+            <p class="card-text bg-warning"><strong>Classes: </strong> create tight coupling or hierarchies/taxonomies
+            </p>
+            <p class="card-text bg-success"><strong>Prototypes: </strong> instances inherit directly from other objects.
+              Instances are typically instantiated via factory functions or `Object.create()`. Instances may be composed
+              from many different objects, allowing for easy selective inheritance.</p>
 
             <p class="card-text bg-success">In JavaScript, prototypal inheritance is simpler &
               more flexible than class inheritance.</p>
 
-              <ul class="list-group">
-                <p class="list-group-item-header">When is prototypal inheritance an appropriate choice?</p>
-                <li class="list-group-item list-group-item-info"><strong>Delegation</strong> (i.e. the prototype chain)</li>
-                <li class="list-group-item list-group-item-info"><strong>Concatenative</strong> (i.e. mixins, 'Object.assign()'</li>
-                <li class="list-group-item list-group-item-info"><strong>Functional</strong> (not to be confused with functional programming.  A function used to create a closure for private state/encapsulation).</li> 
-                <li class="list-group-item">all of them useful in their ability to enable <strong>composition</strong>, which creates <strong>has-a</strong> or <strong>uses-a</strong> or <strong>can-do</strong> relationships as opposed to the <strong>is-a</strong> relationship created with class inheritance.</li>
-              </ul>
+            <ul class="list-group">
+              <p class="list-group-item-header">When is prototypal inheritance an appropriate choice?</p>
+              <li class="list-group-item list-group-item-info"><strong>Delegation</strong> (i.e. the prototype chain)
+              </li>
+              <li class="list-group-item list-group-item-info"><strong>Concatenative</strong> (i.e. mixins,
+                'Object.assign()'</li>
+              <li class="list-group-item list-group-item-info"><strong>Functional</strong> (not to be confused with
+                functional programming. A function used to create a closure for private state/encapsulation).</li>
+              <li class="list-group-item">all of them useful in their ability to enable <strong>composition</strong>,
+                which creates <strong>has-a</strong> or <strong>uses-a</strong> or <strong>can-do</strong> relationships
+                as opposed to the <strong>is-a</strong> relationship created with class inheritance.</li>
+            </ul>
 
-            
+
 
           </div>
         </div>
       </div>
 
-      
-      
+
+
       <div class="card">
         <div class="card-header">
           <h5>
@@ -518,53 +518,83 @@
 
         <div id="collapse11" class="collapse">
           <div class="card-body bg-secondary">
-            
-            <p class="card-text bg-info">A <strong>monolithic architecture</strong> means that your app is written as one cohesive unit of code whose components are designed to work together, sharing the same memory space and resources.</p>
-            <p class="card-text bg-info">A <strong>microservice architecture</strong> means that your app is made up of lots of smaller, independent applications capable of running in their own memory space and scaling independently from each other across potentially many separate machines.</p>
+
+            <p class="card-text bg-info">A <strong>monolithic architecture</strong> means that your app is written as
+              one cohesive unit of code whose components are designed to work together, sharing the same memory space
+              and resources.</p>
+            <p class="card-text bg-info">A <strong>microservice architecture</strong> means that your app is made up of
+              lots of smaller, independent applications capable of running in their own memory space and scaling
+              independently from each other across potentially many separate machines.</p>
 
             <ul class="list-group">
               <p class="list-group-item-header">Monolithic Pros:</p>
-              <li class="list-group-item list-group-item-success">The major advantage of the monolithic architecture is that most apps typically have a large number of cross-cutting concerns, such as logging, rate limiting, and security features such audit trails and DOS protection.
-                When everything is running through the same app, it’s easy to hook up components to those cross-cutting concerns.</li>
-              <li class="list-group-item list-group-item-success">There can also be performance advantages, since shared-memory access is faster than inter-process communication (IPC).</li>
-              <li class="list-group-item list-group-item-success"></li> 
+              <li class="list-group-item list-group-item-success">The major advantage of the monolithic architecture is
+                that most apps typically have a large number of cross-cutting concerns, such as logging, rate limiting,
+                and security features such audit trails and DOS protection.
+                When everything is running through the same app, it’s easy to hook up components to those cross-cutting
+                concerns.</li>
+              <li class="list-group-item list-group-item-success">There can also be performance advantages, since
+                shared-memory access is faster than inter-process communication (IPC).</li>
+              <li class="list-group-item list-group-item-success"></li>
             </ul>
 
             <ul class="list-group">
               <p class="list-group-item-header">Monolithic Cons:</p>
-              <li class="list-group-item list-group-item-warning">Monolithic app services tend to get tightly coupled and entangled as the application evolves, making it difficult to isolate services for purposes such as independent scaling or code maintainability.</li>
-              <li class="list-group-item list-group-item-warning">Monolithic architectures are also much harder to understand, because there may be dependencies, side-effects, and magic which are not obvious when you’re looking at a particular service or controller.</li>
-              <li class="list-group-item list-group-item-warning"></li> 
+              <li class="list-group-item list-group-item-warning">Monolithic app services tend to get tightly coupled
+                and entangled as the application evolves, making it difficult to isolate services for purposes such as
+                independent scaling or code maintainability.</li>
+              <li class="list-group-item list-group-item-warning">Monolithic architectures are also much harder to
+                understand, because there may be dependencies, side-effects, and magic which are not obvious when you’re
+                looking at a particular service or controller.</li>
+              <li class="list-group-item list-group-item-warning"></li>
             </ul>
 
             <ul class="list-group">
               <p class="list-group-item-header">Microservice Pros:</p>
-              <li class="list-group-item list-group-item-success">Microservice architectures are typically better organized, since each microservice has a very specific job, and is not concerned with the jobs of other components.</li>
-              <li class="list-group-item list-group-item-success">Decoupled services are also easier to recompose and reconfigure to serve the purposes of different apps (for example, serving both the web clients and public API).</li>
-              <li class="list-group-item list-group-item-success">They can also have performance advantages depending on how they’re organized because it’s possible to isolate hot services and scale them independent of the rest of the app.</li> 
+              <li class="list-group-item list-group-item-success">Microservice architectures are typically better
+                organized, since each microservice has a very specific job, and is not concerned with the jobs of other
+                components.</li>
+              <li class="list-group-item list-group-item-success">Decoupled services are also easier to recompose and
+                reconfigure to serve the purposes of different apps (for example, serving both the web clients and
+                public API).</li>
+              <li class="list-group-item list-group-item-success">They can also have performance advantages depending on
+                how they’re organized because it’s possible to isolate hot services and scale them independent of the
+                rest of the app.</li>
             </ul>
 
             <ul class="list-group">
               <p class="list-group-item-header">Microservice Cons:</p>
-              <li class="list-group-item list-group-item-warning">As you’re building a new microservice architecture, you’re likely to discover lots of cross-cutting concerns that you did not anticipate at design time. A monolithic app could establish shared magic helpers or middleware to handle such cross-cutting concerns without much effort.</li>
-              <li class="list-group-item list-group-item-warning">In a microservice architecture, you’ll either need to incur the overhead of separate modules for each cross-cutting concern, or encapsulate cross-cutting concerns in another service layer that all traffic gets routed through.</li>
-             
-              <li class="list-group-item list-group-item-warning">Eventually, even monolthic architectures tend to route traffic through an outer service layer for cross-cutting concerns, but with a monolithic architecture, it’s possible to delay the cost of that work until the project is much more mature.</li>
-              <li class="list-group-item list-group-item-warning">Microservices are frequently deployed on their own virtual machines or containers, causing a proliferation of VM wrangling work. These tasks are frequently automated with container fleet management tools.</li>
+              <li class="list-group-item list-group-item-warning">As you’re building a new microservice architecture,
+                you’re likely to discover lots of cross-cutting concerns that you did not anticipate at design time. A
+                monolithic app could establish shared magic helpers or middleware to handle such cross-cutting concerns
+                without much effort.</li>
+              <li class="list-group-item list-group-item-warning">In a microservice architecture, you’ll either need to
+                incur the overhead of separate modules for each cross-cutting concern, or encapsulate cross-cutting
+                concerns in another service layer that all traffic gets routed through.</li>
+
+              <li class="list-group-item list-group-item-warning">Eventually, even monolthic architectures tend to route
+                traffic through an outer service layer for cross-cutting concerns, but with a monolithic architecture,
+                it’s possible to delay the cost of that work until the project is much more mature.</li>
+              <li class="list-group-item list-group-item-warning">Microservices are frequently deployed on their own
+                virtual machines or containers, causing a proliferation of VM wrangling work. These tasks are frequently
+                automated with container fleet management tools.</li>
             </ul>
 
-            <p class="text-card bg-primary mt-3">Positive attitudes toward microservices, despite the higher initial cost vs monolthic apps. Aware that microservices tend to perform and scale better in the long run.</p>
-            <p class="text-card bg-primary">Structure the app so that services are independent from each other at the code level, but easy to bundle together as a monolithic app in the beginning. Microservice overhead costs can be delayed until it becomes more practical to pay the price.</p>
+            <p class="text-card bg-primary mt-3">Positive attitudes toward microservices, despite the higher initial
+              cost vs monolthic apps. Aware that microservices tend to perform and scale better in the long run.</p>
+            <p class="text-card bg-primary">Structure the app so that services are independent from each other at the
+              code level, but easy to bundle together as a monolithic app in the beginning. Microservice overhead costs
+              can be delayed until it becomes more practical to pay the price.</p>
 
 
 
             <p class="card-text bg-info">
-              
+
             </p>
-     
+
             <p class="card-text bg-success"></p>
 
-          
+
           </div>
         </div>
       </div>
