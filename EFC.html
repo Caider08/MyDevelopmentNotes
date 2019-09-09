@@ -225,42 +225,29 @@
         <div class="card-header">
           <h5>
             <a href="#collapse4" data-parent="#accordion" data-toggle="collapse">
-              Function Expresion Differ from Function Declaration?
+              EFC setup steps
             </a>
           </h5>
         </div>
 
         <div id="collapse4" class="collapse">
           <div class="card-body bg-secondary">
-            <h4 class="card-title">How Does a Function Expression Differ from a Function Declaration?</h4>
+            <h4 class="card-title">Entity Framework Core setup steps:</h4>
 
-            <p class="card-text bg-primary">A function declaration uses the keyword function , followed by the name of
-              the
-              function. By contrast, a function expression begins with var , let or const , followed by the name of the
-              function and the assignment operator = . Here are some examples</p>
-
-            <img class="card-img img-fluid" src="img/functionExpressionVsDeclaration.png"
-              alt="Function Declarations and Function Expressions">
-
-
-
-            <p class="card-text bg-info">In usage, the key difference is that function declarations are hoisted, while
-              function expressions are not. That means function declarations are moved to the top of their scope by the
-              JavaScript interpreter, and so you can define a function declaration and call it anywhere in your code. By
-              contrast, you can only call a function expression in linear sequence: you have to define it before you
-              call it.</p>
 
             <ul class="list-group">
 
-              <li class="list-group-item list-group-item-info"><strong>Many developers prefer function
-                  expressions:</strong></li>
-              <li class="list-group-item list-group-item-info">• First and foremost, function expressions enforce a more
-                predictable, structured codebase. Of course, a structured codebase is also possible with declarations;
-                it’s just that declarations allow you to get away with messy code more easily.</li>
-              <li class="list-group-item list-group-item-info">• Second, we can use ES6 syntax for function expressions:
-                this is generally more concise, and let and const provide more control over whether a variable can be
-                re-assigned or not.</li>
-
+              <li class="list-group-item list-group-item">
+                  make your DbContext class(can copy the ApplicationDbContext one).  In Data folder
+                  </li>
+              <li class="list-group-item list-group-item">Setup your DbSets (each one in general is a table)</li>
+              <li class="list-group-item list-group-item">add services.AddDbContext (in startup.cs)</li>
+              <li class="list-group-item list-group-item-info">in fileExplorer (shell or cmd)</li>
+              <li class="list-group-item">dotnet ef migrations add "name of migration" --context "dbContext"</li>
+                <li class="list-group-item">dotnet ef database update</li>
+                <li class="list-group-item">dotnet ef migrations remove --context "NameOfContext"</li>
+                <li class="list-group-item">dotnet ef migrations list --context "NameOfContext"</li>
+             
             </ul>
 
           </div>

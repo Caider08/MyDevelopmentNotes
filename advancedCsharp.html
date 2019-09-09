@@ -8,12 +8,12 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
     integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <link type="text/css" rel="stylesheet" href="notes.css">
-  <title>JS Interview Related</title>
+  <title>advanced C#</title>
 </head>
 
 <body class="bg-dark text-light">
   <header>
-    <h1 class="display-2 text-center my-4">JS Interview Related</h1>
+    <h1 class="display-2 text-center my-4">advanced C#</h1>
     <div class="container">
       <div class="row">
         <div class="col-md-2">
@@ -37,11 +37,12 @@
               C#
             </button>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="mvc.html" class="dropdown-item">.Net MVC</a>
-              <a href="dotnetFundamentals.html" class="dropdown-item">.Net Fundamentals</a>
-              <a href="EFC.html" class="dropdown-item">Entity Framework Core</a>
-              <a href="interviewcSharp.html" class="dropdown-item">interview-related CSharp</a>
-              <a href="index.html" class="dropdown-item">Notes Home</a>
+
+                <a class="dropdown-item" href="mvc.html" class="dropdown-item">ASP.net</a>
+                <a href="interviewcSharp.html" class="dropdown-item">interview-related CSharp</a>
+                <a href="dotNetFundamentals.html" class="dropdown-item">.Net fundamentals</a>
+                <a href="advancedCsharp.html" class="dropdown-item">Advanced c# topics</a>
+                <a href="index.html" class="dropdown-item">Notes Home</a>
             </div>
           </div>
         </div>
@@ -55,6 +56,7 @@
               <a href="objectOrientedJS.html" class="dropdown-item">Object Oriented in JS</a>
               <a href="interviewJS.html" class="dropdown-item">JS Interview Related</a>
               <a href="advancedJStopics.html" class="dropdown-item">Advanced JS Topics</a>
+              <a href="strangeJS.html" class="dropdown-item">strange JS</a>
               <a href="JSframeworks.html" class="dropdown-item">JS Frameworks</a>
               <a href="index.html" class="dropdown-item">Notes Home</a>
             </div>
@@ -86,10 +88,7 @@
               Interview Prep
             </button>
             <div class="dropdown-menu">
-                <a href="interviewJS.html" class="dropdown-item">JS interview prep</a>
-                <a href="interviewcSharp.html" class="dropdown-item">c# interview prep</a>
-                <a href="sqlInterviewPrep.html" class="dropdown-item">SQL interview prep</a>
-                <a href="index.html" class="dropdown-item">Notes Home</a>
+              <a href="index.html" class="dropdown-item">Notes Home</a>
             </div>
           </div>
         </div>
@@ -100,7 +99,7 @@
 
   <div class="container">
     <button class="btn btn-primary d-block mt-25" style="margin-top: 25px" data-toggle="collapse"
-      data-target="#collapse-btn-1">JS links</button>
+      data-target="#collapse-btn-1">c# links</button>
 
     <div class="collapse my-25" id="collapse-btn-1">
       <div class="card">
@@ -108,10 +107,13 @@
           <ul class="list-group">
 
             <a class="list-group-item list-group-item-dark" target="_blank"
-              href="https://medium.com/@bretcameron/what-javascript-developers-can-learn-from-c-3cdb93ab8658">What JS
-              developers can learn from C++</a>
+              href="">
 
+              </a>
 
+              <a class="list-group-item list-group-item-dark" target="_blank"
+              href="https://codeburst.io/does-js-really-do-that-43f17bc01e9b">does JS really do that?</a>
+       
           </ul>
         </div>
       </div>
@@ -122,32 +124,19 @@
         <div class="card-header">
           <h5>
             <a href="#collapse1" data-parent="#accordion" data-toggle="collapse">
-                JOINS
+              ref and out
             </a>
           </h5>
         </div>
 
         <div id="collapse1" class="collapse">
           <div class="card-body bg-secondary">
-            <h4 class="card-title">Inner Joins</h4>
+            <h4 class="card-title">ref and out
+            </h4>
 
-            <p class="card-text bg-primary">selects records that have matching results from 2 given tables</p>
-            <p class="card-text bg-primary">only Returns the matches</p>
-
-            <h4 class="card-title">Outer Joins</h4>
-            <p class="card-text bg-primary">Returns all records when there is a match in either left(table) or right(table2)</p>
-            <p class="card-text bg-warning">can be a huge data set</p>
-
-            <h4 class="card-title">Left Join</h4>
-            <p class="card-text bg-primary">Returns all the data from the <strong>left table</strong> even if no matches + all the matches from the <strong>Right table</strong></p>
-
-
-            <h4 class="card-title">Right Join</h4>
-            <p class="card-text bg-primary">Returns all the data from the right table even if no matches from the <strong>left table</strong>...+ the matches from the <strong>left table</strong></p>
-      
-            <img src="img/sqlJoins.png" alt="SQL Join syntax" class="card-img-bottom img-fluid">
-
-    
+            <img src="img/refAndOut.png" alt="ref and out examples" class="card-img-top img-fluid mb-3">
+            <p class="card-text bg-warning">ref can be considered code smell</p>
+          
           </div>
         </div>
       </div>
@@ -156,22 +145,35 @@
         <div class="card-header">
           <h5>
             <a href="#collapse2" data-parent="#accordion" data-toggle="collapse">
-                Stored Procedures
+              class decorators
             </a>
           </h5>
         </div>
 
         <div id="collapse2" class="collapse">
           <div class="card-body bg-secondary">
-              <h4 class="card-title">Stored Procedures</h4>
 
-            <p class="card-text bg-primary">Subroutine that contains a collection of SQl statements
+            <p class="card-text bg-primary">
+               readonly
             </p>
 
-            <p class="card-text">Saves time and resources...especially with complex logic</p>
+            <p class="card-text mb-5">decorate <strong>readonly</strong> when something should be instantiated only-once</p>
 
+            <p class="card-text bg-primary mb-5"><strong>protected</strong></p>
 
-           
+            <p class="card-text">ONLY accesible from its class and derived classes</p>
+
+            <p class="card-text bg-warning mb-5">AVOID if can (use private instead)</p>
+
+            <p class="card-text bg-primary mb-5"><strong>internal</strong> = only accessible from the same assembly (same Program)</p>
+
+            <p class="card-text bg-primary mb-5">protected internal - accesible from the same Assembly or Derived class</p>
+            <p class="card-text bg-primary">BASE class constructors Always executed first (NOT inherited...need to ReDefine)</p>
+       
+
+            <p class="card-text bg-primary">Upcasting (derived-class to BASE class)</p>
+
+            <p class="card-text bg-primary">Downcasting (BASE to derived)</p>
           </div>
         </div>
       </div>
@@ -180,26 +182,21 @@
         <div class="card-header">
           <h5>
             <a href="#collapse3" data-parent="#accordion" data-toggle="collapse">
-              Interfaces
+              Composition
             </a>
           </h5>
         </div>
 
         <div id="collapse3" class="collapse">
           <div class="card-body bg-secondary">
-            <h4 class="card-title">Interfaces</h4>
 
-            <p class="card-text bg-primary">are used to specify methods and properties that a derived class will have access to.</p>
+            <h4 class="card-title">composition</h4>
 
-            <p class="card-text">Like a contract...if a class implements an interface...then the interface guarantees the class has access to that method.</p>
+            <p class="card-text bg-primary">Allows one class to contain another (Car has an Engine)</p>
 
-            <p class="card-text">Doesn't contain Code or Data
-            </p>
+            <p class="card-text bg-success">looser coupling than Inheritance (Tightly Coupled application = BAD)</p>
+            <p class="card-text bg-success">Any Inheritance can be built to Composition instead</p>
 
-            <p class="card-text">Big role in Abstraction and Styles
-            </p>
-
-            <p class="card-text bg-primary">Used to specify related behaviors that may be common across unrelated classes</p>
 
           </div>
         </div>
@@ -209,44 +206,38 @@
         <div class="card-header">
           <h5>
             <a href="#collapse4" data-parent="#accordion" data-toggle="collapse">
-            abstract classes
+                UserSecrets
             </a>
           </h5>
         </div>
 
         <div id="collapse4" class="collapse">
           <div class="card-body bg-secondary">
-
-            <h4 class="card-title">abstract classes</h4>
-
-            <p class="card-text bg-primary">similar to interfaces BUT can't be instantiated.  Frequently partially or never implemented</p>
-
-            <p class="card-text bg-primary">abstract classes cannot be instantiated</p>
-        
-            <p class="card-text">Can contain code or data</p>
-
-            <p class="card-text">A class can inherit from only one <strong>abstract</strong> class (but can implement multiple interfaces)</p>
-
-            <p class="card-text">Can specify methods as <strong>virtual</strong> to force a derived class to implement their own definition.</p>
-
-            <p class="card-text">If you have classes that will have a lot of the same code/methods...go with <strong>abtract</strong> class instead of interfaces</p>
+            <h4 class="card-title">User Secrets</h4>
 
             
-            <p class="card-text bg-primary">Containing Class doesn't hold implementation (derived classes do that)</p>
+            <p class="card-text bg-primary">stored in JSON config-file</p>
 
-            <p class="card-text">Derived classes must implement all derived methods.</p>
-            <p class="card-text bg-info">Example: A Person abstract class that has a PrintName() method in addition to some data such as default value for an age.</p>
+            <p class="card-text bg-info">dotnet user-secrets set ''</p>
 
-            <p class="card text">should-be used to collect and specify behavior by related classes.</p>
+            <p class="card-text bg-info">stored in AppData/Microsoft/UserSecrets</p>
 
-            <p class="card-text bg-primary">you IMPLEMENT an <strong>interface</strong> while you EXTEND an <strong>abstract class</strong></p>
+            <p class="card-text bg-info">Right-click project "Manage User Secrets"</p>
+
+            <ul class="list-group">
+                    <p class="list-group-item-header"></p>
+                    <li class="list-group-item">Add "Microsoft.Extensions.SecretManager.Tools" in .csproj</li>
+                    <li class="list-group-item">Right click "Manage user Secrets"</li>
+                    <li class="list-group-item">in startup.cs file...Env.IsDeployment()...App.AddUserSecrets startup</li> 
+                    <li class="list-group-item">cmd-line way:  dotnet user-secrets set ' ' Namespace</li>
+
+            </ul>   
             
-        
-            <p class="card-text bg-warning"><strong>Sealed Modifier</strong> prevents it from derived or overriding of methods</p>
+            <p class="card-text bg-primary">For Console Apps</p>
 
-            <p class="card-text bg-warning">Sealed can only be applied to methods that are overriding "virtual" methods of the base class.</p>
+            <p class="card-text">in .csproj:</p>
 
-            <p class="card-text">slightly faster because of run-time optimizations</p>
+
           </div>
         </div>
       </div>
@@ -255,23 +246,117 @@
         <div class="card-header">
           <h5>
             <a href="#collapse5" data-parent="#accordion" data-toggle="collapse">
-              static class
+                Threading
             </a>
           </h5>
         </div>
 
         <div id="collapse5" class="collapse">
           <div class="card-body bg-secondary">
-            <h4 class="card-title">static class</h4>
 
-            <p class="card-text bg-primary">Used to create data or functions that don't need to be instantiated
+            <h4 class="card-title">Threading</h4>
+
+            <p class="card-text bg-primary">Run computation-intensive code on a different thread than the U.I. thread</p>
+
+            <p class="card-text bg-primary">Context Switching</p>
+
+            <p class="card-text">Thread thread = new Thread(spawning thread)</p>
+
+            <p class="card-text bg-primary">main Thread always has the U.I.</p>
+
+            <p class="card-text bg-info">Debug -> Windows -> Threads (Name your threads for debugging...thread.Name = " " )</p>
+
+            <p class="card-text bg-primary"><strong>Multi Threading</strong></p>
+
+            <p class="card-text bg-info">Managed by the Thread-Scheduler</p>
+
+            <p class="card-text bg-info">CLR delegates it</p>
+
+            <p class="card-text bg-info">Operating system takes care of it</p>
+
+            <p class="card-text bg-info">Separate-copy of local-variables is created on each thread's memory-stack</p>
+
+            <p class="card-text bg-info">static variable shared amongst threads</p>
+
+            <p class="card-text bg-info">new Thread("methodName").Start()</p>
+
+
+            <p class="card-text bg-primary">when writing code with shared-resources have to think about <strong>Locking-Strategy</strong></p>
+
+            <p class="card-text bg-info">thread.Start();</p>
+
+            <p class="card-text bg-info">thread.Join();</p>
+
+            <p class="card-text">will wait for thread to finish</p>
+
+            <p class="card-text">any subsequent thread will wait for it to finish</p>
+
+            <p class="card-text mb-5">only way to share a value between threads is using thread.Join()</p>
+
+            <p class="card-text bg-primary"><strong>Tasks</strong></p>
+
+            <p class="card-text">Can-be chained</p>
+            
+            <p class="card-text">may use thread pool</p>
+
+            <p class="card-text">Good for I/O bound operations</p>
+
+            <p class="card-text mb-5">Task.Result()  (will block program until finished</p>
+
+
+            <p class="card-text bg-primary"><strong>Continuation</strong></p>
+
+            <p class="card-text">Async-task that is invoked by another task called an <strong>antecedent</strong></p>
+
+            <p class="card-text bg-info">Pass data from antecedent to the continuation-task</p>
+            
+            <p class="card-text bg-info">Control how continuation is invoked</p>
+
+            <p class="card-text bg-info">Able to cancel continuation</p>
+
+            <p class="card-text bg-info">Multiple continuations from one antecedent</p>
+
+            <h4 class="card-title">Locks</h4>
+
+            <p class="card-text bg-primary">Exclusive-Lock (1 thread to access certain section of code)</p>
+
+            <p class="card-text">Lock</p>
+
+            <p class="card-text">Mutex</p>
+
+            <p class="card-text bg-primary">Non-Exclusive-locks</p>
+
+            <p class="card-text">Semaphore</p>
+
+            <p class="card-text">SemaphoreSlim</p>
+
+            <p class="card-text bg-info">Semaphores are resource intensive</p>
+
+            <p class="card-text bg-info">Limit amount of concurrent threads that can access a resource</p>
+
+            <p class="card-text">Reader/Writer</p>
+
+            <p class="card-text">Allow multiple-threads to access a resource</p>
+
+            <p class="card-text bg-primary">Incrementing a class Automatically </p>
+
+            <p class="card-text bg-success">fine in single-threaded environment</p>
+
+            <p class="card-text bg-warning">Race-conditions can happen</p>
+
+            <p class="card-text">static int _refid</p>
+
+            <p class="card-text">public REFID {get; set; }</p>
+
+            <p class="card-text">Interlocked.Increment(ref refid)</p>
+
+            <img class="card-img img-fluid mb-5" src="img/name.png" alt="'name' must be named with caution">
+
+
+            <p class="card-text bg-info">
+             <strong>name</strong> or <strong>window.name</strong> is a reserved keyword. When name is set to any value, it is automatically stringified, i.e, the toString() method is called on it .
+             window.name gets/sets the name of the window. This only happens for var declarations and not for let declarations since let variables do not attach themselves to the window object.
             </p>
-
-            <p class="card-text">only contain static members</p>
-
-            <p class="card-text">inherently sealed</p>
-
-            <p class="card-text">Can't be instantiated</p>
 
 
           </div>
@@ -282,25 +367,19 @@
         <div class="card-header">
           <h5>
             <a href="#collapse6" data-parent="#accordion" data-toggle="collapse">
-              Generics
+              undefined and null, same but different
             </a>
           </h5>
         </div>
 
         <div id="collapse6" class="collapse">
           <div class="card-body bg-secondary">
+            <h4 class="card-title">undefined and null, same but different</h4>
 
-            <h4 class="card-title">Generics</h4>
-
-
-            <p class="card-text bg-primary">
-                allow you to enforce Type Safety by letting you tailor a method or class to a precise data-type
+            <p class="card-text bg-primary">undefined and null coerce to each other when compared with <strong>==</strong>
             </p>
 
-
-            <p class="card-text"> example: Array Class to store list of users or products and then when you use them you can use them as Users or Products (don't have to do any unboxing)
-            </p>
-
+            <img class="card-img img-fluid mb-5" src="img/undefinedAndNull.png" alt="undefined and NaN">
 
           </div>
         </div>
@@ -310,54 +389,18 @@
         <div class="card-header">
           <h5>
             <a href="#collapse7" data-parent="#accordion" data-toggle="collapse">
-              Four Pillars of OOP
+             caveat to destructuring
             </a>
           </h5>
         </div>
 
         <div id="collapse7" class="collapse">
           <div class="card-body bg-secondary">
-            <h4 class="card-title">4 Pillars of O.O.P.</h4>
 
+            <h4 class="card-title">caveat to destructuring</h4>
 
-            
-            <ul class="list-group">
-                    
-                    <li class="list-group-item list-group-item-primary">Abstraction</li>
-                    <li class="list-group-item list-group-item-primary">Polymorphism</li>
-                    <li class="list-group-item list-group-item-primary">Inheritance</li> 
-                    <li class="list-group-item list-group-item-primary">Encapsulation</li>
-            </ul>
+            <img class="card-img img-fluid mb-5" src="img/caveatDestructuring.png" alt="caveat for destructuring">
 
-            <h4 class="card-title">Abstraction</h4>
-            <p class="card-text bg-primary">abstraction allows making relevant information visible</p>
-            <p class="card-text">are usually implemented as Abstract classes or Interfaces</p>
-
-
-            <h4 class="card-title">Polymorphism</h4>
-            <p class="card-text bg-primary">...when classes have different functionality while sharing the same interface</p>
-
-            <p class="card-text">Blue Ray Disc player(is the interface) able to play DVD(object) or CD(object)</p>
-
-            <p class="card-text">Employee class...another class inherits from it(contractor)..then a permanent Employee class...SO they have different CalculateSalary classes (polymorphic)</p>
-
-            <p class="card-text">Overloading with your methods is also a form of <strong>polymorphism</strong></p>
-
-            <p class="card-text bg-info">creating multiple methods in a class with same name but different parameters and types is called <strong>method overloading</strong>...is an example of compile time polymorhpism which is done at compile time.</p>
-
-            <p class="card-text bg-info"><strong>Run Time polymorphism</strong> would be Method overriding</p>
-
-            <h4 class="card-title">Encapsulation</h4>
-
-            <p class="card-text bg-primary">Related features</p>
-
-            <p class="card-text"><strong>Encapsulation</strong> prevents access to implementation details.</p>
-
-            <p class="card-text bg-info">encapsulation ex: setting stuff as private inside classes</p>
-
-            <h4 class="card-title">Inheritance</h4>
-
-            <p class="card-text bg-primary">when an object or class is based on a parent class (taking on its characteristics)</p>
           </div>
         </div>
       </div>
@@ -366,7 +409,7 @@
         <div class="card-header">
           <h5>
             <a href="#collapse8" data-parent="#accordion" data-toggle="collapse">
-              .Net 
+              Avoid for-loops
             </a>
           </h5>
         </div>
@@ -374,28 +417,9 @@
         <div id="collapse8" class="collapse">
           <div class="card-body bg-secondary">
 
-            <h4 class="card-title">What is .NET?</h4>
+                <img class="card-img img-fluid" src="img/avoidForloops.png" alt="avoidForLoops 1">
 
-            <ul class="list-group">
-                    
-                    <li class="list-group-item list-group-item-primary">managed execution environment to manage and build applications</li>
-                    <li class="list-group-item list-group-item-primary">CLR + FCL (common language run time + framework class library)</li>
-                
-            </ul>
-
-
-            <p class="card-text bg-primary"><strong>CLR</strong> Common Language Run-Time...offers security, memory management, exception handling</p>
-
-            <p class="card-text bg-primary mb-5"><strong>FCL</strong> (framework class library) sits on top of the <strong>CLR</strong></p>
-
-            <p class="card-text bg-primary">C# compilers create <strong>Managed</strong> code - garbage collecting, references etc...</p>
-
-            <p class="card-text bg-primary"><strong>Unmanaged code</strong> compiles straight to machine code...</p>
-
-            <p class="card-text">...Not portable</p>
-
-            <p class="card-text">...Not managed by the CLR</p>
-
+                <img class="card-img img-fluid" src="img/avoidForloops2.png" alt="avoidForLoops 2">
 
           </div>
         </div>
@@ -405,22 +429,43 @@
         <div class="card-header">
           <h5>
             <a href="#collapse9" data-parent="#accordion" data-toggle="collapse">
-              Boxing vs. Unboxing
+            
             </a>
           </h5>
         </div>
 
         <div id="collapse9" class="collapse">
           <div class="card-body bg-secondary">
-            <h4 class="card-title">Boxing vs. Unboxing</h4>
+            <h4 class="card-title"></h4>
 
 
-            <p class="card-text bg-primary"><strong>Boxing</strong> is the process of converting a value type to the type object (integer into an object)</p>
+            <p class="card-text bg-primary"></p>
 
-            <p class="card-text mb-5"><strong>Boxed values</strong> use more memory and require memory lookups to access.</p>
+            <p class="card-text bg-info"></p>
 
-            <p class="card-text bg-primary"><strong>Unboxing</strong> extracts the value from the object</p>
-            
+            <p class="card-text bg-info">
+
+            </p>
+
+            <img class="card-img img-fluid mb-5" src="img/prototypes.png" alt="Prototypes in JS">
+
+            <h5></h5>
+
+            <p class="card-text bg-info"> 
+            </p>
+
+            <p class="card-text bg-warning"></p>
+            <p class="card-text bg-success"></p>
+
+            <p class="card-text bg-success"></p>
+
+              <ul class="list-group">
+                <p class="list-group-item-header"></p>
+                <li class="list-group-item list-group-item-info"></li>
+                <li class="list-group-item list-group-item-info"></li>
+                <li class="list-group-item list-group-item-info"></li> 
+                <li class="list-group-item"></li>
+              </ul>   
 
           </div>
         </div>

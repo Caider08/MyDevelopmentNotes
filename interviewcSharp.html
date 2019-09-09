@@ -38,6 +38,7 @@
             </button>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="mvc.html" class="dropdown-item">.Net MVC</a>
+              <a href="dotnetFundamentals.html" class="dropdown-item">.Net Fundamentals</a>
               <a href="interviewcSharp.html" class="dropdown-item">interview-related CSharp</a>
               <a href="index.html" class="dropdown-item">Notes Home</a>
             </div>
@@ -142,7 +143,7 @@
         <div class="card-header">
           <h5>
             <a href="#collapse2" data-parent="#accordion" data-toggle="collapse">
-              Delegates
+              Events & Delegates
             </a>
           </h5>
         </div>
@@ -160,6 +161,29 @@
                 float> can be used to store a reference to a method that gets an argument of type float, and returns a
                 float.</float>
             </p>
+
+            <p class="card-text bg-warning">"Not Extensible"...meaning developer has to build and Re-Deploy your code.  (Interfaces help solve this)</p>
+
+            <p class="card-text-bg-success">"Extensible"...Developer don't have to rely on you</p>
+
+            <p class="card-text bg-info">System.Action (one Generic T) one Non-Generic</p>
+
+            <p class="card-text bg-info">System.Func ... points to method that returns a-value</p>
+
+            <p class="card-text"><strong>Interface or Delegate?</strong></p>
+
+            <p class="card-text mb-5">Use delegate when: an Eventing design pattern issued...The caller doesn't need to access other properties or methods</p>
+
+            <h4 class="card-title">Events</h4>
+
+            <p class="card-text bg-primary">events are mechanisms for communicating between objects</p>
+
+            <p class="card-text">EVENT - Sender => EVENT - Receiver</p>
+
+            <p class="card-text">(EVENT sender knows nothign about EVENT Receiver</p>
+
+            <img src="img/events.png" alt="Events example" class="card-img-bottom-img-fluid">
+
 
           </div>
         </div>
@@ -184,10 +208,17 @@
             <p class="card-text">Like a contract...if a class implements an interface...then the interface guarantees
               the class has access to that method.</p>
 
-            <p class="card-text">Doesn't contain Code or Data nor method implementations
+            <p class="card-text bg-info">Doesn't contain Code or Data nor method implementations
             </p>
 
-            <p class="card-text">are always public</p>
+            <p class="card-text bg-info">all start w/ I.</p>
+
+            <p class="card-text bg-info">no access modifiers</p>
+
+            <p class="card-text bg-info">no body on methods</p>
+
+
+            <p class="card-text bg-info">are always public</p>
 
             <p class="card-text">Big role in Abstraction and Styles
             </p>
@@ -200,6 +231,10 @@
             <p class="card-text">can only extend one class but may implement many interfaces</p>
 
             <p class="card-text">Icomparer T, Compare(T,T)</p>
+
+            <p class="card-text bg-warning">Interfaces != for Multiple Inheritances...</p>
+
+            <p class="card-text bg-warning">...No code reusability...Just-Conforming to a Contract</p>
 
           </div>
         </div>
@@ -328,6 +363,14 @@
               can use them as Users or Products (don't have to do any unboxing)
             </p>
 
+            <p class="card-text">System.Collections.Generic</p>
+            
+            <p class="card-text bg-success">can put Generic method inside non-generic class</p>
+
+            <p class="card-text bg-warning">rare to have to create Generic classes or methods</p>
+
+            <img src="img/generic.png" alt="" class="card-img-bottom img-fluid">
+
 
           </div>
         </div>
@@ -396,6 +439,19 @@
 
             <p class="card-text bg-primary">when an object or class is based on a parent class (taking on its
               characteristics)</p>
+
+              <p class="card-text bg-info mb-5">polymorphic, code Re-Use</p>
+
+              <h5 class="card-title">Composition</h5>
+
+              <p class="card-text bg-primary">Allows one class to contain another (Car has an Engine)</p>
+
+              <p class="card-text bg-success">looser coupling than Inheritance</p>
+
+              <p class="card-text">Any Inheritance can be built into Composition</p>
+
+              <p class="card-text"><strong>protected</strong> ONLY accessible from its class and derived classes. (AVOID if can...use private instead)</p>
+
           </div>
         </div>
       </div>
@@ -580,6 +636,173 @@
           </div>
         </div>
       </div>
+
+      <div class="card">
+            <div class="card-header">
+              <h5>
+                <a href="#collapse12" data-parent="#accordion" data-toggle="collapse">
+                  Lambda Expressions
+                </a>
+              </h5>
+            </div>
+    
+            <div id="collapse12" class="collapse">
+              <div class="card-body bg-secondary">
+                <h4 class="card-title">Lambda Expressions</h4>
+    
+    
+                <p class="card-text bg-primary">anonymous method</p>
+
+                <p class="card-text">No access modifier</p>
+
+                <p class="card-text">No name</p>
+
+                <p class="card-text">no return statement</p>
+
+                <p class="card-text bg-success">conveniance (readable)</p>
+
+                <p class="card-text bg-info">args goes to expression</p>
+
+                <p class="card-text">args => expression</p>
+
+                <p class="card-text">number => number * number</p>
+
+                <img src="img/lambdaExpressions.png" alt="lambda expression example" class="card-img-bottom img-fluid">
+
+
+    
+                
+    
+              </div>
+            </div>
+        </div>
+
+        <div class="card">
+                <div class="card-header">
+                  <h5>
+                    <a href="#collapse13" data-parent="#accordion" data-toggle="collapse">
+                        Extension methods
+                    </a>
+                  </h5>
+                </div>
+        
+                <div id="collapse13" class="collapse">
+                  <div class="card-body bg-secondary">
+                    <h4 class="card-title">Extension methods</h4>
+        
+        
+                    <p class="card-text bg-primary">Allow us to add methods to a class without:</p>
+
+                    <p class="card-text">changing its source code (or)</p>
+
+                    <p class="card-text">creating a new class that inherits from it</p>
+
+                    <p class="card-text bg-success">essentially static methods (class and method marked static).  C# still allows us to use it on an instance object</p>
+    
+                    <p class="card-text">No access modifier</p>
+    
+                    <p class="card-text">No name</p>
+    
+                    <p class="card-text">no return statement</p>
+    
+                    <p class="card-text bg-success">conveniance (readable)</p>
+    
+                    <p class="card-text bg-info">args goes to expression</p>
+    
+                    <p class="card-text">args => expression</p>
+    
+                    <p class="card-text">number => number * number</p>
+    
+           
+
+                    <img src="img/extensionMethods.png" alt="extension methods example" class="card-img-bottom img-fluid">
+    
+    
+        
+                    
+        
+                  </div>
+                </div>
+            </div>
+
+            <div class="card">
+                    <div class="card-header">
+                      <h5>
+                        <a href="#collapse13" data-parent="#accordion" data-toggle="collapse">
+                            Nullable Types
+                        </a>
+                      </h5>
+                    </div>
+            
+                    <div id="collapse13" class="collapse">
+                      <div class="card-body bg-secondary">
+
+                        <h4 class="card-title">Nullable Types</h4>
+            
+            
+                        <p class="card-text bg-primary">value types cannot be null</p>
+    
+                        <p class="card-text"></p>
+    
+                        <p class="card-text"></p>
+    
+                        <p class="card-text bg-success"></p>
+        
+                        <p class="card-text">No access modifier</p>
+        
+                        <p class="card-text">No name</p>
+        
+                        <p class="card-text">no return statement</p>
+        
+                        <p class="card-text bg-success">conveniance (readable)</p>
+        
+                        <p class="card-text bg-info">args goes to expression</p>
+        
+                        <p class="card-text">args => expression</p>
+        
+                        <p class="card-text">number => number * number</p>
+        
+               
+    
+                        <img src="img/nullableTypes.png" alt="nullable types example" class="card-img-bottom img-fluid">
+        
+        
+            
+                      </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                        <div class="card-header">
+                          <h5>
+                            <a href="#collapse13" data-parent="#accordion" data-toggle="collapse">
+                                Dynamic in c#
+                            </a>
+                          </h5>
+                        </div>
+                
+                        <div id="collapse13" class="collapse">
+                          <div class="card-body bg-secondary">
+    
+                            <h4 class="card-title">Dynamic in c#</h4>
+                
+                
+                            <p class="card-text bg-primary">statically typed = c#, JAVA, apex (compile-time feedback).</p>
+
+                            <p class="card-text bg-primary">Dynamically typed = Ruby, JS, Python  (faster but need more unit tests)</p>
+        
+                            <p class="card-text bg-info">w/ Dynamic have to use Reflection</p>
+        
+                            <p class="card-text"> C.L.R. to machine-Code @ Run-Time</p>
+
+                            <p class="card-text">D.L.R. (sits on top of the CLR)</p>
+        
+                            <p class="card-text bg-success">dynamic name = "Bob"; name = 10;  (this compiles!!)</p>
+                      
+                
+                          </div>
+                        </div>
+                    </div>
 
 
     </div>
