@@ -115,7 +115,6 @@
               href="https://medium.com/@bretcameron/what-javascript-developers-can-learn-from-c-3cdb93ab8658">What JS
               developers can learn from C++</a>
 
-
           </ul>
         </div>
       </div>
@@ -139,10 +138,14 @@
               Interfaces, and Delegates are examples</p>
 
 
-            <p class="card-text bg-primary"><strong>Value types</strong> actually Hold values...assigning one value type
+            <p class="card-text bg-primary mb-5"><strong>Value types</strong> actually Hold values...assigning one value type
               to another COPIES the values. ENUMS, Bools, etc...</p>
 
+              <p class="card-text">Each data-type in c# is a <strong>class</strong> or <strong>structure</strong></p>
 
+              <p class="card-text bg-primary"><strong>structures</strong> are value types (int, bools)</p>
+
+              <p class="card-text bg-primary"><strong>classes</strong> are reference types</p>
           </div>
         </div>
       </div>
@@ -242,7 +245,12 @@
 
             <p class="card-text bg-warning">Interfaces != for Multiple Inheritances...</p>
 
-            <p class="card-text bg-warning">...No code reusability...Just-Conforming to a Contract</p>
+            <p class="card-text bg-warning mb-5">...No code reusability...Just-Conforming to a Contract</p>
+
+              <p class="card-text bg-primary"><strong>interface</strong> merely declares a contract or a behavior that implementing classes should have.</p>
+              <p class="card-text bg-primary">It may declare only properties, methods, and events with no access modifiers.</p>
+              <p class="card-text bg-primary">All the declared members must be implemented.</p>
+
 
           </div>
         </div>
@@ -300,7 +308,15 @@
             <p class="card-text bg-warning">Sealed can only be applied to methods that are overriding "virtual" methods
               of the base class.</p>
 
-            <p class="card-text">slightly faster because of run-time optimizations</p>
+            <p class="card-text mb-5">slightly faster because of run-time optimizations</p>
+
+            <p class="card-text bg-primary"><strong>abstract class</strong> provides a partial implementation for a functionality and some abstract/virtual members that must be implemented by the inheriting entities.</p>
+
+            <p class="card-text bg-primary"><strong>abstract class</strong> can declare fields too (use for classes that have common functionality).</p>
+
+            <p class="card-text bg-primary">Neither <strong>interfaces</strong> nor <strong>abstract classes</strong> can be instantiated</p>
+
+
 
           </div>
         </div>
@@ -523,12 +539,12 @@
 
 
             <p class="card-text bg-primary"><strong>Boxing</strong> is the process of converting a value type to the
-              type object (integer into an object)</p>
+              type object (integer into an object).  Boxing is implicit.</p>
 
             <p class="card-text mb-5"><strong>Boxed values</strong> use more memory and require memory lookups to
               access.</p>
 
-            <p class="card-text bg-primary"><strong>Unboxing</strong> extracts the value from the object</p>
+            <p class="card-text bg-primary"><strong>Unboxing</strong> extracts the value from the object.  Unboxing is explicit.</p>
 
 
           </div>
@@ -540,13 +556,13 @@
       <div class="card">
         <div class="card-header">
           <h5>
-            <a href="#collapse11" data-parent="#accordion" data-toggle="collapse">
+            <a href="#collapse10" data-parent="#accordion" data-toggle="collapse">
               .Net Design Patterns
             </a>
           </h5>
         </div>
 
-        <div id="collapse11" class="collapse">
+        <div id="collapse10" class="collapse">
           <div class="card-body bg-secondary">
 
             <h4 class="card-title">Dependency Injection</h4>
@@ -634,13 +650,6 @@
 
 
 
-            <p class="card-text bg-info">
-
-            </p>
-
-            <p class="card-text bg-success"></p>
-
-
           </div>
         </div>
       </div>
@@ -648,13 +657,13 @@
       <div class="card">
             <div class="card-header">
               <h5>
-                <a href="#collapse12" data-parent="#accordion" data-toggle="collapse">
+                <a href="#collapse11" data-parent="#accordion" data-toggle="collapse">
                   Lambda Expressions
                 </a>
               </h5>
             </div>
     
-            <div id="collapse12" class="collapse">
+            <div id="collapse11" class="collapse">
               <div class="card-body bg-secondary">
                 <h4 class="card-title">Lambda Expressions</h4>
     
@@ -677,10 +686,6 @@
 
                 <img src="img/lambdaExpressions.png" alt="lambda expression example" class="card-img-bottom img-fluid">
 
-
-    
-                
-    
               </div>
             </div>
         </div>
@@ -688,13 +693,13 @@
         <div class="card">
                 <div class="card-header">
                   <h5>
-                    <a href="#collapse13" data-parent="#accordion" data-toggle="collapse">
+                    <a href="#collapse12" data-parent="#accordion" data-toggle="collapse">
                         Extension methods
                     </a>
                   </h5>
                 </div>
         
-                <div id="collapse13" class="collapse">
+                <div id="collapse12" class="collapse">
                   <div class="card-body bg-secondary">
                     <h4 class="card-title">Extension methods</h4>
         
@@ -724,10 +729,7 @@
            
 
                     <img src="img/extensionMethods.png" alt="extension methods example" class="card-img-bottom img-fluid">
-    
-    
-        
-                    
+              
         
                   </div>
                 </div>
@@ -783,13 +785,13 @@
                 <div class="card">
                         <div class="card-header">
                           <h5>
-                            <a href="#collapse13" data-parent="#accordion" data-toggle="collapse">
+                            <a href="#collapse14" data-parent="#accordion" data-toggle="collapse">
                                 Dynamic in c#
                             </a>
                           </h5>
                         </div>
                 
-                        <div id="collapse13" class="collapse">
+                        <div id="collapse14" class="collapse">
                           <div class="card-body bg-secondary">
     
                             <h4 class="card-title">Dynamic in c#</h4>
@@ -812,6 +814,241 @@
                         </div>
                     </div>
 
+                    <div class="card">
+                      <div class="card-header">
+                        <h5>
+                          <a href="#collapse15" data-parent="#accordion" data-toggle="collapse">
+                              Decimal vs. Double
+                          </a>
+                        </h5>
+                      </div>
+              
+                      <div id="collapse15" class="collapse">
+                        <div class="card-body bg-secondary">
+  
+                          <h4 class="card-title">Decimal vs. Double</h4>
+              
+              
+                          <p class="card-text bg-primary">Decimal are slower than Double performance wise</p>
+
+                          <p class="card-text bg-info">Float is single precision(32 bit)</p>
+
+                          <p class="card-text bg-info">double is Double precision (64 bit)</p>
+
+                          <p class="card-text bg-info">decimal is (128bit)</p>
+              
+                        </div>
+                      </div>
+                  </div>
+
+                  
+                  <div class="card">
+                    <div class="card-header">
+                      <h5>
+                        <a href="#collapse16" data-parent="#accordion" data-toggle="collapse">
+                            Lists vs. Arrays
+                        </a>
+                      </h5>
+                    </div>
+            
+                    <div id="collapse16" class="collapse">
+                      <div class="card-body bg-secondary">
+
+                        <h4 class="card-title">Lists vs. Arrays</h4>
+            
+            
+                        <p class="card-text bg-primary">Arrays are 0-based indexed</p>
+
+                        <p class="card-text bg-success">In general, it's better to use lists in c# because lists are far more easily sorted, searched through, and manipulated in c# than arrays are because of all of the built-in list functionalities in the language.</p>
+
+                        <p class="card-text">Lists are used far more often in c# than arrays are, but there are some instances where arrays can (or should) be used, including if your data is unlikely to grow very much or if you're dealing with a relatively large amount of data that will need to be indexed into often.</p>            
+            
+                      </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-header">
+                    <h5>
+                      <a href="#collapse17" data-parent="#accordion" data-toggle="collapse">
+                          variables
+                      </a>
+                    </h5>
+                  </div>
+          
+                  <div id="collapse17" class="collapse">
+                    <div class="card-body bg-secondary">
+
+                      <h4 class="card-title">variables</h4>
+          
+          
+                      <p class="card-text bg-primary">the c# var keyword is used to declare implicit type variables in c#</p>
+
+                      <p class="card-text">c# allows variables to be declared as explicit type or implicit type.</p>
+
+                      <p class="card-text bg-info">Implicitly typed local variables are strongly typed just as if you had declared the type yourself, but the compiler determines the type at run time depending on the value stored in them.</p>            
+                      
+                      <p class="card-text bg-primary">Implicit the compiler is doing something for you...(like with var)</p>
+
+                      <p class="card-text bg-primary">Explicit = casting</p>
+                    </div>
+                  </div>
+
+              </div>
+
+              <div class="card">
+                <div class="card-header">
+                  <h5>
+                    <a href="#collapse18" data-parent="#accordion" data-toggle="collapse">
+                        class vs. object
+                    </a>
+                  </h5>
+                </div>
+        
+                <div id="collapse18" class="collapse">
+                  <div class="card-body bg-secondary">
+
+                    <h4 class="card-title">class vs. object</h4>
+        
+        
+                    <p class="card-text bg-primary">class is the definition of an object and an <strong>object</strong> is instance of a class</p>
+
+                    <p class="card-text">can look at the class as a template of the object: it describes all the properties, methods, states and behaviors that the implementing object will have.</p>
+
+                    <p class="card-text bg-primary">An <strong>object</strong> is an instance of a class, and a class does not become an object until it's instantiated.  There can be more instances of objects based on the one class, each with different properties.</p>            
+                    
+                    <p class="card-text bg-primary"></p>
+
+                    <p class="card-text bg-primary"></p>
+                  </div>
+                </div>
+
+            </div>
+
+            
+            <div class="card">
+              <div class="card-header">
+                <h5>
+                  <a href="#collapse19" data-parent="#accordion" data-toggle="collapse">
+                      managed vs. unmanaged code
+                  </a>
+                </h5>
+              </div>
+      
+              <div id="collapse19" class="collapse">
+                <div class="card-body bg-secondary">
+
+                  <h4 class="card-title">difference between managed and unmanaged code</h4>
+      
+      
+                  <p class="card-text bg-primary">Managed code is code created by the .Net compiler.</p>
+
+                  <p class="card-text">Managed code does not depend on the architecture of the target machine because it is executed by the CLR (Common Language Run Time) and not by the operating system itself.</p>
+
+                  <p class="card-text mb-5">CLR and managed code offers developers few benefits: like garbage collection, type checking, and exceptions handling.</p>
+
+                  <p class="card-text bg-primary">Unmanaged code is directly compiled to native machine code and depends on the architecture of the target machine.</p>            
+                  
+                  <p class="card-text"><strong>Unmanaged code</strong> is executed directly by the operating system.</p>
+
+                  <p class="card-text">in <strong>unmanaged code</strong> the developer has to make sure he is dealing with memory usage and allocation (especially because of memory leaks), type safety, and exceptions manually</p>
+
+                  <p class="card-text bg-info">in .NET, Visual Basic and C# compiler creates <strong>managed code</strong>.  To get unamanged code, the application has to be written in C or C++.</p>
+                </div>
+              </div>
+
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h5>
+                <a href="#collapse20" data-parent="#accordion" data-toggle="collapse">
+                    garbage collection
+                </a>
+              </h5>
+            </div>
+    
+            <div id="collapse20" class="collapse">
+              <div class="card-body bg-secondary">
+
+                <h4 class="card-title">garbage collection</h4>
+    
+    
+                <p class="card-text bg-primary">Garbage collection is a low-priority process that serves as an automatic memory manager which managed the allocation and release of memory for the applications.</p>
+
+                <p class="card-text">Each time a new object is created, the CLR allocates memory for that object from the <strong>Managed Heap.</strong>  As long as free memory space is available in the managed Heap, the runtime continues to allocate space for new objects...</p>
+
+                <p class="card-text bg-warning">...However, memory is not infinite, and once an application fills the Heap memory space, <strong>garbage collection</strong> comes into play to free some memory.</p>
+
+                <p class="card-text">When the <strong>Garbage collector</strong> performs a collection, it checks for objects in the managed Heap that are no longer being used by the application and performs the necessary operations to reclaim the memory.</p>            
+                
+                <p class="card-text bg-info"> <strong>Garbage collection</strong> will stop all the running threads, it will find all objects in the Heap that are not being accessed by the main program and delete them... It will then reorganize all the objects left in the Heap to make space and adjust all the Pointers to these objects in both the <strong>Stack</strong> and the <strong>Heap</strong></p>
+
+                <p class="card-text"><strong>System.GC.Collect()</strong> to enforce garbage collection manually.</p>
+            </div>
+
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5>
+              <a href="#collapse21" data-parent="#accordion" data-toggle="collapse">
+                  difference between STACK and the HEAP
+              </a>
+            </h5>
+          </div>
+  
+          <div id="collapse21" class="collapse">
+            <div class="card-body bg-secondary">
+
+              <h4 class="card-title">Explain the difference between the STACK and HEAP</h4>
+  
+  
+              <p class="card-text bg-primary">in the <strong>STACK</strong> are stored value types (types inherited from System.ValueType).</p>
+
+              <p class="card-text bg-primary">in the <strong>HEAP</strong> are stored reference types (types inherited from System.Object)</p>
+
+              <p class="card-text">We can say the <strong>STACK</strong> is responsible for keeping track of what is actually executing and where each executing thread is (each thread has its own Stack)...while the <strong>Heap</strong> on the other hand, is responsible for keeping track of the data, or more precise objects.</p>
+
+              <p class="card-text"></p>            
+              
+              <p class="card-text bg-info">bjects in both the <strong>Stack</all> and the <strong>Heap</strong></p>
+
+              <p class="card-text"><strong>System.GC.Collect()</strong> to enforce garbage collection manually.</p>
+          </div>
+
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse22" data-parent="#accordion" data-toggle="collapse">
+                .Net Framework
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse22" class="collapse">
+          <div class="card-body bg-secondary">
+
+            <h4 class="card-title">.Net Framework</h4>
+
+
+            <p class="card-text bg-primary">Operating System</p>
+
+            <p class="card-text bg-primary">CLR</p>
+
+            <p class="card-text bg-primary">Base-Class Library</p>
+
+            <p class="card-text bg-primary">Application-Class Library</p>
+
+            <p class="card-text bg-primary">Common Language Specification</p>
+
+            <p class="card-text bg-primary">Languages</p>
+
+        </div>
+
+    </div>
 
     </div>
   </div>
