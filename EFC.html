@@ -80,6 +80,8 @@
               WebDevelopment
             </button>
             <div class="dropdown-menu">
+                <a href="angular.html" class="dropdown-item">Angular</a>
+                <a href="webpack.html" class="dropdown-item">Webpack</a>
               <a href="index.html" class="dropdown-item">Notes Home</a>
             </div>
           </div>
@@ -154,12 +156,22 @@
             <p class="card-text bg-primary">Start with a fresh database</p>
 
             <p class="card-text">Change database name in connection string in <strong>appsettings.json</strong></p>
-            <p class="card-text">dotnet ef update database</p>
+            <p class="card-text bg-primary">dotnet ef update database</p>
+            <p class="card-text">defaults to last migration in your project (can-put a prior migration-name to downgrade </p>
+
+            <p class="card-text bg-primary">dotnet ef database update 0 (take last migration out)</p>
+            <p class="card-text bg-warning">remove command only works to migrations not-applied to the database</p>
             <p class="card-text">dotnet ef database drop</p>
 
             <p class="card-text bg-primary">instances of class to be stored as database table...</p>
 
             <p class="card-text">public DbSetclass TableName {get; set;}</p>
+
+            <p class="card-text bg-primary">Constraints</p>
+
+            <p class="card-text">with strings...EFC automatically makes them-as nvarchar(max), null (strings in c# are required)</p>
+
+
 
 
           </div>
@@ -266,39 +278,44 @@
         <div class="card-header">
           <h5>
             <a href="#collapse5" data-parent="#accordion" data-toggle="collapse">
-              var, let, and const
+              EFC
             </a>
           </h5>
         </div>
 
         <div id="collapse5" class="collapse">
-          <div class="card-body bg-secondary">
-            <h4 class="card-title">What are the differences between var, let and const?</h4>
+          <div class="card-body bg-secondary">          
+            <h4 class="card-title">Build APIs with Entity Framework Core</h4>
 
-            <p class="card-text bg-info"><strong>Assignment: </strong>The most basic difference is that let and var can
-              be
-              re-assigned while const cannot. This makes const the best choice for variables that don’t need to change,
-              and it will prevent mistakes such as accidental re-assignment. Note that const does allow for variable
-              mutation, which means that if it represents an array or an object, these can change. You just can’t
-              re-assign the variable itself.
-              Both let and var can be re-assigned, but — as the following points should make clear — let has significant
-              advantages over var , making it a better choice in most, if not all circumstances where a variable needs
-              to change.
+            <p class="card-text bg-primary">1)  Build Domain Model
             </p>
 
-            <p class="card-text bg-info"><strong>Hoisting: </strong>Similar to the difference between function
-              declarations
-              and expressions (discussed above), variables declared using var are always hoised to the top of their
-              respective scope, while variables declared using const and let are hoisted, but if you try to access them
-              before they’re declared, you will get a ‘temporal dead zone’ error. This is useful behaviour, since var
-              can be more prone to errors, such as accidental re-assignment. Take the following example:</p>
+            <p class="card-text mb-5">open terminal (make folder @ root)</p>
+
+            <p class="card-text bg-primary">2)  dotnet add package  (name)</p>
+
+            <p class="card-text">dotnet restore (each time)</p>
+
+            <p class="card-text">dotnet ef (see EntityFrameworkCore commands</p>
+
+            <p class="card-tex mb-5">dotnet ef migrations --help</p>
 
 
-            <img class="card-img img-fluid mb-5" src="img/varLetConst.png" alt="Var, let, const examples">
+            <p class="card-text bg-primary">3)  Create DbContexes</p>
 
-            <p class="card-text bg-info"><strong>Scope</strong> While var is function-scoped, let and const are
-              block-scoped: in general, a block is any code within curly braces {} , including functions, conditional
-              statements, and loops.</p>
+            <p class="card-text">register-it as a service for Dependancy-Injection </p>
+
+          <p class="card-text mb-5">(want to use Dependencies so later can Unit-Test them using fake projects (startup.cs) (appsettings.json)</p>
+
+          <p class="card-text bg-primary">4)  CODE-FIRST MIGRATIONS</p>
+
+          <p class="card-text">dotnet ef migrations add InitialModel</p>
+
+          <p class="card-text">dotnet ef database update</p>
+
+
+
+          
 
 
           </div>
@@ -309,27 +326,19 @@
         <div class="card-header">
           <h5>
             <a href="#collapse6" data-parent="#accordion" data-toggle="collapse">
-              Assign a variable without a keyword?
+                EFC Commands
             </a>
           </h5>
         </div>
 
         <div id="collapse6" class="collapse">
           <div class="card-body bg-secondary">
-            <h4 class="card-title">What happens if you assign a variable without a keyword?</h4>
+            <h4 class="card-title">Entity Framework Core Commands</h4>
 
 
-
-
-
-            <p class="card-text bg-primary">What if you define a variable without using a keyword at all? Technically,
-              if
-              xhasn’t already been defined, then x = 1 is shorthand for window.x = 1 .
+            <p class="card-text bg-primary">
             </p>
-            <p class="card-text bg-success">as it’s a common cause of memory leaks.
-              To prevent this shorthand altogether, you can use strict mode — introduced in ES5 — by writing use strict
-              at the top of your document or a particular function. Then, when you try to declare a variable without a
-              keyword, you’ll get an error: Uncaught SyntaxError: Unexpected indentifier .
+            <p class="card-text bg-success">
             </p>
 
 
@@ -341,42 +350,28 @@
         <div class="card-header">
           <h5>
             <a href="#collapse7" data-parent="#accordion" data-toggle="collapse">
-              O.O.P. vs functional programming
+              Code First Migrations to Populate Reference-Data
             </a>
           </h5>
         </div>
 
         <div id="collapse7" class="collapse">
           <div class="card-body bg-secondary">
-            <h4 class="card-title">What’s the difference between Object Oriented Programming (OOP) and Functional
-              Programming (FP)?</h4>
+            <h4 class="card-title">Code First Migrations to Populate Reference-Data</h4>
 
 
-            <p class="card-text bg-primary">JavaScript is a multi-paradigm language, meaning that it supports multiple
-              different programming styles, including event-driven, functional and object-oriented.</p>
+            <p class="card-text bg-primary">1) create blank "Seed Migration"</p>
 
-            <p class="card-text bg-info">OOP is based around the concept of “objects”. These are data structures that
-              contain data fields — known in JavaScript as “properties” — and procedures — known as “methods”.
-              Some of JavaScript’s in-built objects include Math (used for methods such as random , max and sin ), JSON
-              (used for parsing JSON data), and primitive data types like String , Array , Number and Boolean .
+            <p class="card-text bg-primary">2)  inside seedDatabase.cs</p>
+
+            <p class="card-text mb-5">migrationBuilder.Sql(); in UP (always should update DOWN)</p>
+
+            <p class="card-text mb-5">migrationBuilder.Sql("DELETE FROM Makes); (always should update DOWN if updated UP)</p>
+
+            <p class="card-text bg-primary">3)  dotnet ef database update
             </p>
 
-            <p class="card-text bg-success">Whenever you rely on in-built methods, prototypes or classes, you are
-              essentially using Object-Oriented Programming.</p>
-
-
-            <p class="card-text bg-info">FP is based around the concept of “pure functions”, which avoid shared state,
-              mutable data and side-effects. This might seem like a lot of jargon, but chances are you’ve created
-              written many pure functions in your code.</p>
-
-            <p class="card-text bg-info">Given the same inputs, a pure function always returns the same output. It does
-              not
-              have side effects: these are anything, such as logging to the console or modifying an external variable,
-              beyond returning the result.</p>
-
-            <p class="card-text bg-success">favor object composition over class inheritance (<strong>can-do, has-a,
-              </strong> relationships instead of <strong>is-a</strong> relationships.</p>
-
+            <p class="card-text bg-success"></p>
 
 
           </div>
@@ -387,33 +382,25 @@
         <div class="card-header">
           <h5>
             <a href="#collapse8" data-parent="#accordion" data-toggle="collapse">
-              Imperative vs. declarative programming
+              Many to Many 
             </a>
           </h5>
         </div>
 
         <div id="collapse8" class="collapse">
           <div class="card-body bg-secondary">
-            <h4 class="card-title">What’s the difference between imperative and declarative programming?</h4>
+            <h4 class="card-title">Many to Many Relationships in E.F.C.</h4>
 
-            <p class="card-text bg-info">We can also think about the difference between OOP and FP in terms of the
-              difference between “imperative” and “declarative” programming.</p>
-            <p class="card-text bg-primary">FP is an example of declarative programming, while OOP is an example of
-              imperative programming.</p>
-            <p class="card-text bg-info">In a basic sense, imperative programming is concerned with how you do
-              something.
-              It spells out the steps in the most essential way, and is characterised by for and while loops, if and
-              switch statements, and so on.</p>
+            <p class="card-text bg-primary">need a mapping class (manually add it)</p>
+
+            <p class="card-text bg-primary">needs a composite primary key (DbContext)</p>
+
+            <p class="card-text"></p>
 
 
-            <p class="card-text bg-info">By contrast, declarative programming is concerned with what to do, and it
-              abstracts away the how by relying on expressions. This often results in more concise code, but at scale,
-              it can become more difficult to debug because it’s that much less transparent.
-              Here’s a declarative approach to our sumArray() function, above.
+            <p class="card-text bg-info">
             </p>
 
-            <img class="card-img img-fluid mb-5" src="img/imperativeDeclarative.png"
-              alt="Imperative and Declarative programming JS">
 
           </div>
         </div>

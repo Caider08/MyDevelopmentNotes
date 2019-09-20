@@ -233,6 +233,12 @@
 
             <p class="card-text bg-info">app.UseMvc() (another middleware)</p>
 
+            <p class="card-text bg-primary">components</p>
+
+            <p class="card-text">need a .ts file and a .html file</p>
+
+            <p class="card-text">register in App.model (or use terminal)</p>
+
 
             <p class="card-text bg-success">
             </p>
@@ -272,37 +278,41 @@
         <div class="card-header">
           <h5>
             <a href="#collapse5" data-parent="#accordion" data-toggle="collapse">
-              var, let, and const
+              Angular CLI
             </a>
           </h5>
         </div>
 
         <div id="collapse5" class="collapse">
           <div class="card-body bg-secondary">
-            <h4 class="card-title">What are the differences between var, let and const?</h4>
+            <h4 class="card-title">Angular CLI</h4>
 
-            <p class="card-text bg-info"><strong>Assignment: </strong>The most basic difference is that let and var can be
-              re-assigned while const cannot. This makes const the best choice for variables that don’t need to change,
-              and it will prevent mistakes such as accidental re-assignment. Note that const does allow for variable
-              mutation, which means that if it represents an array or an object, these can change. You just can’t
-              re-assign the variable itself.
-              Both let and var can be re-assigned, but — as the following points should make clear — let has significant
-              advantages over var , making it a better choice in most, if not all circumstances where a variable needs
-              to change.
-            </p>
+           
+            <p class="card-text bg-primary">sudo npm install @angular/cli@latest -g</p>
 
-            <p class="card-text bg-info"><strong>Hoisting: </strong>Similar to the difference between function declarations
-              and expressions (discussed above), variables declared using var are always hoised to the top of their
-              respective scope, while variables declared using const and let are hoisted, but if you try to access them
-              before they’re declared, you will get a ‘temporal dead zone’ error. This is useful behaviour, since var
-              can be more prone to errors, such as accidental re-assignment. Take the following example:</p>
+            <p class="card-text bg-primary">ng new name (create new Angular app)</p>
+
+            <p class="card-text bg-primary">angular-cli.json</p>
+
+            <p class="card-text">copy into existing project</p>
+
+            <p class="card-text bg-warning">above DEPRACATED in Angular6 ...NOW called <strong>angular.json</strong></p>
+
+            <p class="card-text mb-5">cd .angular-cli.json ../</p>
+
+            <p class="card-text bg-primary">ng g component 'name'-form (creates a new Angular component)</p>
+
+            <p class="card-text">the .spec.ts file is for Unit Tests (Jasmine)</p>
+
+            <p class="card-text">this command also registers our component in app.module.ts (otherwise we'd have to 1) import @ top 2) @NgModule imports: []</p>
+
+            <p class="card-text bg-primary">Creating a Route</p>
+
+            <p class="card-text">bottom of app.module.ts  get bootstrap.com/components </p>
 
 
-            <img class="card-img img-fluid mb-5" src="img/varLetConst.png" alt="Var, let, const examples">
 
-            <p class="card-text bg-info"><strong>Scope</strong> While var is function-scoped, let and const are
-              block-scoped: in general, a block is any code within curly braces {} , including functions, conditional
-              statements, and loops.</p>
+
 
 
           </div>
@@ -313,26 +323,34 @@
         <div class="card-header">
           <h5>
             <a href="#collapse6" data-parent="#accordion" data-toggle="collapse">
-              Assign a variable without a keyword?
+              Services
             </a>
           </h5>
         </div>
 
         <div id="collapse6" class="collapse">
           <div class="card-body bg-secondary">
-            <h4 class="card-title">What happens if you assign a variable without a keyword?</h4>
 
+            <h4 class="card-title">Services</h4>
 
-
-
-
-            <p class="card-text bg-primary">What if you define a variable without using a keyword at all? Technically, if
-              xhasn’t already been defined, then x = 1 is shorthand for window.x = 1 .
+            <p class="card-text bg-primary">Package (encapsulate) calls to API/backend into services 
             </p>
-            <p class="card-text bg-success">as it’s a common cause of memory leaks.
-              To prevent this shorthand altogether, you can use strict mode — introduced in ES5 — by writing use strict
-              at the top of your document or a particular function. Then, when you try to declare a variable without a
-              keyword, you’ll get an error: Uncaught SyntaxError: Unexpected indentifier .
+
+            <p class="card-text bg-primary">services folder (under client app)</p>
+
+            <p class="card-text">ng g service name (create 2 files .spec (Unit Tests)</p>
+
+            <p class="card-text">after making-it have to register-it as a Dependency in appmodule.ts provides: [], (@ bottom)</p>
+
+            <p class="card-text">Console -> Network (check API calls) XHR?</p>
+
+            <p class="card-text">/ root of current drive</p>
+
+            <p class="card-text">./ current directory </p>
+
+            <p class="card-text">../ parent of current directory</p>
+
+            <p class="card-text bg-success">
             </p>
 
 
@@ -344,39 +362,30 @@
         <div class="card-header">
           <h5>
             <a href="#collapse7" data-parent="#accordion" data-toggle="collapse">
-              O.O.P. vs functional programming
+              Angular Rough Code
             </a>
           </h5>
         </div>
 
         <div id="collapse7" class="collapse">
           <div class="card-body bg-secondary">
-            <h4 class="card-title">What’s the difference between Object Oriented Programming (OOP) and Functional
-              Programming (FP)?</h4>
+
+            <h4 class="card-title">ANGULAR rough code</h4>
 
 
-            <p class="card-text bg-primary">JavaScript is a multi-paradigm language, meaning that it supports multiple
-              different programming styles, including event-driven, functional and object-oriented.</p>
+            <p class="card-text bg-primary">[()] = 2 way binding</p>
 
-            <p class="card-text bg-info">OOP is based around the concept of “objects”. These are data structures that
-              contain data fields — known in JavaScript as “properties” — and procedures — known as “methods”.
-              Some of JavaScript’s in-built objects include Math (used for methods such as random , max and sin ), JSON
-              (used for parsing JSON data), and primitive data types like String , Array , Number and Boolean .
+            <p class="card-text bg-primary">{{ }} = interopolated string
             </p>
 
-            <p class="card-text bg-success">Whenever you rely on in-built methods, prototypes or classes, you are
-              essentially using Object-Oriented Programming.</p>
+            <p class="card-text bg-success"></p>
 
 
-            <p class="card-text bg-info">FP is based around the concept of “pure functions”, which avoid shared state,
-              mutable data and side-effects. This might seem like a lot of jargon, but chances are you’ve created
-              written many pure functions in your code.</p>
+            <p class="card-text bg-info"></p>
 
-            <p class="card-text bg-info">Given the same inputs, a pure function always returns the same output. It does not
-              have side effects: these are anything, such as logging to the console or modifying an external variable,
-              beyond returning the result.</p>
+            <p class="card-text bg-info"></p>
 
-              <p class="card-text bg-success">favor object composition over class inheritance (<strong>can-do, has-a, </strong> relationships instead of <strong>is-a</strong> relationships.</p>
+              <p class="card-text bg-success"></p>
 
 
 
@@ -388,29 +397,35 @@
         <div class="card-header">
           <h5>
             <a href="#collapse8" data-parent="#accordion" data-toggle="collapse">
-              Imperative vs. declarative programming
+              API calls
             </a>
           </h5>
         </div>
 
         <div id="collapse8" class="collapse">
           <div class="card-body bg-secondary">
-            <h4 class="card-title">What’s the difference between imperative and declarative programming?</h4>
+            <h4 class="card-title">API Calls</h4>
 
-            <p class="card-text bg-info">We can also think about the difference between OOP and FP in terms of the
-              difference between “imperative” and “declarative” programming.</p>
-            <p class="card-text bg-primary">FP is an example of declarative programming, while OOP is an example of
-              imperative programming.</p>
-            <p class="card-text bg-info">In a basic sense, imperative programming is concerned with how you do something.
-              It spells out the steps in the most essential way, and is characterised by for and while loops, if and
-              switch statements, and so on.</p>
+            <p class="card-text bg-primary">1) Create a Resource (inside Resources in Controllers)</p>
+
+            <p class="card-text bg-primary">2)  Create mapping between Resource and Class</p>
+
+            <p class="card-text">MappingProfile.cs</p>
+            <p class="card-text">Domain to API Resource (give out to user)</p>
+            <p class="card-text">API Resource to Domain (taking input)</p>
+            <p class="card-text bg-primary">3)  inject AutoMapper into Controller Constructor (IMapper)</p>
+
+            <p class="card-text bg-primary">API Resources 2 reasons to create:</p>
+
+            <p class="card-text">1) Prevent API contract from breaking (classes (Domain) change)</p>
+
+            <p class="card-text">2)  Prevent Over-Posting attacks (contain properties shouldn't be set by client)</p>
 
 
-            <p class="card-text bg-info">By contrast, declarative programming is concerned with what to do, and it
-              abstracts away the how by relying on expressions. This often results in more concise code, but at scale,
-              it can become more difficult to debug because it’s that much less transparent.
-              Here’s a declarative approach to our sumArray() function, above.
+            <p class="card-text bg-primary">Testing APIs
             </p>
+
+            <p class="card-text"><strong>postman chrome extension</strong></p>
 
             <img class="card-img img-fluid mb-5" src="img/imperativeDeclarative.png"
               alt="Imperative and Declarative programming JS">
@@ -423,136 +438,195 @@
         <div class="card-header">
           <h5>
             <a href="#collapse9" data-parent="#accordion" data-toggle="collapse">
-              Prototype-Based Inheritance
+              Repository Pattern 
             </a>
           </h5>
         </div>
 
         <div id="collapse9" class="collapse">
           <div class="card-body bg-secondary">
-            <h4 class="card-title">What is Prototype-Based Inheritance?</h4>
 
+            <h4 class="card-title">Repository Pattern (Encapsulate queries)</h4>
 
-            <p class="card-text bg-primary">There are several different styles of Object-Oriented Programming, and the one
-              JavaScript uses is Prototype-Based Inheritance. The system allows for repeated behaviour via the use of
-              existing objects that serve as “prototypes”.</p>
+            <p class="card-text bg-primary">collection of Domain objects</p>
 
-            <p class="card-text bg-info">Even if the idea of prototypes is new to you, you will have encountered the
-              prototype system by using in-built methods. For example, functions used to manipulate arrays such as map ,
-              reduce , splice and so on are all methods of the Array.prototype object. In fact, every instance of an
-              array (defined using square brackets [], or — more unusually — using new Array()) inherits from
-              Array.prototype , which is why methods like map , reduce and spliceare available by default.</p>
+            <p class="card-text bg-primary"> or Command/Query Objects (http://bit.ly/repo-vs-query)</p>
 
-            <p class="card-text bg-info">The same is true of virtually every other built-in object, such as strings and
-              booleans: only a few, such as Infinity , NaN , null and undefined have no properties or methods.
-              At the end of the prototype chain we find Object.prototype , and almost every object in JavaScript is an
-              instance of Object.prototype : Array.prototype and String.prototype , for example, both inherit properties
-              and methods from Object.prototype .
-              To add properties and methods to an object using prototype syntax, you can simply initiate the object as a
-              function, and use the prototype keyword to add properties and methods:
+            <p class="card-text bg-primary">Want-our controller to-be coupled to an Interface...NOT an implementation (helps w/ Unit Tests) <strong>(DON'T want to be dependent on External file-systems/Databases</strong>
 
             </p>
 
-            <img class="card-img img-fluid mb-5" src="img/prototypes.png" alt="Prototypes in JS">
+            <p class="card-text bg-primary">when creating an Infterface...need to register them in <strong>startup.cs  (Configure.services)</strong>  Register as:</p>
 
-            <h5>Should I Override or Extend the Behaviour of Prototypes?</h5>
+            <p class="card-text"><strong>Transient</strong> - a seperate instance of repository for every use</p>
 
-            <p class="card-text bg-info">It’s possible to change the behaviour of built-in prototypes in exactly the same
-              way that we can create and extend our own prototypes, but most developers (and most companies) would
-              advise against this.
-              If you want several objects to share the same behaviour, you can always create a custom object (or define
-              your own ‘class’ or ‘subclass’) that inherits from a built-in prototype without making any changes to the
-              prototype itself. If you’re going to be working with other developers, they’ll have certain expectations
-              about JavaScript’s default behaviour, and editing this default behaviour can easily lead to errors.
-              It’s worth noting, however, that not everyone shares this strong opposition to extending built-in
-              prototypes. See, for example, this article from Brendan Eich, the creator of JavaScript. In this article
-              (from 2005), Eich suggested that the prototype system in fact was built — in part — to make extensions
-              possible!
-            </p>
+            <p class="card-text"><strong>Singleton</strong> - a single instance of repository during app. lifecycle</p>
 
-            <p class="card-text bg-warning"><strong>Classes: </strong> create tight coupling or hierarchies/taxonomies</p>
-            <p class="card-text bg-success"><strong>Prototypes: </strong> instances inherit directly from other objects. Instances are typically instantiated via factory functions or `Object.create()`. Instances may be composed from many different objects, allowing for easy selective inheritance.</p>
+            <p class="card-text"><strong>Scoped</strong> - A single instance of repository each scope.  (this is how our Repository is w/ DbContext right now (won't make another call to database if object already in Memory)</p>
 
-            <p class="card-text bg-success">In JavaScript, prototypal inheritance is simpler &
-              more flexible than class inheritance.</p>
 
-              <ul class="list-group">
-                <p class="list-group-item-header">When is prototypal inheritance an appropriate choice?</p>
-                <li class="list-group-item list-group-item-info"><strong>Delegation</strong> (i.e. the prototype chain)</li>
-                <li class="list-group-item list-group-item-info"><strong>Concatenative</strong> (i.e. mixins, 'Object.assign()'</li>
-                <li class="list-group-item list-group-item-info"><strong>Functional</strong> (not to be confused with functional programming.  A function used to create a closure for private state/encapsulation).</li> 
-                <li class="list-group-item">all of them useful in their ability to enable <strong>composition</strong>, which creates <strong>has-a</strong> or <strong>uses-a</strong> or <strong>can-do</strong> relationships as opposed to the <strong>is-a</strong> relationship created with class inheritance.</li>
-              </ul>
+            <p class="card-text bg-primary">Decoupling Controller from Entity Framework Core</p>
 
-            
+            <p class="card-text">Easy to replace w/ another O.R.M.</p>
+
+            <p class="card-text">Object Oriented Programming - seperate what changes from what doesn't</p>
+
+            <p class="card-text bg-warning">Repository should-not expose IQueryable</p>
+
+
+            <p class="card-text bg-primary">Repository over repository</p>
+
+            <p class="card-text">EFC already implements <strong>Repository</strong> and Unit of Work ...</p>
+
+            <p class="card-text bg-success">...Want Controller Decoupled from EFC (Couple to Interface instead)</p>
+
+            <p class="card-text bg-success">...Encapsulating Queries into one class</p>
+
+            <p class="card-text bg-success">Not increased Complexity</p>
+
+            <p class="card-text bg-primary">Interface is a contract...NOT an implementation (helps w/ Decoupling )</p>
+         
 
           </div>
         </div>
       </div>
 
       
-      
       <div class="card">
         <div class="card-header">
           <h5>
             <a href="#collapse11" data-parent="#accordion" data-toggle="collapse">
-              What are the pros and cons of monolithic vs microservice architectures?
+              Unit of Work Pattern
             </a>
           </h5>
         </div>
 
         <div id="collapse11" class="collapse">
           <div class="card-body bg-secondary">
+
+            <h4 class="card-title">Unit Of Work Pattern</h4>
             
-            <p class="card-text bg-info">A <strong>monolithic architecture</strong> means that your app is written as one cohesive unit of code whose components are designed to work together, sharing the same memory space and resources.</p>
-            <p class="card-text bg-info">A <strong>microservice architecture</strong> means that your app is made up of lots of smaller, independent applications capable of running in their own memory space and scaling independently from each other across potentially many separate machines.</p>
+            <p class="card-text bg-warning">context.SaveChanges();  </p>
 
-            <ul class="list-group">
-              <p class="list-group-item-header">Monolithic Pros:</p>
-              <li class="list-group-item list-group-item-success">The major advantage of the monolithic architecture is that most apps typically have a large number of cross-cutting concerns, such as logging, rate limiting, and security features such audit trails and DOS protection.
-                When everything is running through the same app, it’s easy to hook up components to those cross-cutting concerns.</li>
-              <li class="list-group-item list-group-item-success">There can also be performance advantages, since shared-memory access is faster than inter-process communication (IPC).</li>
-              <li class="list-group-item list-group-item-success"></li> 
-            </ul>
+            <p class="card-text">Bad to put the above in Repository (Repo is a collection of Objects in memory)</p>
 
-            <ul class="list-group">
-              <p class="list-group-item-header">Monolithic Cons:</p>
-              <li class="list-group-item list-group-item-warning">Monolithic app services tend to get tightly coupled and entangled as the application evolves, making it difficult to isolate services for purposes such as independent scaling or code maintainability.</li>
-              <li class="list-group-item list-group-item-warning">Monolithic architectures are also much harder to understand, because there may be dependencies, side-effects, and magic which are not obvious when you’re looking at a particular service or controller.</li>
-              <li class="list-group-item list-group-item-warning"></li> 
-            </ul>
+            <p class="card-text">You might have several different Repositories</p>
 
-            <ul class="list-group">
-              <p class="list-group-item-header">Microservice Pros:</p>
-              <li class="list-group-item list-group-item-success">Microservice architectures are typically better organized, since each microservice has a very specific job, and is not concerned with the jobs of other components.</li>
-              <li class="list-group-item list-group-item-success">Decoupled services are also easier to recompose and reconfigure to serve the purposes of different apps (for example, serving both the web clients and public API).</li>
-              <li class="list-group-item list-group-item-success">They can also have performance advantages depending on how they’re organized because it’s possible to isolate hot services and scale them independent of the rest of the app.</li> 
-            </ul>
+            <p class="card-text bg-success mb-5">So we'll use DbContext in Unit of Work AND Repository Class (nowhere else)</p>
 
-            <ul class="list-group">
-              <p class="list-group-item-header">Microservice Cons:</p>
-              <li class="list-group-item list-group-item-warning">As you’re building a new microservice architecture, you’re likely to discover lots of cross-cutting concerns that you did not anticipate at design time. A monolithic app could establish shared magic helpers or middleware to handle such cross-cutting concerns without much effort.</li>
-              <li class="list-group-item list-group-item-warning">In a microservice architecture, you’ll either need to incur the overhead of separate modules for each cross-cutting concern, or encapsulate cross-cutting concerns in another service layer that all traffic gets routed through.</li>
-             
-              <li class="list-group-item list-group-item-warning">Eventually, even monolthic architectures tend to route traffic through an outer service layer for cross-cutting concerns, but with a monolithic architecture, it’s possible to delay the cost of that work until the project is much more mature.</li>
-              <li class="list-group-item list-group-item-warning">Microservices are frequently deployed on their own virtual machines or containers, causing a proliferation of VM wrangling work. These tasks are frequently automated with container fleet management tools.</li>
-            </ul>
+            <p class="card-text bg-primary">create a Mapping Dictionary keys = strings, values = Expressions</p>
 
-            <p class="text-card bg-primary mt-3">Positive attitudes toward microservices, despite the higher initial cost vs monolthic apps. Aware that microservices tend to perform and scale better in the long run.</p>
-            <p class="text-card bg-primary">Structure the app so that services are independent from each other at the code level, but easy to bundle together as a monolithic app in the beginning. Microservice overhead costs can be delayed until it becomes more practical to pay the price.</p>
+            <p class="card-text">Dictionary(string, Expression(Func(Vehicle, object))</p>
 
+            <p class="card-text bg-primary">create IQueryAbleExtensions (Extension on IQueryAable class)</p>
 
+            <p class="card-text">1) make Extensions folder @ root of project</p>
 
-            <p class="card-text bg-info">
-              
-            </p>
-     
-            <p class="card-text bg-success"></p>
+            <p class="card-text">2) class IQueryAbleExtensions public static class</p>
+
+            <p class="card-text">3) Methods: public static IQueryable(T)ApplyOrdering(T)(   )</p>
+
+            <p class="card-text">allow us to use Generic(T) to decouple from particular objects</p>
+
+            <p class="card-text">4) VehicleQuery: IQueryObject </p>
+
+            <p class="card-text">public bool isSortAscending { get; set; }  (not specific to just object (universal))</p>
+
+            <p class="card-text">public string SortBy { get; set; } </p>
+
 
           
           </div>
         </div>
       </div>
+
+      <div class="card">
+          <div class="card-header">
+            <h5>
+              <a href="#collapse12" data-parent="#accordion" data-toggle="collapse">
+                Dependency Inversion Principle
+              </a>
+            </h5>
+          </div>
+  
+          <div id="collapse12" class="collapse">
+            <div class="card-body bg-secondary">
+  
+              <h4 class="card-title">Dependency Inversion Principle</h4>
+              
+              <p class="card-text bg-primary">High-level modules shouldn't depend upon low-level modules.  Both should depend upon abstractions</p>
+  
+              <p class="card-text bg-success">Example:  Controller ---= IRepository =-- Repository </p>
+  
+              <p class="card-text">REDUCES impact of changes! </p>
+  
+              <p class="card-text bg-info">Add a core folder to-make better! (Move Interfaces in there)</p>
+            
+            </div>
+          </div>
+        </div>
+
+        
+      <div class="card">
+          <div class="card-header">
+            <h5>
+              <a href="#collapse13" data-parent="#accordion" data-toggle="collapse">
+                Querying / Filtering / Sorting in General
+              </a>
+            </h5>
+          </div>
+  
+          <div id="collapse13" class="collapse">
+            <div class="card-body bg-secondary">
+  
+              <h4 class="card-title">Paging On-the Server</h4>
+              
+              <p class="card-text bg-primary">LINQ</p>
+  
+              <p class="card-text bg-primary">paging done in SQL Server...NOT in Memory</p>
+
+
+              <p class="card-text bg-info">1) Vehicle(or whichever object)Query class</p>
+
+              <p class="card-text bg-info">2) VehicleQuery resource (for calling Repository)</p>
+
+              <p class="card-text bg-info">3) VehicleRepository (for logic)</p>
+  
+              <h4 class="card-title">Paging on the Client</h4>
+
+              <p class="card-text bg-primary">1) need pagination component (raises an Event everytime we change page #)</p>
+
+              <p class="card-text bg-primary">2) Shared-folder (put component in there)</p>
+
+              <p class="card-text bg-primary">3) Query Result Class (Use Generic(T))</p>
+              <p class="card-text">every class neds a <strong>Resource</strong> (for front-end of Angular)</p>
+
+              <p class="card-text bg-primary">4) then need mapper between Resource and Query Result Class</p>
+
+
+              <h4 class="card-title">Querying / Filtering / Sorting in General</h4>
+
+              <p class="card-text bg-primary">classes: <strong>NameObject Query</strong> ... <strong>NameObjectQueryResult</strong></p>
+
+              <p class="card-text bg-primary">Resources: <strong>NameObject QueryResource</strong> ... <strong>QueryResult Resource</strong></p>
+
+              <p class="card-text bg-primary">ObjectRepository:</p>
+
+              <p class="card-text">queries data using dbContext</p>
+
+              <p class="card-text">returns QueryResult</p>
+
+              <p class="card-text mb-5">calls IQueryableExtension (for sorting...this takes an IQueryObject)</p>
+
+              <p class="card-text bg-primary">Controller</p>
+
+              <p class="card-text">Takes-in-a ObjectQueryResource</p>
+
+              <p class="card-text">Returns a QueryResultResource(ObjectResource)   (use Generic(T))</p>
+            
+            </div>
+          </div>
+        </div>
 
 
     </div>
