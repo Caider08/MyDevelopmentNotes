@@ -8,12 +8,12 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
     integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <link type="text/css" rel="stylesheet" href="notes.css">
-  <title>JS Fundamentals</title>
+  <title>Webpack</title>
 </head>
 
 <body class="bg-dark text-light">
   <header>
-    <h1 class="display-2 text-center my-4">JS Fundamentals</h1>
+    <h1 class="display-2 text-center my-4">Webpack</h1>
     <div class="container">
       <div class="row">
         <div class="col-md-2">
@@ -80,6 +80,7 @@
               WebDevelopment
             </button>
             <div class="dropdown-menu">
+                <a href="webpack.html" class="dropdown-item">Webpack</a>
               <a href="index.html" class="dropdown-item">Notes Home</a>
             </div>
           </div>
@@ -104,7 +105,7 @@
 
   <div class="container">
     <button class="btn btn-primary d-block mt-25" style="margin-top: 25px" data-toggle="collapse"
-      data-target="#collapse-btn-1">JS links</button>
+      data-target="#collapse-btn-1">Webpack links</button>
 
     <div class="collapse my-25" id="collapse-btn-1">
       <div class="card">
@@ -170,59 +171,71 @@
         <div class="card-header">
           <h5>
             <a href="#collapse1" data-parent="#accordion" data-toggle="collapse">
-              Primitives
+              Webpack
             </a>
           </h5>
         </div>
 
         <div id="collapse1" class="collapse">
           <div class="card-body bg-secondary">
-            <h4 class="card-title">Primitives</h4>
-            <p class="card-text">Number, boolean, string, undefined, and null are primitives</p>
+            <h4 class="card-title">Webpack</h4>
+                  
+            <p class="card-text bg-primary">to Bundle JS Libraries</p>
+
+    
             <ul class="list-group">
-              <p class="list-group-header">Number</p>
-              <li class="list-group-item list-group-item-info">Only one number type in JS (64-bit floating point)</li>
-              <li class="list-group-item list-group-item-info">Decimal number's arithmetic is inexact. 0.1 + 0.2 != 0.3.
-                BUT 1 + 2 === 3</li>
-              <li class="list-group-item list-group-item-info">Invalid arithmetic operations or invalid conversions will
-                not throw an exception, but will result in NaN "Not-a-Number"</li>
+              <p class="list-group-header">adding Webpack</p>
+              <li class="list-group-item list-group-item-primary">in project directory...</li>
+              <li class="list-group-item list-group-item-info">npm install webpack --save-dev (saves this as a dev dependency(React, JQuery are devDependency examples))</li>
+              
+              <li class="list-group-item list-group-item-primary">npm install  (reads package.json AND installs what we need)</li>
+              <li class="list-group-item list-group-item-primary">npm uninstall jquery --save</li>
+              <li class="list-group-item list-group-item-primary">npm install live-server --global (puts a package on machine for all projects)</li>
+            </ul>
+
+
+            <ul class="list-group">
+                    <p class="list-group-header">npm</p>
+                    <li class="list-group-item list-group-item-primary">nodejs.org</li>
+                    <li class="list-group-item">in terminal... node -v</li>
             </ul>
 
             <ul class="list-group">
-              <p class="list-group-header">String</p>
-              <li class="list-group-item list-group-item-info">can be inside '' or "".</li>
-              <li class="list-group-item list-group-item-info">"text".substring(1,3) // "ex"</li>
-              <li class="list-group-item list-group-item-info">strings, like all primitives, are immutable. concat()
-                doesn't modify the existing string but <strong>creates</strong> a new one.</li>
+                    <p class="list-group-header">npm adding (init)</p>
+                    <li class="list-group-item list-group-item-primary">go into folder...</li>
+                    <li class="list-group-item list-group-item-info">npm init</li>
+                    
+                    <li class="list-group-item list-group-item-info">name-it</li>
+                    <li class="list-group-item list-group-item-info">version</li>
+                    <li class="list-group-item list-group-item-info">d....</li>
+
+                    <li class="list-group-item list-group-success">creates "package.json"</li>
+
+                    <li class="list-group-item list-group-item-primary">npm install webpack -cli --save-dev (these are the "scripts" in package.json)</li>
+
+                    <li class="list-group-item list-group-item-primary">npm run " script name " in terminal (after everytime save any changes)</li>
+
+                    <li class="list-group-item list-group-item-info">to open in terminal ... open dist/index.html</li>
+
+                    <li class="list-group-item list-group-item-primary">npm install webpack-dev-server --save-dev ( to auto reload page)</li>
+
+                    <li class="list-group-item list-group-item-primary">npm install html-webpack-plugin --save-dev ( to copy our index.html into 'dist' and inject the js script )</li>
             </ul>
 
-            <img src="img/stringThis.png" alt="string this" class="card-img img-fluid my-5">
+            <h4 class="card-title">all the stuff in our <strong>src folder</strong> gets bundled into bundle.js and shipped under <strong>dist</strong> folder</h4>
 
-            <ul class="list-group">
-              <p class="list-group-header">Boolean (true and false)</p>
-              <li class="list-group-item list-group-item-info">falsy values: false, null, undefined, ''(empty string), 0
-                and NaN are falsy.</li>
-              <li class="list-group-item list-group-item-info">truthy values: all other values, including objects are
-                truthy</li>
-              <li class="list-group-item list-group-item-info">Falsy value is evaluated to false in a boolean context.
-              </li>
-              <li class="list-group-item list-group-item-info">True AND False results in False</li>
-            </ul>
+            <p class="card-text bg-info"><strong>webpack.config.js</strong></p>
 
-            <p class="card-text">Primitives (except null and undefined) are treated like objects, in the sense they have
-              methods but they are not objects...</p>
-            <p class="card-text">Numbers, strings, adn booleans have object equivalent wrappers (Number, string, and
-              Boolean functions)...</p>
-            <p class="card-text">in order to allow access to properties on primitives, JS creates an wrapper object and
-              then destroys it. (optimized by JS engine).</p>
-            <p class="card-text">Primitives are immutable and objects are mutable</p>
+            <p class="card-text">module.exports = { entry: './ }   puts it in current folder</p>
 
-            <p class="card-text bg-primary mt-5">At first, null and undefined may appear to be the same, but they are
-              not. Undefined can be can identifier for a property of the global object but null can not.</p>
+            <p class="card-text bg-info">'. /' = puts it in current folder</p>
 
-            <p class="card-text bg-primary">Undefined and null are equal in value but different in type.</p>
+            <p class="card-text bg-info">'../ ' = would go up one folder</p>
 
-            <img src="img/nullVsUndefined.png" alt="null vs Undefined" class="card-img img-fluid">
+            <p class="card-text bg-info">command + k = will clear terminal</p>
+
+
+      
           </div>
         </div>
       </div>
@@ -231,51 +244,41 @@
         <div class="card-header">
           <h5>
             <a href="#collapse2" data-parent="#accordion" data-toggle="collapse">
-              Arrays
+              Babel
             </a>
           </h5>
         </div>
 
         <div id="collapse2" class="collapse">
           <div class="card-body bg-secondary">
-            <h4 class="card-title">Arrays</h4>
-            <h5>Arrays most basics</h5>
-            <img class="card-img img-fluid mb-5" src="img/arrayBasicsConstructions.PNG" alt="JS creation methods">
-            <img class="card-img img-fluid mb-5" src="img/arrayBasics2.png" alt="JS array basics2">
-            <img class="card-img img-fluid mb-5" src="img/arrayBasics3.png" alt="JS array basics3">
-            <img class="card-img img-fluid mb-5" src="img/copyingArrays.png" alt="JS copying arrays basics3">
-            <img class="card-img img-fluid mb-5" src="img/filteringArrays.png" alt="JS filtering arrays basics4">
-            <img class="card-img img-fluid mb-5" src="img/includesArray.png" alt="JS includes arrays basics5">
-            <img class="card-img img-fluid mb-5" src="img/arrayToSet.png" alt="JS Array to Set basics6">
-            <img class="card-img img-fluid mb-5" src="img/everyArray.png" alt="Array every method JS basics7">
-            <img class="card-img img-fluid mb-5" src="img/someArray.png" alt="Array some method JS basics8">
-            <img class="card-img img-fluid mb-5" src="img/fillArray.png" alt="Array fill some JS basics9">
-            <img class="card-img img-fluid mb-5" src="img/arraySort.png" alt="Array sort some JS basics10">
-            <img class="card-img img-fluid mb-5" src="img/reverseString.png" alt="Reverse a string JS basics11">
+            <h4 class="card-title">Babel</h4>
 
-            <img class="card-img img-fluid mb-5" src="img/flattenArray.png" alt="Flatten an Array JS basics12">
-            <img class="card-img img-fluid mb-5" src="img/ArrayToObject.png"
-              alt="convert an Array to an object JS basics 13">
-            <img class="card-img img-fluid mb-5" src="img/loopingArrays.png"
-              alt="Looping an Array to an object JS basics 14">
-            <img class="card-img img-fluid mb-5" src="img/multiDimensionalArrays.png"
-              alt="MultiDimensional Arrays JS basics 15">
-            <img class="card-img img-fluid mb-5" src="img/getDiagonalMultiDimensionalArrays.png"
-              alt="MultiDimensional Arrays JS basics 16">
+            <p class="card-text bg-primary">Babel - ES6 code back to ES5</p>
+
+            <p class="card-text bg-primary">for compiling back to basic JS for us</p>
+
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-primary">npm install -- save-dev @babel/core @babel/preset-env babel-loader</li>
+
+                <li class="list-group-item list-group-item-primary">npm install --save @babel/polyfill</li>
+
+                <li class="list-group-item list-group-item-primary">adjust webpack.config.js (add module: rules)</li>
+
+                <li class="list-group-item list-group-item-primary">create a .babel rc</li>
+
+                <li class="list-group-item list-group-item-primary">adjust entry on webpack.config.js</li>
+            </ul>
+            <p class="card-text bg-info">"polyfill" writes some ES5 for you implementing Promises (for example)</p>
+          
+            <p class="card-text bg-primary">npm run dev (creating that bundle.js for us) (babel polyfilling us)</p>
+
+            <p class="card-text bg-primary">we using npm, Babel, and webpack</p>
+            <p class="card-text bg-info"></p>
 
 
-            <img class="card-img img-fluid" src="img/arrayFundamentals.png" alt="JS array methods">
 
-            <img class="card-img img-fluid mt-5" src="img/betterUseArrays.png" alt="JS array methods 2">
-            <img class="card-img img-fluid" src="img/arraySome.png" alt="JS array methods 3">
-            <img class="card-img img-fluid mb-5" src="img/arrayReduce.png" alt="JS array reduce">
 
-            <img src="img/spreadOperator.png" alt="Spread Operator example" class="card-img img-fluid">
-            <img src="img/spreadOperator2.png" alt="Spread Operator example 2" class="card-img img-fluid">
-            <img src="img/spreadOperator3.png" alt="Spread Operator example 3" class="card-img img-fluid">
             <img src="img/spreadOperator4.png" alt="Spread Operator example 4" class="card-img img-fluid">
-
-
 
           </div>
         </div>
@@ -285,71 +288,39 @@
         <div class="card-header">
           <h5>
             <a href="#collapse3" data-parent="#accordion" data-toggle="collapse">
-              Variables
+              Axios
             </a>
           </h5>
         </div>
 
         <div id="collapse3" class="collapse">
           <div class="card-body bg-secondary">
-            <h4 class="card-title">Variables</h4>
-            <p class="card-text">Can't use variables before declaring them now (in ES5 we could)</p>
-            <p class="card-text">1 == true = true (becomes JS performs <strong>type coercion</strong></p>
-            <p class="card-text">1 === true = false (no type coercion)</p>
-            <p class="card-text">"2" + 3 returns "23" (because 3 is coerced to "3" and the strings are added</p>
+            <h4 class="card-title">Axios</h4>
+            
+            <p class="card-text bg-primary">for api calls</p>
 
-            <ul class="list-group">
-              <p class="list-group-header">Let</p>
-              <li class="list-group-item list-group-item-success">Can be mutated(same thing as var)</li>
-              <li class="list-group-item list-group-item-success">Dont' have to assign them right away</li>
-            </ul>
+            <p class="card-text bg-primary">npm install axios --save (not a dev tool)</p>
+
+            <p class="card-text bg-primary">import axios from 'axios';</p>
+
+            <p class="card-text"><strong>crossorigin.me</strong></p>
+
+            <p class="card-text mb-5"><strong>corsanywhere</strong></p>
+
+            
+            <p class="card-text bg-warning">never put APIs on client-side JS (maybe AJAX calls from your server and then an api call from there)</p>
+
+
+            <p class="card-text bg-info">grab hash @ end of URL</p>
+
+            <p class="card-text">window.addEventListener('hashchange', firstelement());</p>
+
+            <p class="card-text">get it .... const id = window.location.hash;</p>
+
 
             <img src="img/letDetailed.png" alt="how let works" class="card-img img-fluid">
 
-            <ul class="list-group">
-              <p class="list-group-header">Const</p>
-              <li class="list-group-item list-group-item-info">can't mutate by assigning</li>
-              <li class="list-group-item list-group-item-info">BOTH let and const are block-scoped (function scoped in
-                ES5)</li>
-              <li class="list-group-item list-group-item-info">HAVE to assign const variables right away</li>
-            </ul>
-
-            <ul class="list-group">
-              <p class="list-group-header">'this' keyword</p>
-              <li class="list-group-item list-group-item-success">Not a primitive data type</li>
-              <li class="list-group-item list-group-item-success">It is created for each execution context</li>
-              <li class="list-group-item list-group-item-success">In a method call, the 'this' keyword poitns to the
-                object that it's attached to</li>
-              <li class="list-group-item list-group-item-success">In a method call, the 'this' keyword is only defined
-                as soon as the method gets called</li>
-              <li class="list-group-item list-group-item-success">'this' inside a function POINTS TO THE Global Object
-                (even inner functions)</li>
-            </ul>
-
-
-            <ul class="list-group">
-              <p class="list-group-header"><strong>Hoistings</strong></p>
-              <li class="list-group-item list-group-item-info">Variables are set to undefined in the creation phase</li>
-              <li class="list-group-item list-group-item-info">Hoisting variables in JS are available BEFORE the
-                execution actually starts</li>
-              <li class="list-group-item list-group-item-info">Benefit of Hoisting is being able to use functions before
-                defining</li>
-
-            </ul>
-
-            <img class="card-img img-fluid" src="img/TheVariableObject.PNG" alt="Variable Object">
-
-            <p class="card-text mt-5">Variables associated with objects DON'T contain the objects, they contain a
-              reference (pointer)</p>
-            <p class="card-text">Variables associated with primitives (strings, numbers) actually HOLD the data</p>
-
-
-            <img src="img/var.png" alt="var scope" class="card-img img-fluid mb-5">
-
-            <img src="img/blockScope.png" alt="block scopes" class="card-img img-fluid mb-5">
-
-            <img src="img/letScope.png" alt="let scope" class="card-img img-fluid">
-
+    
             <img src="img/constScope.png" alt="const scope" class="card-img img-fluid">
 
 
@@ -361,59 +332,28 @@
         <div class="card-header">
           <h5>
             <a href="#collapse4" data-parent="#accordion" data-toggle="collapse">
-              Objects
+              Node Packages
             </a>
           </h5>
         </div>
 
         <div id="collapse4" class="collapse">
           <div class="card-body bg-secondary">
-            <h4 class="card-title">Objects</h4>
-            <p class="card-text">dynamic collection of properties...key = unique string (coverted to a string if
-              non-string used)...value = primitive, object, or function</p>
+            <h4 class="card-title">Node Packages</h4>
 
-            <img class="card-img img-fluid mb-5" src="img/objectFundamentals.png" alt="Object basics JS">
+            <p class="card-text bg-primary">Yeoman (web scaffolding)</p>
+
+            <p class="card-text mb-5">npm install -g yo generator-aspnetcore-spa</p>
 
 
-            <p class="card-text">Variables associated with objects DON'T contain the objects, they contain a reference
-              (pointer)</p>
-            <p class="card-text">Variables associated with primitives (strings, numbers) actually HOLD the data</p>
-            <p class="card-text">A JS function is an object becaus its prototype is an object, and so it inherits
-              methods from the prototype</p>
+
             <p class="card-text"></p>
-            <h5>Execution object</h5>
-            <img class="card-img img-fluid" src="img/TheVariableObject.PNG" alt="Variable Object">
-            <ul class="list-group">
-
-              <li class="list-group-item list-group-item-info">stores variables</li>
-              <li class="list-group-item list-group-item-info"><strong>Global execution Object: </strong> Code that
-                isn't in any function...Window object in browser</li>
-              <li class="list-group-item list-group-item-info">any function call is a new execution object</li>
-              <li class="list-group-item list-group-item-info"><strong>Hoisting</strong> variables in JS are available
-                BEFORE the execution actually starts. (don't have to declare functions() before calling it!)</li>
-              <li class="list-group-item list-group-item-info">Benefit of <strong>Hoisting</strong> is being able to use
-                functions before defining.</li>
-              <li class="list-group-item list-group-item-info">ONLY way to create a new scope in JS is to create new
-                functions. <strong>lexical scoping</strong> a function() inside another functions gets access to the
-                scope of the outer functions()</li>
-              <li class="list-group-item list-group-item-info">'this' inside a function POINTS TO THE Global Object
-                (even inner functions)</li>
-            </ul>
-
-            <img src="img/objectAssignment.png" alt="object assignments" class="card-img img-fluid">
-
-            <p class="card-text mt-5">Object methods</p>
-
-            <img src="img/ObjectIsMethod.png" alt="object IS example" class="card-img img-fluid mt-3">
-
-            <img src="img/objectComparison.png" alt="object comparison example" class="card-img img-fluid mt-3">
-
-            <img src="img/objectComparison2.png" alt="object comparison example 2" class="card-img img-fluid mt-3">
-
-            <img src="img/object.assign.png" alt="Objectassign method" class="card-img img-fluid mt-5">
-
-            <img src="img/object.assign2.png" alt="Objectassign method 2" class="card-img img-fluid mb-5">
-
+            <p class="card-text"></p>
+            <p class="card-text"></p>
+            <p class="card-text"></p>
+           
+      
+      
             <img src="img/objectPrototypeMethod.png" alt="Prototype method on objects" class="card-img img-fluid">
 
           </div>
