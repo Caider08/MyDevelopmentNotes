@@ -628,6 +628,90 @@
           </div>
         </div>
 
+        <div class="card">
+            <div class="card-header">
+              <h5>
+                <a href="#collapse14" data-parent="#accordion" data-toggle="collapse">
+                  Angular project flow with .NET core web API 
+                </a>
+              </h5>
+            </div>
+    
+            <div id="collapse14" class="collapse">
+              <div class="card-body bg-secondary">
+    
+                <h4 class="card-title">GET</h4>
+                
+                <p class="card-text bg-primary">1) on-init... component uses services to bring in model-objects (objects matched to ObjectResource) (every component has a service class)</p>
+                <img src="img/ngOnitVehicleService.png" alt="onInit method of angular component" class="card-img img-fluid mb-5">
+
+                <p class="card-text bg-primary">2) the service making API calls (through authenticated Http) to the relevant controller</p>
+
+                <img src="img/vehicleService.png" alt="angular component service class" class="card-img img-fluid mb-5">
+                <p class="card-text bg-primary">3) Controller dependency injects: Imapper mapper, IModelClassRepository repo, IUnitofWork UnitOfWork,</p>
+
+                <img src="img/vehicleControllerTop.png" alt="model controller angular" class="card-img img-fluid">
+
+                <img src="img/vehicleControllerSecond.png" alt="model controller angular" class="card-img img-fluid mb-5">
+
+                <p class="card-text bg-primary">4) Controller uses IRepository to query the database for desired object class...</p>
+                <p class="card-text"><strong>IRepository (in case our repository (data access layer) changes in the future...we only have to change in one spot)</strong></p>
+
+                <img src="img/IVehicleRepo.png" alt="IRepository Example" class="card-img img-fluid">
+
+                <p class="card-text"><strong>ClassRepository</strong> implements the <strong>IClassRepository</strong>... accesses the database using desired DbContext</p>
+
+                <img src="img/VehicleRepository.png" alt="Vehicle Repository Access" class="card-img img-fluid mb-5">
+
+                <p class="card-text bg-primary">5) Repository returns the desired class object and the controller uses IMapper to map the class object to a to a class resource for use by the component in the view (UI) (every returnable class object should have a resource in Angular)</p>
+
+                <img src="img/vehicleClass.png" alt="angular model class" class="card-img img-fluid mb-3">
+
+                <img src="img/vehicleResource.png" alt="angular resource class" class="card-img img-fluid mb-5">
+
+                <p class="card-text">Mapper for going between model classes and model resources (resources make for better use in component views</p>
+
+                <img src="img/mappingProfile.png" alt="Mapping profile for Angular classes and resources" class="card-img img-fluid">
+
+                <p class="card-text bg-primary">6)  Unit of work and IUnit of work (for decoupling away database updating)</p>
+
+                <img src="img/IUnitOfWork.png" alt="Iunit of Work Angular" class="card-img img-fluid mt-5">
+
+                <p class="card-text">Unit of work implementing IUnitOfWork (injecting DbContext)</p>
+
+                <img src="img/UnitOfWork.png" alt="Unit of Work Angular" class="card-img img-fluid">
+
+                <h4 class="card-title">Querying Angular</h4>
+
+                <p class="card-text bg-primary">1) Controller takes a ClassQuery object and returns a QueryResult(class)</p>
+
+                <p class="card-text"><strong>ClassQuery</strong> object implements IQueryObject(T)</p>
+
+                <img src="img/VehicleQuery.png" alt="angular object class query" class="card-img img-fluid">
+
+                <p class="card-text">IQueryObject(T) and IQueryableExtensions go inside 'Extensions' folder of root project</p>
+
+                <img src="img/IQueryObject.png" alt="IQueryObject class" class="card-img img-fluid mb-3">
+
+                <img src="img/IQueryAbleExtensions.png" alt="IQueryAbleExtensions" class="card-img img-fluid mb-5">
+
+                <p class="card-text bg-primary">2) Repository method takes a ClassQuery object and returns a QueryResult(T)</p>
+
+                <img src="img/getVehiclesOfRepo.png" alt="Get Vehicles of Repo" class="card-img img-fluid mb-3">
+
+                <p class="card-text bg-primary">3) QueryResult(class) returned but needs to be mapped to QueryResultResource(class) for use in the component view</p>
+
+                <img src="img/QueryResult.png" alt="Result of Query" class="card-img img-fluid mb-3">
+
+                <img src="img/QueryResultResource.png" alt="Result of Query Resource" class="card-img img-fluid">
+
+
+                
+
+              </div>
+            </div>
+          </div>
+
 
     </div>
   </div>
