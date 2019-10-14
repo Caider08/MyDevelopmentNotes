@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="notes.css">
+  <title>VueJS Fundamentals</title>
+</head>
+
+<body class="bg-dark text-light">
+  <header>
+    <h1 class="display-2 text-center my-4">VueJS Fundamentals</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-primary btn-block dropdown-toggle" type="button" data-toggle="dropdown">
+              Computer Sci.
+            </button>
+            <div class="dropdown-menu">
+
+              <a class="dropdown-item" href="DotNetDesignPatterns.html" class="dropdown-item">Design
+                Patterns</a>
+              <a class="dropdown-item" href="studyDesignPatterns.html" class="dropdown-item">Quick Study
+              </a>
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-success btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              C#
+            </button>
+            <div class="dropdown-menu">
+                  <a href="dotNetFundamentals.html" class="dropdown-item">.Net fundamentals</a>
+                  <a href="advancedCsharp.html" class="dropdown-item">Advanced c# topics</a>
+                  <a class="dropdown-item" href="mvc.html" class="dropdown-item">ASP.net</a>
+                  <a href="interviewcSharp.html" class="dropdown-item">C# Interview Topics</a>     
+                  <a href="cSharpStudy.html" class="dropdown-item">C# quick-study</a> 
+                  <a href="EFC.html" class="dropdown-item">Entity Framework Core</a>       
+                  <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-danger btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              JS
+            </button>
+            <div class="dropdown-menu">
+              <a href="JSfundamentals.html" class="dropdown-item">JS Fundamentals</a>
+              <a href="advancedJStopics.html" class="dropdown-item">Advanced JS Topics</a>
+              <a href="objectOrientedJS.html" class="dropdown-item">Object Oriented in JS</a>              
+              <a href="interviewJS.html" class="dropdown-item">JS Interview Related</a>
+              <a href="jsDatastructures.html" class="dropdown-item">JS Data Structures</a>
+              <a href="strangeJS.html" class="dropdown-item">strange JS</a>
+              <a href="JSframeworks.html" class="dropdown-item">JS Frameworks</a>
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-success btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              Salesforce
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-warning btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              WebDevelopment
+            </button>
+            <div class="dropdown-menu">
+                <a href="VueJSfundamentals.html" class="dropdown-item">VueJS Fundamentals</a>
+                <a href="aspNetCoreVueJS.html" class="dropdown-item">AspNetCore & VueJS</a>
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-primary btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              Interview Prep
+            </button>
+            <div class="dropdown-menu">
+                <a href="interviewJS.html" class="dropdown-item">JS interview prep</a>
+                <a href="interviewcSharp.html" class="dropdown-item">c# interview prep</a>
+                <a href="sqlInterviewPrep.html" class="dropdown-item">SQL interview prep</a>
+                <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <button class="btn btn-primary d-block mt-25" style="margin-top: 25px" data-toggle="collapse"
+      data-target="#collapse-btn-1">JS links</button>
+
+    <div class="collapse my-25" id="collapse-btn-1">
+      <div class="card">
+        <div class="card-body">
+          <ul class="list-group">
+
+            <a class="list-group-item list-group-item-dark" target="_blank"
+              href="https://vuejs.org/">VueJS</a>
+
+              <a href="https://github.com/vuejs/vue" class="list-group-item list-group-item-dark">vue github</a>
+
+              <a class="list-group-item list-group-item-dark" target="_blank"
+              href="https://bootstrap-vue.js.org/">bootstrap Vue</a>
+
+                    
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="accordion" style="margin-top: 10px">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse1" data-parent="#accordion" data-toggle="collapse">
+              Vue Overview
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse1" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Vue Overview</h4>
+
+            <p class="card-text bg-primary">has the virtual-DOM of React</p>
+
+            <p class="card-text bg-primary">Vue components update automatically when model-changes</p>
+            <p class="card-text">Reactivity SIMPLE for number and strings ... mutable: arrays, objects (so Reactivity is tougher)</p>
+
+            <p class="card-text bg-primary">Vue works w/out a Build-step ...BUT better w/ it.</p>
+
+            
+            <ul class="list-group">
+              <p class="list-group-header">directives of Angular</p>
+              <li class="list-group-item list-group-item-info">v-for</li>
+              <li class="list-group-item list-group-item-info">v-if</li>
+              <li class="list-group-item list-group-item-info">v-bind</li>
+            </ul>
+
+            <p class="card-text bg-primary">Vue can't be read by browsers... so need BUILD step</p>
+
+            <p class="card-text">template script  (what's found inside script tags exported and turned into Vue component) script template</p>
+
+            <ul class="list-group">
+              <p class="list-group-header">Vue:</p>
+              <li class="list-group-item list-group-item-info">doesn't create a server for you (can use Vue CLI but that's whole new stack-of dependencies)</li>
+              <li class="list-group-item list-group-item-info">doesn't check for errors</li>
+              <li class="list-group-item list-group-item-info">no routing (unless use Vue-Router)</li>
+              <li class="list-group-item list-group-item-primary">uses ES6 Modules</li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse2" data-parent="#accordion" data-toggle="collapse">
+              Vue EcoSystem
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse2" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Vue EcoSystem</h4>
+
+            <p class="card-text bg-primary">Vue itself is small core library</p>
+
+            <ul class="list-group">
+                    <p class="list-group-header">Complemental Libraries</p>
+                    <li class="list-group-item list-group-item-success"><strong>nuxt</strong> (Universal rendering) ... having server render some stuff (loads faster on phone)</li>
+                    <li class="list-group-item list-group-item-success"><strong>vuex</strong> (state management) ... similar to flux and Redux.  (Don't use for simple state management with array of #s or something)</li>
+
+                    <li class="list-group-item list-group-item-success"><strong>vuetify</strong> (component framework) ... Basket of components ... Material Design and lots of standard lists, buttons, etc...</li>
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse3" data-parent="#accordion" data-toggle="collapse">
+              Vue core 
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse3" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Vue core</h4>
+
+            <p class="card-text bg-primary">Computed Properties: only evaluates when any of its reactive dependencies have changed</p>
+            
+            <img src="" alt="Computed Properties example" class="card-img img-fluid">
+
+
+            <p class="card-text bg-primary">Component Lifecycle Hooks:</p>
+
+            <p class="card-text">created = used to fetch data for your component</p>
+            <p class="card-text">templates and virtual DOM are not yet mounted or rendered</p>
+
+            <p class="card-text bg-primary">Whatchers:</p>
+            <p class="card-text">React to data changes</p>
+            <p class="card-text">Named as reactive value</p>
+            <p class="card-text">Accepts New and Old values</p>
+            <p class="card-text">good for async operators!</p>
+
+            <p class="card-text bg-primary">Filters</p>
+            <p class="card-text"> {{ firstName | capitalize }} </p>
+            <p class="card-text">| = signals a filter is coming ... capitalize = name of filter</p>
+
+            <p class="card-text bg-primary">Global Filters</p>
+
+            <p class="card-text">import Vue from 'vue';</p>
+            <p class="card-text">Vue.filter('  ', function(value) {  </p>
+            <p class="card-text">(must come before the Vue instance)</p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse4" data-parent="#accordion" data-toggle="collapse">
+              Vue Data-Binding
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse4" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Vue Data-Binding</h4>
+
+            <p class="card-text bg-primary">a v-bind:href="github"</p>
+            <p class="card-text">(Binding to variable gitHub (holds the URL))</p>
+            <p class="card-text">:href="github" (is the shorthand)</p>
+      
+            <p class="card-text bg-primary">Event Bindings</p>
+            <p class="card-text">v-on:event = "methodName"</p>
+            <p class="card-text">@(same thing).</p>
+            <p class="card-text">@click="methodName(canPassParameters)"</p>
+
+            <p class="card-text bg-primary">2-Way Binding</p>
+            <p class="card-text">v-model="hero.firstName"</p>
+
+          
+           
+
+
+            <img src="img/objectPrototypeMethod.png" alt="Prototype method on objects" class="card-img img-fluid">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse5" data-parent="#accordion" data-toggle="collapse">
+                    Basic Vue Syntax
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse5" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Basic Vue Syntax</h4>
+
+            <p class="card-text bg-primary">{{ variable }} getting variables to display in HTML (interopalation)</p>
+
+            <p class="card-text bg-primary">Conditionals:  div v-if </p>
+
+            <p class="card-text bg-primary"><strong>Lists and Conditionals</strong></p>
+
+            <p class="card-text">v-for="item in item-list" :key</p>
+
+            <p class="card-text">v-if="variable" (Add or Remove from DOM) (Master/Details)</p>
+
+            <p class="card-text">v-show="expression" (showing and hiding) (conditionally show/hide)</p>
+
+            <p class="card-text bg-primary">data function</p>
+
+            <p class="card-text">vue instance adds all properties in data to Vue's reactivity system</p>
+
+            <p class="card-text">best practice is to return a function</p>
+
+            <p class="card-text">data () { return { props; props; props; } } </p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse6" data-parent="#accordion" data-toggle="collapse">
+              Component Communication
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse6" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Component Communication</h4>
+
+            <ul class="list-group">
+                    
+                    <li class="list-group-item list-group-item-primary">create small components</li>
+                    <li class="list-group-item list-group-item-primary">communicate down w/ props</li>
+                    <li class="list-group-item list-group-item-primary">communicate up w/ events</li>
+      
+            </ul>
+
+            <p class="card-text bg-primary">export default { name: 'App'; components: { HeaderBar, Heroes } } </p>
+            <p class="card-text">components: (how to declare child components)</p>
+
+
+            <p class="card-text bg-primary">Passing Objects</p>
+            <p class="card-text">we-want data to flow from parent (Top) through children</p>
+
+            <p class="card-text bg-primary">go from child-to-parent</p>
+
+            <p class="card-text">methods: { cancelHero() { this.$event('save' this.closedHero); }} (let's Parent component "hear" from child)</p>
+
+
+            <p class="card-text bg-primary">Mix ins (distribute reusable functionality across components)</p>
+
+            <p class="card-text">precendance given to the component's method and data</p>
+
+            <p class="card-text">watch and hook ... Both run ... w/ mixins running before component0</p>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse7" data-parent="#accordion" data-toggle="collapse">
+              DOM
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse7" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Document Object Model</h4>
+            <img class="card-img-top img-fluid" src="img/DOMbasic.PNG" alt="Event Loop in JS example">
+            <p class="card-text">'this' inside a function() points to the Global object (the DOM usually)</p>
+            <p class="card-text"><strong>EVENT Bubbling:</strong> Events bubble up inside the DOM-tree</p>
+
+            <img src="img/eventBubbling.PNG" alt="Event Bubbling JS" class="card-img img-fluid">
+            <img class="card-img img-fluid" src="img/EventLoopExample1.PNG" alt="Event Loop in JS example">
+
+            <h5>Event Delegation</h5>
+            <p class="card-text">Attach it to the parent element and wait for it (catch it)</p>
+            <p class="card-text">Use cases:</p>
+            <p class="card-text">...Have an element w/ lots of child elements we're interested in</p>
+            <p class="card-text">...When we want an Event handler attached to an element that is not yet in the DOM when
+              our page is loaded</p>
+            <img class="card-img img-fluid" src="img/EventDelegation.PNG" alt="Event Loop in JS example">
+            <ul class="list-group">
+              <p class="list-group-header">document methods:</p>
+              <li class="list-group-item list-group-item-info">document.querySelector('id').textContent = variable</li>
+              <li class="list-group-item list-group-item-info">document.querySelector('.id').style.display = "none" (set
+                the image or text to blank)</li>
+              <li class="list-group-item list-group-item-info">document.querySelector('.className').value (grab user
+                input)</li>
+            </ul>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse8" data-parent="#accordion" data-toggle="collapse">
+              Hoisting and Scoping
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse8" class="collapse">
+
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Hoisting and Scoping</h4>
+
+            <p class="card-text">In a nutshell, scoping and hoisting effect how the code we write will deal with our
+              declarations (such as var, let, const and function).</p>
+
+            <p class="card-text bg-primary"><strong>Global Scope</strong> is created internally by JavaScript as var
+              window
+              = Window() (rough equivalent) behind the veil.</p>
+            <p class="card-text"><strong>Global Scope</strong> acts as the first automatically created Execution Context
+              roughly at the time when the browser opens a URL</p>
+
+            <p class="card-text">Variables defined with var, let, or const are created within <strong>Variable
+                Environment.</strong> This is why they are not automatically tied to the <strong>window</strong> object
+              nor bound to <strong>this</strong> object</p>
+            <img src="img/GlobalScopePieChart.png" alt="Scoping Pie Chart" class="card-img img-fluid">
+            <img src="img/GlobalScopePieChart2.png" alt="Scoping Pie Chart 2" class="card-img img-fluid">
+            <img src="img/GlobalScopePieChart3.png" alt="Scoping Pie Chart 3" class="card-img img-fluid mb-5">
+
+            <ul class="list-group">
+              <p class="list-group-header">var</p>
+              <li class="list-group-item list-group-item active">When using var to declare your variables, the parent
+                function where you declare your vars inside is your only de facto scope delimiter. This way, the parent
+                function creates and holds the scope for all the local variables declared within itself. This is
+                <strong>Local Scope...</strong></li>
+              <li class="list-group-item list-group-item-info">...As opposed to <strong>Global Scope,</strong> when the
+                variables are declared outside your function. They are accessible by everyone and everywhere. They are
+                omnipresent like the air we breathe, or like the window object in the browser.</li>
+
+              <li class="list-group-item list-group-item-info">Hence, other code blocks as conditionals and loops (such
+                as if, for, while, switch and try) do not delimit scope, unlike most other languages.
+                Then, any var inside these blocks will be scoped within their parent function which contains that
+                block...
+              </li>
+
+              <li class="list-group-item list-group-item-info">...Not only that, but during runtime, every var
+                declaration that is found inside such code blocks gets moved to the beginning of its parent function
+                (its scope). This is the definition of <strong>Hoisting.</strong></li>
+            </ul>
+
+            <img src="img/varScoping.png" alt="var and its scoping" class="card-img img-fluid mb-5">
+
+
+            <ul class="list-group">
+              <p class="list-group-header">let and const</p>
+              <li class="list-group-item list-group-item-info">ES2015 introduced let and const which are variables that
+                do respect the block scope. This means they are safe to be declared within a block and won’t leak
+                outside, as the following example:</li>
+              <li class="list-group-item list-group-item-info"></li>
+
+            </ul>
+
+            <img src="img/letAndConst.png" alt="let and const scoping" class="card-img img-fluid">
+
+
+            <p class="card-text">Keep in mind that we have created one pair of i and parameter variables for each
+              iteration of the for loop. Compare this to before when we just had one single i and parameter being
+              rewritten each time. This matters a little bit for memory consumption.
+            </p>
+            <p class="card-text mb-5">Finally, since we also created the setTimeout callback function within the same
+              scope, they will co-live with the protected values of i and parameter. Block scope will remain preserved
+              even after stepSum finished executing</p>
+
+
+            <ul class="list-group">
+              <p class="list-group-header">functions</p>
+              <li class="list-group-item list-group-item-info">declaring a function is different than declaring a var
+                and assigning a function to it...</li>
+              <li class="list-group-item list-group-item-info">function name() will get hoisted to top of scope</li>
+              <li class="list-group-item list-group-item-info">IF use var nameFunction = function() and call it before
+                you declared...will get an error</li>
+
+              <li class="list-group-item list-group-item-info">The difference here is that when a function is hoisted,
+                its body is also hoisted. Compared to when a var is hoisted, only its declaration gets hoisted but not
+                its assignment.</li>
+            </ul>
+
+            <img src="img/moreLetandCostscoping.png" alt=" more let and const scoping" class="card-img img-fluid">
+
+            <p class="card-text bg-success">Inside the forEach block, the function total is hoisted, so when the `total
+              +=
+              parameter;` line runs, it uses the function total, not the total variable defined outside of the forEach
+              block. This means the let total varaible is unaffected by the forach block, so when the total is returned,
+              it’s value is still 0, the same as it was at creation.</p>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse9" data-parent="#accordion" data-toggle="collapse">
+              Functions
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse9" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Functions</h4>
+
+            <p class="card-text">Functions are objects, can be assigned to variables, stored in objects or arrays,
+              passed as an argument to other functions, and returned from functions.</p>
+            <p class="card-text">A JS function is an object becaues its prototype is an object, and so it inherits
+              methods from the protype</p>
+            <p class="card-text">main JS runtime is single-threaded....so two functions can't run at same time.</p>
+            <p class="card-text">Functions (except for arrow functions) have two pseudo-parameters:
+              <strong>this</strong> and <strong>arguments</strong></p>
+            <ul class="list-group">
+              <p class="list-group-header">3 ways to define a function:</p>
+              <li class="list-group-item list-group-item-success">1) Function Declaration (aka Function Statement)</li>
+              <li class="list-group-item list-group-item-success">2) Function Expression (aka Function Literal)</li>
+              <li class="list-group-item list-group-item-success">3) Arrow Function</li>
+            </ul>
+
+            <p class="card-text">Functions can be used before declaration since function declarations are moved, or
+              "hoisted", to the top of their scope. (variables set to undefined in creation phase)</p>
+            <p class="card-text"><strong>Closures</strong> are not formed with anonymous functions</p>
+            <p class="card-text">Function A() declares variable X and returns Function B()....Function B() CAN access
+              variable X because of <strong>closures</strong></p>
+            <p class="card-text">in module pattern, public methods can access private functions and variables because a
+              <strong>CLOSURE</strong> was created.</p>
+            <ul class="list-group">
+              <p class="list-group-header">WHEN program calls a function...</p>
+              <li class="list-group-item list-group-item-success">JS creates a new execution context (local)</li>
+              <li class="list-group-item list-group-item-success">That local context will have its own set of variables
+              </li>
+              <li class="list-group-item list-group-item-success">New Execution Context thrown onto the execution-stack
+              </li>
+            </ul>
+
+            <ul class="list-group">
+              <p class="list-group-header">WHEN function ends...</p>
+              <li class="list-group-item list-group-item-warning">Local execution context pops off the stack</li>
+              <li class="list-group-item list-group-item-warning">Return value sent back to the calling context. Global
+                or if no return statement..."undefined" returned</li>
+              <li class="list-group-item list-group-item-warning">Local context destroyed</li>
+            </ul>
+
+
+            <p class="card-text"></p>
+
+            <img src="img/thisFunctions.png" alt="functions this" class="card-img img-fluid mb-5">
+
+
+            <h5>Callback Functions</h5>
+
+            <p class="card-text">function to be executed AFTER another has finished</p>
+            <p class="card-text">Why need CallBack Functions?...</p>
+            <p class="card-text">...JS is Event - Driven language (will keep executing while listening for other
+              events)...</p>
+            <p class="card-text">...Callbacks are a way to make certain code doesn't execute until other code has
+              already finished execution.</p>
+            <p class="card-text">Can use callBack functions() to defer activities into future to make our CODE
+              NonBlocking.</p>
+
+            <p class="card-text bg-info">Pass a reference to a function as an argument... you do this the function
+              you’re passing as an argument is called a callback function and the function you’re passing the callback
+              function to is called a higher order function.</p>
+            <img class="card-img img-fluid mb-5" src="img/CallBackFunction.png" alt="Callback Function basic">
+            <img class="card-img img-fluid mb-5" src="img/moreCallbackFunction.png" alt="More Callback Function basic">
+
+            <img class="card-img img-fluid mb-5" src="img/MoreComplexCallBackExample.PNG"
+              alt="Complex CallBack Function example">
+            <p class="card-text">first Class Functions = passing functions as parameters to other functions</p>
+            <p class="card-text">'this' inside a function() points to the Global object (the DOM usually)</p>
+            <p class="card-text">Methods are functions that are stored in objects. Functions are independent. In order
+              for a function to know on which object to work on <strong>this</strong> is used. <strong>this</strong>
+              represents the function's context</p>
+            <p class="card-text">The value of <strong>this</strong> depends on how the function was invoked, not where
+              the function was defined.</p>
+            <p class="card-text">There is no point to use <strong>this</strong> when a function is invoked with the
+              function form: doSomething(). In this case <strong>this</strong> is undefined or is the window object,
+              depending if the strict mode of JS is enabled or not.</p>
+            <p class="card-text">When a function is invoked with the method form: theObject.doSomething(),
+              <strong>this</strong> represents the object.</p>
+            <p class="card-text">When a function is used as a constructor: new Constructor(), <strong>this</strong>
+              represents the newly created object.</p>
+            <p class="card-text">When a function sits in the global scope, then the value of ‘this’ is the Window
+              object. Think of it as the test function being a method on the context in which it sits (the window
+              object).</p>
+            <p class="card-text bg-warning">However, if a function is executed in strict mode, ‘this’ will return
+              undefined because strict mode does not allow default binding.</p>
+            <p class="card-text">The value of <strong>this</strong> can be set with apply() or call():
+              doSomething.apply(theObject). In this case <strong>this</strong> is the object sent as the first parameter
+              to the method.</p>
+
+            <h5>Arrow Function</h5>
+            <p class="card-text">sugar syntax for creating an anonymous function expression.</p>
+            <p class="card-text">let doSomething = () => {};</p>
+
+            <p class="card-text">Arrow Functions don't have their own <strong>this</strong> and
+              <strong>arguments</strong></p>
+            <p class="card-text">Share the surrounding <strong>this</strong> keyword...</p>
+            <p class="card-text bg-primary">An arrow function expression has a shorter syntax than a function expression
+              and does not have its own this, arguments, super, or new.target. These function expressions are best
+              suited for non-method functions, and they cannot be used as constructors</p>
+            <p class="card-text">...<strong>lexical</strong> this variable (use arrow functions to preserve value of
+              this)</p>
+            <p class="card-text">Every async function() always returns a Promise</p>
+
+            <p class="card-text"><strong>Destructuring</strong> = returning multiple values from a function()</p>
+            <p class="card-text">Immediately Invoked Function Expression is only called ONCE (IIFE)</p>
+
+            <ul class="list-group">
+              <p class="list-group-header">Private Functions</p>
+              <li class="list-group-item list-group-item-info">Exposed functions can be accessed from the outer scope
+              </li>
+              <li class="list-group-item list-group-item-info">Other code cannot overwrite private functions and
+                variables</li>
+              <li class="list-group-item list-group-item-info">An exposed public interface is sometimes called an API
+              </li>
+            </ul>
+
+            <img src="img/arrowFunctionThis.png" alt="how this works with arrow functions" class="card-img img-fluid">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse10" data-parent="#accordion" data-toggle="collapse">
+              loops
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse10" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">loops</h4>
+
+            <img class="card-img-top img-fluid" src="img/forOf.png" alt="For of Loop example">
+
+            <p class="card-text"></p>
+            <p class="card-text"></p>
+
+
+            <h5></h5>
+            <p class="card-text"></p>
+            <p class="card-text"></p>
+            <p class="card-text"></p>
+            <p class="card-text"></p>
+
+
+            <ul class="list-group">
+              <p class="list-group-header"></p>
+              <li class="list-group-item list-group-item-info"></li>
+              <li class="list-group-item list-group-item-info"></li>
+              <li class="list-group-item list-group-item-info"></li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse11" data-parent="#accordion" data-toggle="collapse">
+              async JS
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse11" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">async JS</h4>
+
+            <img class="card-img-top img-fluid" src="img/consumingPromise.png" alt="consuming promise example">
+
+            <img src="img/chainingFetch.png" alt="chaining promises example fetch api" class="card-img img-fluid mb-3">
+
+            <img src="img/fetchChainingExample.png" alt="example of promise chaining via fetch API"
+              class="card-img img-fluid mb-5">
+
+            <img src="img/promiseAndDestructuring.png" alt="promise example with some destructuring"
+              class="card-img img-fluid mb-5">
+
+            <img src="img/promiseRace.png" alt="Race promises example" class="card-img img-fluid mb-5">
+
+            <img src="img/arrowFunctionsThen.png" alt="arrow functions Then example" class="card-img img-fluid">
+
+            <img src="img/thenArrowFunctionsCatch.png" alt="arrow functions with Catch example" class="card-img img-fluid">
+
+            <img src="img/moreOnSalesforcePromises.png" alt="More on JS Promises async" class="card-img-bottom img-fluid mt-5">
+
+            <p class="card-text"></p>
+            <p class="card-text"></p>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse12" data-parent="#accordion" data-toggle="collapse">
+              modules JS
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse12" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">modules JS</h4>
+
+            <img src="img/modulesTop.png" alt="JS Modules General" class="card-img-top img-fluid mb-5">
+
+            <img class="card-img img-fluid" src="img/ESmodulesyntax.png" alt="ES Module syntax">
+
+            <img src="img/ESmodulesyntax2.png" alt="ES module syntax 2" class="card-img img-fluid">
+
+            <img src="img/ESmodulesyntax3.png" alt="ES module syntax 3" class="card-img img-fluid">
+
+            <img src="img/ESmodulesyntax4.png" alt="ES module syntax 4" class="card-img img-fluid">
+
+            <img src="img/ESmodulesyntax5.png" alt="ES module syntax 5" class="card-img img-fluid">
+
+            <img src="img/cors.png" alt="CORS considerations with modules" class="card-img img-fluid mt-3">
+
+            <p class="card-text"></p>
+            <p class="card-text"></p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse13" data-parent="#accordion" data-toggle="collapse">
+              Sets
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse13" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Sets</h4>
+
+
+            <img class="card-img img-fluid" src="img/set.png" alt="JS Set methods">
+            <img src="img/set2.png" alt="JS Set methods 2" class="card-img img-fluid">
+            <img src="img/set3.png" alt="JS Set methods 3" class="card-img img-fluid">
+            <img src="img/set4.png" alt="JS Set methods 4" class="card-img img-fluid">
+            <img src="img/set5.png" alt="JS Set methods 5" class="card-img img-fluid mb-5">
+
+
+            <img src="img/weakSet.png" alt="weak Set" class="card-img img-fluid">
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+  </script>
+
+</body>
+
+</html>
