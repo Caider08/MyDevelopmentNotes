@@ -255,18 +255,18 @@
             <h4 class="card-title">Entity Framework Core setup steps:</h4>
 
 
-            <ul class="list-group">
+            <ul class="list-group bg-dark">
 
-              <li class="list-group-item list-group-item">
+              <li class="list-group-item list-group-item-info">
                   make your DbContext class(can copy the ApplicationDbContext one).  In Data folder
                   </li>
-              <li class="list-group-item list-group-item">Setup your DbSets (each one in general is a table)</li>
-              <li class="list-group-item list-group-item">add services.AddDbContext (in startup.cs)</li>
+              <li class="list-group-item list-group-item-info">Setup your DbSets (each one in general is a table)</li>
+              <li class="list-group-item list-group-item-info">add services.AddDbContext (in startup.cs)</li>
               <li class="list-group-item list-group-item-info">in fileExplorer (shell or cmd)</li>
-              <li class="list-group-item">dotnet ef migrations add "name of migration" --context "dbContext"</li>
-                <li class="list-group-item">dotnet ef database update</li>
-                <li class="list-group-item">dotnet ef migrations remove --context "NameOfContext"</li>
-                <li class="list-group-item">dotnet ef migrations list --context "NameOfContext"</li>
+              <li class="list-group-item list-group-item-info">dotnet ef migrations add "name of migration" --context "dbContext"</li>
+                <li class="list-group-item list-group-item-info">dotnet ef database update</li>
+                <li class="list-group-item list-group-item-info">dotnet ef migrations remove --context "NameOfContext"</li>
+                <li class="list-group-item list-group-item-info">dotnet ef migrations list --context "NameOfContext"</li>
              
             </ul>
 
@@ -313,9 +313,6 @@
 
           <p class="card-text">dotnet ef database update</p>
 
-
-
-          
 
 
           </div>
@@ -476,7 +473,7 @@
                 'Object.assign()'</li>
               <li class="list-group-item list-group-item-info"><strong>Functional</strong> (not to be confused with
                 functional programming. A function used to create a closure for private state/encapsulation).</li>
-              <li class="list-group-item">all of them useful in their ability to enable <strong>composition</strong>,
+              <li class="list-group-item list-group-item-info">all of them useful in their ability to enable <strong>composition</strong>,
                 which creates <strong>has-a</strong> or <strong>uses-a</strong> or <strong>can-do</strong> relationships
                 as opposed to the <strong>is-a</strong> relationship created with class inheritance.</li>
             </ul>
