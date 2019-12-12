@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous" />
+  <link type="text/css" rel="stylesheet" href="notes.css" />
+  <title>Useful JS Topics</title>
+</head>
+
+
+<body class="bg-dark text-light">
+  <header>
+    <h1 class="display-2 text-center my-4">Advanced JS Topics</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-primary btn-block dropdown-toggle" type="button" data-toggle="dropdown">
+              Computer Sci.
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="DotNetDesignPatterns.html" class="dropdown-item">Design Patterns</a>
+              <a class="dropdown-item" href="studyDesignPatterns.html" class="dropdown-item">Quick Study
+              </a>
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-success btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              C#
+            </button>
+            <div class="dropdown-menu">
+                <a href="dotNetFundamentals.html" class="dropdown-item">.Net fundamentals</a>
+                <a href="advancedCsharp.html" class="dropdown-item">Advanced c# topics</a>
+                <a class="dropdown-item" href="mvc.html" class="dropdown-item">ASP.net</a>
+                <a href="interviewcSharp.html" class="dropdown-item">C# Interview Topics</a>     
+                <a href="cSharpStudy.html" class="dropdown-item">C# quick-study</a> 
+                <a href="EFC.html" class="dropdown-item">Entity Framework Core</a>       
+                <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-danger btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              JS
+            </button>
+            <div class="dropdown-menu">
+              <a href="JSfundamentals.html" class="dropdown-item">JS Fundamentals</a>
+              <a href="usefulJS.html" class="dropdown-item">Useful JS</a>
+              <a href="advancedJStopics.html" class="dropdown-item">Advanced JS Topics</a>
+              <a href="objectOrientedJS.html" class="dropdown-item">Object Oriented in JS</a>              
+              <a href="interviewJS.html" class="dropdown-item">JS Interview Related</a>
+              <a href="jsDatastructures.html" class="dropdown-item">JS Data Structures</a>
+              <a href="strangeJS.html" class="dropdown-item">strange JS</a>
+              <a href="JSframeworks.html" class="dropdown-item">JS Frameworks</a>
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-success btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              Salesforce
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-warning btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              WebDevelopment
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-primary btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              Interview Prep
+            </button>
+            <div class="dropdown-menu">
+                <a href="interviewJS.html" class="dropdown-item">JS interview prep</a>
+                <a href="interviewcSharp.html" class="dropdown-item">c# interview prep</a>
+                <a href="sqlInterviewPrep.html" class="dropdown-item">SQL interview prep</a>
+                <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <button class="btn btn-primary d-block mt-25" style="margin-top: 25px" data-toggle="collapse"
+      data-target="#collapse-btn-1">
+      JS links
+    </button>
+
+    <div class="collapse my-25" id="collapse-btn-1">
+      <div class="card">
+        <div class="card-body">
+          <ul class="list-group">
+
+            <a class="list-group-item list-group-item-dark" target="_blank"
+              href="https://medium.com/poka-techblog/destructuring-in-javascript-f4f56d5cbd80">Destructuring in JS</a>
+
+            <a href="https://codeburst.io/js-by-example-8-distinct-uses-of-javascript-array-slice-4e4e95a470e4"
+              class="list-group-item list-group-item-dark">Uses of array.slice()</a>
+
+
+            <a href="https://medium.com/javascript-in-plain-english/insanely-useful-array-methods-b3f93bf5415e"
+              class="list-group-item list-group-item-dark">Insanely useful array methods</a>
+
+              <a href="https://medium.com/@bretcameron/12-javascript-tricks-you-wont-find-in-most-tutorials-a9c9331f169d" class="list-group-item list-group-item-dark">JS Tricks</a>
+
+                     
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="accordion" style="margin-top: 10px">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse1" data-parent="#accordion" data-toggle="collapse">
+              Useful JS Array Methods
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse1" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-text-header">Useful JS Array Methods</h4>
+
+            <p class="card-text bg-primary">
+             const numbers = new Array(5); //creates array of length 5 with values set to undefined </br>
+             const numbers = Array.of(5); //this will create a numbers array containing the value 5 AND NOT 5 undefined values which was the case with new Array(5);
+            </p>
+
+            <p class="card-text bg-primary">
+              Array.from(arrayLike[, mapFn[, thisArg]]) </br>
+              The from() method creates a new instance of array from an array-like or iterable object.
+            </p>
+
+            <p class="card-text bg-info">
+                const numbers = [1, 2, 3, 4, 5]; </br>
+                //Following code will create an array where each element is multiplied by 2 </br>
+                const copy = Array.from(numbers, value => value *2); </br>
+                console.log(copy); // [2, 4, 6, 8, 10];
+            </p>
+
+            <p class="card-text bg-info">
+                In order to convert such iterable objects like HTMLCollection or NodeList (which is returned when we use document.querySelectorAll method), we can use Array.from method. </br>
+                Array.from(document.scripts).forEach(script => console.log(script.src));
+            </p>
+
+            <p class="card-text bg-primary">
+                Array.find(callback(element[, index[, array]])[, thisArg]) </br>
+
+                The find() method returns the value of the first element in the array that satisfies the provided test condition. </br>
+                The find() method takes a callback function as the first argument and execute the callback function for every element of the array.  Each array element value is passed as the first paramter to callback function
+              </p>
+
+              <p class="card-text bg-info">
+                const employee = employees.find(employee => employee.name.indexOf("John") > -1); </br>
+                console.log(employee); // { name: "John Cena", age: 34 }  </br>
+                //will try to find employee of John and return the first element that matches
+
+              </p>
+
+              <p class="card-text bg-info">
+                const index = employees.findIndex(employee => employee.name.indexOf("John") > -1); </br>
+                //returns the index of the first element in the array that satisfies the provided test condition.  Otherwise it returns -1, indicating that no element passed the test.
+
+              </p>
+
+              <p class="card-text bg-primary">
+                Array.filter(callback(element[, index[, array]])[, thisArg]);  </br>
+                The filter() method creates a new array with all the elements that satisfies the provided test condition.  </br>
+                Note that, filter method always returns the array, If no element passed the test condition, an empty array will be returned.
+
+              </p>
+
+              <p class="card-text bg-primary">
+                Array.fill(value[, start[, end]]) </br>
+                THe fill() method fills (modifies) all the elements of an array from a start index (default zero) to an end index (default array length) with a static value. </br>
+
+                const checkboxes = new Array(5).fill(false);
+
+              </p>
+
+              <p class="card-text bg-primary">
+                Array.forEach(callback(currentValue [, index [, array]])[, thisArg]); </br>
+
+                const months = ["January", "February", "March", "April"]; </br>
+                const returnedValue = months.forEach(month => console.log(month)); // January February March April </br>
+                console.log("returnedValue: ", returnedValue); // undefined </br>
+                Note that, forEach is only used to loop through the array and perform some processing or logging, it does not return any value, even if you explicitly return value from the callback function so the returnedValue is coming as undefined.
+
+              </p>
+
+              <p class="card-text bg-primary">
+              
+                Array.map(function callback(currentValue[, index[, array]]) { </br>
+                    // Return element for new_array </br>
+                }[, thisArg]) </br>
+                
+                const months = ["January", "February", "March", "April"]; </br>
+                const transformedArray = months.map(month => month.toUpperCase()); </br>
+                console.log(transformedArray); // ["JANUARY", "FEBRUARY", "MARCH", "APRIL"] </br>
+
+                //will return new array if use map </br>
+                const months = ["January", "February", "March", "April"]; </br>
+                const transformedArray = months.map(month => month.toUpperCase()); </br>
+                console.log(transformedArray); // ["JANUARY", "FEBRUARY", "MARCH", "APRIL"] </br>
+
+              </p>
+
+              <p class="card-text bg-primary">
+              
+                Array.every(callback(element[, index[, array]])[, thisArg])
+                The every() method tests whether all elements in the array pass the provided test condition and returns a boolean true or false value.
+
+                Array.some(callback(element[, index[, array]])[, thisArg])
+                The some() method tests whether at least one element in the array passes the test condition given by the provided function and returns a boolean true or false value.
+
+              </p>
+
+
+            <p class="card-text bg-primary">
+                Array.reduce(callback(accumulator, currentValue[, index[, array]])[, initialValue])
+                The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
+                The output of reduce method is always a single value. It can be an object, a number, a string or an array etc. It depends on what you want the output of reduce method to generate but its always a single value.
+            </p>
+
+
+        
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse2" data-parent="#accordion" data-toggle="collapse">
+              JS Tricks
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse2" class="collapse">
+          <div class="card-body bg-secondary">
+            <p class="card-text bg-primary">
+              <strong>filter unique values</strong> </br>
+              const array = [1, 1, 2, 3, 5, 5, 1] </br>
+                const uniqueArray = [...new Set(array)]; </br>
+                console.log(uniqueArray); // Result: [1, 2, 3, 5]
+            </p>
+
+          
+
+              <p class="card-text bg-primary">
+                <strong>&& and ||</strong> </br>
+                Using && will return the first false or ‘falsy’ value. If every operand evaluates to true , the last evaluated expression will be returned.
+              </p>
+
+              <p class="card-text bg-info">
+                let one = 1, two = 2, three = 3; </br>
+                console.log(one && two && three); // Result: 3 </br>
+                console.log(0 && null); // Result: 0 </br>
+
+                let one = 1, two = 2, three = 3;  </br>
+                console.log(one || two || three); // Result: 1  </br>
+                console.log(0 || null); // Result: null </br>
+
+                
+                return (foo || []).length;  </br>
+                If the variable foo is truthy, it will be returned. Otherwise, the length of the empty array will be returned: 0 </br>
+
+                if (this.state.data) { </br>
+                return this.state.data; </br>
+                } else {  </br>
+                return 'Fetching Data'; </br>
+                } </br>
+
+                do this instead: </br>
+                return (this.state.data || 'Fetching Data'); </br>
+
+              </p>
+
+              <p class="card-text bg-primary">
+                  <strong>Convert to boolean</strong></br>
+                  Unless otherwise defined, all values in Javascript are 'truthy' with the exception of 0, "", null, undefined, NaN and of course false, which are 'falsy' </br>
+
+                  const isTrue  = !0; </br>
+                const isFalse = !1;  </br>
+                const alsoFalse = !!0; </br>
+                console.log(isTrue); // Result: true </br>
+                console.log(typeof true); // Result: "boolean" </br>
+              </p>
+
+              <p class="card-text bg-primary">
+                  <strong>Convert to string</strong> </br>
+                    const val = 1 + ""; </br>
+                    console.log(val); // Result: "1" </br>
+                    console.log(typeof val); // Result: "string" </br>
+              </p>
+
+
+              <p class="card-text bg-primary">
+                  <strong>Convert to String</strong> </br>
+                  const val = 1 + ""; </br>
+                  console.log(val); // Result: "1" </br>
+                  console.log(typeof val); // Result: "string" </br>
+
+              </p>
+
+              <p class="card-text bg-primary">
+                  <strong>Convert to Number</strong> </br>
+
+                  let int = "15"; </br>
+                    int = +int;  </br>
+
+                    console.log(int); // Result: 15 </br>
+                    console.log(typeof int); Result: "number" </br>
+
+                    console.log(+true);  // Return: 1 </br>
+                    console.log(+false); // Return: 0
+
+                    There may be contexts where the + will be interpreted as the concatenation operator rather than the addition operator. When that happens (and you want to return an integer, not a float) you can instead use two tildes: ~~ .
+                    const int = ~~"15"
+                    console.log(int); // Result: 15
+                    console.log(typeof int); Result: "number"
+              </p>
+
+              <p class="card-text bg-primary">
+                  <strong>Quick Powers</strong> </br>
+                  console.log(2**3); // Result: 8
+              </p>
+
+              <p class="card-text bg-primary">
+                  Quick Float to Integer </br>
+                  //The following expressions are equivalent: </br>
+                    Math.pow(2, n); </br>
+                    2 << (n - 1);  </br>
+                    2**n;  </br>
+
+                    For example, 2 << 3 = 16 is equivalent to 2 ** 4 = 16 . </br>
+
+
+                    console.log(23.9 | 0);  // Result: 23 </br>
+                    console.log(-23.9 | 0); // Result: -23  </br>
+
+                    If n is positive, n | 0 effectively rounds down. If n is negative, it effectively rounds up. To put it more accurately, this operation removes whatever comes after the decimal point, truncating a float to an integer.</br>
+                    console.log(1553 / 10   | 0)  // Result: 155 </br>
+                    console.log(1553 / 100  | 0)  // Result: 15 </br>
+                    console.log(1553 / 1000 | 0)  // Result: 1  </br>
+
+              </p>
+
+            <p class="card-text bg-primary">
+            <strong>Automatic Binding in Class</strong> </br>
+                We can use ES6 arrow notation in class methods, and by doing so binding is implied. This will often save several lines of code in our class constructor, and we can happily say goodbye to repetitive expressions such as this.myMethod = this.myMethod.bind(this) 
+            </p>
+
+            <p class="card-text bg-primary">
+                <strong>Truncate an Array</strong> </br>
+
+                let array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; </br>
+                array.length = 4;  </br>
+                console.log(array); // Result: [0, 1, 2, 3] </br>
+
+                let array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; </br>
+                array = array.slice(0, 4); </br>
+                console.log(array); // Result: [0, 1, 2, 3] </br>
+            </p>
+
+            <p class="card-text bg-primary">
+                <strong>Last items from an array</strong> </br>
+                let array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; </br>
+                console.log(array.slice(-1)); // Result: [9] </br>
+                console.log(array.slice(-2)); // Result: [8, 9] </br>
+                console.log(array.slice(-3)); // Result: [7, 8, 9]
+            </p>
+
+            <p class="card-text bg-primary">
+                The stringify() method takes two optional parameters: a replacer function, which you can use to filter the JSON that is displayed, and a space value. </br>
+
+                The space value takes an integer for the number of spaces you want or a string (such as '\t' to insert tabs), and it can make it a lot easier to read fetched JSON data. </br>
+
+                console.log(JSON.stringify({ alpha: 'A', beta: 'B' }, null, '\t')); </br>
+                // Result: </br>
+                // '{ </br>
+                //     "alpha": A, </br>
+                //     "beta": </br>
+            </p>
+
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse3" data-parent="#accordion" data-toggle="collapse">
+              Write Better JS
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse3" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Better Programming in JS</h4>
+
+            <img class="card-img img-fluid" src="img/betterProgrammingexamplesJS.png" alt="Write Better JS example 1" />
+
+            <p class="card-text-success">
+              <strong>ESLint</strong> is a tool for static code analysis. It
+              is the most important tool that allows us to find potential
+              issues within the codebase and ensure high quality of the
+              codebase. The best part is that linting is a fully automated
+              process and can be used to prevent the low-quality code from
+              making its way into the codebase.
+            </p>
+
+            <a href="https://eslint.org/">ES-Lint</a>
+
+            <p class="card-text-info">
+              <strong>ES-Lint</strong> Configuration
+            </p>
+            <p class="card-text-info">
+              ESLint rules into your project one-by-one as well. Configure
+              them initially as warn, and once you’re comfortable, you can
+              convert some of the rules into error.
+            </p>
+            <p class="card-text-info">
+              In the root directory of your project run:
+            </p>
+            <p class="card-text bg-primary">
+              npm i -D eslint npm i -D eslint-plugin-fp
+            </p>
+
+            <p class="card-text">
+              Then create a .eslintrc.yml file within the root directory of
+              your project:
+            </p>
+            <p class="card-text bg-info">
+              env: es6: true plugins: fp rules: # rules will go in here
+            </p>
+
+            <p class="card-text">
+              You can also run ESLint manually from the command line: npx
+              eslint .
+            </p>
+
+            <p class="card-text bg-warning">
+              rules: max-lines: - warn - 200 (sets the max lines to 200 for
+              files)
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse4" data-parent="#accordion" data-toggle="collapse">
+              advanced console commands
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse4" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">advanced console commands</h4>
+
+            <p class="card-text bg-info">console.log({ foo, bar });</p>
+            <p class="card-text>(to console.log() multiple objects for testing/debugging) </p>
+              <p class=" card-text bg-info">console.warn() & console.error()</p>
+
+            <p class="card-text bg-info">console.group() can be used when grouping or nesting together relevant details
+              to enable you to read the logs easily</p>
+
+            <img class="card-img img-fluid" src="img/consoleLog.png" alt="Advanced console log commands" />
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse5" data-parent="#accordion" data-toggle="collapse">
+              this
+
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse5" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">
+              Why 'this' is so powerful
+            </h4>
+
+            <p class="card-text bg-primary">
+              “this” is a keyword used in JavaScript that has a special meaning depending on the context it’s being used
+            </p>
+
+            <p class="card-text">
+              Context is always the value of the this keyword which is a reference to the object that “owns” the
+              currently executing code.
+            </p>
+
+            <p class="card-text bg-primary">Functions that sit in the global context (not as a method on an object) will
+              point the ‘this’ keyword back to the Window object.</p>
+
+            <p class="card-text bg-primary">When “this” is inside an object, it refers to the object itself (returns the
+              object itself)
+            </p>
+
+            <p class="card-text bg-primary">Anytime you have an object nested inside another object, and then ‘this’
+              points to the object on which the method is defined.</p>
+
+            <p class="card-text bg-primary">this on Arrow functions returns window object(or global context). An arrow
+              function expression has a shorter syntax than a function expression and does not have its own this,
+              arguments, super, or new.target. These function expressions are best suited for non-method functions, and
+              they cannot be used as constructors</p>
+
+            <img class="card-img img-fluid mb-5" src="img/arrowFunctionThis.png" alt="this with Arrow functions" />
+
+            <p class="card-text bg-primary">However, if a function is executed in strict mode, ‘this’ will return
+              undefined because strict mode does not allow default binding.</p>
+
+            <img class="card-img img-fluid" src="img/strictModeThis.png" alt="this with strict-mode">
+
+            <p class="card-text-info">
+              if you want to use ‘this’ in strict mode, ‘this’ must be defined by the execution context because ‘this’
+              is not automatically attached to any object (not even the Window object).
+            </p>
+
+            <p class="card-text bg-primary">When ‘this’ is called from a function declared outside of an object</p>
+
+            <img src="img/thisFunctionAssignment.png" alt="function assignment with this" class="card-img img-fluid">
+
+            <p class="card-text">In this context, the function chase() returns undefined because when run in the global
+              context, ‘this’ points to the window object by default and does not have the properties (‘breed’ or
+              ‘lovesToChase’) defined on that object.</p>
+
+            <p class="card-text">A constructor function allows us to define an object (like Number or String, except it
+              has its own special properties and methods).</p>
+
+            <p class="card-text bg-primary">It’s important to note that ‘this’ does not have a value while in the
+              constructor function.</p>
+
+            <img src="img/thisDog.png" alt="more this functions" class="card-img img-fluid">
+
+            <img src="img/thisFunctions.png" alt="more detailed this in Functions" class="card-img img-fluid mb-5">
+
+            <img src="img/arrowFunctionThis.png" alt="this in arrow functions" class="card-img img-fluid mb-5">
+
+            <img src="img/thisEventListeners.png" alt="this with Event Listeners" class="card-img-bottom img-fluid">
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse6" data-parent="#accordion" data-toggle="collapse">
+              array.slice()
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse6" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">
+            </h4>
+
+            <p class="card-text bg-primary">
+              The slice method provides a mechanism for creating a shallow copy of a subset of a list, without modifying
+              the original list. Thus it provides a key building block for writing functional JavaScript.
+            </p>
+
+            <p class="card-text bg-warning">The slice method is not to be confused with the splice method, which
+              modifies an array in place</p>
+
+            <ul class="list-group">
+              <p class="list-group-header">And with the rise of React and other functionally oriented JavaScript
+                practices, it is becoming even more important, for 2 key reasons:</p>
+              <li class="list-group-item list-group-item-success">
+                Functional programming, particularly higher level functions, works heavily with lists of data.
+              </li>
+              <li class="list-group-item list-group-item-success">
+                Functional programming requires pure functions, functions that do not cause side effects or modify their
+                input data.
+              </li>
+
+            </ul>
+
+            <p class="card-text bg-primary mt-3">
+              arr.slice([begin[, end]]);
+
+            </p>
+
+            <p class="card-text bg-info"> The slice method creates a copy of the array starting at begin up to but not
+              including end.</p>
+
+            <p class="card-text bg-info">It also accepts negative indices, which indicate counts back from the end of
+              the array.</p>
+
+            <img src="img/arraySlice.png" alt="array slice example 1" class="card-img img-fluid">
+
+            <p class="card-text bg-primary mt-3">Another huge area of use for slice is to manipulate arrays in a
+              functional/pure way, without modifying the original array.</p>
+
+            <p class="card-text">A powerful and common use of slice in a functional context is to replace the value of a
+              particular item in an array.
+              Imperatively this is simple, you just assign the new value, but in a functional world you can’t modify the
+              original array.</p>
+
+            <img src="img/arraySlice2.png" alt="Array slice example 2" class="car-img-bottom img-fluid">
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse7" data-parent="#accordion" data-toggle="collapse">
+              Async JS
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse7" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">
+              Async JS
+            </h4>
+
+            <img src="img/jQueryAsync.png" alt="JQuery Async example" class="car-img img-fluid">
+
+            <p class="card-text">JavaScript is a single-threaded programming language which means only one thing can
+              happen at a time. That is, the JavaScript engine can only process one statement at a time in a single
+              thread.</p>
+            <p class="card-text bg-warning">While the single-threaded languages simplify writing code because you don’t
+              have to worry about the concurrency issues, this also means you can’t perform long operations such as
+              network access without blocking the main thread.</p>
+
+            <p class="card-text bg-primary">Using asynchronous JavaScript (such as callbacks, promises, and
+              async/await), you can perform long network requests without blocking the main thread.</p>
+
+            <p class="card-text-primary">
+              If giving the restaurant your number is like giving them a <strong>callback function,</strong> receiving
+              the little buzzy thing is like receiving what’s called a <srong>“Promise”</srong>
+            </p>
+
+            <p class="card-text">
+              <strong>Promise</strong> can be in one of three states, pending, fulfilled or rejected... they represent
+              the status of an asynchronous request.
+            </p>
+
+            <p class="card-text">
+              When you create a new Promise, you’re really just creating a plain old JavaScript object. This object can
+              invoke two methods, then, and catch. Here’s the key. When the status of the promise changes to fulfilled,
+              the function that was passed to .then will get invoked. When the status of a promise changes to rejected,
+              the function that was passed to .catch will be invoked. What this means is that once you create a promise,
+              you’ll pass the function you want to run if the async request is successful to .then. You’ll pass the
+              function you want to run if the async request fails to .catch.
+            </p>
+
+            <img src="img/multiplePromise.png" alt="Promises Example" class="card-img img-fluid">
+
+            <p class="card-text"><strong>Chaining</strong> Both .then and .catch will return a new promise. That seems
+              like a small detail but it’s important because it means that promises can be chained.</p>
+
+            <img src="img/promiseChaining.png" alt="Example of Promise Chaining" class="card-img img-fluid">
+
+            <p class="card-text">thread the data (users) from the first async request all the way through to the last
+              .then.</p>
+
+            <img src="img/callbackVSpromise.png" alt="callbacks vs. promises" class="card-img img-fluid mb-3">
+
+            <p class="card-text bg-primary">
+              <strong>Async / Await</strong> anytime you add async to a function, that function is going to implicitly
+              return a promise.
+            </p>
+
+            <p class="card-text bg-primary">Async is nothing more than syntactic sugar for promises</p>
+
+            <p class="card-text bg-primary">
+              When you add async to a function it does two things. It makes it so the function itself returns (or wraps
+              what gets returned in) a promise and makes it so you can use await inside of it.
+            </p>
+
+            <p class="card-text bg-warning">With Async/Await... catch errors by wrapping in try / catch blocks
+              generally.</p>
+
+            <img src="img/asyncAwait.png" alt="Async and Await modern JS example" class="card-img img-fluid mb-5">
+
+            <img src="img/asyncAxios.png" alt="Async and Await with Axios" class="card-img img-fluid mb-5">
+
+            <p class="card-text">a data structure which maps an event to a particular method. This data structure is the
+              <strong>Event Table.</strong> But this event table only maps the method to an event and does not invoke
+              the method itself. The event table instead sends the method to the <strong>Event Queue</strong>, and as
+              the name suggests, it is a queue of methods to be executed in the correct order/sequence.</p>
+            <p class="card-text">The event loop is basically an endless loop, which keeps on checking whether there is
+              something to be executed in the call stack. If the call stack is empty it checks the <strong>Event
+                Queue,</strong> whether there is something to move to the call stack. If there is a method present, it
+              moves it to the call stack and the method gets executed.</p>
+
+            <img src="img/asyncEventQue2.png" alt="Async Event-Que" class="card-img img-fluid">
+
+            <img src="img/asyncEventQue.png" alt="Async Event-Que 2" class="card-img img-fluid mb-5">
+
+            <p class="card-text bg-primary"><strong>the event loop</strong> is a process that runs endlessly and whose
+              only job is to monitor and transfer methods to the call stack from the event queue.</p>
+
+            <img src="img/asyncEventLoop.png" alt="async Event Loop example" class="card-img img-fluid mb-5">
+
+            <p class="card-text">Async event-loop with <strong>Promises</strong></p>
+
+            <img src="img/asyncPromise.png" alt="async Event Loop example with Promise" class="card-img img-fluid">
+
+            <img src="img/asyncIteration.png" alt="asynchronous async" class="card-img img-fluid">
+
+            <img src="img/promisesfinally.png" alt="promise finally example" class="card-img img-fluid mt-5">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse8" data-parent="#accordion" data-toggle="collapse">
+              Imperative vs. declarative programming
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse8" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">
+              What’s the difference between imperative and declarative
+              programming?
+            </h4>
+
+            <p class="card-text-info">
+              We can also think about the difference between OOP and FP in
+              terms of the difference between “imperative” and “declarative”
+              programming.
+            </p>
+            <p class="card-text-primary">
+              FP is an example of declarative programming, while OOP is an
+              example of imperative programming.
+            </p>
+            <p class="card-text-info">
+              In a basic sense, imperative programming is concerned with how
+              you do something. It spells out the steps in the most essential
+              way, and is characterised by for and while loops, if and switch
+              statements, and so on.
+            </p>
+
+            <p class="card-text-info">
+              By contrast, declarative programming is concerned with what to
+              do, and it abstracts away the how by relying on expressions.
+              This often results in more concise code, but at scale, it can
+              become more difficult to debug because it’s that much less
+              transparent. Here’s a declarative approach to our sumArray()
+              function, above.
+            </p>
+
+            <img class="card-img img-fluid mb-5" src="img/imperativeDeclarative.png"
+              alt="Imperative and Declarative programming JS" />
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse9" data-parent="#accordion" data-toggle="collapse">
+              Prototype-Based Inheritance
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse9" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">What is Prototype-Based Inheritance?</h4>
+
+            <p class="card-text-primary">
+              There are several different styles of Object-Oriented
+              Programming, and the one JavaScript uses is Prototype-Based
+              Inheritance. The system allows for repeated behaviour via the
+              use of existing objects that serve as “prototypes”.
+            </p>
+
+            <p class="card-text-info">
+              Even if the idea of prototypes is new to you, you will have
+              encountered the prototype system by using in-built methods. For
+              example, functions used to manipulate arrays such as map ,
+              reduce , splice and so on are all methods of the Array.prototype
+              object. In fact, every instance of an array (defined using
+              square brackets [], or — more unusually — using new Array())
+              inherits from Array.prototype , which is why methods like map ,
+              reduce and spliceare available by default.
+            </p>
+
+            <p class="card-text-info">
+              The same is true of virtually every other built-in object, such
+              as strings and booleans: only a few, such as Infinity , NaN ,
+              null and undefined have no properties or methods. At the end of
+              the prototype chain we find Object.prototype , and almost every
+              object in JavaScript is an instance of Object.prototype :
+              Array.prototype and String.prototype , for example, both inherit
+              properties and methods from Object.prototype . To add properties
+              and methods to an object using prototype syntax, you can simply
+              initiate the object as a function, and use the prototype keyword
+              to add properties and methods:
+            </p>
+
+            <img class="card-img img-fluid mb-5" src="img/prototypes.png" alt="Prototypes in JS" />
+
+            <h5>Should I Override or Extend the Behaviour of Prototypes?</h5>
+
+            <p class="card-text-info">
+              It’s possible to change the behaviour of built-in prototypes in
+              exactly the same way that we can create and extend our own
+              prototypes, but most developers (and most companies) would
+              advise against this. If you want several objects to share the
+              same behaviour, you can always create a custom object (or define
+              your own ‘class’ or ‘subclass’) that inherits from a built-in
+              prototype without making any changes to the prototype itself. If
+              you’re going to be working with other developers, they’ll have
+              certain expectations about JavaScript’s default behaviour, and
+              editing this default behaviour can easily lead to errors. It’s
+              worth noting, however, that not everyone shares this strong
+              opposition to extending built-in prototypes. See, for example,
+              this article from Brendan Eich, the creator of JavaScript. In
+              this article (from 2005), Eich suggested that the prototype
+              system in fact was built — in part — to make extensions
+              possible!
+            </p>
+
+            <img src="img/prototypeExample.png" alt="example of prototype" class="card-img-bottom img-fluid">
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse10" data-parent="#accordion" data-toggle="collapse">
+              Generator
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse10" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Generator</h4>
+
+
+
+            <img class="card-img-top img-fluid" src="img/generator.png" alt="Generator in JS" />
+
+            <img class="card-img-top img-fluid" src="img/generator2.png" alt="Generator in JS 2" />
+            <img class="card-img-top img-fluid" src="img/generator3.png" alt="Generator in JS 3" />
+            <img class="card-img-top img-fluid" src="img/generator4.png" alt="Generator in JS 4" />
+
+            <img class="card-img-top img-fluid" src="img/generator5.png" alt="Generator in JS 5" />
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+          <div class="card-header">
+            <h5>
+              <a href="#collapse11" data-parent="#accordion" data-toggle="collapse">
+                MVC using ES6 Modules
+              </a>
+            </h5>
+          </div>
+  
+          <div id="collapse11" class="collapse">
+            <div class="card-body bg-secondary">
+
+              <h4 class="card-title">MVC using ES6 Modules</h4>
+              
+              <p class="card-text bg-primary">Model</p>
+
+              <p class="card-text">search.js</p>
+
+              <p class="card-text mb-5">Recipe.js</p>
+
+              <p class="card-text bg-primary">Controller</p>
+  
+              <p class="card-text mb-5">ES6 index.js</p>
+
+              <p class="card-text bg-primary">View</p>
+
+              <p class="card-text">searchView.js</p>
+
+              <p class="card-text mb-5">recipeView.js</p>
+
+
+              <h4 class="card-title">ES Modules</h4>
+
+              <p class="card-text bg-primary">capitalize js Module</p>
+
+              <p class="card-text">export default '   ';</p>
+
+              <p class="card-text bg-info">... then in index.js ... import string from ' ./models/search'</p>
+
+              <p class="card-text">import * as searchView from './views/searchView';  (imports an entire JS file)</p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+              <h5>
+                <a href="#collapse12" data-parent="#accordion" data-toggle="collapse">
+                  local storage API
+                </a>
+              </h5>
+            </div>
+    
+            <div id="collapse12" class="collapse">
+              <div class="card-body bg-secondary">
+  
+                <h4 class="card-title">local storage API</h4>
+                
+                <p class="card-text bg-primary">Web Storage API in console</p>
+  
+                <p class="card-text">saves k.v.p. in browser</p>
+
+                <p class="card-text">localStorage.setItem()</p>
+
+
+                <p class="card-text">localStorage.setItem('likes', JSON.stringify(this.likes));</p>
+  
+                <p class="card-text bg-warning">can only save strings in local storage</p>
+
+                <p class="card-text mb-5">const storage = JSON.parse(localStoragegetItem('key');</p>
+
+  
+              </div>
+            </div>
+          </div>
+
+
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
