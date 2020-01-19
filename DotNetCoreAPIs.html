@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="notes.css">
+  <title>Entity Framework Core</title>
+</head>
+
+<body class="bg-dark text-light">
+  <header>
+    <h1 class="display-2 text-center my-4">Entity Framework Core</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-primary btn-block dropdown-toggle" type="button" data-toggle="dropdown">
+              Computer Sci.
+            </button>
+            <div class="dropdown-menu">
+
+              <a class="dropdown-item" href="DotNetDesignPatterns.html" class="dropdown-item">Design
+                Patterns</a>
+              <a class="dropdown-item" href="studyDesignPatterns.html" class="dropdown-item">Quick Study
+              </a>
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-success btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              C#
+            </button>
+            <div class="dropdown-menu">
+                            <a href="dotNetFundamentals.html" class="dropdown-item">.Net fundamentals</a>
+                            <a href="advancedCsharp.html" class="dropdown-item">Advanced c# topics</a>
+                            <a class="dropdown-item" href="mvc.html" class="dropdown-item">ASP.net</a>
+                            <a href="interviewcSharp.html" class="dropdown-item">C# Interview Topics</a>     
+                            <a href="cSharpStudy.html" class="dropdown-item">C# quick-study</a> 
+                            <a href="EFC.html" class="dropdown-item">Entity Framework Core</a>  
+                            <a href="DotNetCoreAPIs.html" class="dropdown-item">DotNetCore APIs</a>       
+                            <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-danger btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              JS
+            </button>
+            <div class="dropdown-menu">
+              <a href="JSfundamentals.html" class="dropdown-item">JS Fundamentals</a>
+              <a href="advancedJStopics.html" class="dropdown-item">Advanced JS Topics</a>
+              <a href="objectOrientedJS.html" class="dropdown-item">Object Oriented in JS</a>              
+              <a href="interviewJS.html" class="dropdown-item">JS Interview Related</a>
+              <a href="jsDatastructures.html" class="dropdown-item">JS Data Structures</a>
+              <a href="strangeJS.html" class="dropdown-item">strange JS</a>
+              <a href="JSframeworks.html" class="dropdown-item">JS Frameworks</a>
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-success btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              Salesforce
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-warning btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              WebDevelopment
+            </button>
+            <div class="dropdown-menu">
+                <a href="angular.html" class="dropdown-item">Angular</a>
+                <a href="webpack.html" class="dropdown-item">Webpack</a>
+              <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown">
+            <button class="btn btn-primary btn-block dropdown-toggle" type="buton" data-toggle="dropdown">
+              Interview Prep
+            </button>
+            <div class="dropdown-menu">
+                <a href="interviewJS.html" class="dropdown-item">JS interview prep</a>
+                <a href="interviewcSharp.html" class="dropdown-item">c# interview prep</a>
+                <a href="sqlInterviewPrep.html" class="dropdown-item">SQL interview prep</a>
+                <a href="index.html" class="dropdown-item">Notes Home</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <button class="btn btn-primary d-block mt-25" style="margin-top: 25px" data-toggle="collapse"
+      data-target="#collapse-btn-1">API links</button>
+
+    <div class="collapse my-25" id="collapse-btn-1">
+      <div class="card">
+        <div class="card-body">
+          <ul class="list-group">
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="accordion" style="margin-top: 10px">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse1" data-parent="#accordion" data-toggle="collapse">
+              REST
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse1" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">REST</h4>
+
+            <p class="card-text bg-primary">REST is architectural style, not standard</p>
+            <p class="card-text bg-primary">REST is protocol agnostic</p>
+            <p class="card-text">JSON isn't rest, HTTPs isn't even REST</p>
+
+
+            <p class="card-text bg-primary">CLIENT changes STATE depending upon the representation of the resource you're accessing (from the Server or otherwise)</p>
+            <p class="card-text mb-5">and that is REST (Representational State Transfer)</p>
+
+            <ul class="list-group">
+                <p class="list-group-item-header">REST is defined by 6 Constraints (constraints can have positive and negative impacts)</p>
+                <li class="list-group-item list-group-item-success">1) Uniform Interface --- API and consumers share one single, technical interface: URI, Method (HTTP requests), Media Type (payload aka JSON etc..)</li>
+  
+                <li class="list-group-item list-group-item-success">2) Client-Server --- client and server are separated (can evolve separately) = server shouldn't be concerned with User-Interface or HOW the client is implemented (we can design our API without any clue of what the client is). </li>
+                <li class="list-group-item list-group-item-success">3) Stateless --- state is contained within the request itself (STATE is kept on the client ... not on the server)</li>
+                <li class="list-group-item list-group-item-success">4) Layered System --- client cannot tell what layer it's connected to (no layer can access a layer it isn't connected to (next)) - reduces overall complexity</li>
+                <li class="list-group-item list-group-item-success">5) Cacheable --- each response message must explicitly state whether it can be cached or not (HTTP cache (holy grail of cacheing)</li>
+                <li class="list-group-item list-group-item-success">6) Code on Demand --- (optional) - server can extend client functionality (if client is web app...server can transfer JS code to the client to extend its functionality.</li>
+              </ul>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse2" data-parent="#accordion" data-toggle="collapse">
+              Structuring Outer Facing Contract
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse2" class="collapse">
+          <div class="card-body bg-secondary">
+
+
+            <p class="card-text bg-primary mb-5">Resource identifiers (the URI where the resources can be found)</p>
+            <p class="card-text">each resource has its own URI</p>
+            <p class="card-text">Nouns: things, not actions (actions are meant for the HTTP methods)</p>
+            <p class="card-text">helps with predictibility</p>
+            <p class="card-text">represent hierachy when naming resources - api/authors/{authorId}/books</p>
+            <p class="card-text">filters, sorting orders...aren't resources (should be done via Query string) -api/authors?orderBy=name</p>
+            <p class="card-text mb-5">api/authors/{authorId}/totalamountofpages</p>
+
+         
+
+            <p class="card-text bg-primary mb-5">HTTP method (POST, PUT, GET)</p>
+
+            <p class="card-text bg-primary mb-5">Payload (representation: media types (application JSON))</p>
+
+            <ul class="list-group">
+                <p class="list-group-item-header">Impelementing Outer Facing Contract</p>
+                <li class="list-group-item list-group-item-success">1) Create a controller </li>
+  
+                <li class="list-group-item list-group-item-success">2) Inject a Repository</li>
+                <li class="list-group-item list-group-item-success">3) create Action methods</li>
+                <li class="list-group-item list-group-item-success">4) Return results</li>
+              
+            
+              </ul>
+        
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse3" data-parent="#accordion" data-toggle="collapse">
+              Endpoint Routing
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse3" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Endpoint Routing</h4>
+
+            <p class="card-text bg-primary mb-5">Routing matches a request URI to an action on the controller</p>
+            <p class="card-text bg-primary">2 Middleware need injected:</p>
+            <p class="card-text">app.useRouting() - marks the position in the middleware pipeline where a routing decision is made</p>
+
+            <p class="card-text">app.UseAuthorization()</p>
+            <p class="card-text mb-5">app.UseEndpoints() - marks the position in the middleware pipeline where the selected endpoint is executed</p>
+
+            <p class="card-text bg-primary">Convention-based Routing (typically used for Web Applications)</p>
+
+            <p class="card-text mb-5">app.UseEndpoints(endpoints => { endpoints.MapControllerRoute(name: "default", pattern: "{controller=home}/{action=Index}/{id?}"; endpoints.MapRazorPages()});</p>
+
+            <p class="card-text bg-primary">Attribute-based Routing (typically used for APIs)</p>
+
+            <p class="card-text">app.useEndpoints(endpoints => { endpoints.MapControllers();});</p>
+            <p class="card-text">No conventions are applied ... so use attributes.  Use attributes at controller and action level: [Route], [HttpGet]...</p>
+            <p class="card-text"><strong>Http Cache</strong> Relies on correct use of Http methods</p>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse4" data-parent="#accordion" data-toggle="collapse">
+                Status Codes
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse4" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Importance of Status Codes</h4>
+
+            <p class="card-text bg-primary mb-5">Status codes should describe the results of the Resource OUTER FACING layer of the API (not concerned with levels lower than it)</p>
+
+            <p class="card-text bg-primary">5 levels:</p>
+
+            <ul class="list-group bg-dark">
+
+              <li class="list-group-item list-group-item-info">
+                 1) Level 100 not used by APIs
+                  </li>
+              <li class="list-group-item list-group-item-info">2) Level 200 - success level 201 success creation of resource and Level 204 - Success No Content</li>
+              <li class="list-group-item list-group-item-info">3) level 400 Client Mistakes</li>
+              <li class="list-group-item list-group-item-info">3) level 400 - Bad Request</li>
+              <li class="list-group-item list-group-item-info">3) level 401 - Unathorized</li>
+                <li class="list-group-item list-group-item-info">3) level 403 - Authorization succeeded but not authorized</li>
+                <li class="list-group-item list-group-item-info">3) level 404 - Not Found</li>
+                <li class="list-group-item list-group-item-info">3) Level 405 - Method Not Allowed (Post when only Get is implemented)</li>
+                <li class="list-group-item list-group-item-info">3) Level 406 - Not acceptable (consumer requested a presentation not supported by the API)...requesting XML while API only returns JSON</li>
+                <li class="list-group-item list-group-item-info">3) level 409 - Conflict with the request (trying to create a resource that already exists ... Concurrency issues)</li>
+                <li class="list-group-item list-group-item-info">3) Level 415 - Unsupported media type</li>
+                <li class="list-group-item list-group-item-info">3) level 422 - Unprocessable entity (server understands the request so 415 not appropriate) - semantic mistakes ... (validation rules)</li>
+                <li class="list-group-item list-group-item-info">4) level 500 - server mistakes</li>
+                <li class="list-group-item list-group-item-info">4) level 500 - Internal Server error</li>
+             
+            </ul>
+
+            <p class="card-text bg-primary mb-5"><strong>Errors</strong> = Consumer passes invalid data to the API and the API correctly rejects it (level 400 codes).  Do not contribute to API availability</p>
+
+            <p class="card-text bg-primary mb-5"><strong>Faults</strong> = API fails to return a response to a valid request made by the consumer (level 500 status codes).  DO contribute to the overall API availability</p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse5" data-parent="#accordion" data-toggle="collapse">
+              Below Outer Facing Model
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse5" class="collapse">
+          <div class="card-body bg-secondary">          
+            <h4 class="card-title">Below Outer Facing Model</h4>
+
+            <p class="card-text bg-primary mb-5">Entity Model represents database rows as Objects
+            </p>
+
+            <p class="card-text bg-primary mb-5">Whenever mapping fields from one class to another ... try using Automapper (better to use AutoMapper.Extensions.Microsoft.DependencyInjection)</p>
+
+            <p class="card-text">need to Configure Services in Startup.cs for it --- services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());</p>
+
+
+            <p class="card-text bg-primary"><strong>Handling Faults</strong></p>
+
+            <p class="card-text">try catches aren't expensive on their own...but once an exception IS THROWN ... it becomes detriment to performance.</p>
+
+            <p class="card-text">check Configure method in Startup.cs</p>
+
+            <p class="card-text bg-primary">handling HEAD</p>
+
+            <p class="card-text bg-info">HEAD is identical to GET, with the notable difference that the API shouldn't return a response Body (can be used to obtain info on the response...whether the resource is still valid, accessible at all etc...)</p>
+
+            <p class="card-text bg-info">can just do the following (on same method)</p>
+
+            <p class="card-text">[HttpGet()]</p>
+            <p class="card-text">[HttpHead]</p>
+
+    
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse6" data-parent="#accordion" data-toggle="collapse">
+                Passing Data to the API
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse6" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Passing Data to the API</h4>
+
+
+            <p class="card-text bg-primary">via request body
+            </p>
+            <p class="card-text bg-primary">via url query strings
+            </p>
+
+            <p class="card-text">by default ASP.NET Core attempts to use the complex object model binder</p>
+
+            <p class="card-text bg-primary mb-5">Filtering --- allows you to be precise by adding filters until you get exactly the results you want</p>
+
+            <p class="card-text bg-primary mb-5">Searching --- allows you to go wider ... you don't know exactly which items will be in the collection</p>
+
+            <p class="card-text bg-info">Filtering and Search options are not part of the resource ... only allow filtering on fields that are part of the resource.</p>
+
+            <p class="card-text bg-success mb-5">var collection = _context.Authors as IQueryable(Author);  (turn a table into a Queryable collection)</p>
+
+            <p class="card-text bg-primary"><strong>Deferred Execution</strong></p>
+
+            <p class="card-text">Query execution occurs sometime after the query is constructed</p>
+
+            <p class="card-text bg-info">A query variable stores query commands, not results</p>
+            <p class="card-text">IQueryable(T) creates an expression tree</p>
+            <p class="card-text">Execution is deferred until the query is iterated over</p>
+            <p class="card-text">foreach loop</p>
+            <p class="card-text">ToList(), ToArray(), ToDictionary(); Singleton queries (First, Last, etc...)</p>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse7" data-parent="#accordion" data-toggle="collapse">
+              Method Safety and Method idempotency
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse7" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">Method Safety and Method idempotency</h4>
+
+
+            <p class="card-text bg-primary">a method is considered safe when it doesn't change the resource representation</p>
+
+            <p class="card-text bg-primary mb-5">a method is considered idempotent when it can be called multiple times with the same result</p>
+
+            <p class="card-text bg-success">GET = both</p>
+
+            <p class="card-text bg-success">Options and head = Both</p>
+
+            <p class="card-text bg-success">Post = neither of them
+            </p>
+
+            <p class="card-text bg-success">DELETE = not safe BUT it's idempotent</p>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse8" data-parent="#accordion" data-toggle="collapse">
+              Many to Many 
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse8" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title"></h4>
+
+            <p class="card-text bg-primary"></p>
+
+            <p class="card-text bg-primary"></p>
+
+            <p class="card-text"></p>
+
+
+            <p class="card-text bg-info">
+            </p>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse9" data-parent="#accordion" data-toggle="collapse">
+              Prototype-Based Inheritance
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse9" class="collapse">
+          <div class="card-body bg-secondary">
+            <h4 class="card-title">What is Prototype-Based Inheritance?</h4>
+
+            <ul class="list-group">
+                <p class="list-group-item-header">Nuget Packages needed:</p>
+                <li class="list-group-item list-group-item-info">Microsoft.EntityFrameworkCore
+                </li>
+                <li class="list-group-item list-group-item-info">Microsoft.EntityFrameworkCore.SqlServer</li>
+                <li class="list-group-item list-group-item-info">Microsoft.EntityFrameworkCore.Tools</li>
+              
+              </ul>
+
+
+            <p class="card-text bg-primary">Initial Migration</p>
+
+            <p class="card-text bg-info">Package manager console => Add-Migration InitialMigration (should create your folder an initial migration)</p>
+
+             
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse11" data-parent="#accordion" data-toggle="collapse">
+              Building in Development Mode Visual Studio 2019
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse11" class="collapse">
+          <div class="card-body bg-secondary">
+
+
+            <ul class="list-group">
+              <p class="list-group-item-header">Steps for building in Development Mode (will make everything pop up / log in a console window)</p>
+              <li class="list-group-item list-group-item-success">Properties => Launch to Project (from IIS)</li>
+
+              <li class="list-group-item list-group-item-success">Uncheck "Launch Browser" (makes everythign pop up in console window)</li>
+              <li class="list-group-item list-group-item-success">App URL: http://localhost:51044  (the URL all your Postman requests / tests will refer to)</li>
+            </ul>
+
+            
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+  </script>
+
+</body>
+
+</html>
