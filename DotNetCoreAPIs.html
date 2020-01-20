@@ -363,6 +363,10 @@
             <p class="card-text">foreach loop</p>
             <p class="card-text">ToList(), ToArray(), ToDictionary(); Singleton queries (First, Last, etc...)</p>
 
+            <p class="card-text bg-warning">Shouldn't allow POST with url containing the id ...  (Framework handles this for us returning a 405 method not found)</p>
+
+
+
 
           </div>
         </div>
@@ -395,6 +399,8 @@
 
             <p class="card-text bg-success">DELETE = not safe BUT it's idempotent</p>
 
+            <p class="card-text bg-primary">For a collection of Resources...just create a new Resource Type --> create a new Controller</p>
+
 
           </div>
         </div>
@@ -404,24 +410,76 @@
         <div class="card-header">
           <h5>
             <a href="#collapse8" data-parent="#accordion" data-toggle="collapse">
-              Many to Many 
+              Validation
             </a>
           </h5>
         </div>
 
         <div id="collapse8" class="collapse">
           <div class="card-body bg-secondary">
-            <h4 class="card-title"></h4>
+            <h4 class="card-title">Validation, Options, Updating Resources</h4>
 
-            <p class="card-text bg-primary"></p>
+            <p class="card-text bg-primary">Supporting Options</p>
 
-            <p class="card-text bg-primary"></p>
+            <p class="card-text">handles communication about how to speak to our API</p>
 
-            <p class="card-text"></p>
+            <p class="card-text bg-primary mb-5">[HttpOptions]</p>
+
+            <p class="card-text bg-primary">Validation</p>
 
 
-            <p class="card-text bg-info">
+            <p class="card-text bg-info">Validate input, not output (validate input with DataAnnotations)
             </p>
+
+            <p class="card-text bg-info">Class-level input-validation with IValidatableObject</p>
+
+            <p class="card-text bg-primary">Checking Validation Rules</p>
+            <p class="card-text">Built in ModelState is used</p>
+
+            <p class="card-text bg-primary">Reporting Validation errors</p>
+
+            <p class="card-text">Response status should be 422 (client level error)</p>
+
+            <p class="card-text bg-info mb-5">When a controller is annatated with ApiController attribute it will automatically return a 400 BadRequest on validation errors</p>
+
+            <p class="card-text bg-primary">Updating Resources</p>
+
+            <p class="card-text"><strong>PUT</strong> for full updates</p>
+
+            <p class="card-text">all resource fields are either overwritten or set to their default values</p>
+
+            <p class="card-text bg-primary"><strong>PATCH</strong> for partial updates</p>
+
+            <p class="card-text">allows sending over change sets via JsonPatchDocument</p>
+
+            <p class="card-text bg-primary mb-5"><strong>UPSERTING</strong> create a resource with PUT or PATCH</p>
+
+            <p class="card-text bg-primary"><strong>Updating Collection Resources</strong></p>
+
+            <p class="card-text bg-primary">Upserting</p>
+
+            <p class="card-text">PUT = ideompotent</p>
+
+            <p class="card-text bg-primary">Partially updating a Resource</p>
+
+            <p class="card-text bg-primary"><strong>Patch</strong></p>
+
+            <p class="card-text bg-info">(Http PATCH is for partial updates)</p>
+
+            <p class="card-text bg-info">preferred over PUT because of performance reasons</p>
+
+            <p class="card-text bg-info">return type for PATCH should be sent with media type "application/json-patch+json"</p>
+
+            <ul class="list-group">
+                <p class="list-group-item-header">6 possible JSON Patch Operations</p>
+                <li class="list-group-item list-group-item-info">Add { "op": "add", }</li>
+                <li class="list-group-item list-group-item-info">Remove { "op"; "remove" }</li>
+                <li class="list-group-item list-group-item-info">Replace { "op"; "replace" }</li>
+                <li class="list-group-item list-group-item-info">Copy { "op"; "copy" }</li>
+                <li class="list-group-item list-group-item-info">Move { "op": "move" }</li>
+                <li class="list-group-item list-group-item-info">Test { "op": "test" }</li>
+              
+              </ul>
 
 
           </div>
@@ -432,28 +490,42 @@
         <div class="card-header">
           <h5>
             <a href="#collapse9" data-parent="#accordion" data-toggle="collapse">
-              Prototype-Based Inheritance
+              Repository Pattern
             </a>
           </h5>
         </div>
 
         <div id="collapse9" class="collapse">
           <div class="card-body bg-secondary">
-            <h4 class="card-title">What is Prototype-Based Inheritance?</h4>
+            <h4 class="card-title">Repository Pattern</h4>
+
+            <p class="card-text bg-primary">an abstraction that reduces complexity and aims to make the code safe for the repository impelentation, persistance ignorant </p>
 
             <ul class="list-group">
-                <p class="list-group-item-header">Nuget Packages needed:</p>
-                <li class="list-group-item list-group-item-info">Microsoft.EntityFrameworkCore
-                </li>
-                <li class="list-group-item list-group-item-info">Microsoft.EntityFrameworkCore.SqlServer</li>
-                <li class="list-group-item list-group-item-info">Microsoft.EntityFrameworkCore.Tools</li>
+                <p class="list-group-item-header">Advantages:</p>
+                <li class="list-group-item list-group-item-info">Less Code duplication</li>
+                <li class="list-group-item list-group-item-info">less error-prone</li>
+                <li class="list-group-item list-group-item-info">Testing (if controller contains PERSISTANCE ...it's harder to pinpoint what may be going wrong)</li>
               
               </ul>
 
+              <p class="card-text bg-primary">Persistance ignorant</p>
 
-            <p class="card-text bg-primary">Initial Migration</p>
+              <p class="card-text">switching out the persistance technology is not the main purpose... Choosing the best one for each repository method is.</p>
 
-            <p class="card-text bg-info">Package manager console => Add-Migration InitialMigration (should create your folder an initial migration)</p>
+              <p class="card-text">we're working on a contract, not an implementation (in regards to having blank method body in repository)</p>
+
+              <p class="card-text">always have a set of methods matching the required functionality and call them, even if they don't do anything in the current implementation.</p>
+
+              <ul class="list-group">
+                <p class="list-group-item-header">Implementation:</p>
+                <li class="list-group-item list-group-item-success">RepositoryClass "LibraryRepository" inherits from IRepositoryClass</li>
+                <li class="list-group-item list-group-item-success">RepositoryClass accesses the dbContext via Dependency Injection to class constructor </li>
+                <li class="list-group-item list-group-item-success">IRepositoryClass outlines methods that RepositoryClass will implement (no access to dbContext in the IRepoClass)</li>
+                <li class="list-group-item list-group-item-success">Both the RepositoryClass and IRepositoryClass belong in Services folder</li>
+              
+              </ul>
+
 
              
           </div>
@@ -465,13 +537,13 @@
       <div class="card">
         <div class="card-header">
           <h5>
-            <a href="#collapse11" data-parent="#accordion" data-toggle="collapse">
+            <a href="#collapse10" data-parent="#accordion" data-toggle="collapse">
               Building in Development Mode Visual Studio 2019
             </a>
           </h5>
         </div>
 
-        <div id="collapse11" class="collapse">
+        <div id="collapse10" class="collapse">
           <div class="card-body bg-secondary">
 
 
@@ -483,6 +555,103 @@
               <li class="list-group-item list-group-item-success">App URL: http://localhost:51044  (the URL all your Postman requests / tests will refer to)</li>
             </ul>
 
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse11" data-parent="#accordion" data-toggle="collapse">
+              API project structure
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse11" class="collapse">
+          <div class="card-body bg-secondary">
+           
+            <p class="card-text bg-primary">Resource Parameters</p>
+            <p class="card-text bg-info">create class "AuthorsResourceParameters" inside separate folder</p>
+            <p class="card-text bg-info">this allows us to just pass this in as a method parameter inside controller </p>
+            <p class="card-text bg-info mb-5">Useful because ... IF we decide to add more parameters...we can just add the parameters in one spot (the class body)</p>
+
+            <p class="card-text bg-primary mb-5"><strong>Repository Pattern</strong> (see above)</p>
+
+            <p class="card-text bg-primary">Profiles (related to AutoMapper)</p>
+
+            <p class="card-text">Crate a Profiles folder and then a ClassProfile for each class you will be saving into database</p>
+
+            <p class="card-text">ClassProfile : Profile (using AutoMapper)</p>
+
+            <img src="img/BookProfile.PNG" alt="Book Profile mapping" class="card-img img-fluid my-5">
+            <img src="img/AuthorsProfile.PNG" alt="Author Profile mapping" class="card-img img-fluid my-5">
+
+            <p class="card-text bg-primary mb-5"><strong>Entities folder</strong> contains classes that will persist in data store</p>
+
+            <p class="card-text bg-primary mb-5"><strong>Model folder</strong> contains Dto classes (used for mapping and returning from our Controller methods so that we don't have to return entire Entity)</p>
+
+            <img src="img/BookDto.png" alt="Book Dto for mapping" class="card-img img-fluid my-5">
+
+
+            <ul class="list-group">
+                <p class="list-group-item-header">possible Nuget Packages:</p>
+
+                <li class="list-group-item list-group-item-success">AutoMapper.Extensions.Microsoft.DependencyInjection</li>
+                <li class="list-group-item list-group-item-success">Microsoft.AspNetCore.JsonPatch</li>
+                <li class="list-group-item list-group-item-success">Microsoft.AspnetCore.Mvc.NewtonsoftJson</li>
+                <li class="list-group-item list-group-item-success">Microsoft.EntityFrameworkCore</li>
+                <li class="list-group-item list-group-item-success">Microsoft.EntityFrameworkCore.SqlServer</li>
+                <li class="list-group-item list-group-item-success">Microsoft.EntityFrameworkCore.Tools</li>
+              </ul>
+
+              
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse12" data-parent="#accordion" data-toggle="collapse">
+              Summary
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse12" class="collapse">
+          <div class="card-body bg-secondary">
+           
+
+            <ul class="list-group">
+              <p class="list-group-item-header">All fields should be updated as the Result of a put request</p>
+              <li class="list-group-item list-group-item-success">fields not passed ... should be sets to default values</li>
+
+              <li class="list-group-item list-group-item-success">200 for OK or 204 for No Content</li>
+              <li class="list-group-item list-group-item-success">Not safe BUT idempotent</li>
+            </ul>
+
+            <ul class="list-group">
+                <p class="list-group-item-header">PATCH for partial updates</p>
+                <li class="list-group-item list-group-item-success">JSON Patch standard</li>
+  
+                <li class="list-group-item list-group-item-success">validate the patched DTO</li>
+                <li class="list-group-item list-group-item-success">200 for OK or 204 for No Content</li>
+                <li class="list-group-item list-group-item-success">Not Safe</li>
+                <li class="list-group-item list-group-item-success">Not Idempotent</li>
+              </ul>
+
+              <p class="card-text bg-primary mb-5">validation: to minimize code duplication ... we can work with abstract base classes and mark common properties with virtual to allow for their own implementation</p>
+
+              <p class="card-text bg-info">HATEOAS (tells User what they can do with our API)</p>
+
+              <p class="card-text bg-info">Advanced content negotation</p>
+
+              <p class="card-text bg-info">Caching and concurrency</p>
+
+              <p class="card-text bg-info">Paging, sorting, data shaping</p>
             
           </div>
         </div>
