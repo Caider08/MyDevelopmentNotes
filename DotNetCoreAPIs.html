@@ -114,6 +114,18 @@
         <div class="card-body">
           <ul class="list-group">
 
+            <a class="list-group-item list-group-item-dark" target="_blank"
+              href="https://medium.com/asos-techblog/maximising-net-core-api-performance-11ad883436c">DotNET core Api Performance</a>
+
+              <a class="list-group-item list-group-item-dark" target="_blank"
+              href="https://github.com/benaadams/Ben.BlockingDetector">Blocking Detector</a>
+
+              <a class="list-group-item list-group-item-dark" target="_blank"
+              href="https://github.com/App-vNext/Polly">Cancelling redundant tasks</a>
+
+              <a href="https://github.com/KevinDockx/HttpCacheHeaders" target="_blank" class="list-group-item list-group-item-dark">Marvin.Cache.Headers</a>
+
+              	
 
           </ul>
         </div>
@@ -616,7 +628,7 @@
         <div class="card-header">
           <h5>
             <a href="#collapse12" data-parent="#accordion" data-toggle="collapse">
-              Summary
+              Paging
             </a>
           </h5>
         </div>
@@ -624,6 +636,310 @@
         <div id="collapse12" class="collapse">
           <div class="card-body bg-secondary">
            
+            <p class="card-text bg-primary">cacheable Constraint = Each response message must explicitly state if it can be cached or not</p>
+
+            <p class="card-text bg-primary">considered best-practice to implement paging on each collection ... or at least on those Resources that can also be created?  Parameters for paging passed through via the query string.  Users should be able to specify the page # and page size ( page size should be limited).  IF no parameters ...just return the first page by default.  PAGING should go all the way through to the data store ... IE don't wait to Page the data in the controller .... do it in database</p>
+
+            <p class="card-text bg-info mb-5">Deferred Execution helps with this = Query variable itself never holds the query results themselves ... Query execution occurs sometime after the query is constructed  (use IQueryable<T>).    Should see OFFSET in API result in console window or something blah blah which demonstrates that paging is @ work</p>
+                   
+
+            <img src="img/queryingPaginationRepositoryMethod.PNG" alt="QueryingPagination Repository method" class="card-img img-fluid my-5">
+
+            <p class="card-text bg-primary">Returning MetaData = think about returning links to the previous and next pages ... can include additional information (total count, amount of pages, etc...)</p>
+            
+            <p class="card-text bg-info">Use a custom header, like X-Pagination on the reponse</p>
+            
+            <p class="card-text bg-info">for returning pagination collections = created a Custom PagedList<T> class</T></p>
+
+            <img src="img/iPropertyMappingService.PNG" alt="IpropertyMappingService" class="card-img img-fluid mt-5"></img>
+
+            <img src="img/propertyMappingService.PNG" alt="Property Mapping Service" class="card-img img-fluid mt-5">
+
+            <img src="img/propertyMappingService2.PNG" alt="QueryingPagination Repository method" class="card-img img-fluid mb-5">
+
+            <p class="card-text bg-info">Allowing sorting on resource fields, not on fields that lie beneath that layer</p>
+
+            <p class="card-text bg-info">Return the OrderBy clause as query string in pagination links</p>
+
+
+            <img src="img/apiIQueryableExtensions.PNG" alt="IQueryableExtensions" class="card-img img-fluid mt-5">
+
+            <img src="img/apiIQueryableExtensions2.PNG" alt="IQueryableExtensions2" class="card-img img-fluid mb-5">
+
+            <p class="card-text bg-primary"><strong>Data Shaping</strong></p>
+            
+            <img src="img/apiIEnumerableExtensions.PNG " alt="IEnumerableExtensions" class="card-img img-fluid mt-5">
+
+            <img src="img/apiIEnumerableExtensions2.PNG" alt="apiIEnumerableExtensions2" class="card-img img-fluid mb-5">
+            
+            <p class="card-text bg-info">ExpandoObject = Object whose members can be dynamically added or removed at RunTime</p>
+            
+            <p class="card-text bg-info">Data shaping allows consumer of the API to choose the resource fields (instead of returning all the fields of the Author for example) fields =id, name  (shape on fields of the resource, not on the fields of lower-level layer objects)</p>
+            
+            <p class="card-text bg-warning">Dynamically creating an object from our ObjectDtos (at RunTime) to return in responses</p>
+            
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse13" data-parent="#accordion" data-toggle="collapse">
+              API Performance
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse13" class="collapse">
+          <div class="card-body bg-secondary">
+           
+            <p class="card-text bg-primary">thread pool starvation (common cause of slow, bottlenecked code) -- where your thread pool is too busy exhausted and is unavailable to jump around and pick up new requests</p>
+
+            <ul class="list-group">
+              <p class="list-group-item-header">Possible issues:</p>
+              <li class="list-group-item list-group-item-success">Redis caching through StackExchange --> <strong>Redis bulk data management</strong></li>
+
+              <li class="list-group-item list-group-item-success">ConnectionMultiplexer.Connect(Connection) --> <strong>ConnectionMultiplexer.ConnectAsync(Connection)</strong></li>
+              
+            </ul>
+
+         
+
+              <p class="card-text bg-primary mt-5"><strong>Redis bulk data management</strong></p>
+
+              <img src="img/redisBulk.PNG" alt="Redis Bulk data" class="card-img img-fluid my-5">
+
+              <p class="card-text bg-primary"><strong>Logging Output</strong></p>
+
+              <p class="card-text bg-info">Serilog Library -- Console Standard Out (console output was slow)</p>
+
+              <img src="img/apiLoggingOutput.PNG" alt="Redis Bulk data" class="card-img img-fluid my-5">
+
+              <p class="card-text bg-primary"><strong>Cancelling redundant tasks</strong> -- Polly</p>
+
+              <p class="card-text bg-info">Polly -- helps you easily control tasks such as timeouts, retrying failed code, and some other powerful functionality</p>
+
+              <ul class="list-group">
+                <p class="list-group-item-header">Polly settings:</p>
+
+                <li class="list-group-item list-group-item-success">Timeout after 30 seconds</li>
+  
+                <li class="list-group-item list-group-item-success">Retry three times if the request fails (this can include failing due to the timeout)</li>
+                
+                <li class="list-group-item list-group-item-success">If it failed after three times, throw an exception back to our application so that we can return an error on our API response</li>
+
+                <li class="list-group-item list-group-item-success">about connections: Waiting forever (having no timeout) is a bad design strategy: it specifically leads to the blocking up of threads or connections (itself often a cause of further failure)</li>
+
+                <li class="list-group-item list-group-item-success">Async calls must be used wherever possible to avoid thread pool starvation</li>
+
+                <li class="list-group-item list-group-item-success">As for long-running dependency calls, we now know that we need to provide cancellation support where appropriate, with the implemenation in place of timing out and cancelling those tokens.</li>
+
+              </ul>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse14" data-parent="#accordion" data-toggle="collapse">
+              Cacheable
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse14" class="collapse">
+          <div class="card-body bg-secondary">
+           
+            <p class="card-text bg-primary">HTTP cache (holy Grail)</p>
+
+            <p class="card-text bg-primary">response caching middleware</p>
+
+            <p class="card-text bg-primary">every response should define itself as cacheable or not</p>
+
+            <p class="card-text bg-primary">cache is separate component that sits between the client (user) and the API itself</p>
+           
+            <p class="card-text bg-info">Receives repsonses from the API and stores them if they are deemed cacheable</p>
+
+            <p class="card-text bg-info">Accepts requests from consumer to the API</p>
+
+            <p class="card-text bg-info mb-5">It's the middle-man of request-response communication</p>
+
+           
+            <ul class="list-group">
+              <p class="list-group-item-header">3 Cache Types:</p>
+              <li class="list-group-item list-group-item-success">Client Cache ... Lives on the client (private cache), cache on your mobile device ... cache on LocalStorage (Angular)</li>
+
+              <li class="list-group-item list-group-item-success">Gateway Cache ... Lives on the server (shared)</li>
+              <li class="list-group-item list-group-item-success">Proxy Cache ... Lives on the network (shared cache) ... (used by corporations to serve thousands)</li>
+            </ul>
+
+            <p class="card-text bg-primary my-5">Reponse Cache Attribute and Middleware</p>
+
+            <p class="card-text bg-info">state for each resource whether or not it's cacheable</p>
+
+            <p class="card-text bg-info">Cache-Control: max-age=120 (says it's cacheable only for 120 seconds)</p>
+
+            <p class="card-text bg-info">doesn't actually cache anything ... (need a cache store)</p>
+
+            <p class="card-text bg-warning mb-5">Postman by default sends a no-cache request (go into settings and turn off "send-no-cache header"</p>
+
+            <p class="card-text bg-primary">ResponseCaching Middleware</p>
+
+            <p class="card-text bg-info">services.AddResponseCaching(); inside Startup.cs</p>
+
+            <p class="card-text bg-info">app.UseResponseCaching();  inside Startup.cs in Configure method (make sure it's before all the other app.Use ones)</p>
+
+            <img src="img/apiStartupCS.PNG" alt="caching Startup.cs" class="card-img img-fluid mt-5">
+            
+            <img src="img/apiStartupCS2.PNG" alt="caching Startup.cs 2" class="card-img img-fluid">
+
+            <img src="img/apiStartupCS3.PNG" alt="caching Startup.cs 3" class="card-img img-fluid mb-5">
+
+
+            <p class="card-text bg-primary">Cache Profiles -- add into services.AddControllers() in Startup.cs</p>
+
+            <ul class="list-group">
+                <p class="list-group-item-header">Expiration Model</p>
+                <li class="list-group-item list-group-item-success">Allows the server to state how long a response is considered fresh</li>
+  
+                <li class="list-group-item list-group-item-success">Expires Header HAS been superceded by Cache-Control header</li>
+                <li class="list-group-item list-group-item-success">Cache-Control header</li>
+                <li class="list-group-item list-group-item-primary"><strong>Private Cache</strong> + Reduces bandwidth requirements ++ Less Requests from cache to API</li>
+                <li class="list-group-item list-group-item-primary"><strong>Shared Cache</strong> + Doesn't save bandwidth between cache and API ++ Drastically lowers requests to the API</li>
+              </ul>
+
+              <ul class="list-group">
+                <p class="list-group-item-header">Validation Model (not supported by DOTnet core middleware)</p>
+                <li class="list-group-item list-group-item-success">Used to validate the freshness of a response that's been cached</li>
+                <li class="list-group-item list-group-item-primary"><strong>Strong Validators:</strong> + Change if the body or headers of a response change ++ use ETag (Entity Tag) response headers ETag: "12345" +++ Can be used for concurrency checks too (when updating resources)</li>
+                <li class="list-group-item list-group-item-primary"><strong>Weak Validators:</strong> + Doesn't always change when response changes (up to server)  last modified: (example ... weak because 1 second gap)  ETag: "w/12345" (weak example)</li>
+                <li class="list-group-item list-group-item-info">use weak when you DON'T necessarily need the most recent version  ( a Resource we can GET as well as UPDATE = bad use of weak)</li>
+                <li class="list-group-item list-group-item-primary"><strong>Private cache (client side)</strong> + Reduces bandwidth requirements</li>
+                <li class="list-group-item list-group-item-primary"><strong>Shared (public)</strong> Saves bandwidth between cache (middleware between client and API) and API (Api doesn't have to recreate the response)</li>
+              </ul>
+
+              <p class="card-text bg-primary my-5">Expiration and Validation Models are usually combined</p>
+
+              <p class="card-text bg-primary"><strong>Private cache</strong></p>
+
+              <p class="card-text bg-info">As long as the response hasn't expired (Isn't stale), thate response can be returned from the cache</p>
+
+              <p class="card-text bg-info">Reduces communication with the API (including response generation), reduces bandwidth requirements</p>
+
+              <p class="card-text bg-info mb-5">If it has expired, the API is hit</p>
+
+
+              <p class="card-text bg-primary"><strong>Public Cache</strong></p>
+
+              <p class="card-text bg-info">As long as the response hasn't expired (isn't stale) that response can be returned from the cache</p>
+
+              <p class="card-text bg-info">Reduces bandwidth requirements between cache and API, dramatically reduces request to the API</p>
+
+              <p class="card-text bg-info">If it has expired, the API is hit</p>
+
+              <p class="card-text bg-info mb-5">Bandwidth between cache and API and response generation is potentially reduced</p>
+
+              <p class="card-text bg-primary">Cache-Control Directives</p>
+
+              <p class="card-text bg-info">Response:</p>
+
+              <p class="card-text bg-success">Freshness (max-age, s-maxage) ... can set different for private / public</p>
+
+              <p class="card-text bg-success">Cache Type (public, private)</p>
+
+              <p class="card-text bg-success">Validation (no-cache, must-reavalidate, proxy-reavalidate)</p>
+
+              <p class="card-text bg-success mb-5">other (no-store, no-transform) no-store = for confidentiality reasons</p>
+              
+              <p class="card-text bg-info">Request (by Client):</p>
+
+              <p class="card-text bg-success">Freshness (max-age, min-fresh, max-stale)</p>
+
+              <p class="card-text bg-success">Validation (no-cache)</p>
+
+              <p class="card-text bg-success">Other (no-store, no-transform, only-if-cached)</p>
+
+              <p class="card-text bg-primary my-5">Supporting <strong>Http Cache</strong></p>
+
+             
+              <p class="card-text bg-warning">ETags are preferred over dates as they are strong validators</p>
+              
+              <p class="card-text bg-primary">Marvin.Cache.Headers (useful Header middleware from tutorial)</p>
+          
+              <p class="card-text bg-info">IF a response is stale, a cache must validate it using ETags</p>
+
+              <p class="card-text bg-warning">MSFT Response cache good for simple use cases ... like Expiration ... ONCE VALIDATION comes into play ... (Add in Marvin.Cache middleware)</p>
+
+              <p class="card-text bg-primary"><strong>Cache Stores and CDNs</strong></p>
+
+              <p class="card-text bg-info">most cache stores are full-blown cache servers, not pieces of middleware</p>
+
+              <p class="card-text bg-info">private caches LIVE on the CLIENT</p>
+
+              <p class="card-text bg-info">Xamarin ... probably needs CacheCow.Client</p>
+
+              <p class="card-text bg-info">Shared Caches = gateway or proxy caches</p>
+
+              <p class="card-text bg-info">Varnish, Apache Traffic Server, Squid</p>
+
+              <p class="card-text bg-primary mt-5">CDNs</p>
+
+              <p class="card-text bg-info">extensively use caching: Http cache (Azure CDN, Cloudfare, Akamai)</p>
+
+              <p class="card-text bg-warning">Not recommended to implement cache-control at API level ... instead ensure API can return Cache-Control headers and supports expiration / validation models (Combine that with a cache server or CDN)</p>
+              
+              <p class="card-text bg-primary mt-5">Cache Invalidation</p>
+
+              <p class="card-text bg-info">wiping a response from the cache because you know it isn't the correct version anymore (a lot is automated) (responses go stale, ETags get updated)</p>
+
+              <p class="card-text bg-primary mt-5"><strong>Concurrency Strategies</strong></p>
+
+              <p class="card-text bg-primary mb-5">Pessimistic concurrency (not possible in REST)  ... Resource Locked</p>
+            
+              <p class="card-text bg-primary"><strong>Optimistic concurrency (supported with Etags)</strong></p>
+
+              <p class="card-text bg-info">Token is returned together with resource</p>
+
+              <p class="card-text bg-info">The udpate can happen as long as the token is still valid</p>
+
+              <p class="card-text bg-info">The Marvin.Cache Nuget package handles this stuff for us</p>
+
+              <p class="card-text bg-info">use ETags as tokens/validators for an optimistic concurrency strategy</p>
+
+              <p class="card-text bg-info">Send as If-Match header value</p>
+
+              <p class="card-text bg-info">on mismatch, 412 Precondition Failed will be returned</p>
+            
+              <img src="img/apiCacheController.PNG" alt="dotNetCore cache controller example" class="card-img img-fluid mt-5">
+              
+              <img src="img/apiCacheController2.PNG" alt="dotNetCore cache controller example2" class="card-img img-fluid">
+
+              <img src="img/apiCacheController3.PNG" alt="dotNetCore cache controller example3" class="card-img img-fluid">
+
+              <img src="img/apiCacheController4.PNG" alt="dotNetCore cache controller example4" class="card-img img-fluid mb-5">
+            
+            </div>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            <a href="#collapse15" data-parent="#accordion" data-toggle="collapse">
+              Summary
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse15" class="collapse">
+          <div class="card-body bg-secondary">
+           
+            <p class="card-text bg-primary">Map (using IMapper) between Entities (classes) and Dtos (Model folder (what we return from our controllers))</p>
 
             <ul class="list-group">
               <p class="list-group-item-header">All fields should be updated as the Result of a put request</p>
@@ -645,11 +961,44 @@
 
               <p class="card-text bg-primary mb-5">validation: to minimize code duplication ... we can work with abstract base classes and mark common properties with virtual to allow for their own implementation</p>
 
+              <p class="card-text bg-primary"><strong>Vendor-specific Media Types</strong></p>
+
+              <p class="card-text bg-info mb-5">application/vnd.marvin.hateoas+json</p>
+
+              <p class="card-text bg-primary">need to register / set-up valid OutputFormatters in startup.cs</p>
+
+              
+              <p class="card-text bg-primary">there should be only one suffix per media type, and only officially registered suffixes should be used</p>
+              
+              <p class="card-text bg-primary">always provide a default representation that will be returned when no semantic information is passed through (eg: application/json)</p>
               <p class="card-text bg-info">HATEOAS (tells User what they can do with our API)</p>
 
+              <p class="card-text bg-info">HATEOS links should be return only when the correct media type is requested</p>
+              
+              <p class="card-text bg-info">(Hypermedia as the Application State)</p>
+
+              <p class="card-text bg-info">helps with evolvability and self descriptiveness</p>
+
+              <p class="card-text bg-info">if an API fails @ HATEOAS ... then a user of the API must know more than they should ... if an API fails @ HATEOAS ... the API cannot evolve separately of consuming applications</p>
+
+              <p class="card-text bg-primary mt-5">Adapting to change:</p>
+
+              <p class="card-text bg-info">HATEOAS for changes to functionality and business rules</p>
+
+              <p class="card-text bg-info mb-5">Versioned media types (until code on demand feasible)</p>
+
+              <p class="card-text bg-primary">creating a Dto (to return from requests)</p>
+
+              <p class="card-text bg-info">1) create a Model class (dto)</p>
+
+              <p class="card-text bg-info">2) add a Mapping profile (or just a CreateMap () in already existing Mapping Profile)</p>
+
+              
               <p class="card-text bg-info">Advanced content negotation</p>
 
               <p class="card-text bg-info">Caching and concurrency</p>
+
+              <p class="card-text bg-warning">Not recommended to implement cache-control at API level ... instead ensure API can return Cache-Control headers and supports expiration / validation models (Combine that with a cache server or CDN)</p>
 
               <p class="card-text bg-info">Paging, sorting, data shaping</p>
             
